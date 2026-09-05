@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import { useState, lazy, Suspense } from 'react'
 import BotanicalText from './BotanicalText'
-import BotanicalTextThree from './BotanicalTextThree'
 import { detectWebGL } from '../utils/detectWebGL'
 import './WelcomePage.css'
+
+// Three.js 版按需加载：仅在支持 WebGL 且真正需要时下载 three.js chunk
+const BotanicalTextThree = lazy(() => import('./BotanicalTextThree'))
 
 export default function WelcomePage({ onEnter }) {
   const [showControls, setShowControls] = useState(false)
@@ -26,17 +28,19 @@ export default function WelcomePage({ onEnter }) {
     <div className="welcome-page" onClick={onEnter}>
       <div className="welcome-content">
         {useThree ? (
-          <BotanicalTextThree 
-            text="My Workspace" 
-            width={950} 
-            height={280}
-            density={params.density}
-            bloomSize={params.bloomSize}
-            leafMix={params.leafMix}
-            hoverRadius={params.hoverRadius}
-            maxBloom={params.maxBloom}
-            breathe={params.breathe}
-          />
+          <Suspense fallback={null}>
+            <BotanicalTextThree 
+              text="My Workspace" 
+              width={950} 
+              height={280}
+              density={params.density}
+              bloomSize={params.bloomSize}
+              leafMix={params.leafMix}
+              hoverRadius={params.hoverRadius}
+              maxBloom={params.maxBloom}
+              breathe={params.breathe}
+            />
+          </Suspense>
         ) : (
           <BotanicalText 
             text="My Workspace" 
