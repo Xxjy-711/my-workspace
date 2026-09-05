@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import ParticleBackground from './components/ParticleBackground'
 import Butterflies from './components/Butterflies'
+import ClickPetals from './components/ClickPetals'
 import WelcomePage from './components/WelcomePage'
 import DailyReport from './components/DailyReport'
 import './components/DailyReport.css'
@@ -12,6 +13,7 @@ function App() {
     <div className="app">
       <ParticleBackground />
       <Butterflies />
+      <ClickPetals />
       
       {showWelcome && <WelcomePage onEnter={() => setShowWelcome(false)} />}
       

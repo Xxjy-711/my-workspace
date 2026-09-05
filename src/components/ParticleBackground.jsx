@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 
 export default function ParticleBackground() {
   const canvasRef = useRef(null)
+  const mouseRef = useRef({ x: -1000, y: -1000 })
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -16,8 +17,19 @@ export default function ParticleBackground() {
     resize()
     window.addEventListener('resize', resize)
 
-    // 创建粒子
-    for (let i = 0; i < 80; i++) {
+    const handleMouseMove = (e) => {
+      mouseRef.current.x = e.clientX
+      mouseRef.current.y = e.clientY
+    }
+    const handleMouseLeave = () => {
+      mouseRef.current.x = -1000
+      mouseRef.current.y = -1000
+    }
+    window.addEventListener('mousemove', handleMouseMove)
+    window.addEventListener('mouseleave', handleMouseLeave)
+
+    const colors = ['#8B7FD4', '#e8a0c4', '#a898e8', '#d4b87f', '#7fd4b8']
+    for (let i = 0; i < 100; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -25,14 +37,36 @@ export default function ParticleBackground() {
         speedX: (Math.random() - 0.5) * 0.3,
         speedY: (Math.random() - 0.5) * 0.3,
         opacity: Math.random() * 0.5 + 0.2,
-        color: Math.random() > 0.5 ? '#8B7FD4' : '#e8a0c4'
+        color: colors[Math.floor(Math.random() * colors.length)],
+        baseOpacity: Math.random() * 0.5 + 0.2
       })
     }
+
+    const MOUSE_RADIUS = 150
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
       
+      const mx = mouseRef.current.x
+      const my = mouseRef.current.y
+      
       particles.forEach(p => {
+        const dx = mx - p.x
+        const dy = my - p.y
+        const dist = Math.sqrt(dx * dx + dy * dy)
+        
+        if (dist < MOUSE_RADIUS && dist > 0) {
+          const force = (MOUSE_RADIUS - dist) / MOUSE_RADIUS * 0.02
+          p.speedX += (dx / dist) * force
+          p.speedY += (dy / dist) * force
+          p.opacity = Math.min(1, p.baseOpacity + force * 10)
+        } else {
+          p.opacity += (p.baseOpacity - p.opacity) * 0.05
+        }
+        
+        p.speedX *= 0.99
+        p.speedY *= 0.99
+        
         p.x += p.speedX
         p.y += p.speedY
         
@@ -55,6 +89,8 @@ export default function ParticleBackground() {
 
     return () => {
       window.removeEventListener('resize', resize)
+      window.removeEventListener('mousemove', handleMouseMove)
+      window.removeEventListener('mouseleave', handleMouseLeave)
       cancelAnimationFrame(animationId)
     }
   }, [])
