@@ -1,0 +1,205 @@
+.daily-report {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* 头部 */
+.report-header {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.greeting {
+  font-size: 16px;
+  color: var(--pink);
+  margin-bottom: 12px;
+}
+
+.report-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.dateline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.badge {
+  background: rgba(139, 127, 212, 0.2);
+  color: var(--purple-light);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.stamp-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* 统计栏 */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.stat-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--purple-light);
+}
+
+/* 板块 */
+.section {
+  margin-bottom: 50px;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.num.tech { background: rgba(139, 127, 212, 0.2); color: var(--purple-light); }
+.num.life { background: rgba(232, 160, 196, 0.2); color: var(--pink-light); }
+.num.local { background: rgba(127, 212, 184, 0.2); color: var(--mint); }
+
+.section-head h2 {
+  font-size: 24px;
+}
+
+.en {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* 头条卡片 */
+.headline-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.tag {
+  display: inline-block;
+  background: rgba(212, 184, 127, 0.2);
+  color: var(--gold);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.headline-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.headline-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* 卡片 */
+.card .name {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.card .lang {
+  font-size: 11px;
+  background: rgba(139, 127, 212, 0.2);
+  color: var(--purple-light);
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.card .desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.card .meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.card .meta span {
+  color: var(--text-muted);
+}
+
+.card .meta b {
+  color: var(--gold);
+}
+
+/* 底部 */
+.report-foot {
+  text-align: center;
+  padding: 40px 0;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .report-title { font-size: 32px; }
+  .stats-bar { grid-template-columns: repeat(2, 1fr); }
+  .stamp-container { position: static; margin-top: 20px; }
+}

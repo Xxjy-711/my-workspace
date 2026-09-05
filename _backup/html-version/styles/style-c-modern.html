@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>我的工作台 · 每日早报</title>
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@700;900&display=swap">
+<style>
+  :root {
+    --bg: #FFFFFF;
+    --ink: #111214;
+    --ink-2: #5A5E66;
+    --ink-3: #A1A5AC;
+    --line: #ECECEF;
+    --tech: #2563EB;
+    --life: #EA6A2B;
+    --local: #0F9D76;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: var(--bg); }
+  body {
+    font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    color: var(--ink); line-height: 1.7; font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .shell { max-width: 920px; margin: 0 auto; padding: 0 20px 60px; }
+
+  /* 外壳 */
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; flex-wrap: wrap; padding: 28px 0 16px;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-mark {
+    width: 38px; height: 38px; border-radius: 10px; background: var(--ink);
+    color: #fff; display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 18px; letter-spacing: 0;
+  }
+  .brand-name { font-size: 17px; font-weight: 900; letter-spacing: 1px; }
+  .brand-sub { font-size: 11px; color: var(--ink-3); letter-spacing: 2px; text-transform: uppercase; font-weight: 500; }
+
+  .tabs { display: flex; gap: 10px; flex-wrap: wrap; }
+  .tab {
+    font-size: 14px; font-weight: 500; padding: 9px 20px;
+    border-radius: 10px; cursor: pointer; border: 1.5px solid var(--line);
+    background: #fff; color: var(--ink-2); font-family: inherit;
+    transition: all .15s ease;
+  }
+  .tab.active { background: var(--ink); border-color: var(--ink); color: #fff; font-weight: 700; }
+  .tab.placeholder { color: var(--ink-3); border-style: dashed; cursor: default; }
+
+  /* 报头 */
+  .paper { margin-top: 8px; }
+  .headline {
+    padding: 34px 4px 26px;
+    display: flex; align-items: flex-end; justify-content: space-between;
+    gap: 16px; flex-wrap: wrap;
+    border-bottom: 3px solid var(--ink);
+  }
+  .headline .date {
+    font-size: clamp(30px, 5.5vw, 44px); font-weight: 900; letter-spacing: 1px;
+    line-height: 1.1;
+  }
+  .headline .date small {
+    display: block; font-size: 13px; font-weight: 500; color: var(--ink-2);
+    letter-spacing: 2px; margin-top: 6px;
+  }
+  .headline .meta { text-align: right; font-size: 12.5px; color: var(--ink-2); line-height: 2; font-weight: 500; }
+  .headline .meta b { color: var(--tech); font-weight: 700; }
+
+  /* 版面 */
+  .section { margin-top: 6px; padding: 26px 0 2px; }
+  .section-head { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .section-head .stamp {
+    font-size: 12px; font-weight: 900; letter-spacing: 2px;
+    color: #fff; padding: 4px 12px; border-radius: 6px; white-space: nowrap;
+  }
+  .section-head .stamp.tech { background: var(--tech); }
+  .section-head .stamp.life { background: var(--life); }
+  .section-head .stamp.local { background: var(--local); }
+  .section-head h2 { font-size: 19px; font-weight: 900; letter-spacing: 2px; white-space: nowrap; }
+  .section-head .line { flex: 1; border-top: 1.5px solid var(--line); }
+
+  /* 头条 */
+  .lead {
+    background: var(--ink); border-radius: 14px; padding: 24px 26px; color: #fff;
+    margin-bottom: 16px;
+  }
+  .lead .tag {
+    display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 2px;
+    background: var(--tech); padding: 3px 12px; border-radius: 999px; margin-bottom: 12px;
+  }
+  .lead h3 { font-size: 19px; font-weight: 900; line-height: 1.5; margin-bottom: 8px; }
+  .lead p { font-size: 13.5px; color: rgba(255,255,255,.75); font-weight: 400; }
+
+  /* 卡片 */
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(258px, 1fr)); gap: 14px; }
+  .card {
+    background: #fff; border: 1.5px solid var(--line); border-radius: 12px;
+    padding: 16px 18px; position: relative; overflow: hidden;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .card::before {
+    content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: var(--tech);
+  }
+  .card.life::before { background: var(--life); }
+  .card.local::before { background: var(--local); }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(17,18,20,.07); }
+  .card .name { font-size: 14.5px; font-weight: 700; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+  .card .name .lang {
+    font-size: 10px; font-weight: 700; color: var(--tech); background: #EAF0FE;
+    padding: 1px 8px; border-radius: 999px;
+  }
+  .card .desc { font-size: 12.5px; color: var(--ink-2); margin-top: 6px; line-height: 1.65; }
+  .card .meta { font-size: 11.5px; color: var(--ink-3); margin-top: 10px; display: flex; justify-content: space-between; align-items: center; font-weight: 500; }
+  .card .meta b { color: var(--life); font-weight: 900; font-size: 13px; }
+
+  .card.pending { background: #FAFAFB; border-style: dashed; }
+  .card.pending::before { display: none; }
+  .card.pending .name { color: var(--ink-2); font-size: 14px; }
+  .card.pending .desc { color: var(--ink-3); }
+  .card.pending .meta b { color: var(--ink-2); }
+
+  .note {
+    margin-top: 16px; padding: 14px 18px; border-radius: 12px;
+    background: #F6F8FF; border: 1.5px solid #DCE4FA;
+    font-size: 13px; color: #3A4A75; display: flex; gap: 10px; align-items: flex-start;
+    font-weight: 500;
+  }
+  .note b { color: var(--tech); font-weight: 900; }
+
+  .foot {
+    margin-top: 30px; padding-top: 18px; border-top: 1.5px solid var(--ink);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px;
+    font-size: 12px; color: var(--ink-3); letter-spacing: 1px; font-weight: 500;
+  }
+
+  @media (max-width: 640px) {
+    .shell { padding: 0 14px 44px; }
+    .headline { padding: 26px 2px 20px; }
+    .headline .meta { text-align: left; }
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+  <header>
+    <div class="topbar">
+      <div class="brand">
+        <div class="brand-mark">工</div>
+        <div>
+          <div class="brand-name">我的工作台</div>
+          <div class="brand-sub">Personal Desk</div>
+        </div>
+      </div>
+      <nav class="tabs">
+        <button class="tab active">每日早报</button>
+        <button class="tab placeholder">＋ 更多板块（预留）</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="paper">
+    <div class="headline">
+      <div class="date">9月5日 星期六<small>2026 · 第 001 期</small></div>
+      <div class="meta">每日 10:00 自动更新<br><b>今天 10:00 更新全部版面</b></div>
+    </div>
+
+    <section class="section">
+      <div class="section-head">
+        <span class="stamp tech">A</span>
+        <h2>技术版</h2>
+        <span class="line"></span>
+      </div>
+
+      <div class="lead">
+        <span class="tag">本周头条</span>
+        <h3>GitHub 热榜：AI Agent 工具与多智能体应用领跑本周</h3>
+        <p>本周 GitHub Trending 上，AI 画图工具 archify（47.8k★）与清华多智能体课堂 OpenMAIC（31.4k★）分列前二，AI 编程与多智能体成为最热方向。</p>
+      </div>
+
+      <div class="section-head" style="margin:18px 0 12px;">
+        <h2 style="font-size:15px;">AI 热门项目</h2>
+        <span class="line"></span>
+      </div>
+      <div class="grid">
+        <div class="card"><div class="name">tt-a1i / archify <span class="lang">JS</span></div><div class="desc">Agent 技能：一句话生成架构图、流程图、时序图，输出可导出的 HTML。</div><div class="meta"><span>本周热榜</span><b>47.8k★</b></div></div>
+        <div class="card"><div class="name">THU-MAIC / OpenMAIC <span class="lang">TS</span></div><div class="desc">清华出品：多智能体互动课堂，一键获得沉浸式学习体验。</div><div class="meta"><span>本周热榜</span><b>31.4k★</b></div></div>
+        <div class="card"><div class="name">affaan-m / ECC <span class="lang">JS</span></div><div class="desc">Agent 性能优化系统：技能、记忆、安全，适配 Claude Code / Codex / Cursor。</div><div class="meta"><span>LLM 顶流</span><b>248k★</b></div></div>
+        <div class="card"><div class="name">NousResearch / hermes-agent <span class="lang">PY</span></div><div class="desc">「会随你成长」的 AI Agent，兼容 OpenAI / Claude / Codex 生态。</div><div class="meta"><span>LLM 顶流</span><b>241k★</b></div></div>
+        <div class="card"><div class="name">ollama / ollama <span class="lang">GO</span></div><div class="desc">本地一键跑大模型：DeepSeek、Qwen、GLM、Kimi 等，新手最友好。</div><div class="meta"><span>LLM 顶流</span><b>180k★</b></div></div>
+        <div class="card"><div class="name">f / prompts.chat <span class="lang">HTML</span></div><div class="desc">社区共享 AI 提示词库，原 Awesome ChatGPT Prompts，新手必逛。</div><div class="meta"><span>AI 顶流</span><b>169k★</b></div></div>
+        <div class="card"><div class="name">huggingface / transformers <span class="lang">PY</span></div><div class="desc">模型定义框架：文本、视觉、音频、多模态的统一推理与训练入口。</div><div class="meta"><span>ML 顶流</span><b>163k★</b></div></div>
+        <div class="card"><div class="name">rasbt / LLMs-from-scratch <span class="lang">NB</span></div><div class="desc">用 PyTorch 从零手写 ChatGPT 类大模型的逐步教程，公认最佳入口。</div><div class="meta"><span>AI 顶流</span><b>104k★</b></div></div>
+      </div>
+
+      <div class="note">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>
+        <div><b>开发技术</b>（Python / 测试 / 汽车电子）与 <b>AI 伴侣 / 人机恋</b> 板块：今日 10:00 自动更新后填充。</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <span class="stamp life">B</span>
+        <h2>生活版</h2>
+        <span class="line"></span>
+      </div>
+      <div class="grid">
+        <div class="card life pending"><div class="name">数码科技</div><div class="desc">手机、安卓、苹果新品与玩机技巧。</div><div class="meta"><span>待更新</span><b>10:00</b></div></div>
+        <div class="card life pending"><div class="name">游戏</div><div class="desc">仙剑等游戏新动态、新游发布。</div><div class="meta"><span>待更新</span><b>10:00</b></div></div>
+        <div class="card life pending"><div class="name">穿搭美妆</div><div class="desc">时尚趋势与好物推荐。</div><div class="meta"><span>待更新</span><b>10:00</b></div></div>
+        <div class="card life pending"><div class="name">理财职场</div><div class="desc">个税、理财、行业动态。</div><div class="meta"><span>待更新</span><b>10:00</b></div></div>
+        <div class="card life pending"><div class="name">健康</div><div class="desc">健康知识与日常提醒。</div><div class="meta"><span>待更新</span><b>10:00</b></div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <span class="stamp local">C</span>
+        <h2>本地版</h2>
+        <span class="line"></span>
+      </div>
+      <div class="grid">
+        <div class="card local pending"><div class="name">上海天气</div><div class="desc">当日天气、气温与出行提示。</div><div class="meta"><span>待更新</span><b>10:00</b></div></div>
+        <div class="card local pending"><div class="name">本地要闻</div><div class="desc">上海新闻、交通与生活资讯。</div><div class="meta"><span>待更新</span><b>10:00</b></div></div>
+      </div>
+    </section>
+
+    <div class="foot">
+      <span>我的工作台 · 每日早报</span>
+      <span>VOL.001 · 2026-09-05</span>
+    </div>
+  </main>
+</div>
+</body>
+</html>

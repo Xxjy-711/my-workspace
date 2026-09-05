@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lanyard 挂绳效果 Demo</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: radial-gradient(ellipse at center, #1a1030 0%, #0a0618 50%, #050310 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-family: sans-serif;
+    color: #fff;
+  }
+  .hint { font-size: 14px; color: rgba(180,160,220,0.6); }
+  canvas { cursor: grab; }
+  canvas:active { cursor: grabbing; }
+</style>
+</head>
+<body>
+  <div class="hint">拖拽卡片摆动，松手后有惯性摇摆</div>
+  <canvas id="canvas" width="500" height="600"></canvas>
+
+<script>
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+// 物理参数
+const GRAVITY = 0.25;
+const DAMPING = 0.98;
+const ROPE_SEGMENTS = 15;
+const ROPE_LENGTH = 160;
+const CARD_WIDTH = 140;
+const CARD_HEIGHT = 200;
+
+// 挂绳节点
+let ropePoints = [];
+let ropeVelocities = [];
+
+// 卡片状态
+let cardAngle = 0;
+let cardAngularVel = 0;
+let cardX = 250;
+let cardY = 350;
+
+// 拖拽状态
+let isDragging = false;
+let dragOffsetX = 0;
+let dragOffsetY = 0;
+let lastMouseX = 0;
+let lastMouseY = 0;
+let mouseVelX = 0;
+let mouseVelY = 0;
+
+// 初始化挂绳
+function initRope() {
+  ropePoints = [];
+  ropeVelocities = [];
+  const anchorX = canvas.width / 2;
+  const anchorY = 50;
+  for (let i = 0; i <= ROPE_SEGMENTS; i++) {
+    ropePoints.push({
+      x: anchorX,
+      y: anchorY + (i / ROPE_SEGMENTS) * ROPE_LENGTH
+    });
+    ropeVelocities.push({ x: 0, y: 0 });
+  }
+}
+
+initRope();
+
+// Verlet 物理模拟
+function updatePhysics() {
+  const anchorX = canvas.width / 2;
+  const anchorY = 50;
+  const segLen = ROPE_LENGTH / ROPE_SEGMENTS;
+
+  if (!isDragging) {
+    // 应用重力
+    for (let i = 1; i <= ROPE_SEGMENTS; i++) {
+      ropeVelocities[i].y += GRAVITY;
+      ropeVelocities[i].x *= DAMPING;
+      ropeVelocities[i].y *= DAMPING;
+      ropePoints[i].x += ropeVelocities[i].x;
+      ropePoints[i].y += ropeVelocities[i].y;
+    }
+
+    // 约束：固定起点
+    ropePoints[0].x = anchorX;
+    ropePoints[0].y = anchorY;
+
+    // 约束：段长度（多次迭代更稳定）
+    for (let iter = 0; iter < 8; iter++) {
+      for (let i = 1; i <= ROPE_SEGMENTS; i++) {
+        const dx = ropePoints[i].x - ropePoints[i-1].x;
+        const dy = ropePoints[i].y - ropePoints[i-1].y;
+        const dist = Math.sqrt(dx*dx + dy*dy) || 0.001;
+        const diff = (dist - segLen) / dist;
+        const offsetX = dx * diff * 0.5;
+        const offsetY = dy * diff * 0.5;
+        if (i > 1) {
+          ropePoints[i-1].x += offsetX;
+          ropePoints[i-1].y += offsetY;
+        }
+        ropePoints[i].x -= offsetX;
+        ropePoints[i].y -= offsetY;
+      }
+    }
+
+    // 卡片跟随挂绳末端
+    const endX = ropePoints[ROPE_SEGMENTS].x;
+    const endY = ropePoints[ROPE_SEGMENTS].y;
+    cardX += (endX - cardX) * 0.2;
+    cardY += (endY + CARD_HEIGHT/2 - cardY) * 0.2;
+
+    // 卡片角度基于挂绳方向
+    const dx = ropePoints[ROPE_SEGMENTS].x - ropePoints[ROPE_SEGMENTS-1].x;
+    const dy = ropePoints[ROPE_SEGMENTS].y - ropePoints[ROPE_SEGMENTS-1].y;
+    const targetAngle = Math.atan2(dx, dy);
+    cardAngularVel += (targetAngle - cardAngle) * 0.03;
+    cardAngularVel *= 0.9;
+    cardAngle += cardAngularVel;
+  }
+}
+
+// 绘制挂绳
+function drawRope() {
+  ctx.beginPath();
+  ctx.moveTo(ropePoints[0].x, ropePoints[0].y);
+  for (let i = 1; i <= ROPE_SEGMENTS; i++) {
+    ctx.lineTo(ropePoints[i].x, ropePoints[i].y);
+  }
+  ctx.strokeStyle = 'rgba(180, 140, 220, 0.8)';
+  ctx.lineWidth = 6;
+  ctx.lineCap = 'round';
+  ctx.stroke();
+
+  // 挂绳纹理
+  ctx.strokeStyle = 'rgba(200, 160, 240, 0.4)';
+  ctx.lineWidth = 2;
+  ctx.stroke();
+
+  // 固定点
+  ctx.beginPath();
+  ctx.arc(ropePoints[0].x, ropePoints[0].y, 8, 0, Math.PI * 2);
+  ctx.fillStyle = 'rgba(150, 120, 200, 0.9)';
+  ctx.fill();
+}
+
+// 绘制卡片
+function drawCard() {
+  ctx.save();
+  ctx.translate(cardX, cardY);
+  ctx.rotate(cardAngle);
+
+  // 卡片阴影
+  ctx.shadowColor = 'rgba(0,0,0,0.5)';
+  ctx.shadowBlur = 20;
+  ctx.shadowOffsetX = 5;
+  ctx.shadowOffsetY = 5;
+
+  // 卡片背景
+  const gradient = ctx.createLinearGradient(-CARD_WIDTH/2, -CARD_HEIGHT/2, CARD_WIDTH/2, CARD_HEIGHT/2);
+  gradient.addColorStop(0, '#2a1f4a');
+  gradient.addColorStop(1, '#1a1030');
+  ctx.fillStyle = gradient;
+  roundRect(-CARD_WIDTH/2, -CARD_HEIGHT/2, CARD_WIDTH, CARD_HEIGHT, 12);
+  ctx.fill();
+
+  ctx.shadowColor = 'transparent';
+
+  // 卡片边框
+  ctx.strokeStyle = 'rgba(180, 140, 220, 0.5)';
+  ctx.lineWidth = 2;
+  roundRect(-CARD_WIDTH/2, -CARD_HEIGHT/2, CARD_WIDTH, CARD_HEIGHT, 12);
+  ctx.stroke();
+
+  // 卡片内容
+  ctx.fillStyle = 'rgba(200, 170, 240, 0.9)';
+  ctx.font = 'bold 16px sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('My Workspace', 0, -50);
+
+  // 装饰花朵
+  ctx.font = '30px serif';
+  ctx.fillText('🌸', 0, -10);
+
+  ctx.font = '12px sans-serif';
+  ctx.fillStyle = 'rgba(180, 150, 220, 0.7)';
+  ctx.fillText('每日早报', 0, 30);
+  ctx.fillText('2026.09.05', 0, 50);
+
+  // 打孔
+  ctx.beginPath();
+  ctx.arc(0, -CARD_HEIGHT/2 + 15, 8, 0, Math.PI * 2);
+  ctx.fillStyle = '#0a0618';
+  ctx.fill();
+  ctx.strokeStyle = 'rgba(180, 140, 220, 0.6)';
+  ctx.lineWidth = 2;
+  ctx.stroke();
+
+  ctx.restore();
+}
+
+function roundRect(x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x+r, y);
+  ctx.lineTo(x+w-r, y);
+  ctx.quadraticCurveTo(x+w, y, x+w, y+r);
+  ctx.lineTo(x+w, y+h-r);
+  ctx.quadraticCurveTo(x+w, y+h, x+w-r, y+h);
+  ctx.lineTo(x+r, y+h);
+  ctx.quadraticCurveTo(x, y+h, x, y+h-r);
+  ctx.lineTo(x, y+r);
+  ctx.quadraticCurveTo(x, y, x+r, y);
+  ctx.closePath();
+}
+
+function render() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  updatePhysics();
+  drawRope();
+  drawCard();
+  requestAnimationFrame(render);
+}
+
+// 鼠标交互
+canvas.addEventListener('mousedown', (e) => {
+  const rect = canvas.getBoundingClientRect();
+  const mx = (e.clientX - rect.left) * (canvas.width / rect.width);
+  const my = (e.clientY - rect.top) * (canvas.height / rect.height);
+  
+  // 检查是否点击在卡片上
+  const dx = mx - cardX;
+  const dy = my - cardY;
+  const cos = Math.cos(-cardAngle);
+  const sin = Math.sin(-cardAngle);
+  const localX = dx * cos - dy * sin;
+  const localY = dx * sin + dy * cos;
+  
+  if (Math.abs(localX) < CARD_WIDTH/2 && Math.abs(localY) < CARD_HEIGHT/2) {
+    isDragging = true;
+    dragOffsetX = localX;
+    dragOffsetY = localY;
+    lastMouseX = mx;
+    lastMouseY = my;
+  }
+});
+
+canvas.addEventListener('mousemove', (e) => {
+  const rect = canvas.getBoundingClientRect();
+  const mx = (e.clientX - rect.left) * (canvas.width / rect.width);
+  const my = (e.clientY - rect.top) * (canvas.height / rect.height);
+  
+  mouseVelX = mx - lastMouseX;
+  mouseVelY = my - lastMouseY;
+  lastMouseX = mx;
+  lastMouseY = my;
+  
+  if (isDragging) {
+    const cos = Math.cos(cardAngle);
+    const sin = Math.sin(cardAngle);
+    cardX = mx - dragOffsetX * cos + dragOffsetY * sin;
+    cardY = my - dragOffsetX * sin - dragOffsetY * cos;
+    
+    // 更新挂绳末端跟随卡片
+    ropePoints[ROPE_SEGMENTS].x = cardX;
+    ropePoints[ROPE_SEGMENTS].y = cardY - CARD_HEIGHT/2;
+    ropeVelocities[ROPE_SEGMENTS].x = mouseVelX;
+    ropeVelocities[ROPE_SEGMENTS].y = mouseVelY;
+  }
+});
+
+canvas.addEventListener('mouseup', () => {
+  if (isDragging) {
+    isDragging = false;
+    // 释放时给挂绳一个初速度
+    ropeVelocities[ROPE_SEGMENTS].x = mouseVelX * 0.5;
+    ropeVelocities[ROPE_SEGMENTS].y = mouseVelY * 0.5;
+  }
+});
+
+canvas.addEventListener('mouseleave', () => {
+  isDragging = false;
+});
+
+render();
+</script>
+</body>
+</html>

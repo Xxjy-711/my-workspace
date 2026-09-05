@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>我的工作台 · 每日早报</title>
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --paper: #F6F3EC;
+    --paper-2: #EFEAE0;
+    --ink: #22201C;
+    --ink-2: #6B6559;
+    --rule: #D8D0C0;
+    --red: #A63A2B;
+    --blue: #2C4A63;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: var(--paper); }
+  body {
+    font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .shell { max-width: 860px; margin: 0 auto; padding: 0 16px 48px; }
+
+  /* ===== 工作台外壳 ===== */
+  .shell-head {
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+    padding: 22px 0 10px; border-bottom: 3px double var(--ink);
+  }
+  .shell-title {
+    font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 19px;
+    letter-spacing: 2px;
+  }
+  .shell-title .dot { color: var(--red); }
+  .tabs { display: flex; gap: 4px; margin-top: 14px; flex-wrap: wrap; }
+  .tab {
+    font-family: 'Noto Serif SC', serif; font-size: 14px; font-weight: 700;
+    padding: 8px 18px; border-radius: 8px 8px 0 0; cursor: pointer;
+    border: 1px solid transparent; border-bottom: none;
+    background: transparent; color: var(--ink-2);
+    letter-spacing: 1px;
+  }
+  .tab.active {
+    background: var(--ink); color: var(--paper);
+    border-color: var(--ink);
+  }
+  .tab.placeholder { color: #B4AC9C; cursor: default; font-weight: 500; }
+
+  /* ===== 报纸 ===== */
+  .paper {
+    margin-top: 18px; background: var(--paper);
+    border: 1px solid var(--rule); border-radius: 2px;
+    padding: 26px 26px 18px;
+  }
+  .masthead { text-align: center; padding-bottom: 14px; border-bottom: 2px solid var(--ink); }
+  .masthead .kicker {
+    font-size: 11px; letter-spacing: 4px; color: var(--ink-2);
+    text-transform: uppercase; margin-bottom: 6px;
+  }
+  .masthead h1 {
+    font-family: 'Noto Serif SC', serif; font-weight: 900;
+    font-size: clamp(30px, 6vw, 44px); letter-spacing: 6px; line-height: 1.2;
+  }
+  .masthead .dateline {
+    margin-top: 8px; font-size: 12.5px; color: var(--ink-2);
+    letter-spacing: 1px;
+  }
+  .masthead .dateline b { color: var(--ink); font-weight: 700; }
+
+  .section { padding: 18px 0 6px; }
+  .section + .section { border-top: 1px solid var(--rule); margin-top: 6px; }
+  .section-head {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+  }
+  .section-head .no {
+    font-family: 'Noto Serif SC', serif; font-weight: 900; font-size: 13px;
+    color: var(--paper); background: var(--ink); padding: 2px 9px;
+    letter-spacing: 1px; border-radius: 1px;
+  }
+  .section-head h2 {
+    font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 18px;
+    letter-spacing: 3px;
+  }
+  .section-head .en { font-size: 10.5px; letter-spacing: 3px; color: var(--ink-2); }
+  .section-head .line { flex: 1; border-top: 1px solid var(--rule); }
+
+  /* 头条 */
+  .lead {
+    border: 1px solid var(--rule); background: var(--paper-2);
+    padding: 16px 18px; margin-bottom: 16px;
+  }
+  .lead .tag {
+    display: inline-block; font-size: 11px; letter-spacing: 2px;
+    color: var(--paper); background: var(--red); padding: 2px 8px;
+    margin-bottom: 8px; font-weight: 700;
+  }
+  .lead h3 {
+    font-family: 'Noto Serif SC', serif; font-size: 19px; font-weight: 700;
+    line-height: 1.4; margin-bottom: 6px;
+  }
+  .lead p { font-size: 13.5px; color: var(--ink-2); }
+
+  /* 项目条目 */
+  .items { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; }
+  .item {
+    border: 1px solid var(--rule); padding: 12px 14px; background: var(--paper);
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .item .name { font-size: 14px; font-weight: 700; }
+  .item .name span { font-family: 'Noto Sans SC', sans-serif; font-weight: 500; color: var(--ink-2); font-size: 12px; }
+  .item .desc { font-size: 12.5px; color: var(--ink-2); line-height: 1.6; }
+  .item .meta { font-size: 11.5px; color: var(--ink-2); }
+  .item .meta b { color: var(--red); font-weight: 700; }
+
+  .note {
+    border: 1px dashed #B9B0A0; padding: 12px 14px; margin-top: 12px;
+    font-size: 12.5px; color: var(--ink-2); background: transparent;
+    display: flex; gap: 8px; align-items: flex-start;
+  }
+  .note svg { flex: 0 0 auto; margin-top: 2px; }
+  .note b { color: var(--ink); font-weight: 700; }
+
+  .col { columns: 2; column-gap: 24px; }
+  .col .item { break-inside: avoid; margin-bottom: 10px; }
+  @media (max-width: 620px) { .col { columns: 1; } }
+
+  .foot {
+    margin-top: 20px; padding-top: 12px; border-top: 2px solid var(--ink);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px;
+    font-size: 11.5px; color: var(--ink-2); letter-spacing: 1px;
+  }
+  @media (max-width: 620px) {
+    .paper { padding: 18px 14px 12px; }
+    .shell { padding: 0 10px 32px; }
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <!-- ===== 工作台外壳 ===== -->
+  <header>
+    <div class="shell-head">
+      <div class="shell-title">我的工作台<span class="dot">·</span></div>
+    </div>
+    <nav class="tabs" id="tabs">
+      <button class="tab active" data-tab="paper">每日报纸</button>
+      <button class="tab placeholder" disabled>＋ 更多板块（预留）</button>
+    </nav>
+  </header>
+
+  <!-- ===== 每日报纸 ===== -->
+  <main class="paper" id="view-paper">
+
+    <div class="masthead">
+      <div class="kicker">Daily Brief · 个人早报</div>
+      <h1>每日早报</h1>
+      <div class="dateline"><b>2026年9月5日 星期六</b> · 第 001 期 · 每日 10:00 更新</div>
+    </div>
+
+    <!-- 技术版 -->
+    <section class="section">
+      <div class="section-head">
+        <span class="no">A</span>
+        <h2>技术版</h2>
+        <span class="en">TECH</span>
+        <span class="line"></span>
+      </div>
+
+      <div class="lead">
+        <span class="tag">本周头条</span>
+        <h3>GitHub 热榜：AI Agent 工具与多智能体应用领跑本周</h3>
+        <p>本周 GitHub Trending 上，AI 画图工具 archify（47.8k★）与清华多智能体课堂 OpenMAIC（31.4k★）分列前二，AI 编程与多智能体成为最热方向。</p>
+      </div>
+
+      <div class="section-head" style="margin-bottom:10px;">
+        <h2 style="font-size:15px;">AI 热门项目</h2>
+        <span class="line"></span>
+      </div>
+      <div class="items">
+        <div class="item">
+          <div class="name">tt-a1i / archify <span>JavaScript</span></div>
+          <div class="desc">Agent 技能：一句话生成架构图、流程图、时序图，输出可导出的 HTML。</div>
+          <div class="meta">本周热榜 · <b>47.8k★</b></div>
+        </div>
+        <div class="item">
+          <div class="name">THU-MAIC / OpenMAIC <span>TypeScript</span></div>
+          <div class="desc">清华出品：多智能体互动课堂，一键获得沉浸式学习体验。</div>
+          <div class="meta">本周热榜 · <b>31.4k★</b></div>
+        </div>
+        <div class="item">
+          <div class="name">affaan-m / ECC <span>JavaScript</span></div>
+          <div class="desc">Agent 性能优化系统：技能、记忆、安全，适配 Claude Code / Codex / Cursor。</div>
+          <div class="meta">LLM 顶流 · <b>248k★</b></div>
+        </div>
+        <div class="item">
+          <div class="name">NousResearch / hermes-agent <span>Python</span></div>
+          <div class="desc">「会随你成长」的 AI Agent，兼容 OpenAI / Claude / Codex 生态。</div>
+          <div class="meta">LLM 顶流 · <b>241k★</b></div>
+        </div>
+        <div class="item">
+          <div class="name">ollama / ollama <span>Go</span></div>
+          <div class="desc">本地一键跑大模型：DeepSeek、Qwen、GLM、Kimi 等，新手最友好。</div>
+          <div class="meta">LLM 顶流 · <b>180k★</b></div>
+        </div>
+        <div class="item">
+          <div class="name">f / prompts.chat <span>HTML</span></div>
+          <div class="desc">社区共享 AI 提示词库，原 Awesome ChatGPT Prompts，新手必逛。</div>
+          <div class="meta">AI 顶流 · <b>169k★</b></div>
+        </div>
+        <div class="item">
+          <div class="name">huggingface / transformers <span>Python</span></div>
+          <div class="desc">模型定义框架：文本、视觉、音频、多模态的统一推理与训练入口。</div>
+          <div class="meta">ML 顶流 · <b>163k★</b></div>
+        </div>
+        <div class="item">
+          <div class="name">rasbt / LLMs-from-scratch <span>Jupyter</span></div>
+          <div class="desc">用 PyTorch 从零手写 ChatGPT 类大模型的逐步教程，公认最佳入口。</div>
+          <div class="meta">AI 顶流 · <b>104k★</b></div>
+        </div>
+      </div>
+
+      <div class="note">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6B6559" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>
+        <div>开发技术（Python / 测试 / 汽车电子）与 <b>AI 伴侣 / 人机恋</b> 板块：今日 10:00 自动更新后填充。</div>
+      </div>
+    </section>
+
+    <!-- 生活版 -->
+    <section class="section">
+      <div class="section-head">
+        <span class="no">B</span>
+        <h2>生活版</h2>
+        <span class="en">LIFE</span>
+        <span class="line"></span>
+      </div>
+      <div class="items">
+        <div class="item"><div class="name">数码科技</div><div class="desc">手机、安卓、苹果新品与玩机技巧。</div><div class="meta">今日 10:00 更新</div></div>
+        <div class="item"><div class="name">游戏</div><div class="desc">仙剑等游戏新动态、新游发布。</div><div class="meta">今日 10:00 更新</div></div>
+        <div class="item"><div class="name">穿搭美妆</div><div class="desc">时尚趋势与好物推荐。</div><div class="meta">今日 10:00 更新</div></div>
+        <div class="item"><div class="name">理财职场</div><div class="desc">个税、理财、行业动态。</div><div class="meta">今日 10:00 更新</div></div>
+        <div class="item"><div class="name">健康</div><div class="desc">健康知识与日常提醒。</div><div class="meta">今日 10:00 更新</div></div>
+      </div>
+    </section>
+
+    <!-- 本地版 -->
+    <section class="section">
+      <div class="section-head">
+        <span class="no">C</span>
+        <h2>本地版</h2>
+        <span class="en">SHANGHAI</span>
+        <span class="line"></span>
+      </div>
+      <div class="items col">
+        <div class="item"><div class="name">上海天气</div><div class="desc">当日天气、气温与出行提示。</div><div class="meta">今日 10:00 更新</div></div>
+        <div class="item"><div class="name">本地要闻</div><div class="desc">上海新闻、交通与生活资讯。</div><div class="meta">今日 10:00 更新</div></div>
+      </div>
+    </section>
+
+    <div class="foot">
+      <span>我的工作台 · 每日早报</span>
+      <span>第 001 期 · 2026-09-05</span>
+    </div>
+  </main>
+</div>
+</body>
+</html>
