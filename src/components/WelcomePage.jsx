@@ -1,74 +1,24 @@
-import { useState, lazy, Suspense } from 'react'
-import BotanicalText from './BotanicalText'
-import { detectWebGL } from '../utils/detectWebGL'
+import { lazy, Suspense } from 'react'
 import './WelcomePage.css'
 
-// Three.js 版按需加载：仅在支持 WebGL 且真正需要时下载 three.js chunk
-const BotanicalTextThree = lazy(() => import('./BotanicalTextThree'))
 // Originkit Botanical Text（内含 three）：懒加载，与主包分离
 const OriginkitFlowerType = lazy(() => import('./originkit/botanical-text'))
 
 export default function WelcomePage({ onEnter }) {
-  const [showControls, setShowControls] = useState(false)
-  // 浏览器支持 WebGL 时启用 Three.js 版；不支持则回退 Canvas 2D 版（避免白屏）
-  const [useThree] = useState(() => detectWebGL())
-  const [params, setParams] = useState({
-    density: 5,
-    bloomSize: 6,
-    leafMix: 0.18,
-    hoverRadius: 120,
-    maxBloom: 2.3,
-    breathe: 0.2,
-    spread: 3
-  })
-
-  const updateParam = (key, value) => {
-    setParams(prev => ({ ...prev, [key]: value }))
-  }
-
   return (
     <div className="welcome-page" onClick={onEnter}>
       <div className="welcome-content">
-        {useThree ? (
-          <Suspense fallback={null}>
-            <BotanicalTextThree 
-              text="My Workspace" 
-              width={950} 
-              height={280}
-              density={params.density}
-              bloomSize={params.bloomSize}
-              leafMix={params.leafMix}
-              hoverRadius={params.hoverRadius}
-              maxBloom={params.maxBloom}
-              breathe={params.breathe}
-            />
-          </Suspense>
-        ) : (
-          <BotanicalText 
-            text="My Workspace" 
-            width={950} 
-            height={280}
-            density={params.density}
-            bloomSize={params.bloomSize}
-            leafMix={params.leafMix}
-            hoverRadius={params.hoverRadius}
-            maxBloom={params.maxBloom}
-            breathe={params.breathe}
-            spread={params.spread}
-          />
-        )}
-        <div className="welcome-hint">点击进入每日早报</div>
+        {/* 主视觉：Originkit 交互花朵文字。点击/划过不触发进入页面 */}
         <div
-          className="originkit-wrap"
+          className="hero-flower"
           onClick={(e) => e.stopPropagation()}
           onPointerDown={(e) => e.stopPropagation()}
         >
-          <div className="originkit-label">✦ 交互花朵文字（Originkit）· 点击输入 / 划过绽放</div>
           <Suspense fallback={null}>
             <OriginkitFlowerType
-              text="Botanical"
-              bloom="#FF6B9D"
-              leaf="#3E9E5A"
+              text="My Workshop"
+              bloom="#FF8FB8"
+              leaf="#5BB87A"
               opacity={14}
               bloomSize={11}
               leafSize={8}
@@ -77,85 +27,9 @@ export default function WelcomePage({ onEnter }) {
             />
           </Suspense>
         </div>
+        <div className="welcome-hint">点击空白处进入每日早报</div>
+        <div className="flower-subhint">点击花朵可输入文字 · 划过绽放</div>
       </div>
-
-      <button 
-        className="control-toggle"
-        onClick={(e) => { e.stopPropagation(); setShowControls(!showControls) }}
-      >
-        ⚙️ 调节花朵
-      </button>
-
-      {showControls && (
-        <div className="control-panel" onClick={(e) => e.stopPropagation()}>
-          <h3>花朵参数调节</h3>
-          
-          <div className="control-item">
-            <label>花朵密度: {params.density}</label>
-            <input 
-              type="range" min="3" max="8" step="0.5"
-              value={params.density}
-              onChange={(e) => updateParam('density', parseFloat(e.target.value))}
-            />
-          </div>
-
-          <div className="control-item">
-            <label>花朵大小: {params.bloomSize}</label>
-            <input 
-              type="range" min="3" max="12" step="0.5"
-              value={params.bloomSize}
-              onChange={(e) => updateParam('bloomSize', parseFloat(e.target.value))}
-            />
-          </div>
-
-          <div className="control-item">
-            <label>叶子比例: {(params.leafMix * 100).toFixed(0)}%</label>
-            <input 
-              type="range" min="0" max="0.4" step="0.02"
-              value={params.leafMix}
-              onChange={(e) => updateParam('leafMix', parseFloat(e.target.value))}
-            />
-          </div>
-
-          <div className="control-item">
-            <label>悬停范围: {params.hoverRadius}px</label>
-            <input 
-              type="range" min="50" max="200" step="10"
-              value={params.hoverRadius}
-              onChange={(e) => updateParam('hoverRadius', parseFloat(e.target.value))}
-            />
-          </div>
-
-          <div className="control-item">
-            <label>最大绽放: {params.maxBloom}x</label>
-            <input 
-              type="range" min="1.5" max="3.5" step="0.1"
-              value={params.maxBloom}
-              onChange={(e) => updateParam('maxBloom', parseFloat(e.target.value))}
-            />
-          </div>
-
-          <div className="control-item">
-            <label>呼吸幅度: {params.breathe}</label>
-            <input 
-              type="range" min="0" max="0.4" step="0.02"
-              value={params.breathe}
-              onChange={(e) => updateParam('breathe', parseFloat(e.target.value))}
-            />
-          </div>
-
-          <div className="control-item">
-            <label>散落程度: {params.spread}</label>
-            <input 
-              type="range" min="0" max="6" step="0.5"
-              value={params.spread}
-              onChange={(e) => updateParam('spread', parseFloat(e.target.value))}
-            />
-          </div>
-
-          <div className="control-tip">调整后自动实时生效</div>
-        </div>
-      )}
     </div>
   )
 }
