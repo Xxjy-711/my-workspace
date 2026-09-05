@@ -1,9 +1,13 @@
 import { useState } from 'react'
 import BotanicalText from './BotanicalText'
+import BotanicalTextThree from './BotanicalTextThree'
+import { detectWebGL } from '../utils/detectWebGL'
 import './WelcomePage.css'
 
 export default function WelcomePage({ onEnter }) {
   const [showControls, setShowControls] = useState(false)
+  // 浏览器支持 WebGL 时启用 Three.js 版；不支持则回退 Canvas 2D 版（避免白屏）
+  const [useThree] = useState(() => detectWebGL())
   const [params, setParams] = useState({
     density: 5,
     bloomSize: 6,
@@ -21,18 +25,32 @@ export default function WelcomePage({ onEnter }) {
   return (
     <div className="welcome-page" onClick={onEnter}>
       <div className="welcome-content">
-        <BotanicalText 
-          text="My Workspace" 
-          width={950} 
-          height={280}
-          density={params.density}
-          bloomSize={params.bloomSize}
-          leafMix={params.leafMix}
-          hoverRadius={params.hoverRadius}
-          maxBloom={params.maxBloom}
-          breathe={params.breathe}
-          spread={params.spread}
-        />
+        {useThree ? (
+          <BotanicalTextThree 
+            text="My Workspace" 
+            width={950} 
+            height={280}
+            density={params.density}
+            bloomSize={params.bloomSize}
+            leafMix={params.leafMix}
+            hoverRadius={params.hoverRadius}
+            maxBloom={params.maxBloom}
+            breathe={params.breathe}
+          />
+        ) : (
+          <BotanicalText 
+            text="My Workspace" 
+            width={950} 
+            height={280}
+            density={params.density}
+            bloomSize={params.bloomSize}
+            leafMix={params.leafMix}
+            hoverRadius={params.hoverRadius}
+            maxBloom={params.maxBloom}
+            breathe={params.breathe}
+            spread={params.spread}
+          />
+        )}
         <div className="welcome-hint">点击进入每日早报</div>
       </div>
 
