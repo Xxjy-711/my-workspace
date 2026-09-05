@@ -5,6 +5,8 @@ import './WelcomePage.css'
 
 // Three.js 版按需加载：仅在支持 WebGL 且真正需要时下载 three.js chunk
 const BotanicalTextThree = lazy(() => import('./BotanicalTextThree'))
+// Originkit Botanical Text（内含 three）：懒加载，与主包分离
+const OriginkitFlowerType = lazy(() => import('./originkit/botanical-text'))
 
 export default function WelcomePage({ onEnter }) {
   const [showControls, setShowControls] = useState(false)
@@ -56,6 +58,25 @@ export default function WelcomePage({ onEnter }) {
           />
         )}
         <div className="welcome-hint">点击进入每日早报</div>
+        <div
+          className="originkit-wrap"
+          onClick={(e) => e.stopPropagation()}
+          onPointerDown={(e) => e.stopPropagation()}
+        >
+          <div className="originkit-label">✦ 交互花朵文字（Originkit）· 点击输入 / 划过绽放</div>
+          <Suspense fallback={null}>
+            <OriginkitFlowerType
+              text="Botanical"
+              bloom="#FF6B9D"
+              leaf="#3E9E5A"
+              opacity={14}
+              bloomSize={11}
+              leafSize={8}
+              leafMix={3}
+              spread={3}
+            />
+          </Suspense>
+        </div>
       </div>
 
       <button 
