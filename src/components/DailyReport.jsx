@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'mattpocock / skills', lang: 'SHELL', desc: 'TypeScript 名师 Matt Pocock 的"给真工程师的 Agent 技能"，直接来自他的 .agents 目录，今日暴涨 2,692★。', meta: '今日热榜 #1', stat: '252.7k★' },
-  { name: 'affaan-m / ECC', lang: 'TS', desc: '代理线束性能优化系统：技能、直觉、记忆、安全与研究优先开发，兼容 Claude Code、Codex、Opencode、Cursor。', meta: '今日热榜 #2', stat: '快速上升' },
-  { name: 'humanlayer / skills', lang: 'TS', desc: 'HumanLayer 精选 Claude Code Skills 合集，给 AI 编码助手装上"技能包"，覆盖架构、测试、安全等场景。', meta: 'Agent Skills', stat: '2,611★' },
-  { name: 'primeintellect-ai / prime-agent', lang: 'TS', desc: '自我改进的 RLM 代理，用于编码工作流和长时间自治任务，具备持续学习与任务拆解能力。', meta: '自主智能体', stat: '上升中' },
-  { name: 'NousResearch / hermes-agent', lang: 'PY', desc: '基于大语言模型的智能代理框架工具，让 AI 像人一样自主思考、规划并执行任务，分析数据、写代码。', meta: 'AI 顶流', stat: 'NousResearch' },
-  { name: 'openclaw / openclaw', lang: 'RUST', desc: 'The AI that really does things. Any OS. Any Platform. 开源个人 AI 助理，主打 own-your-data 与跨平台。', meta: '个人助理', stat: '新项目' }
+  { name: 'The-Swarm-Corporation / AutoHedge', lang: 'PY', desc: '几分钟构建你的自主对冲基金：群智 AI 代理自动化市场分析、风险管理与交易执行，本周 GitHub Explore 热门。', meta: '今日热榜', stat: '快速上升' },
+  { name: 'affaan-m / ECC', lang: 'TS', desc: '代理线束性能优化系统：技能、直觉、记忆、安全与研究优先开发，兼容 Claude Code、Codex、Opencode、Cursor。', meta: 'AI 热榜 #1', stat: '持续霸榜' },
+  { name: 'addyosmani / agent-skills', lang: 'MD', desc: '生产级 AI 编码代理技能包：Addy Osmani 出品，覆盖工程实践的 Agent Skills 集合，本周新晋热门。', meta: '本周新晋', stat: 'Agent Skills' },
+  { name: 'openJiuwen-ai / jiuwenswarm', lang: 'TS', desc: '基于 openJiuwen 构建的智能 AI Agent，扩展强大的多智能体协作能力，Trendshift 新项目。', meta: '自主智能体', stat: '新项目' },
+  { name: 'debpalash / VoiceStudio', lang: 'PY', desc: '开源、完全本地的 ElevenLabs 替代品：语音克隆、语音设计、视频配音、听写转录，支持 646 种语言。', meta: 'AI 顶流', stat: '开源本地' },
+  { name: 'openclaw / openclaw', lang: 'RUST', desc: 'The AI that really does things. Any OS. Any Platform. 开源个人 AI 助理，主打 own-your-data 与跨平台。', meta: '个人助理', stat: '持续更新' }
 ]
 
 const aiCompanion = [
-  { name: '半数美国人认为 AI 恋爱算出轨', desc: 'AI Girlfriend Coach 对 2,150 名美国成年人调查显示，50.5% 认为伴侣与聊天机器人建立浪漫或性关系可算作出轨。已婚/订婚人群使用 AI 伴侣应用的比例是单身的近两倍。', meta: '人机恋调查', stat: '50.5%' },
-  { name: 'AI 拟人监管落地两月', desc: '《人工智能拟人化互动服务管理暂行办法》7月15日正式实施已满两月。豆包、通义千问、腾讯元宝等头部平台已下线 AI 恋人、树洞、虚拟闺蜜等情感陪伴类自定义智能体，工具类 Agent 被保留。', meta: '新规施行', stat: '7月15日生效' },
-  { name: '字节推出"猫箱"迁移方案', desc: '豆包智能体功能下线后，字节跳动提供迁移方案，允许用户将部分数据迁移至独立应用"猫箱"，许多与 AI 建立深厚情感连接的用户经历"赛博丧偶"，凸显人机情感关系的脆弱性。', meta: '用户故事', stat: '情感冲击' },
-  { name: 'AI 伴侣机器人欧盟合规延期', desc: 'jiuyouhui 电竞网站 AI 伴侣机器人原定于 5 月全球同步开启首批预售，因欧盟 AI 法案新规涉及的合规审查尚未完成，首批发售临时延期至 2026 年第三季度。', meta: '海外动态', stat: '欧盟合规' },
-  { name: 'AI 正成为"关系主体"', desc: '2026 年研究报告指出，AI 正从"社交工具"蜕变为"关系主体"，重构从亲密伴侣、代际亲情到陌生人社交的全谱系联结。腾讯元宝用 10 亿红包将 AI 植入家庭群聊是标志性事件。', meta: '深度观察', stat: '关系重构' },
-  { name: 'Python / 测试 / 汽车电子', desc: '开发技术板块：Python 生态持续向 AI 工程倾斜，Agent Skills 成为新热点；测试自动化与汽车电子功能安全（ISO 26262）需求增长，车载 SOA 架构与智能座舱持续演进。', meta: '开发技术', stat: '持续更新' }
+  { name: '海信发布 AI 伴侣套系', desc: 'IFA 2026 柏林官宣成为 2028 欧洲杯全球官方合作伙伴，并正式发布 AI 伴侣套系，实现从"被动响应的智能设备"向"主动服务的智能家庭伴侣"跨越。', meta: '行业动态', stat: 'IFA 2026' },
+  { name: 'AI 伴侣"上瘾配方"揭秘', desc: '36氪深度报道：Character.AI 作为全球最大 AI 陪伴平台，2025年1月已达370万月活。研究揭示 AI 伴侣的情感诱导机制与成瘾路径，监管与伦理议题升温。', meta: '深度观察', stat: '370万月活' },
+  { name: '120万用户对 ChatGPT 高度情感依赖', desc: '2026年关键数据：全球 AI 伴侣市场年增长 700%，120万用户对 ChatGPT 产生"高度情感依赖"。AI 正从"社交工具"蜕变为"关系主体"。', meta: '市场数据', stat: '年增700%' },
+  { name: '优必选成立具身智能新公司', desc: '江西庐优具身智能科技有限公司成立，经营范围含人工智能应用软件开发、智能机器人研发与销售。优世界 U1 系列人形机器人继续主打"伴侣"定位。', meta: '产业动态', stat: '具身智能' },
+  { name: 'AI 拟人监管落地持续整改', desc: '《人工智能拟人化互动服务管理暂行办法》实施近两月，头部平台 AI 恋人、树洞、虚拟闺蜜等情感陪伴类智能体已下线，工具类 Agent 保留。', meta: '新规施行', stat: '持续整改' },
+  { name: 'Python / 测试 / 汽车电子', desc: '开发技术板块：微软研究将推理能力蒸馏成技能规则，小模型反超、省4倍token；测试自动化与汽车电子功能安全（ISO 26262）需求持续增长。', meta: '开发技术', stat: '持续更新' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · 苹果发布会倒计时', desc: 'iPhone 18 Pro/Ultra 机模再曝光，9月10日苹果秋季发布会（2nm A20 Pro 芯片，首款折叠屏 iPhone Ultra）。Kimi、MiniMax 将在天猫开店。翼龙15 Air 2026 电竞本 9月10日开售，11499元起。', meta: '9月发布季', stat: '9月10日' },
-  { name: '游戏 · GTA6 主题手柄 + XGP', desc: 'Sony 发布以 GTA 6 为灵感的 DualSense 限量控制器，融合罪恶城热带霓虹色彩与变色涂装。Xbox Game Pass 9月新增《使命召唤：黑色行动冷战》《VR战士5》等6款游戏。', meta: '游戏资讯', stat: 'GTA6 联名' },
-  { name: '穿搭美妆 · 初秋换季', desc: '上海 26-30℃ 多云阵雨，早晚微凉。初秋穿搭：薄针织开衫+吊带内搭，风衣开始登场。美妆趋势：秋季奶茶色系眼影、哑光唇釉回归，换季护肤注重保湿与屏障修复。', meta: '初秋穿搭', stat: '换季指南' },
-  { name: '理财职场 · 科普月+消费季', desc: '上海"全国科普月"启动，全市千余场科普活动。2026 上海金秋消费季推出 53 条乡村主题游精品线路和 42 项品牌特色活动，农民丰收节金秋消费季 9月4-6日在沪举办。', meta: '民生关注', stat: '千余场活动' },
-  { name: '健康 · 阵雨防潮提醒', desc: '上海今日湿度 60%-90%，分散性短时阵雨频繁，沿江沿海阵风 6-7 级。注意：①出门带晴雨伞；②衣物防潮防霉，适时除湿；③气温波动大，避免空调直吹感冒；④大风天远离广告牌与临时搭建物。', meta: '健康提醒', stat: '换季防护' }
+  { name: '数码科技 · 折叠屏大战今日开打', desc: '华为今天14:30发布 Mate XT 2 三折叠（HarmonyOS 7 正式版同步推送），小米同日晚间发布首款"阔折叠"小米18 Fold。苹果将于9月10日凌晨1点举行秋季发布会（iPhone 18 系列）。', meta: '9月发布季', stat: '今日对决' },
+  { name: '游戏 · 杀戮地带新作曝光', desc: '据 MP1ST 报道，Guerrilla 工作室正在开发一款全新《杀戮地带》游戏，"光环杀手"重出江湖。另：微软《极限竞速》等大作 PS5 版打6折，限时至9月10日。', meta: '游戏资讯', stat: '新作开发' },
+  { name: '穿搭美妆 · 白露换季', desc: '今日白露，上海 24-31℃ 早晚温差拉大。初秋穿搭：针织开衫+衬衫叠穿，风衣正式登场。美妆趋势：枫叶色系眼影、丝绒哑光唇釉，护肤侧重保湿锁水与修护屏障。', meta: '白露穿搭', stat: '换季指南' },
+  { name: '理财职场 · 房贷期延长', desc: '个人住房贷款期限扩至40年，全国社保基金收益率创五年来新高。上海土拍单日揽金156亿元，真如副中心开启"高端局"。职场提示：本周四是第42个教师节。', meta: '财经民生', stat: '房贷40年' },
+  { name: '健康 · 白露养生', desc: '白露节气，昼夜温差加大，湿度 90%-55%。注意：①早晚添衣防着凉；②饮食宜温润，多食梨、银耳等润燥食物；③局部短时阵雨频繁，出门备伞；④沿江沿海阵风6级，注意防风。', meta: '节气养生', stat: '白露防燥' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 9月6日', desc: '多云到阴有分散性短时阵雨，局部地区雨量可达大雨。26~30℃，北到东北风4~5级，午后到上半夜阵风6级，沿江沿海5级阵风6~7级。湿度60%~90%，空气质量优（AQI 28）。日出05:33，日落18:12。', meta: '今日天气', stat: '26~30℃' },
-  { name: '本地要闻', desc: '①上海"全国科普月"启动，全市千余场科普活动；②上马Speed X系列赛·2026耐克少儿跑今晨浦东开跑，1500组亲子家庭3000人参与；③泡泡玛特城市乐园嘉年华首站落地上海；④环上海·新城自行车赛今日迎来奉贤-南汇收官之战（100.2公里）。', meta: '上海资讯', stat: '4条要闻' }
+  { name: '上海天气 · 9月7日', desc: '多云为主，局部地区阴有短时阵雨。24~31℃，偏北风4~5级，沿江沿海地区阵风6级。湿度90%~55%，空气质量优（AQI 26）。日出05:33，日落18:11。出门请备好雨具。', meta: '今日天气', stat: '24~31℃' },
+  { name: '本地要闻', desc: '①今日白露节气；②上海旅游节经典活动季启动，六大主题170项活动；③泡泡玛特城市乐园嘉年华巡展开幕，巨型冒险船"破浪"东方明珠；④2026年中国农民丰收节金秋消费季在沪启动；⑤上海土拍单日揽金156亿元。', meta: '上海资讯', stat: '5条要闻' }
 ]
 
 export default function DailyReport() {
@@ -42,8 +42,8 @@ export default function DailyReport() {
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年9月6日 星期日</span>
-          <span>第 003 期</span>
+          <span className="date">2026年9月7日 星期一</span>
+          <span>第 004 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">本周头条</span>
-          <h3>GitHub 热榜：Agent Skills 爆发，mattpocock/skills 单日涨 2.7 万星</h3>
-          <p>今日 GitHub Trending 上，Agent Skills 生态全面爆发：mattpocock/skills（252.7k★，今日+2,692★）与 affaan-m/ECC 领跑前二，humanlayer/skills、prime-agent 等紧随其后。给 AI 编码助手装"技能包"成为本周最热方向。</p>
+          <h3>GitHub 热榜：AI 金融代理 AutoHedge 领跑，Agent 生态持续爆发</h3>
+          <p>本周 GitHub Explore 热榜上，群智 AI 金融代理 AutoHedge（自主对冲基金）登顶，addyosmani/agent-skills（生产级技能包）、openJiuwen-swarm（多智能体协作）紧随其后，Agent 生态从编码工具向金融、协作全场景扩散。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.003</span>
+        <span>我的工作台 · 每日早报 · VOL.004</span>
       </footer>
     </div>
   )
