@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'THU-MAIC / OpenMAIC', lang: 'TS', desc: '清华开源多智能体互动课堂：上传资料一键生成可提问、可练习、可聊改的课程，本周 +10.1k★，总计 32.2k★，本周开源周榜明星。', meta: '本周热榜', stat: '+10.1k★' },
+  { name: 'bilawalsidhu / gods-eye-view', lang: 'TS', desc: '浏览器里的间谍卫星模拟器：基于 Google Maps Photorealistic 3D Tiles 与 Three.js 的 3D 地理空间可视化，今日热榜 #1。', meta: '今日热榜', stat: '3D 可视化' },
   { name: 'affaan-m / ECC', lang: 'TS', desc: '代理线束性能优化系统：技能、直觉、记忆、安全与研究优先开发，兼容 Claude Code、Codex、Opencode、Cursor，AI 热度榜 #1。', meta: 'AI 热榜 #1', stat: '持续霸榜' },
-  { name: 'debpalash / VoiceStudio', lang: 'PY', desc: '开源的本地版 ElevenLabs：语音克隆、语音设计、视频配音、听写转录与有声书创作，支持 646 种语言，本月新晋项目。', meta: '语音 AI', stat: '646种语言' },
-  { name: 'lobehub / lobehub', lang: 'TS', desc: '你的 AI 团队首席 Agent 运营官：招募、调度、汇报你的整个 AI 团队，7×24 小时自动化运营，长期热榜。', meta: 'Agent 运营', stat: '7×24' },
-  { name: 'mattpocock / skills', lang: 'MD', desc: '让 AI 先问对问题再写代码：给编码代理装上"需求澄清"技能，避免在模糊需求上建错东西，今日 +2.8k★。', meta: '今日新晋', stat: '+2.8k★' },
-  { name: 'DietrichGebert / ponytail', lang: 'JS', desc: '阻止 AI 把小修复变成新框架：一组指令让 AI 编码代理优先复用现有代码，今日 +2.3k★。', meta: '今日新晋', stat: '+2.3k★' }
+  { name: 'JustVugg / colibri', lang: 'C', desc: '在现有硬件上运行前沿 MoE 模型：纯 C、零依赖、专家从磁盘流式加载——小引擎，大模型。今日热榜新晋。', meta: '今日新晋', stat: '纯C引擎' },
+  { name: 'debpalash / VoiceStudio', lang: 'PY', desc: '开源的本地版 ElevenLabs：语音克隆、语音设计、视频配音、听写转录与有声书创作，支持 646 种语言，持续热榜。', meta: '语音 AI', stat: '646种语言' },
+  { name: 'alibaba / open-code-review', lang: 'TS', desc: '阿里开源的代码审查智能体：自动化的 AI 代码评审工具，Trendshift 新晋项目。', meta: '阿里开源', stat: '代码评审' },
+  { name: 'omacom / omarchy', lang: 'Shell', desc: 'Beautiful, Modern & Opinionated Linux：一个更现代、更漂亮的开源 Linux 发行版，本月 +16.5k★。', meta: '本月热榜', stat: '+16.5k★' }
 ]
 
 const aiCompanion = [
-  { name: '"AI恋人"下架整改满月', desc: '华西都市报调查：《人工智能拟人化互动服务管理暂行办法》施行一个月，许多"AI恋人"被下架整改，豆包、千问、元宝等大厂的 AI 角色对话功能也纷纷宣布下线，人机恋进入强监管时代。', meta: '监管落地', stat: '大厂下线' },
-  { name: 'OpenAI 拟推 1 亿台 AI 伴侣设备', desc: '据财联社，OpenAI CEO 奥特曼向员工展示与苹果前设计师 Jony Ive 共同开发的设备，计划推出 1 亿个人工智能"伙伴"（AI companions），目标 2026 年末开始出货。', meta: '海外动态', stat: '1亿台' },
-  { name: '机器人伴侣持续热销', desc: '仿生人形机器人 11.98 万元起预售、多款角色可选、搭载情感大模型，不到一个月收获超 1.3 万台订单，"机器人伴侣"概念持续升温。', meta: '硬件伴侣', stat: '1.3万台' },
-  { name: 'AI 男友/女友怎么选', desc: '大厂 AI 角色下线后，市场转向"长期陪伴"产品：能记住你、主动关心、支持管理记忆与退出关系的 AI 伴侣成为新标准，"人机恋"进入精细化产品时代。', meta: '产品观察', stat: '长期记忆' },
-  { name: 'AI 角色大模型分层记忆', desc: '角色大模型分层记忆专利（短期/中期/长期三层结构+人格偏置检索算法）让 AI 伴侣实现"记忆新陈代谢"，长期情感联结的基础设施日趋成熟。', meta: '技术前沿', stat: '分层记忆' },
-  { name: 'Python / 测试 / 汽车电子', desc: '开发技术板块：开源语音（VoiceStudio）、多智能体课堂（OpenMAIC）等场景化项目密集上新；AI 编码 Agent 的"问清楚再做"成为新趋势；测试与汽车电子需求稳步增长。', meta: '开发技术', stat: '持续更新' }
+  { name: 'Bside："沉默"的 AI 陪伴凭什么次留60%', desc: '人人都是产品经理深度拆解：上海团队 Kotoko AI 的桌面陪伴产品 Bside 撬动日本市场——玩家捏出原创角色"Biibit"，看它生活、交朋友、出门冒险。2025年10月登陆 Steam 抢先体验，二次元"赛博分身"概念引爆日本。', meta: '产品拆解', stat: '次留60%' },
+  { name: '18岁Clawra和60万场数字恋情', desc: 'GitHub 开源 AI 项目引发关注：一个名为 Clawra 的 AI 角色背后是 60 万场数字恋情。人机恋从猎奇走向规模化，长期记忆与情感陪伴成为开源社区最热议题之一。', meta: '开源项目', stat: '60万场' },
+  { name: '星眠：仿生人男友永久记忆', desc: '手游《星眠》主打 AI 动态陪伴：仿生人男友 MY-001 拥有永久记忆、真实情绪起伏，Live2D 触摸反馈覆盖耳垂、垂眸等细节，"活人感"拉满的赛博男友持续出圈。', meta: '产品观察', stat: '永久记忆' },
+  { name: '大厂 AI 角色下线，用户流向"猫箱"', desc: '《办法》落地后，豆包、通义千问、腾讯元宝等头部平台下线情感陪伴类自定义智能体；字节跳动提供迁移方案，用户数据可迁至独立应用"猫箱"，陪伴需求向垂直产品转移。', meta: '行业动态', stat: '迁移方案' },
+  { name: '美国调查：已婚者更爱用 AI 恋人', desc: 'AI Romance 2026 调查（美国 2150 名成年人）：订婚/已婚受访者使用 AI 男友/女友应用的比例几乎是单身者的两倍，且更倾向认为 AI 恋情算"出轨"——AI 情感关系正在模糊亲密关系的边界。', meta: '社会观察', stat: '2,150人' },
+  { name: 'Python / 测试 / 汽车电子', desc: '开发技术板块：AI 音乐（YuE）、本地语音（VoiceStudio）等生成式项目密集上新；纯 C 推理引擎（colibri）让 MoE 大模型跑进个人硬件；测试与汽车电子需求稳步增长。', meta: '开发技术', stat: '持续更新' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · 麒麟9050 Pro 实测', desc: '华为 Mate XT 2 展翼三折叠首发麒麟 9050 Pro（19999 元起）：极客湾实测能效出色，游戏体验比肩骁龙 8 Elite 产品。智谱官宣 50 亿美元融资，国产大模型资本热度不减。', meta: '数码资讯', stat: '旗舰实测' },
-  { name: '游戏 · 赛博朋克2077登陆战网', desc: 'CD Projekt RED 今日宣布《赛博朋克2077》年内上线暴雪战网（含《往日之影》资料片），《巫师3》重制版同步确认；苹果被曝开发 iPhone 游戏手柄（The Verge）；2026 PCL 秋季赛今晚开赛。', meta: '游戏资讯', stat: '跨界登陆' },
-  { name: '穿搭美妆 · 阵雨微凉', desc: '今日多云到阴局部短时阵雨，24~30℃，北到东北风4~5级。穿搭：防风薄外套+长裤应对阵雨降温，通勤建议随身带伞。美妆趋势：初秋"湿发感"造型与雾面底妆流行。', meta: '穿搭指南', stat: '阵雨降温' },
-  { name: '理财职场 · 大模型融资潮', desc: '智谱官宣 50 亿美元融资，国产大模型进入资本深水区；外滩大会落幕：50 余项成果首发首展、80 多项合作达成意向、7.8 万人次现场参会，AI 产业商业化加速。', meta: '财经职场', stat: '50亿美元' },
-  { name: '健康 · 防风防雨提醒', desc: '今日北到东北风4~5级（沿江沿海阵风6级），局部短时阵雨。注意：①大风天出行远离临时搭建物与广告牌；②阵雨时段路滑慢行；③本周15-16日适合洗晒，17日有弱降水；④湿度85%-40%变化大，注意衣物防潮。', meta: '健康提醒', stat: '大风6级' }
+  { name: '数码科技 · Steam Deck 2 计划未变', desc: '内存涨价背景下，Valve 表示 Steam Deck 2 计划不变；AOC 便携屏降至 49.99 美元，Switch 玩家迎来真香外设。Steam Frame（Valve 新硬件）正式发布，掌机市场风起云涌。', meta: '数码资讯', stat: '掌机潮' },
+  { name: '游戏 · 漫威金刚狼今日发售', desc: '《漫威金刚狼》今日登陆 PS5：高线性单人史诗，血腥战斗与电影级过场拉满期待；《雷曼传奇：重制版》"压盘后延期"至12月3日；《Crystal Crisis》Steam 限免至9月22日；2026 暴雪嘉年华本周末开幕。', meta: '游戏资讯', stat: '金刚狼' },
+  { name: '穿搭美妆 · 晴好洗晒日', desc: '今日多云到晴，21~30℃，北到东北风4~5级（沿江阵风6级）。穿搭：白天短袖+防晒，早晚备薄外套；今天特别适合洗晒换季衣物。美妆趋势：初秋"清透感"防晒底妆与奶茶色系唇釉流行。', meta: '穿搭指南', stat: '适宜洗晒' },
+  { name: '理财职场 · 医保余额全家共济', desc: '医保个人账户余额今日起可全家共济：职工医保参保人可在"随申办"绑定家庭成员，家庭共享医保余额。2026 国家网络安全宣传周上海开幕，主题"智能时代 网安护航"。', meta: '财经职场', stat: '家庭共济' },
+  { name: '健康 · 换季洗晒提醒', desc: '今日多云到晴适合大扫除与晾晒：①换季衣物、被褥趁今天紫外线适宜时晾晒杀菌；②早晚温差约9℃（21-30℃）防着凉；③明天起转阴，洗晒宜趁今日；④秋燥渐起，多喝水润燥。', meta: '健康提醒', stat: '趁晴晾晒' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 9月14日', desc: '多云到阴，局部地区有短时阵雨。24~30℃，北到东北风4~5级，沿江沿海地区阵风6级。湿度85%~40%，空气质量优（AQI 29）。日出05:38，日落18:02。', meta: '今日天气', stat: '24~30℃' },
-  { name: '本地要闻', desc: '①第48届世界技能大赛在沪举行，今日0时起8条入沪高速省际道口实施交通管制（至9月27日24时）；②2026外滩大会闭幕：50余项成果首发、80多项合作意向、7.8万人次参会；③上海综合科创水平保持全国第一；④MXGP上海站收官，赛事红利持续释放；⑤第二届全国青少年智能无人系统应用大赛总决赛在沪开幕。', meta: '上海资讯', stat: '5条要闻' }
+  { name: '上海天气 · 9月15日', desc: '多云到晴。21~30℃，北到东北风4~5级，沿江沿海地区阵风6级，夜里转3~4级。湿度80%~40%，空气质量优（AQI 24）。日出05:38，日落18:01。', meta: '今日天气', stat: '21~30℃' },
+  { name: '本地要闻', desc: '①医保个人账户余额今日起可全家共济（随申办可绑定家庭成员）；②2026国家网络安全宣传周上海地区活动开幕（主题"智能时代 网安护航"）；③第三届上海国际光影节9月17日-10月16日举行（黄浦主会场+16个分会场）；④陈吉宁调研市金融工作党委，增强国际金融中心竞争力；⑤世赛期间入沪高速省际道口交通管制持续至9月27日。', meta: '上海资讯', stat: '5条要闻' }
 ]
 
 export default function DailyReport() {
@@ -42,8 +42,8 @@ export default function DailyReport() {
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年9月14日 星期一</span>
-          <span>第 011 期</span>
+          <span className="date">2026年9月15日 星期二</span>
+          <span>第 012 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">本周头条</span>
-          <h3>GitHub 热榜：多智能体课堂领跑，AI 编码进入"问清楚再做"时代</h3>
-          <p>今日热榜上，清华 OpenMAIC（资料一键变互动课）本周 +10.1k★ 领跑；VoiceStudio（本地版 ElevenLabs）补齐开源语音拼图；mattpocock/skills 与 ponytail 代表的"需求澄清派"走红——AI 编码正从"埋头快写"转向"先问对问题"。</p>
+          <h3>GitHub 热榜：纯 C 跑大模型，AI 推理进入"个人硬件"时代</h3>
+          <p>今日热榜上，gods-eye-view（3D 地理空间可视化）领衔，JustVugg/colibri 用纯 C 把 MoE 大模型跑进现有硬件，阿里的 open-code-review 入局 AI 代码评审；生成式 AI（音乐、语音）与端侧推理成为两大主线。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.011</span>
+        <span>我的工作台 · 每日早报 · VOL.012</span>
       </footer>
     </div>
   )
