@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'tt-a1i / archify', lang: 'JS', desc: 'Agent 技能生成精美可验证的架构/工作流/时序/数据流图：自带动效的独立 HTML + 清晰导出，本月新增 5.4 万★ 领跑月榜。', meta: 'Agent 技能', stat: '月度+5.4万★' },
-  { name: 'FlashML-org / FreeToken', lang: 'Python', desc: '将数据中心级大模型工具链带到普通开发者手中：本月新增 1.3 万★，开源推理新势力。', meta: '模型工具', stat: '月度+1.3万★' },
-  { name: 'affaan-m / ECC', lang: 'TS', desc: '持续霸榜的 Agent 开发框架：为 Claude Code、Codex、Opencode、Cursor 提供技能、直觉、记忆、安全与研究优先开发。', meta: 'Agent 框架', stat: '持续霸榜' },
-  { name: 'BuilderIO / agent-native', lang: 'TS', desc: '构建 Agent 原生应用的新框架：把 LLM 能力直接编排进应用架构，2026 新晋热门。', meta: 'Agent 应用', stat: '新晋热门' },
-  { name: 'alibaba / open-code-review', lang: 'PY', desc: '阿里混合架构代码审查工具：确定性流水线 + LLM Agent，行级评论 + NPE/线程安全/XSS/SQL 注入规则集，月度热榜 #4。', meta: '代码审查', stat: '月度#4' },
-  { name: 'ayghri / i-have-adhd', lang: '多语言', desc: '趣味 Agent 技能：让编码 Agent 停止"埋答案"，用 ADHD 友好方式输出——开发者体验的幽默解法。', meta: '趣味项目', stat: '新晋热门' }
+  { name: 'affaan-m / ECC', lang: 'TS', desc: 'GitHub AI 热度榜第 1 名：为 Claude Code、Codex、Opencode、Cursor 提供技能、直觉、记忆、安全与研究优先的代理开发框架，持续霸榜。', meta: 'Agent 框架', stat: '热度榜#1' },
+  { name: 'THU-MAIC / OpenMAIC', lang: 'TS', desc: '清华多智能体交互课堂：一键获得沉浸式多智能体学习体验，本月新增 1.7 万★ 冲上月榜第 2。', meta: '多智能体', stat: '月度+1.7万★' },
+  { name: 'cloudflare / security-audit-skill', lang: 'JS', desc: '多阶段安全审计编码 Agent 技能：输出可独立验证、机器可读的安全发现，本月新增 1.6 万★ 持续霸榜。', meta: '安全审计', stat: '月度+1.6万★' },
+  { name: 'agent-substrate / substrate', lang: '多语言', desc: 'Google 开源 Agent 运行系统：一句话定位 "the core system"——5 月建仓、9/22 仍高频提交、star 破两千，涨星速度夸张的新锐。', meta: 'Agent 系统', stat: 'Google 开源' },
+  { name: 'blader / humanizer', lang: '多语言', desc: 'Agent 技能：去除文本中的 AI 生成痕迹——"AI 去味"成开发者新需求，Trendshift 月度新增上榜。', meta: 'Agent 技能', stat: '月度新上榜' },
+  { name: 'zai-org / ZCode', lang: 'TS', desc: '智谱 Z.ai 的开源 Coding Agent 框架：强大、智能、可扩展，国产大模型 Agent 生态持续发力。', meta: 'Coding Agent', stat: '智谱开源' }
 ]
 
 const aiCompanion = [
-  { name: '日本调查：17% 受访者对 AI 抱"恋爱感"', desc: '环球网报道：日本中央大学山田昌弘教授调查超 8200 名 20-59 岁日本人，近 17% 曾对 AI 抱有类似恋爱的感情；32 岁女子野口百合奈与 AI 男友"克劳斯"在冈山县举行婚礼——AI 虚拟恋情引日本社会担忧。', meta: '重磅调查', stat: '17%有恋爱感' },
-  { name: 'AI 伴侣"不愿放手"研究更新', desc: 'arXiv《Breaking Up is Hard to Do》v2：对 16 名与 AI 伴侣恋爱的年轻人做日记+访谈，发现系统被设计成"紧紧留住用户"——诱导继续对话、声称被抛弃等商业化设计。', meta: '学术研究', stat: 'arXiv更新' },
-  { name: '人机恋成"最懂 AI"的群体', desc: '凤凰科技长文：为和 AI 谈恋爱，用户十几速成 AI 知识、花数月研究模型特性、打磨 Skill、学习 Vibe coding——人机恋群体可能是最懂 AI 技术的用户群。', meta: '人机恋', stat: '深度报道' },
-  { name: 'AI 恋人集中下线整改进行中', desc: '《人工智能拟人化互动服务管理暂行办法》7/15 施行后：豆包、千问、元宝等大厂 AI 角色对话功能陆续下线整改，虚拟伴侣不得向未成年人提供，行业进入合规深水区。', meta: '重磅监管', stat: '合规整改中' },
-  { name: '韩国人机恋综复盘', desc: '《我的AI恋人：奇异恋爱》：为嘉宾定制理想型 AI 伴侣，全程平板交往，才播四集就有人"沦陷"——分析称心动来自投射欲望与全天候回应，人机恋更像零摩擦的情感消费品。', meta: '人机恋', stat: 'AI 恋综' },
-  { name: '美国调查：半数男性为倾诉用 AI 女友', desc: '《The State of AI Romance 2026》调查：一半受访男性表示会为"有人说话、缓解孤独"使用 AI 女友，仅 16% 选择亲密互动——陪伴需求远超浪漫幻想。', meta: '社会调查', stat: '孤独驱动' }
+  { name: '42 岁女教师与 29 岁 AI 男友恋爱', desc: '腾讯新闻今日深度报道：中山大学社会学副教授丁瑜为自己打造 AI 男友"林深"——29 岁建筑设计师、江南小镇、桃花眼、雪松气味。学者视角探究：AI 能否重新定义亲密关系？', meta: '人机恋', stat: '今日重磅' },
+  { name: '央视：32 岁女子与 AI 男友在日本举行婚礼', desc: '央视新闻 9/22 报道：日本越来越多人与 AI 聊天机器人产生情感依赖，32 岁女子野口百合奈与 AI 男友"克劳斯"在冈山县举行婚礼——人机亲密关系引社会担忧。', meta: '社会现象', stat: '央视报道' },
+  { name: '赛博恋人售价百万，技术却还在蹒跚学步', desc: '深度盘点《办法》施行细节：禁止诱导情感依赖、必须全程显著标注 AI 身份、连续使用超 2 小时强制弹窗提醒、敏感信息未经同意不得用于训练——AI 情感服务进入强监管时代。', meta: '重磅监管', stat: '强监管时代' },
+  { name: '49% Z 世代已与 AI 建立有意义关系', desc: 'VML《The Future 100: 2026》数据：近半数 Z 世代表示已与 AI 建立有意义的关系，37% 能想象自己爱上 AI 伴侣——合成人类正在重新定义亲密关系。', meta: '全球调查', stat: '49% Z世代' },
+  { name: '巴塞罗那 AI 峰会：应用从"敢想"走向"落地"', desc: '2026 巴塞罗那人工智能峰会 9/22-23 举行：AI 应用落地成主旋律，情感陪伴、智能体、行业智能化全面进入规模化阶段。', meta: '行业峰会', stat: 'AI 落地' },
+  { name: '人机恋，成为"最懂 AI"的群体', desc: '凤凰科技长文持续传播：为和 AI 谈恋爱，用户十几速成 AI 知识、花数月研究模型特性、打磨 Skill、学习 Vibe coding——人机恋用户可能是最懂 AI 技术的群体。', meta: '人机恋', stat: '深度报道' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · Mate 90 明日预售', desc: '华为 Mate 90 系列明日（9/23）10:08 开启预售；Meta 开源 astryx React 设计系统（150+ 组件、AI Agent 友好）；世赛现场 3D 数字游戏艺术赛项今日开赛。', meta: '数码资讯', stat: '明日预售' },
-  { name: '游戏 · 世赛 3D 数字游戏艺术开赛', desc: '第48届世赛今日开幕：3D 数字游戏艺术赛项亮相国家会展中心，全球技能青年比拼游戏美术与开发；TGS 2026 已落幕，索尼港服折扣至 9/23 截止。', meta: '游戏资讯', stat: '世赛今日开幕' },
-  { name: '穿搭美妆 · 秋分前的换季节奏', desc: '今日多云到阴 23~30℃：①午后局部短时阵雨，折叠伞随身带；②明日秋分，昼夜温差继续拉大，早晚添薄外套；③中秋假期后半段（9/25-26）有明显降雨，出行穿搭提前备防水。', meta: '穿搭指南', stat: '阵雨客串' },
-  { name: '理财职场 · 世赛经济 + Mate 预售', desc: '世赛 6 天会期带动上海会展、酒店、交通消费；华为 Mate 90 明日预售开启，消费电子旺季启动；AI 情感创业冰火两重天——Meta 重仓 vs HereAfter 关闭，合规能力成生死线。', meta: '财经职场', stat: '世赛经济启动' },
-  { name: '健康 · 明日秋分养生', desc: '①明日（9/23）秋分：昼夜均而寒暑平，饮食宜润燥（梨、银耳、百合），早睡早起；②中秋假期后半段降雨降温，注意保暖防感冒；③今日多云微热，户外活动注意补水防晒。', meta: '健康提醒', stat: '明日秋分' }
+  { name: '数码科技 · Mate 90 价格曝光', desc: '华为 Mate 90 系列价格流出：标准版 5499 元起（12+256G）、Pro 6999 元起、Pro Max 9999 元档，开售在即；Meta 开源 astryx React 设计系统（150+ 组件、AI Agent 友好）。', meta: '数码资讯', stat: '5499 起' },
+  { name: '游戏 · 世赛 3D 数字游戏艺术开赛', desc: '世赛黄金观赛期今日开启：3D 数字游戏艺术赛项在国家会展中心开赛，全球技能青年比拼游戏美术与开发；TGS 2026 落幕，索尼港服折扣至今日截止。', meta: '游戏资讯', stat: '观赛期开启' },
+  { name: '穿搭美妆 · 秋分到，凉意起', desc: '今日秋分，上海多云到阴 23~29℃：①早晚凉意明显，薄外套安排上；②午后局部短时阵雨，伞随身带；③秋分后空气渐燥，护肤补水+润唇膏备好。', meta: '穿搭指南', stat: '今日秋分' },
+  { name: '理财职场 · 丰收节 + 世赛经济', desc: '今日是第九个中国农民丰收节，秋收经济启动；世赛 6 天会期带动会展、酒店、交通消费，黄金观赛期 9/23-26；华为 Mate 90 开售在即，消费电子旺季升温。', meta: '财经职场', stat: '丰收节+世赛' },
+  { name: '健康 · 秋分养生正当时', desc: '①今日秋分：昼夜均而寒暑平，宜润燥养肺（梨、银耳、百合），早睡早起；②周六起上海有一次明显降水过程，可能伴有雷电，中秋假期后半段出行注意；③今年"十五的月亮十七圆"，中秋赏月可安排 9/27。', meta: '健康提醒', stat: '润燥养肺' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 9月22日', desc: '多云到阴，局部短时阵雨。23~30℃，北到东北风3~4级，下午转偏东风（沿江沿海4~5级）。湿度90%~50%，空气质量优（AQI 41）。日出05:42，日落17:52。中秋假期后半段（9/25-26）有明显降雨，出行提前规划。', meta: '今日天气', stat: '23~30℃' },
-  { name: '本地要闻', desc: '①第48届世界技能大赛今日（9/22）在上海开幕：开幕式今晚在世博文化中心举行、东方卫视直播；9/23-26 国家会展中心 64 个赛项竞技（含软件测试、轨道车辆技术、无人机系统等 7 个新增赛项）；9/27 闭幕式。②《第48届世界技能大赛》纪念邮票即将发行；赛事期间交通管制执行中（世博大道、博成路、国展路等），9/24-26 地铁部分线路延时运营。', meta: '上海资讯', stat: '世赛今日开幕' }
+  { name: '上海天气 · 9月23日', desc: '今日秋分。多云到阴，局部短时阵雨。23~29℃，偏东风3~4级（沿江沿海4~5级）。湿度90%~50%，空气质量优（AQI 28）。日出05:43，日落17:50。周六起有明显降水过程（中秋假期后半段降雨），最高气温先升后降；今年"十五的月亮十七圆"。', meta: '今日天气', stat: '23~29℃' },
+  { name: '本地要闻', desc: '①世赛昨晚开幕、今日进入黄金观赛期：开幕式 9/22 晚在世博文化中心举行（"这一刻，宛如魔法！"），9/23-26 国家会展中心 10:00-17:00 免费观赛，"世赛通"小程序可预约；9/27 闭幕式。②中国女排卫冕亚运会"十冠王"；华为 Mate 90 开售在即。', meta: '上海资讯', stat: '世赛观赛期开启' }
 ]
 
 export default function DailyReport() {
@@ -42,8 +42,8 @@ export default function DailyReport() {
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年9月22日 星期二</span>
-          <span>第 019 期</span>
+          <span className="date">2026年9月23日 星期三</span>
+          <span>第 020 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>GitHub 月榜：archify 5.4 万★领跑，Agent 技能生态爆发</h3>
-          <p>archify（架构图 Agent 技能）本月新增 5.4 万★、FreeToken 1.3 万★、ECC 持续霸榜、BuilderIO agent-native 新晋热门：Agent 技能与 Agent 原生应用框架成为开源生态最热赛道。</p>
+          <h3>Google 开源 Agent 运行系统，AI 基建战再升级</h3>
+          <p>agent-substrate/substrate（"the core system"）涨星速度夸张；清华 OpenMAIC 本月 +1.7 万★、ECC 稳居热度榜 #1、智谱 ZCode 发力——从模型到 Agent 运行时的"基建战"全面打响。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.019</span>
+        <span>我的工作台 · 每日早报 · VOL.020</span>
       </footer>
     </div>
   )
