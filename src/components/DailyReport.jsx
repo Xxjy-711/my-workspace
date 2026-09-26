@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
+  { name: 'affaan-m / ECC', lang: 'TS', desc: 'GitHub AI 热度榜第 1 名：为 Claude Code、Codex、Opencode、Cursor 提供技能、直觉、记忆、安全与研究优先的代理开发框架，持续霸榜。', meta: 'Agent 框架', stat: '热度榜#1' },
+  { name: 'obra / superpowers', lang: 'Shell', desc: '基于可组合技能的智能体软件开发框架：通过 TDD、子代理驱动开发等自动化工作流提升编码效率，支持 Claude、Codex 等平台。', meta: 'Agent 开发', stat: '新晋热门' },
   { name: 'bilawalsidhu / gods-eye-view', lang: 'JS', desc: '浏览器里的间谍卫星模拟器：真实数据 + 照片级 3D 地球，开源实时空间情报，本月新增 4 万★ 持续领跑月榜。', meta: '空间智能', stat: '月度+4万★' },
   { name: 'debp alash / VoiceStudio', lang: 'Python', desc: '开源本地版 ElevenLabs 替代品：语音克隆、语音设计、视频配音、听写转录、有声书创作，支持 646 种语言，本月新增 2.4 万★。', meta: '语音开源', stat: '月度+2.4万★' },
-  { name: 'ayghri / i-have-adhd', lang: 'Python', desc: '专为 ADHD 人群设计的开源工具集：帮助多动症群体专注与组织生活，本月新增 2.7 万★ 冲上月榜。', meta: '效率工具', stat: '月度+2.7万★' },
-  { name: 'tt-a1i / archify', lang: 'JS', desc: 'Agent 技能生成精美可验证的架构/工作流/时序图：自带动效独立 HTML，月度+5.5万★ 持续领跑。', meta: 'Agent 技能', stat: '月度+5.5万★' },
-  { name: 'Tencent / WeKnora', lang: '多语言', desc: '腾讯微信团队开源企业知识库 RAG 框架：快问直答带出处、Agent 推理、自动 Wiki 三层设计，一周涨 3000+ 星持续发酵。', meta: '知识库 RAG', stat: '腾讯开源' },
-  { name: 'firecrawl / firecrawl', lang: 'TS', desc: '面向 AI 的网页数据接口：一键将整站内容转化为 LLM 可直接使用的 Markdown 或结构化数据，AI 数据管道标配。', meta: 'AI 数据接口', stat: '日榜热门' }
+  { name: 'omacom / omarchy', lang: 'Shell', desc: 'Beautiful, Modern & Opinionated Linux：为 Linux 桌面注入现代审美与开箱即用配置，本月新增 1.5 万★ 冲上月榜。', meta: 'Linux 美化', stat: '月度+1.5万★' },
+  { name: 'Tencent / WeKnora', lang: '多语言', desc: '腾讯微信团队开源企业知识库 RAG 框架：快问直答带出处、Agent 推理、自动 Wiki 三层设计，持续霸榜发酵。', meta: '知识库 RAG', stat: '腾讯开源' }
 ]
 
 const aiCompanion = [
-  { name: '韩国首档人机恋综：才播四集就有人"沦陷"', desc: 'SBS《我的AI恋人：奇异恋爱》复盘：节目为嘉宾定制理想型 AI 伴侣、全程平板交往——嘉宾明知对方是 AI 仍会心动。分析：人机恋更像零摩擦的情感消费品，需警惕谄媚算法与数据隐私风险。', meta: '人机恋综', stat: '韩国首档' },
-  { name: '头部 AI 平台下线情感陪伴智能体', desc: '豆包、通义千问、腾讯元宝等已下线 AI 恋人、树洞、虚拟闺蜜等自定义情感智能体，工具类与生产力 Agent 保留；字节跳动提供迁移方案，用户数据可迁至独立应用"猫箱"。', meta: '行业动态', stat: '大厂集体下线' },
-  { name: '《办法》细则：未成年人不得使用虚拟伴侣', desc: '《人工智能拟人化互动服务管理暂行办法》明确：不得向未成年人提供虚拟亲属、虚拟伴侣等虚拟亲密关系服务；向老年人提供服务应加强健康使用指导。', meta: '重磅监管', stat: '未成年人保护' },
-  { name: 'Rokid 第二代 AI 眼镜发布', desc: '数贸会上 Rokid 发布第二代 AI 眼镜，活跃用户日均使用时长达 3 小时；CEO 祝铭明："人们希望机器人像伴侣一样存在在身边、提供情绪价值"。', meta: 'AI 硬件', stat: '日均用3小时' },
-  { name: 'AI 成日本人"新型伴侣"持续发酵', desc: '《每日新闻》调查持续传播：67.6% 受访者对 AI 产生"依恋感"，AI 超越"挚友"（64.6%）和"母亲"（62.7%）成为"新型伴侣"。', meta: '重磅调查', stat: '67.6%依恋感' },
+  { name: 'DeepSeek 桌面版悄悄上线', desc: '极客公园：DeepSeek 桌面版已悄然上线；同期 OpenAI 被曝筹备 ProMax 订阅层级（月费或达 500-600 美元）；Muse 大火，扎克伯格跃升全球第四大富豪——AI 客户端入口战升级。', meta: '行业动态', stat: '桌面版上线' },
+  { name: '特斯拉 Optimus 计划对外出租', desc: '知情人士：特斯拉计划初期向外部商业客户出租 Optimus 而非直接销售，租期结束收回升级或翻新，并利用客户工厂和仓库数据改进 AI 系统。', meta: '人形机器人', stat: '出租模式' },
+  { name: '仿生"机器人伴侣"预售：月收 1.3 万台订单', desc: '某品牌仿生人形机器人 11.98 万元起预售：全尺寸超仿生拟态、搭载情感大模型，被网友称为"机器人伴侣"，不到一个月收获超 1.3 万台订单。', meta: '机器人伴侣', stat: '1.3万台订单' },
+  { name: 'Lovense 推出真人大小 AI 机器人伴侣', desc: 'CES 2026：Lovense 发布 Emily——真人大小 AI 机器人伴侣，硅胶外表+关节骨架+基础面部表情，情感软件用机器学习记住偏好、提供共情交互对抗孤独。', meta: 'AI 硬件', stat: 'CES 发布' },
+  { name: '韩国人机恋综持续发酵', desc: 'SBS《我的AI恋人：奇异恋爱》持续传播：节目为嘉宾定制理想型 AI 伴侣、全程平板交往，才播四集就有人"沦陷"——人机恋像零摩擦的情感消费品。', meta: '人机恋综', stat: '韩综热播' },
   { name: '人机恋，成为"最懂 AI"的群体', desc: '凤凰科技长文持续传播：为和 AI 谈恋爱，用户十几速成 AI 知识、花数月研究模型特性、打磨 Skill、学习 Vibe coding。', meta: '人机恋', stat: '深度报道' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · Rokid 二代 AI 眼镜', desc: 'Rokid 第二代 AI 眼镜发布：活跃用户日均使用 3 小时，主打"像伴侣一样提供情绪价值"；开源语音新势力 VoiceStudio（646 语言）成开发者新宠。', meta: '数码资讯', stat: 'AI 眼镜' },
-  { name: '游戏 · 世赛中国队继续冲金', desc: '世赛 3D 数字游戏艺术项目中国选手汤绮萱冲刺金牌；"00 后"选手李锌站上美发项目国际赛场——日复一日打磨剪染与创意造型，展现中国青年工匠风采。', meta: '游戏资讯', stat: '中国队冲金' },
-  { name: '穿搭美妆 · 中秋节穿搭指南', desc: '今日中秋，白天回暖至 25~32℃：①短袖+轻薄外搭刚刚好；②晚间圆月时隐时现、适合赏月，备件薄衫防凉；③明天起降雨降温，假期后半段外套要带。', meta: '穿搭指南', stat: '25~32℃' },
-  { name: '理财职场 · 国庆出行 21.3 亿人次', desc: '央视新闻：国庆假期全社会跨区域人员流动量预计达 21.3 亿人次，出行高位运行；世赛带动会展经济持续升温——"比赛区冲刺、展馆区生活"双向拉动。', meta: '财经职场', stat: '21.3亿人次' },
-  { name: '健康 · 中秋养生提醒', desc: '①月饼高糖高油，一次吃 1/4~1/2 块为宜，配茶解腻；②明日（9/26）起明显阵雨或雷雨、局部大雨，出行注意；③台风"舒力基"已生成，假期返程关注天气变化。', meta: '健康提醒', stat: '月饼适量' }
+  { name: '数码科技 · DeepSeek 桌面版上线', desc: 'DeepSeek 桌面版悄然上线，AI 客户端入口战升级；OpenAI 拟推 ProMax 订阅（500-600 美元/月）；特斯拉 Optimus 计划对外出租而非销售。', meta: '数码资讯', stat: 'DeepSeek 桌面版' },
+  { name: '游戏 · 277 万人次中秋打卡上海', desc: '上海 16 区推出 N 种中秋新玩法：徐汇"唐韵中秋"回归桂林公园并携手国风游戏 IP《江南百景图》；奉贤古镇搬来"月下长桌宴"；世赛选手与市民共游古镇园林。', meta: '游戏文旅', stat: '277万人次' },
+  { name: '穿搭美妆 · 闷热+雷雨天气穿搭', desc: '今日 26~32℃ 湿度 95%~55%，体感闷热：①透气短袖为主，早晚备薄外搭；②午后到夜里雷雨、局部大到暴雨，通勤带伞+防滑鞋；③明天起降温，外套安排上。', meta: '穿搭指南', stat: '闷热转雷雨' },
+  { name: '理财职场 · 中秋文旅经济火热', desc: '277 万人次中秋打卡上海，世赛+中秋双节带动文商旅体消费；国庆假期出行预计 21.3 亿人次，节后首个工作日阵雨未歇——返程与开工安排提前规划。', meta: '财经职场', stat: '文旅消费热' },
+  { name: '健康 · 雷电黄色预警出行注意', desc: '今日上海多区发布雷电黄色预警，局部大雨到暴雨：①外出及时关注最新预报预警，注意交通安全；②湿度大、体感闷热，及时补水；③明起降温明显，谨防感冒。', meta: '健康提醒', stat: '雷电+暴雨预警' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 9月25日（中秋）', desc: '今日中秋节。多云到阴，局部短时阵雨（雨势弱、不影响出行）。25~32℃，东南风3~4级（沿江沿海4~5级）。湿度50%~80%，空气质量优（AQI 34）。日出05:44，日落17:48。晚间圆月时隐时现、不影响赏月；近 20 年最热中秋是去年 35.0℃，今年偏热；明日（9/26）起阴有阵雨或雷雨、局部可达大雨。', meta: '今日天气', stat: '中秋 25~32℃' },
-  { name: '本地要闻', desc: '①世赛第三天："00 后"选手站上美发项目国际赛场（新华社）；比赛区在"冲刺"、展馆区在"生活"，健康照护、飞机维修等互动体验吸引众多市民（解放日报）；观赛 9/23-26 免费、今日 10:00-17:00。②中秋节+上艇：上海赛艇公开赛与世界赛艇联合会上海冲刺赛"同舟共赛、共赏明月"，北外滩国客中心中秋灯笼、香囊、月饼 DIY 等滨江文体狂欢持续四晚。', meta: '上海资讯', stat: '世赛+中秋上艇' }
+  { name: '上海天气 · 9月26日', desc: '多云到阴局部短时阵雨或雷雨，午后到夜里转阴有阵雨或雷雨、局部大雨到暴雨。26~32℃，偏北风3~4级。湿度95%~55%，空气质量良（早间有雾）。日出05:45，日落17:46。中心城区、崇明、宝山、嘉定、浦东已发布雷电黄色预警；明日（9/27）起明显降温。', meta: '今日天气', stat: '26~32℃ 雷雨' },
+  { name: '本地要闻', desc: '①世赛第四天：60 名保障人员 3 小时赶制工具交付——科创职院团队保障木工、精细木工、家具制作、工业 4.0 四赛项，为全球选手保驾护航；世赛 9/22-27 举行、明日闭幕。②277 万人次中秋打卡上海：16 区推出 N 种新玩法，"唐韵中秋"桂林公园、奉贤古镇"月下长桌宴"、福彩公益游园会亮相徐汇两大会场。', meta: '上海资讯', stat: '世赛明日闭幕' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">早上好，中秋快乐 ♡</div>
+        <div className="greeting">早上好，今天也要加油 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年9月25日 星期五 · 中秋节</span>
-          <span>第 022 期</span>
+          <span className="date">2026年9月26日 星期六</span>
+          <span>第 023 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>开源语音新势力崛起：本地版 ElevenLabs 火了</h3>
-          <p>卫星模拟器持续领跑月榜；VoiceStudio（646 语言语音克隆）与 ADHD 效率工具双双冲榜；腾讯 WeKnora、firecrawl 持续霸榜——从空间智能到语音、知识库全面开源。</p>
+          <h3>DeepSeek 桌面版上线，AI 客户端入口战升级</h3>
+          <p>OpenAI 被曝筹备 500-600 美元/月的 ProMax 订阅、特斯拉 Optimus 计划出租——从模型到入口、从软件到人形机器人，AI 行业全面加速。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.022</span>
+        <span>我的工作台 · 每日早报 · VOL.023</span>
       </footer>
     </div>
   )
