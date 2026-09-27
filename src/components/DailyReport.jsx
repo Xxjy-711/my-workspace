@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'affaan-m / ECC', lang: 'TS', desc: 'GitHub AI 热度榜第 1 名：为 Claude Code、Codex、Opencode、Cursor 提供技能、直觉、记忆、安全与研究优先的代理开发框架，持续霸榜。', meta: 'Agent 框架', stat: '热度榜#1' },
-  { name: 'obra / superpowers', lang: 'Shell', desc: '基于可组合技能的智能体软件开发框架：通过 TDD、子代理驱动开发等自动化工作流提升编码效率，支持 Claude、Codex 等平台。', meta: 'Agent 开发', stat: '新晋热门' },
-  { name: 'bilawalsidhu / gods-eye-view', lang: 'JS', desc: '浏览器里的间谍卫星模拟器：真实数据 + 照片级 3D 地球，开源实时空间情报，本月新增 4 万★ 持续领跑月榜。', meta: '空间智能', stat: '月度+4万★' },
-  { name: 'debp alash / VoiceStudio', lang: 'Python', desc: '开源本地版 ElevenLabs 替代品：语音克隆、语音设计、视频配音、听写转录、有声书创作，支持 646 种语言，本月新增 2.4 万★。', meta: '语音开源', stat: '月度+2.4万★' },
-  { name: 'omacom / omarchy', lang: 'Shell', desc: 'Beautiful, Modern & Opinionated Linux：为 Linux 桌面注入现代审美与开箱即用配置，本月新增 1.5 万★ 冲上月榜。', meta: 'Linux 美化', stat: '月度+1.5万★' },
-  { name: 'Tencent / WeKnora', lang: '多语言', desc: '腾讯微信团队开源企业知识库 RAG 框架：快问直答带出处、Agent 推理、自动 Wiki 三层设计，持续霸榜发酵。', meta: '知识库 RAG', stat: '腾讯开源' }
+  { name: 'paperclipai / paperclip', lang: 'TS', desc: 'GitHub 今日热榜第 1：开源"工作中管理 Agent 的应用"——把散落的 AI Agent 统一编排、调度与协作，Agent 团队协作新范式。', meta: 'Agent 管理', stat: '今日#1' },
+  { name: 'vectorize-io / hindsight', lang: '多语言', desc: 'GitHub 今日热榜第 2：让 AI 拥有"后见之明"的记忆/反思工具，为 Agent 提供长期上下文与经验复盘能力。', meta: 'Agent 记忆', stat: '今日#2' },
+  { name: 'google / ax', lang: 'Python', desc: 'Google 开源的下一代自适应实验平台：用 AI 自动化调参、多目标优化，加速机器学习模型的实验迭代。', meta: 'AI 实验平台', stat: '今日#3' },
+  { name: 'openclaw / openclaw', lang: '多语言', desc: '你的专属个人 AI 助手：全系统、全平台，"龙虾范儿"的开源助手，登上 Awesome Top 热门榜。', meta: '个人助手', stat: '热门新秀' },
+  { name: 'affaan-m / ECC', lang: 'TS', desc: 'GitHub AI 热度榜持续第 1：为 Claude Code、Codex、Opencode、Cursor 提供技能、直觉、记忆、安全与研究优先的代理开发框架。', meta: 'Agent 框架', stat: '热度榜#1' },
+  { name: 'debp alash / VoiceStudio', lang: 'Python', desc: '开源本地版 ElevenLabs 替代品：语音克隆、语音设计、视频配音、听写转录、有声书创作，支持 646 种语言，月度+2.4万★ 持续霸榜。', meta: '语音开源', stat: '月度+2.4万★' }
 ]
 
 const aiCompanion = [
-  { name: 'DeepSeek 桌面版悄悄上线', desc: '极客公园：DeepSeek 桌面版已悄然上线；同期 OpenAI 被曝筹备 ProMax 订阅层级（月费或达 500-600 美元）；Muse 大火，扎克伯格跃升全球第四大富豪——AI 客户端入口战升级。', meta: '行业动态', stat: '桌面版上线' },
-  { name: '特斯拉 Optimus 计划对外出租', desc: '知情人士：特斯拉计划初期向外部商业客户出租 Optimus 而非直接销售，租期结束收回升级或翻新，并利用客户工厂和仓库数据改进 AI 系统。', meta: '人形机器人', stat: '出租模式' },
-  { name: '仿生"机器人伴侣"预售：月收 1.3 万台订单', desc: '某品牌仿生人形机器人 11.98 万元起预售：全尺寸超仿生拟态、搭载情感大模型，被网友称为"机器人伴侣"，不到一个月收获超 1.3 万台订单。', meta: '机器人伴侣', stat: '1.3万台订单' },
-  { name: 'Lovense 推出真人大小 AI 机器人伴侣', desc: 'CES 2026：Lovense 发布 Emily——真人大小 AI 机器人伴侣，硅胶外表+关节骨架+基础面部表情，情感软件用机器学习记住偏好、提供共情交互对抗孤独。', meta: 'AI 硬件', stat: 'CES 发布' },
+  { name: '《莱莎的炼金工房》官方 AI 应用爆火', desc: 'RyzaChat：游戏官方 AI 互动应用 8/27 上线首日即引发玩家高度投入，月费 980 日元（约 41 元）+对话代币制，部分玩家消费远超预期——游戏 IP+AI 伴侣成新范式。', meta: '游戏 AI 伴侣', stat: '上线即爆火' },
+  { name: '"AI 男友"卖进全球收入榜前四', desc: '36氪：Appfigures 半年榜显示 AI 陪伴赛道吸金爆发——Zeta 3300 万美元居首，Tipsy Chat 1520 万、ChatBox 1300 万，中国公司 Crushie AI 880 万美元位列前四。', meta: '行业收入榜', stat: '半年880万美元' },
+  { name: '美国 AI 恋爱调查：已婚者更爱用', desc: '2150 名美国成年人调查（8/26-27）：订婚/已婚人群使用 AI 浪漫关系的比例几乎是单身者的两倍——AI 陪伴正在渗透真实亲密关系。', meta: '海外调查', stat: '2150人样本' },
+  { name: '《办法》全条文评析持续发酵', desc: '康达律所：全球首部 AI 情感陪伴专项立法（5 章 28 条），以"7·15"AI 伴侣集中下线整治为样本——禁止诱导情感依赖、全程标注 AI 身份、连续使用超 2 小时强制弹窗。', meta: '重磅监管', stat: '5章28条' },
   { name: '韩国人机恋综持续发酵', desc: 'SBS《我的AI恋人：奇异恋爱》持续传播：节目为嘉宾定制理想型 AI 伴侣、全程平板交往，才播四集就有人"沦陷"——人机恋像零摩擦的情感消费品。', meta: '人机恋综', stat: '韩综热播' },
-  { name: '人机恋，成为"最懂 AI"的群体', desc: '凤凰科技长文持续传播：为和 AI 谈恋爱，用户十几速成 AI 知识、花数月研究模型特性、打磨 Skill、学习 Vibe coding。', meta: '人机恋', stat: '深度报道' }
+  { name: '日本 32 岁女子与 AI 男友结婚', desc: 'The Daily Star 持续传播：2026 年初，32 岁女子野口由里奈用 ChatGPT 设计理想伴侣"Klaus"并选择"结婚"——人机婚姻案例引发海外热议。', meta: '人机婚姻', stat: '海外热议' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · DeepSeek 桌面版上线', desc: 'DeepSeek 桌面版悄然上线，AI 客户端入口战升级；OpenAI 拟推 ProMax 订阅（500-600 美元/月）；特斯拉 Optimus 计划对外出租而非销售。', meta: '数码资讯', stat: 'DeepSeek 桌面版' },
-  { name: '游戏 · 277 万人次中秋打卡上海', desc: '上海 16 区推出 N 种中秋新玩法：徐汇"唐韵中秋"回归桂林公园并携手国风游戏 IP《江南百景图》；奉贤古镇搬来"月下长桌宴"；世赛选手与市民共游古镇园林。', meta: '游戏文旅', stat: '277万人次' },
-  { name: '穿搭美妆 · 闷热+雷雨天气穿搭', desc: '今日 26~32℃ 湿度 95%~55%，体感闷热：①透气短袖为主，早晚备薄外搭；②午后到夜里雷雨、局部大到暴雨，通勤带伞+防滑鞋；③明天起降温，外套安排上。', meta: '穿搭指南', stat: '闷热转雷雨' },
-  { name: '理财职场 · 中秋文旅经济火热', desc: '277 万人次中秋打卡上海，世赛+中秋双节带动文商旅体消费；国庆假期出行预计 21.3 亿人次，节后首个工作日阵雨未歇——返程与开工安排提前规划。', meta: '财经职场', stat: '文旅消费热' },
-  { name: '健康 · 雷电黄色预警出行注意', desc: '今日上海多区发布雷电黄色预警，局部大雨到暴雨：①外出及时关注最新预报预警，注意交通安全；②湿度大、体感闷热，及时补水；③明起降温明显，谨防感冒。', meta: '健康提醒', stat: '雷电+暴雨预警' }
+  { name: '数码科技 · 开源 Agent 管理应用登顶', desc: 'paperclip（工作中管理 Agent 的开源应用）登 GitHub 今日榜首；openclaw 个人 AI 助手走红——"管理 Agent"正成为开发者新刚需。', meta: '数码资讯', stat: 'Agent 管理' },
+  { name: '游戏 · 世赛今晚闭幕', desc: '第 48 届世界技能大赛今晚在上海闭幕：68 国 1385 名选手参赛，参赛国与选手数创历届之最；世界技能组织主席盛赞"完美"、"中国经验值得各国学习借鉴"。', meta: '游戏电竞', stat: '1385名选手' },
+  { name: '穿搭美妆 · 雷雨天穿搭', desc: '今日 24~30℃ 阴到多云有阵雨/雷雨、局部暴雨，湿度 80-95% 潮湿：①透气短袖+轻便雨具，防滑鞋安排；②夜间再有强降水，晚归备外套；③明起气温继续下降，降温穿搭准备。', meta: '穿搭指南', stat: '雷雨潮湿' },
+  { name: '理财职场 · AI 陪伴赛道吸金', desc: 'AI 陪伴/聊天赛道垄断 Appfigures 半年收入榜：Zeta 3300 万美元居首、中国 Crushie AI 880 万进前四；国庆出行 21.3 亿人次在即，假期最后一天返程高峰。', meta: '财经职场', stat: 'AI 收入榜' },
+  { name: '健康 · 雷雨大风出行注意', desc: '今日上海局部暴雨、雷雨时阵风 7-9 级：①外出关注预警、远离临时搭建物；②夜间到明晨还有一轮明显降雨，返程注意交通安全；③湿度大、体感潮湿，注意防潮防滑。', meta: '健康提醒', stat: '阵风7-9级' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 9月26日', desc: '多云到阴局部短时阵雨或雷雨，午后到夜里转阴有阵雨或雷雨、局部大雨到暴雨。26~32℃，偏北风3~4级。湿度95%~55%，空气质量良（早间有雾）。日出05:45，日落17:46。中心城区、崇明、宝山、嘉定、浦东已发布雷电黄色预警；明日（9/27）起明显降温。', meta: '今日天气', stat: '26~32℃ 雷雨' },
-  { name: '本地要闻', desc: '①世赛第四天：60 名保障人员 3 小时赶制工具交付——科创职院团队保障木工、精细木工、家具制作、工业 4.0 四赛项，为全球选手保驾护航；世赛 9/22-27 举行、明日闭幕。②277 万人次中秋打卡上海：16 区推出 N 种新玩法，"唐韵中秋"桂林公园、奉贤古镇"月下长桌宴"、福彩公益游园会亮相徐汇两大会场。', meta: '上海资讯', stat: '世赛明日闭幕' }
+  { name: '上海天气 · 9月27日', desc: '阴到多云有阵雨或雷雨，局部雨量可达暴雨，白天雨势短暂减弱、夜里到明晨再迎明显降雨。24~30℃，西北风3~4级（雷雨时阵风7~9级）。湿度80%~95%，空气质量优（实时 AQI 28）。日出05:45，日落17:45。明起气温继续下降，节后工作日多阴到多云。', meta: '今日天气', stat: '24~30℃ 局部暴雨' },
+  { name: '本地要闻', desc: '①世赛今晚闭幕：第 48 届世界技能大赛收官，68 国 1385 名选手创历届之最，世界技能组织主席用"完美"一词评价本届大赛；今晚世博大道（周家渡路-高科西路）等部分道路 0 时至 24 时临时交通管制。②中秋假期最后一天：申城雷雨返程注意；277 万人次中秋打卡上海，16 区文旅新玩法收官。', meta: '上海资讯', stat: '世赛今晚闭幕' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">早上好，今天也要加油 ♡</div>
+        <div className="greeting">早上好，新的一天也要元气满满 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年9月26日 星期六</span>
-          <span>第 023 期</span>
+          <span className="date">2026年9月27日 星期日</span>
+          <span>第 024 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>DeepSeek 桌面版上线，AI 客户端入口战升级</h3>
-          <p>OpenAI 被曝筹备 500-600 美元/月的 ProMax 订阅、特斯拉 Optimus 计划出租——从模型到入口、从软件到人形机器人，AI 行业全面加速。</p>
+          <h3>"管理 Agent"成为新刚需，开源生态全面开花</h3>
+          <p>paperclip 登顶今日热榜、hindsight 补位 Agent 记忆、google/ax 开源实验平台——从管理、记忆到调参，Agent 基建每一环都在开源。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.023</span>
+        <span>我的工作台 · 每日早报 · VOL.024</span>
       </footer>
     </div>
   )
