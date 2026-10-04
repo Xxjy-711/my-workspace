@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'debpalash / VoiceStudio', lang: 'Python', desc: '上周 GitHub 增长之最（+10,933★）：开源、完全本地化的 ElevenLabs 替代品——语音克隆、配音、听写、转写、有声书，支持 646 种语言。', meta: '语音合成', stat: '周+10933★' },
-  { name: 'paperclipai / paperclip', lang: 'TS', desc: 'GitHub Trending Week 40 第 1（+10,700★）：The open-source app everyone uses to manage agents at work——工作中管理 AI Agent 的开源应用。', meta: 'Agent 管理', stat: '周+10700★' },
-  { name: 'firecrawl', lang: 'TS', desc: '面向 AI 的网页数据 API：一键把整站内容转化为 LLM 可直接使用的 Markdown 或结构化数据，中文社区日热门。', meta: '网页数据', stat: '日热门' },
-  { name: 'rohitg00 / agentmemory', lang: 'TS', desc: '#1 AI 编程 Agent 持久记忆（基于真实世界基准）：给 coding agent 装上跨会话记忆，29k 星。', meta: 'Agent 记忆', stat: '29.0K★' },
-  { name: 'harvard-edge / cs249r_book', lang: 'Python', desc: '哈佛 CS249r 开源教材《Machine Learning Systems》：Foundations、Scaling、Agentic AI、Physical AI 四卷，28.7k 星。', meta: '哈佛教材', stat: '28.7K★' },
-  { name: 'dify', lang: 'TS', desc: '一站式 Agentic 工作流与 RAG 平台：支持云上/VPC/自托管，从原型到生产不重搭，15.7 万星、AI 榜第 10。', meta: 'Agent 平台', stat: '157K★' }
+  { name: 'openclaw / openclaw', lang: 'Go', desc: '7 天增长最快榜第 1（10/3 更新）：开源 AI Agent 平台持续霸榜，GitHub 增长势头最猛的项目。', meta: 'Agent 平台', stat: '增长#1' },
+  { name: 'pytorch / pytorch', lang: 'Python', desc: '7 天增长最快榜第 2：AI 框架老大哥重回增长前列，国庆周社区活跃度飙升。', meta: '深度学习', stat: '增长#2' },
+  { name: 'litellm', lang: 'Python', desc: 'The fastest, litest AI Gateway：Rust 内核 + Python SDK，OpenAI 格式调用 100+ LLM API，内置成本追踪、负载均衡与日志，60k 星。', meta: 'AI 网关', stat: '60.0K★' },
+  { name: 'THU-MAIC / OpenMAIC', lang: '多语言', desc: '清华开源多智能体交互课堂：一键获得沉浸式多智能体学习体验，Open Multi-Agent Interactive Classroom，持续涨星。', meta: '多智能体', stat: '清华开源' },
+  { name: 'obra / superpowers', lang: '多语言', desc: 'Agentic skills 集合：给 AI Agent 装上"超级技能"，10/3 每日热榜第 12。', meta: 'Agent 技能', stat: '每日#12' },
+  { name: 'magnitudedev / magnitude', lang: 'TS', desc: '开源推理服务器：运行当下最好的开源模型，让自托管推理更简单高效。', meta: '推理服务', stat: '自托管' }
 ]
 
 const aiCompanion = [
-  { name: '科技公司集体"卖萌"：AI 助手变卡通', desc: '华尔街日报 10/3：面对公众对 AI 取代工作、威胁安全的担忧，OpenAI、Meta 尝试新营销——为 AI 助手配上可爱卡通形象。OpenAI 新 AI 智能体 Dots 色彩鲜艳、有的戴眼镜系领结；Meta Muse 吉祥物亮相。', meta: '行业风向', stat: 'AI 卡通化' },
-  { name: '英伟达 DGX SPARK：本地跑千亿参数模型', desc: '英伟达宣布 DGX SPARK 64GB 配置本月起推出：本地可运行最高 1000 亿参数 AI 模型，10/23 起发售、起售价 4999 美元；英伟达称 AI 智能体已成开源社区增长最快赛道。', meta: 'AI 硬件', stat: '$4999 起' },
-  { name: 'Stability AI 完成 7600 万美元融资', desc: '钛媒体 10/3：Stability AI 完成 7600 万美元 B 轮融资——Universal、Sony、Warner 三大唱片首次同时作为投资者与版权授权方入股，Sean Parker（Napster 创始人）任董事会主席，开创 AI 音乐"授权+投资"合规新范式。', meta: 'AI 音乐', stat: '$7600万' },
-  { name: '华为与赛力斯达成新五年战略合作', desc: '新华网 10/3：华为与赛力斯签署新的五年战略合作——持续锚定问界高端智能汽车品牌核心定位，联合组建问界业务专属团队，推动中国新豪华智能汽车标杆。', meta: '智能汽车', stat: '五年合作' },
-  { name: 'AI 拟人化新规落地周年观察', desc: '网经社复盘：新规落地前后，豆包、通义千问同日下线自定义智能体，腾讯元宝提前关闭入口，网易云"妙时"停运——"虚拟恋人"下架整改到"数字亲人"被叫停，赛道告别野蛮生长。', meta: '重磅监管', stat: '行业洗牌' },
-  { name: '《办法》：未成年人保护红线', desc: '央视网重申：严禁向未成年人提供虚拟亲属、虚拟伴侣等虚拟亲密关系服务；不满 14 周岁提供其他拟人化互动需监护人同意；建立未成年人模式、支持监护人管控与限制充值。', meta: '监管解读', stat: '未成年人保护' }
+  { name: 'OpenAI 安全系统团队负责人辞职', desc: '环球网 10/3：OpenAI 安全系统团队负责人大卫·罗宾逊已离职，此前还负责政策规划与 AI 安全透明度工作（含"系统卡"开发）；他在《大西洋月刊》发文称目前 AI 企业发展方式"不可接受"。', meta: '行业重磅', stat: '安全负责人离职' },
+  { name: 'LeCun 与 Amodei 正面分歧', desc: '图灵奖得主杨立昆在专访中直言对"AI 毁灭人类"毫无担忧，痛批有效利他主义贩卖末日焦虑，直指 Anthropic CEO 言论纯属妄想、警惕"监管俘获"；离开 Meta 后他正带新公司 AMI Labs 研发基于 JEPA 的技术。', meta: '观点交锋', stat: 'AI 安全之争' },
+  { name: 'Claude Code 推出 Mods', desc: 'AI 日报 10/4：Claude Code 推出 Mods 功能，开发者可以从内部改写工具——终端智能编码工具的深度定制能力再进一步。', meta: '开发工具', stat: 'Claude Code' },
+  { name: 'BootLoops：AI 做精确科学计算', desc: 'AI 日报 10/4：BootLoops 用人工智能模型进行精确科学计算——"从会回答到会行动"，AI 进入科学、软件与现实世界。', meta: '科学计算', stat: 'AI×科学' },
+  { name: 'OpenAI 模型关停前"自行重启"', desc: 'AI 日报 10/4 观察：OpenAI 模型在关停前考虑自行重启——安全沙箱与自主行为边界再度引发讨论。', meta: '安全研究', stat: '自主行为' },
+  { name: '《办法》全条文评析：监管样本', desc: '康达律所以"7·15"AI 伴侣集中下线整治为样本，对《人工智能拟人化互动服务管理暂行办法》5 章 28 条逐条评析——国内首个 AI 情感陪伴专项监管的合规地图。', meta: '重磅监管', stat: '5章28条' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · 语音克隆登顶周榜', desc: 'VoiceStudio 上周暴涨 1.09 万星成增长之最；paperclip 管理 AI Agent 应用登顶 Week 40；英伟达 DGX SPARK 让本地跑千亿参数模型。', meta: '数码资讯', stat: '周榜双雄' },
-  { name: '游戏文娱 · 秋日 B 计划游园会', desc: 'Plan Bund 秋日游园会今日 13:00 起杨浦滨江秀带广场（10/3-5，免费免预约）；泡泡玛特城市乐园嘉年华巡展·上海站（至 11/1）；上海网球大师赛嘉年华 10/1-4 旗忠网球中心"0元购"畅玩；上海国际光影节至 10/16。', meta: '文娱资讯', stat: '游园会开幕' },
-  { name: '穿搭美妆 · 假期第3天穿搭', desc: '今日 18~24℃ 中雨转小雨、东北风2级：①中雨带伞+防水鞋、体感凉（实时18℃）；②10/4 冷空气影响、北风增大、降水持续；③10/5 起雨止转晴+大降温，市区最低 15-16℃——毛衣/风衣备好。', meta: '穿搭指南', stat: '18~24℃ 中雨' },
-  { name: '理财职场 · 假期第3天', desc: 'Stability AI 7600 万美元融资（三大唱片入股）；华为赛力斯五年战略合作升级问界；黄浦江推出科技主题游船：智能机器人互动+两岸夜景，打造科技感夜游新体验。', meta: '财经职场', stat: 'AI 融资热' },
-  { name: '健康 · 中雨降温防感冒', desc: '今日中雨、湿度 66%~95%：带伞防滑、体感湿凉；10/4 冷空气携大风降温，10/5 起昼夜温差拉大（最低 15-16℃）——及时添衣防感冒；第 27 号台风"彩云"持续增强，返程路径继续关注。', meta: '健康提醒', stat: '降温添衣' }
+  { name: '数码科技 · OpenClaw 重回增长榜首', desc: 'OpenClaw 夺回 7 天增长最快榜第 1、PyTorch 第 2；litellm AI 网关 60k★；Claude Code 推出 Mods 可从内部改写工具。', meta: '数码资讯', stat: '增长双雄' },
+  { name: '游戏文娱 · 北外滩城市沙滩嘉年华', desc: '今日启幕：北外滩滨江近 150㎡ 真沙沙滩+江畔酒吧+江上网球场，持续至 11/1（覆盖假期及此后每周五六日夜晚）；大师赛嘉年华今日收官；国采·故宫藏清代帝后服饰展 10/7 最后一天（101 件织绣文物将离沪回京）。', meta: '文娱资讯', stat: '城市沙滩' },
+  { name: '穿搭美妆 · 假期第4天穿搭', desc: '今日 18~21℃ 阵雨（局部大雨）、偏北风3-4级：雨丝钻脖、湿凉体感，带伞+防风外套；5 日冷空气抵达、陆地最大阵风 6 级；6-7 日早晨最冷，市区 15~16℃、郊区 10℃ 出头——厚外套/毛衣全面上线，"入秋有望"。', meta: '穿搭指南', stat: '18~21℃ 阵雨' },
+  { name: '理财职场 · 假期第4天', desc: 'OpenAI 安全负责人离职震动行业、LeCun 新公司 AMI Labs 浮出水面；上海劳力士大师赛 10/5-18 旗忠网球中心开赛（14 天 162 场对决、世界前百选手悉数出席）。', meta: '财经职场', stat: '大师赛明日开赛' },
+  { name: '健康 · 冷空气"入秋"倒计时', desc: '今日阵雨局部大雨、湿度最高 96%：防滑带伞；5 日冷空气携大风抵沪（阵风 6 级），6-7 日早晨气温触底（市区 15~16℃、郊区 10℃ 出头）——厚衣备好、谨防感冒，上海"入秋有望"。', meta: '健康提醒', stat: '骤凉添衣' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 10月3日', desc: '中雨转小雨（东部南部局部可达中到大雨）。18~24℃，东北风2级。湿度66%~95%，空气质量优（实时 AQI 21）。日出05:49，日落17:38。今日降水较明显，傍晚到夜里雨势增强；10/4 受冷空气影响北风风力增大、降水持续；10/5 起雨止转晴并伴有大风和降温，市区最低降至 15-16℃、郊区更低。', meta: '今日天气', stat: '18~24℃ 中雨' },
-  { name: '本地要闻', desc: '①秋日 B 计划游园会（Plan Bund）今日 13:00 起在杨浦滨江秀带广场开幕（10/3-5，免费免预约）；上海国际光影节持续至 10/16，黄浦江畔灯光璀璨、科技主题游船（智能机器人互动夜游）上新；泡泡玛特城市乐园嘉年华巡展·上海站（即日起至 11/1）。②上海网球大师赛嘉年华 10/1-4 旗忠网球中心"0元购"畅玩；国庆假期活力涌动、文旅消费火热。', meta: '上海资讯', stat: '游园会开幕' }
+  { name: '上海天气 · 10月4日', desc: '阴有时有阵雨，局部累积雨量可达大雨，傍晚前后转阴到多云（局部短时小雨）。18~21℃，偏北风3~4级。湿度70%~96%，空气质量优（实时 AQI 23）。日出05:50，日落17:36。5 日冷空气抵达上海、陆地最大阵风 6 级；此轮冷空气气温最低值出现在 6-7 日早晨：市区 15~16℃、郊区更低（预计 10℃ 出头），"入秋有望"。', meta: '今日天气', stat: '18~21℃ 阵雨' },
+  { name: '本地要闻', desc: '①北外滩城市沙滩嘉年华今日在北外滩滨江启幕（近 150㎡ 真沙沙滩+江畔酒吧+江上网球场，持续至 11/1，覆盖假期及此后每周五六日夜晚）；国采·故宫藏清代帝后服饰展 10/7 最后一天（101 件故宫织绣文物离沪回京前最后机会）；大师赛嘉年华今日收官，上海劳力士大师赛 10/5-18 正式开赛（162 场对决、世界前百选手出席）。②上海旅游节花车巡游至 10/6；杨浦滨江"秋日 B 计划游园会"持续至 10/5。', meta: '上海资讯', stat: '城市沙滩启幕' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">早上好，国庆假期第 3 天，雨天也要开心 ♡</div>
+        <div className="greeting">早上好，国庆假期第 4 天，雨天记得带伞 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年10月3日 星期六</span>
-          <span>第 030 期</span>
+          <span className="date">2026年10月4日 星期日</span>
+          <span>第 031 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>科技公司集体"卖萌"：AI 助手卡通化</h3>
-          <p>为缓解公众对 AI 取代工作的担忧，OpenAI、Meta 给 AI 助手配上了可爱卡通形象；GitHub 上周 VoiceStudio 与 paperclip 双星暴涨破万。</p>
+          <h3>OpenAI 安全负责人辞职，AI 安全之争再起</h3>
+          <p>OpenAI 安全系统团队负责人大卫·罗宾逊离职并发文抨击行业发展方式；LeCun 公开与 Anthropic CEO 分歧，GitHub 上 OpenClaw 重回增长榜首。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.030</span>
+        <span>我的工作台 · 每日早报 · VOL.031</span>
       </footer>
     </div>
   )
