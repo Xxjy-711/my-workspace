@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'debpalash / VoiceStudio', lang: 'Python', desc: '5 天再涨 +11.5K 星（累计 50.4K★）持续登顶：本地优先、多引擎语音平台——克隆、配音、长音频制作，主打数据隐私与自托管高吞吐。', meta: '语音平台', stat: '50.4K★ +11.5K' },
-  { name: 'obra / superpowers', lang: '多语言', desc: 'Agentic skills 集合：给 AI Agent 装上"超级技能"，连续多日登上每日热榜（10/5 第 12）。', meta: 'Agent 技能', stat: '每日#12' },
-  { name: 'svcvit / Awesome-Dify-Workflow', lang: '多语言', desc: 'Dify 工作流精选合集：RAG、Agent、自动化场景的开箱工作流案例库，10.7k 星，AI 趋势榜第 9。', meta: 'Dify 生态', stat: '10.7K★' },
-  { name: 'RAG_Techniques', lang: 'Jupyter', desc: 'RAG 高级技术笔记本合集：检索增强生成各流派技术均有详细教程演示，29.6k 星。', meta: 'RAG 教程', stat: '29.6K★' },
-  { name: 'diegosouzapw / OmniRoute', lang: '多语言', desc: 'Trending Scout 头号机会项目：新晋路由方向开源项目，星增曲线值得关注。', meta: '新晋项目', stat: '头号机会' },
-  { name: 'awesome-selfhosted', lang: '多语言', desc: '自托管网络服务与应用大全：Free Software 服务清单，每天更新，每日热榜第 11。', meta: '自托管', stat: '每日#11' }
+  { name: 'affaan-m / ECC', lang: '多语言', desc: 'GitHub AI 项目热度榜第 1（10/6）：代理线束性能优化系统——Claude Code、Codex、OpenCode、Cursor 等的技能、直觉、记忆、安全与研究优先开发。', meta: 'Agent 工程', stat: '热度榜#1' },
+  { name: 'paperclipai / paperclip', lang: '多语言', desc: 'Week 41 Trending 第 1：大家都在用的开源应用——管理工作中的 AI Agent（paperclip.ing）。', meta: 'Agent 管理', stat: '周榜#1' },
+  { name: 'debpalash / VoiceStudio', lang: 'Python', desc: '连续多日登顶的本地优先多引擎语音平台：克隆、配音、长音频制作，主打数据隐私与自托管高吞吐，50.4k 星。', meta: '语音平台', stat: '50.4K★' },
+  { name: 'nexu-io / open-design', lang: 'TS', desc: '2026 新星：开源 Claude Design 替代——本地优先设计引擎，编码 Agent 直接产出原型/落地页/看板/幻灯片/图片视频，可导出 HTML/PDF/PPTX/MP4。', meta: '设计引擎', stat: '2026 新星' },
+  { name: 'open-webui', lang: 'Python', desc: '自托管 AI 界面首选（支持 Ollama、OpenAI API 等），153k 星：把大模型服务变成自己的 Web 应用。', meta: 'AI 界面', stat: '153K★' },
+  { name: 'obra / superpowers', lang: '多语言', desc: 'Agentic skills 框架与软件开发方法论，总星 204k+：给 AI Agent 装上"超级技能"。', meta: 'Agent 技能', stat: '204K★' }
 ]
 
 const aiCompanion = [
-  { name: 'Meta AI 助手 Muse 被曝深度整合人际数据', desc: 'DoNews/IT之家 10/5：Muse 数百万用户将其绑定银行、通讯与健康数据；研究人员通过常规交互提取内部指令，揭示 Muse 每小时自动为每位联系人建立并更新结构化档案（住址、职业、重要日期、关系模式、维护建议）——引发隐私争议。', meta: '隐私争议', stat: '每小时建档案' },
-  { name: 'OpenAI "28天计划"：每天更新 Codex/Work', desc: 'IT之家 10/5：OpenAI 核心产品与平台负责人宣布，未来 28 天每天发布一项对 Codex / ChatGPT Work 用户有实际意义的改进，否则提供一次"重置"。', meta: '产品动态', stat: '28天计划' },
-  { name: '奥特曼：AI 收益足以让世界接受一定风险', desc: 'Politico《Decoded》专访：OpenAI CEO 奥特曼表示"AI 收益足以让世界接受一定风险"，与 Anthropic 在监管路径上的根本分歧公开化。', meta: '观点交锋', stat: '监管分歧' },
-  { name: '马斯克"跟 AI 分手"：SpaceXAI 改名 SpaceXSI', desc: '36氪 10/5：马斯克发帖称「No more AI」、SI（超级智能）更好；网友问能否改名 SpaceXSI，他回复"可以，会改"——xAI 被 SpaceX 收购后二度更名。', meta: '行业花絮', stat: '二度更名' },
-  { name: '谷歌 Googlebook AI 笔记本上架', desc: '10/4 起美国零售上架：覆盖 Acer/华硕/惠普/联想/戴尔五家 OEM，起售价 899 美元，标配 Gemini Intelligence 与 45TOPS 端侧 NPU。', meta: 'AI 硬件', stat: '$899 起' },
-  { name: '《赛博恋人售价百万，技术却还在蹒跚学步》', desc: '人人都是产品经理观察：AI 伴侣商业价值高企但技术仍在早期；《办法》核心红线——禁止诱导情感依赖、必须全程标注 AI 身份、连续使用超 2 小时强制弹窗、敏感信息未经同意不得用于训练。', meta: '市场观察', stat: '合规红线' }
+  { name: 'OpenAI 洽谈 300 亿美元融资，估值 1.4 万亿美元', desc: '财联社/凤凰网 10/6：MGX 等多家阿联酋基金正在洽谈参与 OpenAI 最新一轮 300 亿美元融资（合计最高 100 亿美元），贝莱德亦在商谈；计划固定价格、不设领投方。', meta: '资本重磅', stat: '估值1.4万亿$' },
+  { name: 'GPT-6 提速 50% + ChatGPT 文字水印', desc: '凤凰网 10/6：28 天计划 Day 1 兑现——订阅用户使用 GPT-6 Astra 和 GPT-6.1 Sol 默认速度提升约 50%；ChatGPT 和 Codex 部分文字输出开始加入不可见水印。', meta: '产品更新', stat: '提速50%' },
+  { name: 'OpenAI、Meta、Manus 同时下注"智能体 2.0"', desc: '蓝鲸新闻 10/6：OpenAI 个人智能体 Dots 宣传片出圈，Meta Muse 爆火——同样主动能力、C 端定位、云端虚拟机 7×24 小时运转，个人 Agent 从"助手"走向"管家"。', meta: '行业共识', stat: '智能体2.0' },
+  { name: 'ChatGPT 广告继续扩张', desc: '鞭牛士 10/6：视觉展示广告正式加入 OpenAI 广告产品库，用户要求 ChatGPT 生成图像时，画面旁将同步出现商业展示广告；本月下旬率先在美国测试。', meta: '商业模式', stat: '生图嵌广告' },
+  { name: '智谱涨逾 7%，GLM-5.3 上架 Amazon', desc: '每经 10/6：智谱股价涨逾 7%，GLM-5.3 上架 Amazon，打开海外收入分成通道——国产大模型出海再进一步。', meta: '国产大模型', stat: '涨逾7%' },
+  { name: 'Auros 推出 ARQ™：衡量 AI 关系的"人性面"', desc: 'AI Reporter 10/6：Auros 发布 AI Relationship Quality（ARQ™）指标，尝试量化人与 AI 关系的质量——AI 伴侣赛道的新评估维度。', meta: 'AI 伴侣', stat: 'ARQ 新指标' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · VoiceStudio 再破纪录', desc: 'VoiceStudio 5 天再涨 1.15 万星（50.4K★）持续登顶；谷歌 Googlebook AI 笔记本 $899 起零售上架；OpenAI 官宣 28 天计划每天更新 Codex/Work。', meta: '数码资讯', stat: 'AI 硬件潮' },
-  { name: '游戏文娱 · 大师赛今日开赛', desc: '上海劳力士大师赛今日旗忠网球中心开赛（10/5-18，14 天 162 场对决、世界前百选手悉数出席）；上海再迎 Robotex 世界机器人大会亚洲总决赛（大虹桥）；首届 NSW 新南西国际科技文化风尚周落地南京西路（联动上海展览中心/静安公园/吴江路）；PREP 乐队今晚上海站演出。', meta: '文娱资讯', stat: '大师赛开赛' },
-  { name: '穿搭美妆 · 假期第5天穿搭', desc: '今日多云转晴 15~22℃、北到西北风4-5级阵风6级：①冷高压控制转晴、但大风呼呼体感凉；②昼夜温差大，郊区最低 12-13℃；③6-7 日早晨最冷（市区 16℃ 左右）——薄外套+防风衣，早晚添衣。', meta: '穿搭指南', stat: '15~22℃ 大风' },
-  { name: '理财职场 · 假期第5天', desc: '上海劳力士大师赛今日开赛带动体育经济；Meta Muse 隐私争议波及 AI 个人助手赛道；奥特曼谈 AI 风险收益再引监管路径之争。', meta: '财经职场', stat: '大师赛今日开赛' },
-  { name: '健康 · 转晴大风防着凉', desc: '今日雨止转晴但北到西北风 4-5 级（阵风 6 级、沿江沿海 6-7 级）：防风保暖、温差大易着凉；6-7 日早晨最冷（市区 16℃、郊区更低）；AQI 优——适合出门但多穿一件。', meta: '健康提醒', stat: '大风添衣' }
+  { name: '数码科技 · OpenAI 估值 1.4 万亿美元', desc: 'OpenAI 洽谈 300 亿美元融资（估值 1.4 万亿美元）；GPT-6 提速 50% 并引入不可见文字水印；ChatGPT 生图界面试点嵌入展示广告；智谱 GLM-5.3 上架 Amazon 涨逾 7%。', meta: '数码资讯', stat: '资本大年' },
+  { name: '游戏文娱 · 木偶艺术周启幕', desc: '第十届上海国际木偶艺术周 10/5 启幕：联动第四届"炫偶狂欢周"，全新原创大型木偶巡游《玩偶世界》全城首秀；2026 世界水上摩托锦标赛中国上海大奖赛开赛；国庆档电影票房突破 9 亿（连续 5 天单日破亿）；劳力士大师赛激战正酣。', meta: '文娱资讯', stat: '木偶艺术周' },
+  { name: '穿搭美妆 · 假期第6天穿搭', desc: '今日晴 15~23℃、西北风2级：①秋高气爽、阳光正好；②昼夜温差大（郊区最低 13℃ 左右）；③午后体感温暖、早晚凉——薄外套+可穿脱叠穿最实用，紫外线中等注意防晒。', meta: '穿搭指南', stat: '晴 15~23℃' },
+  { name: '理财职场 · 假期第6天', desc: 'OpenAI 融资估值 1.4 万亿美元、智谱 GLM-5.3 出海涨逾 7%；"智能体 2.0"成行业共识（OpenAI/Meta/Manus 同时下注）；Auros 推出 ARQ 指标量化 AI 关系质量。', meta: '财经职场', stat: 'AI 资本大年' },
+  { name: '健康 · 返程高峰开启', desc: '今日晴天温差大（15~23℃）：早晨偏凉注意保暖、紫外线中等注意防晒；国庆返程高峰（10/6-7）开启，中东部大范围晴朗利于出行——路上注意补水休息。', meta: '健康提醒', stat: '返程好天气' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 10月5日', desc: '多云（阴雨结束，冷高压控制转晴）。15~22℃，北到西北风4~5级、阵风6级（沿江沿海5级阵风6-7级）。湿度47%~75%，空气质量优（实时 AQI 27，预报 40-60 优到良）。日出05:50，日落17:35。冷空气已抵达、大风明显；昼夜温差大；6-7 日早晨最低气温 16℃ 左右、郊区更低——"入秋"在望。', meta: '今日天气', stat: '15~22℃ 大风' },
-  { name: '本地要闻', desc: '①上海劳力士大师赛今日在旗忠网球中心正式开赛（10/5-18，14 天 162 场对决、世界前百选手悉数出席，闵行公安护航）；上海再迎 Robotex 世界机器人大会亚洲总决赛（大虹桥）；首届 NSW 新南西国际科技文化风尚周落地南京西路沿线（联动上海展览中心、静安公园、吴江路、芮欧百货）。②上海旅游节花车巡游明日收官（至 10/6）；杨浦滨江"秋日 B 计划游园会"今日最后一天（10/3-5）。', meta: '上海资讯', stat: '大师赛今日开赛' }
+  { name: '上海天气 · 10月6日', desc: '晴。15~23℃，西北风2~4级。湿度38%~61%，空气质量优（实时 AQI 50，预报 60-80 良）。日出05:51，日落17:34。冷空气影响基本结束、秋高气爽；昼夜温差大（郊区最低 13℃ 左右）；明晨仍偏凉、白天快速回暖——"入秋"在望。', meta: '今日天气', stat: '晴 15~23℃' },
+  { name: '本地要闻', desc: '①中国第 16 次北冰洋考察"雪龙"号"雪龙2"号返回上海（央视 10/6）；第十届上海国际木偶艺术周启幕（10/5，《玩偶世界》全城首秀）；2026 世界水上摩托锦标赛中国上海大奖赛开赛；上海劳力士大师赛进行中（10/5-18）。②国庆档电影票房突破 9 亿（连续 5 天单日破亿）；上海旅游节花车巡游今日收官（至 10/6）；WF2026 上海国际手办模型文化博览会落幕（首发新品超 700 款）。', meta: '上海资讯', stat: '雪龙号归来' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">早上好，国庆假期第 5 天，天晴有风 ♡</div>
+        <div className="greeting">早上好，国庆假期第 6 天，秋高气爽 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年10月5日 星期一</span>
-          <span>第 032 期</span>
+          <span className="date">2026年10月6日 星期二</span>
+          <span>第 033 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>Meta Muse 深度整合人际数据引隐私争议</h3>
-          <p>AI 个人助手在迅速普及的同时暴露数据逻辑；GitHub 上 VoiceStudio 5 天再涨 1.15 万星，语音 AI 持续领跑。</p>
+          <h3>OpenAI 洽谈 300 亿美元融资，估值冲 1.4 万亿</h3>
+          <p>阿联酋基金与贝莱德齐上桌；GPT-6 提速 50% 兑现"28 天计划"首日，GitHub 上 ECC 登顶热度榜。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.032</span>
+        <span>我的工作台 · 每日早报 · VOL.033</span>
       </footer>
     </div>
   )
