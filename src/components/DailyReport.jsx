@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'affaan-m / ECC', lang: '多语言', desc: 'GitHub AI 项目热度榜第 1（10/6）：代理线束性能优化系统——Claude Code、Codex、OpenCode、Cursor 等的技能、直觉、记忆、安全与研究优先开发。', meta: 'Agent 工程', stat: '热度榜#1' },
-  { name: 'paperclipai / paperclip', lang: '多语言', desc: 'Week 41 Trending 第 1：大家都在用的开源应用——管理工作中的 AI Agent（paperclip.ing）。', meta: 'Agent 管理', stat: '周榜#1' },
-  { name: 'debpalash / VoiceStudio', lang: 'Python', desc: '连续多日登顶的本地优先多引擎语音平台：克隆、配音、长音频制作，主打数据隐私与自托管高吞吐，50.4k 星。', meta: '语音平台', stat: '50.4K★' },
-  { name: 'nexu-io / open-design', lang: 'TS', desc: '2026 新星：开源 Claude Design 替代——本地优先设计引擎，编码 Agent 直接产出原型/落地页/看板/幻灯片/图片视频，可导出 HTML/PDF/PPTX/MP4。', meta: '设计引擎', stat: '2026 新星' },
-  { name: 'open-webui', lang: 'Python', desc: '自托管 AI 界面首选（支持 Ollama、OpenAI API 等），153k 星：把大模型服务变成自己的 Web 应用。', meta: 'AI 界面', stat: '153K★' },
-  { name: 'obra / superpowers', lang: '多语言', desc: 'Agentic skills 框架与软件开发方法论，总星 204k+：给 AI Agent 装上"超级技能"。', meta: 'Agent 技能', stat: '204K★' }
+  { name: 'DietrichGebert / ponytail', lang: 'JavaScript', desc: '日增长榜第 1（10/7 数据，155.8K★）：JS 生态热门项目，今日增星势头最猛。', meta: '日增榜首', stat: '155.8K★' },
+  { name: 'mvschwarz / openrig', lang: '多语言', desc: '今日 +2,209★：OpenRig 是本地控制层，把 Claude Code 和 Codex 会话跑成"持久团队"。', meta: 'Agent 团队', stat: '今日+2.2K' },
+  { name: 'obra / superpowers', lang: '多语言', desc: '今日 +2,192★（累计 295.6K★）：编码 Agent 的开发方法论技能包，给 AI 装上"超级技能"。', meta: 'Agent 技能', stat: '295.6K★' },
+  { name: 'vectorize-io / hindsight', lang: '多语言', desc: '今日 +2,014★（45.9K★）：AI Agent 的记忆服务器——存储事实与经验、按需检索相关材料。', meta: '记忆服务', stat: '45.9K★' },
+  { name: 'cc-switch', lang: 'Rust', desc: '跨平台桌面 All-in-One 助手：统一管理 Claude Code、Codex、OpenCode、OpenClaw、Grok Build 与 Hermes Agent，140K 星。', meta: '桌面助手', stat: '140K★' },
+  { name: 'AstrBot', lang: 'Python', desc: 'AI Agent 助手与开发框架：集成大量 IM 平台、LLM、插件与 AI 功能，可作 OpenClaw 的替代方案，41.2K 星。', meta: 'Agent 框架', stat: '41.2K★' }
 ]
 
 const aiCompanion = [
-  { name: 'OpenAI 洽谈 300 亿美元融资，估值 1.4 万亿美元', desc: '财联社/凤凰网 10/6：MGX 等多家阿联酋基金正在洽谈参与 OpenAI 最新一轮 300 亿美元融资（合计最高 100 亿美元），贝莱德亦在商谈；计划固定价格、不设领投方。', meta: '资本重磅', stat: '估值1.4万亿$' },
-  { name: 'GPT-6 提速 50% + ChatGPT 文字水印', desc: '凤凰网 10/6：28 天计划 Day 1 兑现——订阅用户使用 GPT-6 Astra 和 GPT-6.1 Sol 默认速度提升约 50%；ChatGPT 和 Codex 部分文字输出开始加入不可见水印。', meta: '产品更新', stat: '提速50%' },
-  { name: 'OpenAI、Meta、Manus 同时下注"智能体 2.0"', desc: '蓝鲸新闻 10/6：OpenAI 个人智能体 Dots 宣传片出圈，Meta Muse 爆火——同样主动能力、C 端定位、云端虚拟机 7×24 小时运转，个人 Agent 从"助手"走向"管家"。', meta: '行业共识', stat: '智能体2.0' },
-  { name: 'ChatGPT 广告继续扩张', desc: '鞭牛士 10/6：视觉展示广告正式加入 OpenAI 广告产品库，用户要求 ChatGPT 生成图像时，画面旁将同步出现商业展示广告；本月下旬率先在美国测试。', meta: '商业模式', stat: '生图嵌广告' },
-  { name: '智谱涨逾 7%，GLM-5.3 上架 Amazon', desc: '每经 10/6：智谱股价涨逾 7%，GLM-5.3 上架 Amazon，打开海外收入分成通道——国产大模型出海再进一步。', meta: '国产大模型', stat: '涨逾7%' },
-  { name: 'Auros 推出 ARQ™：衡量 AI 关系的"人性面"', desc: 'AI Reporter 10/6：Auros 发布 AI Relationship Quality（ARQ™）指标，尝试量化人与 AI 关系的质量——AI 伴侣赛道的新评估维度。', meta: 'AI 伴侣', stat: 'ARQ 新指标' }
+  { name: 'OpenAI 四连更：API 最高档付费砍半、Auto-review 全面免费', desc: '新浪财经 10/7：28 天计划持续兑现——继 GPT-6 提速 50% 后，API 最高档付费砍半、Auto-review 全面免费，连续 4 天每天一更。', meta: '产品更新', stat: '四连更' },
+  { name: '可灵 AI 要赴港上市', desc: '观察者网/华商网 10/7：快手旗下可灵 AI 已选定中金、高盛、瑞银作为承销商，计划未来 12 个月内启动港股上市程序、预计 2027 年初递表，至少募资 10 亿美元。', meta: '资本重磅', stat: '至少募资10亿$' },
+  { name: '月之暗面估值 500 亿美元 + Claude 中文版上线', desc: '观察者网硬科技早报 10/7：月之暗面估值达 500 亿美元；Claude 中文版正式上线，国产 AI 与海外巨头同台竞技加速。', meta: '行业动态', stat: '估值500亿$' },
+  { name: '美国西南航空上线 ChatGPT 插件', desc: '财联社 10/7：西南航空与 OpenAI、AWS 合作，上线 ChatGPT 插件——用户可直接在 ChatGPT 内查询、选购西南航空航班。', meta: 'AI 落地', stat: 'ChatGPT 订票' },
+  { name: 'OpenAI 发布前沿大模型数学能力测试新成果', desc: '财联社 10/7：OpenAI 发布针对前沿大模型的全新数学能力测试成果，评测体系再升级。', meta: '模型评测', stat: '数学能力' },
+  { name: '节后 A 股 AI 修复窗口预期', desc: '每经微博 10/7：美光财报超预期、韩国 9 月出口增长提振情绪；OpenRouter 数据显示国产大模型贡献重要 Token 增量——节后 A 股 AI 板块有望迎来修复窗口。', meta: '资本市场', stat: '修复窗口' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · OpenAI 估值 1.4 万亿美元', desc: 'OpenAI 洽谈 300 亿美元融资（估值 1.4 万亿美元）；GPT-6 提速 50% 并引入不可见文字水印；ChatGPT 生图界面试点嵌入展示广告；智谱 GLM-5.3 上架 Amazon 涨逾 7%。', meta: '数码资讯', stat: '资本大年' },
-  { name: '游戏文娱 · 木偶艺术周启幕', desc: '第十届上海国际木偶艺术周 10/5 启幕：联动第四届"炫偶狂欢周"，全新原创大型木偶巡游《玩偶世界》全城首秀；2026 世界水上摩托锦标赛中国上海大奖赛开赛；国庆档电影票房突破 9 亿（连续 5 天单日破亿）；劳力士大师赛激战正酣。', meta: '文娱资讯', stat: '木偶艺术周' },
-  { name: '穿搭美妆 · 假期第6天穿搭', desc: '今日晴 15~23℃、西北风2级：①秋高气爽、阳光正好；②昼夜温差大（郊区最低 13℃ 左右）；③午后体感温暖、早晚凉——薄外套+可穿脱叠穿最实用，紫外线中等注意防晒。', meta: '穿搭指南', stat: '晴 15~23℃' },
-  { name: '理财职场 · 假期第6天', desc: 'OpenAI 融资估值 1.4 万亿美元、智谱 GLM-5.3 出海涨逾 7%；"智能体 2.0"成行业共识（OpenAI/Meta/Manus 同时下注）；Auros 推出 ARQ 指标量化 AI 关系质量。', meta: '财经职场', stat: 'AI 资本大年' },
-  { name: '健康 · 返程高峰开启', desc: '今日晴天温差大（15~23℃）：早晨偏凉注意保暖、紫外线中等注意防晒；国庆返程高峰（10/6-7）开启，中东部大范围晴朗利于出行——路上注意补水休息。', meta: '健康提醒', stat: '返程好天气' }
+  { name: '数码科技 · OpenAI 连续四天更新', desc: 'OpenAI 28 天计划四连更：API 最高档付费砍半、Auto-review 全面免费；可灵 AI 拟赴港上市（至少 10 亿美元）；月之暗面估值 500 亿美元；西南航空上线 ChatGPT 插件可订票。', meta: '数码资讯', stat: 'AI 资本大年' },
+  { name: '游戏文娱 · 假期收官指南', desc: '谢娜主演话剧《十三角关系》上海站今日最后一场（美罗城上剧场）；故宫帝后服饰展今日最后一天（101 件织绣文物离沪回京）；劳力士大师赛激战正酣；木偶艺术周持续至假期后。', meta: '文娱资讯', stat: '今日收官多场' },
+  { name: '穿搭美妆 · 寒露节气穿搭', desc: '今日寒露+晴到多云 15~26℃：①今晨气温近期谷底（市区 15℃、崇明等远郊或跌破 10℃）；②白天升温给力（最高 25-26℃）、昼夜温差超 10℃；③空气干燥（湿度 35%-80%）——洋葱式叠穿、注意补水润燥。', meta: '穿搭指南', stat: '15~26℃ 温差大' },
+  { name: '理财职场 · 假期收官日', desc: '可灵 AI 拟赴港上市（承销商中金/高盛/瑞银）；节后 A 股 AI 修复窗口预期升温；OpenAI 300 亿美元融资推进中、API 定价再调整。', meta: '财经职场', stat: '港股IPO潮' },
+  { name: '健康 · 寒露养生', desc: '今日寒露：空气干燥（湿度低至 35%）注意补水润燥；昼夜温差超 10℃、早晚寒意明显，洋葱式穿衣防感冒；返程高峰人潮密集，注意个人防护与休息。', meta: '健康提醒', stat: '寒露润燥' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 10月6日', desc: '晴。15~23℃，西北风2~4级。湿度38%~61%，空气质量优（实时 AQI 50，预报 60-80 良）。日出05:51，日落17:34。冷空气影响基本结束、秋高气爽；昼夜温差大（郊区最低 13℃ 左右）；明晨仍偏凉、白天快速回暖——"入秋"在望。', meta: '今日天气', stat: '晴 15~23℃' },
-  { name: '本地要闻', desc: '①中国第 16 次北冰洋考察"雪龙"号"雪龙2"号返回上海（央视 10/6）；第十届上海国际木偶艺术周启幕（10/5，《玩偶世界》全城首秀）；2026 世界水上摩托锦标赛中国上海大奖赛开赛；上海劳力士大师赛进行中（10/5-18）。②国庆档电影票房突破 9 亿（连续 5 天单日破亿）；上海旅游节花车巡游今日收官（至 10/6）；WF2026 上海国际手办模型文化博览会落幕（首发新品超 700 款）。', meta: '上海资讯', stat: '雪龙号归来' }
+  { name: '上海天气 · 10月7日', desc: '晴到多云（今日寒露）。15~26℃，西北风3~4级。湿度35%~80%（空气干燥）。AQI 良（实时 74，下午预报 85-105 良到轻度污染，首要污染物 O3）。日出05:51，日落17:33。今晨气温近期谷底（市区 15℃、崇明等远郊或跌破 10℃），白天升温给力、昼夜温差超 10℃；明日多云转暖（18~26℃）。', meta: '今日天气', stat: '寒露 15~26℃' },
+  { name: '本地要闻', desc: '①返程最高峰今日到来：虹桥枢纽预计单日到达 44.3 万人次，长三角铁路预计发送旅客 415 万人次（同比 +17.7%，增开 557 列）；G40 长江隧桥预计 15 万辆车通行，崇明/浦东公安联动保障；上海地铁 1/2/10/17 号线今晚加开夜间定点加班车。②故宫帝后服饰展今日最后一天（101 件织绣文物将离沪回京）；谢娜主演《十三角关系》上海站收官；劳力士大师赛激战正酣（10/5-18）。', meta: '上海资讯', stat: '返程最高峰' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">早上好，国庆假期第 6 天，秋高气爽 ♡</div>
+        <div className="greeting">早上好，国庆假期最后一天，寒露至、返程顺 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年10月6日 星期二</span>
-          <span>第 033 期</span>
+          <span className="date">2026年10月7日 星期三</span>
+          <span>第 034 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>OpenAI 洽谈 300 亿美元融资，估值冲 1.4 万亿</h3>
-          <p>阿联酋基金与贝莱德齐上桌；GPT-6 提速 50% 兑现"28 天计划"首日，GitHub 上 ECC 登顶热度榜。</p>
+          <h3>OpenAI 四连更：API 付费砍半、Auto-review 免费</h3>
+          <p>28 天计划持续兑现；可灵 AI 拟赴港上市，GitHub 上 Agent 生态项目集体走高。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.033</span>
+        <span>我的工作台 · 每日早报 · VOL.034</span>
       </footer>
     </div>
   )
