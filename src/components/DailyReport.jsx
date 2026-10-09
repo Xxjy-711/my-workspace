@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'airi', lang: 'TypeScript', desc: '💖🧸 自托管、真正属于你的 Grok 伴侣：waifu 灵魂容器、赛博生灵，支持实时语音对话，还能玩 Minecraft/Factorio，50.1K 星。', meta: 'AI 伴侣', stat: '50.1K★' },
-  { name: 'openai / openai-agents-python', lang: 'Python', desc: 'OpenAI 官方：轻量、强大的多智能体工作流框架，29.8K 星——编排 Agent 协作的 Python 首选。', meta: 'Agent 框架', stat: '29.8K★' },
-  { name: 'simstudioai / sim', lang: 'TypeScript', desc: '构建、部署与监控 AI Agent 与工作流的协作空间，10 万+ 开发者使用，29.7K 星。', meta: 'Agent 平台', stat: '29.7K★' },
-  { name: 'wechat-bot', lang: 'JavaScript', desc: '多平台 IM AI Agent：覆盖 Telegram/WhatsApp/Lark/微信，可接 ChatGPT/Claude/Kimi/DeepSeek/Ollama/Pi，11.4K 星。', meta: 'IM Agent', stat: '11.4K★' },
-  { name: 'awesome-selfhosted', lang: '多语言', desc: '自托管软件圣经：可部署在你自有服务器上的免费网络服务与应用清单，长期霸榜自托管分类。', meta: '自托管', stat: '长期#11' },
-  { name: 'obra / superpowers', lang: '多语言', desc: '编码 Agent 的开发方法论技能包，累计 295.6K 星——给 AI 装上"超级技能"。', meta: 'Agent 技能', stat: '295.6K★' }
+  { name: 'tester-army / e2e', lang: 'TypeScript', desc: 'GitHub Trending：下一代 e2e 测试框架——覆盖 Web 与移动端，Playwright 生态，端到端测试新选择。', meta: '测试框架', stat: 'Trending' },
+  { name: 'n8n-io / n8n', lang: 'TypeScript', desc: 'Fair-code 工作流自动化平台：原生 AI 能力 + 可视化编排 + 400+ 集成，可自托管可上云，热门 AI 项目常客。', meta: '工作流', stat: '400+ 集成' },
+  { name: 'mattpocock / skills', lang: 'Shell', desc: '面向真实工程师的技能包：直接来自作者 .agents 目录的 Agent 技能，开箱即用。', meta: 'Agent 技能', stat: 'Trending' },
+  { name: 'faster-whisper', lang: 'Python', desc: 'CTranslate2 加速的 Whisper 转录引擎：本地语音转写更快更省资源，25.7K 星。', meta: '语音转写', stat: '25.7K★' },
+  { name: 'ego-lite', lang: '多语言', desc: '与 AI 智能体共用且互不干扰的浏览器：每个 Agent 在独立空间执行任务，不影响你正常浏览网页。', meta: 'Agent 浏览器', stat: '新星' },
+  { name: 'pentagi', lang: 'Go', desc: '全自主 AI Agent 系统：可独立执行复杂渗透测试任务的安全测试框架，25.3K 星。', meta: '安全测试', stat: '25.3K★' }
 ]
 
 const aiCompanion = [
-  { name: 'OpenAI 面向全球所有 ChatGPT 用户全面上线 GPT-6', desc: '财联社/每经 10/8：GPT-6 全面取代 GPT-5.6 SOL 与 LUNA，集成 Astra 安全技术改进；Plus/Pro/Business/Enterprise 由 GPT-6 Sol 驱动、免费版与 Go 版由 GPT-6 Luna 驱动，均针对日常对话优化。', meta: '重磅发布', stat: 'GPT-6 全面上线' },
-  { name: 'Anthropic 发布 Claude Haiku 5.5', desc: '凤凰网 10/8：迄今最快、成本最低且能力最强的 Haiku 模型——平均运行成本较 Haiku 4.5 下降约 75%，≤10 万 Token 的请求 API 价格降 90%。', meta: '模型发布', stat: '成本降75%' },
-  { name: 'Anthropic 与 SpaceX 签署最高 845 亿美元算力协议', desc: '星知 10/8：Anthropic 在机密 IPO 文件中披露已与 SpaceX 签署最高 845 亿美元算力供应协议（2029 年前支付），较今年 5 月约 450 亿美元协议大幅扩容。', meta: '算力军备', stat: '845亿$' },
-  { name: '马斯克：Grok Bot 将不再只依赖自家模型', desc: '观点网 10/7：Grok Bot 将为不同任务选择"最有可能带来最佳结果"的模型——推理可交 Claude、图片生成可用 Midjourney，界面作为统一前端按任务分派。', meta: 'Agent 路由', stat: '多模型调度' },
-  { name: 'Meta Muse 适配 iPad 并新增 8 个连接器', desc: '极客公园 10/8：Muse 新增 Canva、Dropbox、Figma、QuickBooks、GitHub、Klaviyo、Zoom 等连接器；过去几周一直位居美国 App Store 免费 iPhone 应用下载榜首。', meta: 'AI 伴侣', stat: '下载榜榜首' },
-  { name: 'ChatGPT 推出全新 IUI 智能用户界面', desc: '极客早知道 10/8：搭载"智能 UI"（Intelligent UI）的 GPT-6 面向全球上线，对话式交互体验全面升级。', meta: '产品更新', stat: '智能UI' }
+  { name: 'OpenAI 年化收入约 500 亿美元，低于此前报道 180 亿', desc: '每经 10/9：OpenAI 向投资者披露，截至 9 月底年化收入运行率约 500 亿美元（此前报道 680 亿含合作伙伴收入）；Q3 整体收入运行率增长 77%；英伟达、甲骨文等 AI 股应声下跌。', meta: '资本重磅', stat: '年化500亿$' },
+  { name: '扩散智能 DiffuSpace 完成数亿人民币融资', desc: '环球网 10/9：经纬创投、顺为资本、君联资本联合领投，中科创星、华为哈勃、地平线等跟投；正在推进新一代更大参数 dLLM（扩散语言模型）训练，计划近期发布并开源。', meta: '融资动态', stat: '数亿元' },
+  { name: 'Claude 核心研究员：AI 几年内或超越所有人类', desc: '智源 10/8：Anthropic 强化学习技术负责人 Sholto Douglas 预测，能力超越所有人类的 AI 可能几年内出现，并估算到 2028 年全球 AI 年度资本开支或达 4 万亿美元。', meta: '行业展望', stat: '资本开支4万亿$' },
+  { name: 'AI 乙游"数亿融资，正在丢失它的阵地"', desc: '界面 10/9：AI 乙女游戏赛道观察——《星眠》是目前已知唯一拿到游戏版号的 AI 乙游（7/22 过审），《无限谷》至今没有版号；AI 聊天从核心变成点缀。', meta: 'AI 伴侣', stat: 'AI 乙游困境' },
+  { name: '微软 Copilot 变身"超级应用"', desc: '新浪 10/8：Copilot 从聊天助手升级为"超级应用"——整合文档、邮件、会议、日程与第三方 Agent 能力，用户在 Copilot 内完成从检索到执行的全流程。', meta: '办公入口', stat: '超级应用' },
+  { name: '阿里千问办公发布桌面机器人 QwenNote Eva', desc: '星知 10/8：QwenNote Eva 定价 899 元——千问办公首款桌面机器人，AI 办公硬件再进一步。', meta: 'AI 硬件', stat: '899元' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · GPT-6 时代开启', desc: 'OpenAI 面向全球所有用户上线 GPT-6（搭载智能 UI）；Claude Haiku 5.5 成本降 75%；Anthropic 与 SpaceX 签 845 亿美元算力协议；Grok Bot 将多模型调度；Meta Muse 适配 iPad。', meta: '数码资讯', stat: 'GPT-6 上线' },
-  { name: '游戏文娱 · 大师赛进行时', desc: '劳力士大师赛激战正酣（10/5-18 旗忠网球中心）；FISE 极限运动世界巡回赛·上海站 10/15-18 西岸免票全开放；谷歌推出试验性 AI 游戏平台 Playground；苹果被曝与 LG 联合开发门铃/门锁/温控器。', meta: '文娱资讯', stat: '大师赛进行中' },
-  { name: '穿搭美妆 · 入秋穿搭', desc: '今日晴到多云 17~26℃：①申城已正式入秋，秋高气爽阳光在线；②早间城郊温差大（郊区最低 12~13℃）；③湿度偏高（90%~40%）——衬衫+薄外套叠穿，紫外线中等注意防晒。', meta: '穿搭指南', stat: '17~26℃ 已入秋' },
-  { name: '理财职场 · 节后开工', desc: '节后首个工作日：10/10（周六）调休上班记得调闹钟；恒生科技指数拟扩容至 50 只；OpenAI 全球上线 GPT-6，AI 产业链热度延续。', meta: '财经职场', stat: '今日开工' },
-  { name: '健康 · 秋燥渐显', desc: '上海正式入秋：秋燥渐显注意补水润燥、早睡早起；早晨前后局部有雾，出行注意交通安全；寒露后昼夜温差大，洋葱式穿衣防感冒。', meta: '健康提醒', stat: '入秋润燥' }
+  { name: '数码科技 · AI 资本节奏', desc: 'OpenAI 年化收入约 500 亿美元（低于此前报道）引发 AI 股波动；DiffuSpace 完成数亿人民币融资；微软 Copilot 升级"超级应用"；阿里发布 899 元桌面机器人 QwenNote Eva。', meta: '数码资讯', stat: 'AI 股波动' },
+  { name: '游戏文娱 · 德约今日登场', desc: '上海大师赛正赛今日开打：德约科维奇 vs 胡尔卡奇（约 18:00 后）、兹维列夫 vs 吴易昺（外卡）、谢尔顿 vs 阿尔特迈尔，张之臻亦持外卡出战；AI 乙游《星眠》唯一拿版号、《无限谷》仍未过审；上海国际光影节静安分会场收官。', meta: '文娱资讯', stat: '德约登场' },
+  { name: '穿搭美妆 · 阴天穿搭', desc: '今日多云到阴 19~26℃、局部短时小雨：①湿度高（90%~55%）体感略闷；②早晚温差收窄、单层长袖即可；③出门备雨具；紫外线很弱，防晒可轻量。', meta: '穿搭指南', stat: '19~26℃ 局部小雨' },
+  { name: '理财职场 · 补班提醒', desc: 'OpenAI 年化收入披露引发 AI 股波动；恒生科技指数拟扩容至 50 只；明日（10/10 周六）调休上班，今晚早点休息。', meta: '财经职场', stat: '明日补班' },
+  { name: '健康 · 湿度波动', desc: '今日湿度大（90%~55%）注意通风防潮；秋燥与湿热交替，注意饮食清淡多补水；明天周六补班，调整作息避免节后疲乏。', meta: '健康提醒', stat: '防潮补水' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 10月8日', desc: '晴到多云（早晨前后局部有雾）。17~26℃，偏北风转偏东风 3~4级。湿度90%~40%。AQI 优~良（实时 54）。日出05:52，日落17:31。申城已正式入秋（10/3-7 连续 5 天日平均气温达标）；早间城郊温差明显（市区徐家汇 16.4℃、崇明 11.3℃），白天最高 26℃；明日多云转阴 19~25℃。', meta: '今日天气', stat: '正式入秋 17~26℃' },
-  { name: '本地要闻', desc: '①国庆长假上海接待游客 2020.54 万人次、线上线下消费 762.4 亿元（市政府 10/8）；长宁上线上海首个区级"文商旅体展绿"一站式服务平台（最多 5 天拿审批结果）；全市公园假期接待游客超 652 万人次；10/10 周六调休上班。②2026 西岸都市运动嘉年华暨 FISE 极限运动世界巡回赛·上海站 10/15-18 免票全开放；劳力士大师赛进行中；第二十五届中国上海国际艺术节 10/17-11/15 即将开幕。', meta: '上海资讯', stat: '国庆消费762.4亿' }
+  { name: '上海天气 · 10月9日', desc: '多云到阴，局部地区有短时小雨。19~26℃，偏东风3~4级。湿度90%~55%。AQI 优~良（实时 25 优，预报 55-75 良）。日出05:52，日落17:30。出门备把雨具；未来三天多云到阴为主、局部弱降水，11 日夜间降水消散后将迎来 4 天多云好天气。', meta: '今日天气', stat: '19~26℃ 短时小雨' },
+  { name: '本地要闻', desc: '①上海劳力士大师赛正赛今日开打：德约科维奇 vs 胡尔卡奇（约 18:00 后）、兹维列夫 vs 吴易昺（持外卡）、谢尔顿 vs 阿尔特迈尔，张之臻亦持外卡出战；静安苏河湾"第二现场"联动网球版"潦草小狗"可爱出圈。②上海国际光影节静安分会场收官；中外企业 CEO 将齐聚第 38 次市咨会；中国上海国际艺术节 10/17 开幕临近。', meta: '上海资讯', stat: '大师赛正赛开打' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">早上好，节后首个工作日，申城已入秋 ♡</div>
+        <div className="greeting">早上好，节后第二天，阴天记得带伞 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年10月8日 星期四</span>
-          <span>第 035 期</span>
+          <span className="date">2026年10月9日 星期五</span>
+          <span>第 036 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>OpenAI 全面上线 GPT-6，Claude Haiku 5.5 成本砍 75%</h3>
-          <p>两大模型同日更新；Anthropic 再签 845 亿美元算力大单，GitHub 上自托管 AI 伴侣 airi 登热榜。</p>
+          <h3>OpenAI 年化收入约 500 亿美元，AI 股应声波动</h3>
+          <p>低于此前报道 180 亿；DiffuSpace 数亿融资、Claude 研究员预言 AI 几年内超越人类。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.035</span>
+        <span>我的工作台 · 每日早报 · VOL.036</span>
       </footer>
     </div>
   )
