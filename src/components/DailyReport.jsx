@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'storytold / vectorcraft', lang: 'Rust', desc: 'GitHub 热榜 #2：纯 Rust 复刻的 Adobe Illustrator 开源替代品——免费矢量设计工具新选择，热度持续攀升。', meta: '矢量设计', stat: '热榜#2' },
-  { name: 'boykopovar / AnyPS5', lang: 'C++', desc: 'PS5 可执行文件自动移植到 Linux/Windows 的工具，今日 +5.9k 星，主机游戏跨界新玩法。', meta: '游戏工具', stat: '今日+5.9K' },
-  { name: 'storytold / artcraft', lang: 'Rust', desc: 'ArtCraft：面向艺术家/设计师/电影制作人的"意图驱动"创作引擎，今日 +3.8k 星。', meta: '创作引擎', stat: '今日+3.8K' },
-  { name: 'ollama / ollama', lang: 'Go', desc: '本地跑大模型全家桶：Kimi、GLM、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma 一键运行，182.6K 星。', meta: '本地模型', stat: '182.6K★' },
-  { name: 'browser-use / browser-use', lang: 'Python', desc: '会使用浏览器的 Agent：让 AI 像人一样操作网页，117.5K 星。', meta: '浏览器Agent', stat: '117.5K★' },
-  { name: 'affaan-m / ECC', lang: 'JavaScript', desc: 'Agent harness 性能优化系统：技能、直觉、记忆一体化，274.5K 星，热榜常客。', meta: 'Agent 系统', stat: '274.5K★' }
+  { name: 'morluto / rea', lang: 'Python', desc: 'REA（Reverse Engineer Anything）"逆向灭霸"：用 Agent 逆向任何东西——从应用行为到原生二进制，一天登顶 GitHub，狂揽近 7 万星。', meta: '逆向工程', stat: '近7万★' },
+  { name: 'Tencent / WeKnora', lang: 'Go', desc: '腾讯开源 LLM 知识平台：把原始文档变成可查询的 RAG 与自主推理 Agent，本月 +11.2K 星。', meta: '知识平台', stat: '本月+11.2K' },
+  { name: 'zhongerxin / iPhone-use', lang: 'Python', desc: '用 Codex 通过 USB 控制真实 iPhone：引导式设置、App 自动化、实时屏幕反馈——LLM 与物理设备桥接新玩法。', meta: '设备控制', stat: 'Trending' },
+  { name: 'openclaw / openclaw', lang: '多语言', desc: 'The AI that really does things：任何系统、任何平台都能干的 AI，热榜 #6，🦞 风格。', meta: 'Agent 平台', stat: '热榜#6' },
+  { name: 'anthropics / financial-services', lang: 'Python', desc: 'Anthropic 开源的金融服务工具集：把 Claude 能力接入金融场景，本月 +4.6K 星。', meta: '金融 AI', stat: '本月+4.6K' },
+  { name: 'insforge', lang: 'TypeScript', desc: '为编码智能体提供数据库、认证、存储、计算、托管与 AI 网关的开源后端平台，13.1K 星。', meta: '后端平台', stat: '13.1K★' }
 ]
 
 const aiCompanion = [
-  { name: '英伟达洽谈收购 Reflection AI，加码开放权重模型', desc: 'IT之家/财联社 10/11：英伟达正就收购或追加投资 Reflection AI 展开深入谈判；该公司专注开放权重模型，10/5 发布首款开源模型 Beam；"人才收购"模式（聘用员工+技术许可）可绕开完整收购。', meta: '资本重磅', stat: '收购谈判' },
-  { name: '赛博恋人售价百万，技术却还在蹒跚学步', desc: '人人都是产品经理 10/10：《人工智能拟人化互动服务管理暂行办法》7/15 起正式施行——全球首批 AI 情感互动专项监管：禁止诱导情感依赖、必须全程显著标注 AI 身份、不得生成淫秽色情内容、连续使用超 2 小时强制提醒。', meta: 'AI 伴侣', stat: '人机恋监管' },
-  { name: 'Meta Muse iPad 版上线一个月下载超 660 万', desc: 'AIbase 10/10：Muse 10/7 上线 iPad 专属 app，距 9/8 登陆 iOS/Android 仅一个月，扩张速度远超当年的 Instagram。', meta: 'AI 伴侣', stat: '660万下载' },
-  { name: 'OpenAI 推出文本水印技术 textGrain', desc: '智源 10/7：为 ChatGPT 生成内容逐词嵌入隐蔽密钥——肉眼不可辨、语义无损，专用检测器可精准识别来源；即刻生效，覆盖全球 API 调用，作业/简历/周报等 AI 文本可溯源。', meta: '内容溯源', stat: 'AI 水印' },
-  { name: 'Anthropic 与字节扎堆 AI 制药', desc: '星知：AI 制药赛道升温，巨头入场加速早期研发，但临床环节难同步缩短；数据基础设施与失败实验数据成关键，市场等待英矽智能 III 期临床数据验证。', meta: '行业观察', stat: 'AI 制药' },
-  { name: '世界首款 AI Agent 智能手机 NaviX Ultra', desc: 'Houdao 10/11：内置豆包大模型消费版，首创独立 AI 按钮+指纹识别无缝衔接，搭载骁龙 8 Gen 5 Elite 与高速 LPDDR5X 内存——"AI 原生化"手机来了。', meta: 'AI 硬件', stat: 'AI Agent 手机' }
+  { name: '模思智能完成超 10 亿元 Pre-A 轮融资', desc: '新浪科技 10/12：押注下一代 AI 全模态实时交互基座，华控基金领投，国开科创、上海科创基金、徐汇资本等参投，元禾控股等老股东持续加注。', meta: '融资重磅', stat: '超10亿元' },
+  { name: '蚂蚁"灵光"开启新版内测', desc: 'AI 晨报 10/12：升级为具备长期记忆、可主动推进复杂任务的个人智能体，计划本月正式开放。', meta: '个人智能体', stat: '本月开放' },
+  { name: '腾讯云开源 TeamAI', desc: 'AI 晨报 10/12：基于 Git 统一管理团队技能与项目知识，支持跨智能体复用，已适配 16 款主流工具。', meta: '开源动态', stat: '16款工具' },
+  { name: '零一万物推出 AI 游戏搭子 UPUP', desc: '人人都是产品经理 10/12：把 AI 角色定制、实时游戏辅助与玩家交友揉进同一入口，与逗逗、鹅次元、GameBuddy 同台试错——AI 游戏陪伴赛道升温。', meta: 'AI 伴侣', stat: '游戏搭子' },
+  { name: '腾讯秘密测试 AI 数字人游戏伴侣"鹅次元"', desc: 'AIbase 10/12：聚焦情感陪伴而非技术炫技，AI 数字人切入游戏陪玩场景，行业竞速加码。', meta: 'AI 伴侣', stat: '情感陪伴' },
+  { name: 'AI 社交出海：Popia 进美国畅销榜 Top 25', desc: '36氪：AI 聊天框成角色编辑器，面向美国市场，移动端累计收入约 40 万美元——AI 社交出海再"整活"。', meta: '出海观察', stat: '收入40万美元' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · 开放模型收购潮', desc: '英伟达洽谈收购开放权重模型公司 Reflection AI（Beam 已开源）；OpenAI 推出文本水印 textGrain 覆盖全球 API；Meta Muse iPad 版一个月 660 万下载；世界首款 AI Agent 手机 NaviX Ultra 亮相。', meta: '数码资讯', stat: '英伟达加码开源' },
-  { name: '游戏文娱 · 乒乓收官日', desc: 'WTT 中国大满贯今日收官：女单决赛王曼昱 vs 佐藤瞳（日本削球手）、男单半决赛周启豪 vs 松岛辉空、林昀儒 vs 雨果，男单决赛压轴——国乒冲双冠；上海大师赛周末继续；Vectorcraft 开源复刻 Illustrator、AnyPS5 自动移植 PS5 游戏。', meta: '文娱资讯', stat: '国乒冲双冠' },
-  { name: '穿搭美妆 · 秋日出行', desc: '今日多云转晴 18~25℃：①阳光在线、秋高气爽，适合出行拍照；②昼夜温差约 7℃，早晚加件薄外套；③湿度适中（59%~84%）、紫外线弱；周日出行舒适度高。', meta: '穿搭指南', stat: '18~25℃ 多云转晴' },
-  { name: '理财职场 · 明日复工', desc: '今天周日放松、明天周一正常上班；AI 收购潮持续（英伟达 Reflection AI、苹果 Huxe）；OpenAI 年化收入约 500 亿美元引发行业估值讨论。', meta: '财经职场', stat: '明日复工' },
-  { name: '健康 · 户外正当时', desc: '秋高气爽、阳光好，适合户外运动晒太阳补维生素 D；早晚温差大注意保暖防感冒；秋燥继续，多喝水润燥。', meta: '健康提醒', stat: '户外运动' }
+  { name: '数码科技 · 个人智能体升温', desc: '蚂蚁"灵光"新版内测（长期记忆+主动推进任务，本月开放）；腾讯云开源 TeamAI；阿里 Qoder 上线 Fast 模式约 3 秒响应；REA 逆向工具一天狂揽近 7 万星。', meta: '数码资讯', stat: '灵光内测' },
+  { name: '游戏文娱 · 国乒两冠收官', desc: 'WTT 中国大满贯收官：王曼昱女单决赛 4:0 横扫日本削球手佐藤瞳卫冕，成就女单女双双冠王、重返世界第一；国乒男线未进决赛；上海大师赛第三轮激战正酣，唯一晋级中国选手继续冲关。', meta: '文娱资讯', stat: '王曼昱卫冕' },
+  { name: '穿搭美妆 · 多云通勤', desc: '今日多云转阴 18~25℃：①云量较多、体感舒适；②昼夜温差约 7℃，通勤路上加件薄外套；③化妆指数"去油防晒"、紫外线弱；下午阴天为主。', meta: '穿搭指南', stat: '18~25℃ 多云转阴' },
+  { name: '理财职场 · 周一开工', desc: '新一周开工日；模思智能超 10 亿 Pre-A 轮融资领跑 AI 交互基座赛道；AI 社交出海验证变现（Popia 累计收入约 40 万美元）；OpenAI 年化收入约 500 亿美元讨论持续。', meta: '财经职场', stat: '新一周' },
+  { name: '健康 · 降温注意保暖', desc: '今日感冒指数"易发"——较前期明显降温，早晚记得加衣；运动指数适宜，通勤可步行锻炼；秋季干燥多补水。', meta: '健康提醒', stat: '感冒易发' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 10月11日', desc: '多云转晴。18~25℃，北风 1-2级。湿度84%~59%。AQI 优（实时 27）。日出05:53，日落17:28。秋高气爽、阳光在线，适合外出；明天（周一）多云转阴 18~25℃；本周气温稳定，周三前后局部地区有短时小雨。', meta: '今日天气', stat: '18~25℃ 多云转晴' },
-  { name: '本地要闻', desc: '①WTT 中国大满贯今日收官：女单决赛王曼昱 vs 佐藤瞳（日本削球手）、男单半决赛周启豪 vs 松岛辉空、林昀儒 vs 雨果·卡尔德拉诺，男单决赛压轴登场——国乒冲击双冠。②上海劳力士大师赛周末继续（中心球场 10/11-12 场次热售，¥230 起）；旗忠主赛场与苏河湾"第二现场"双场联动。', meta: '上海资讯', stat: '国乒收官日' }
+  { name: '上海天气 · 10月12日', desc: '多云转阴。18~25℃，北风 1-2级。湿度81%~74%。AQI 优（实时 39）。日出05:54，日落17:26。感冒指数易发：较前期降温明显，适当增加衣服；运动指数适宜。明天（周二）多云 19~27℃；周三前后局部短时小雨。', meta: '今日天气', stat: '18~25℃ 多云转阴' },
+  { name: '本地要闻', desc: '①WTT 中国大满贯收官：王曼昱女单决赛 4:0 横扫日本削球手佐藤瞳（11-2、11-8、11-3、11-9）成功卫冕，再成女单女双双冠王、女单重返世界第一；男单决赛日本选手松岛辉空夺冠。②上海劳力士大师赛 11 日展开第三轮争夺，唯一闯入第三轮的中国选手继续出战；旗忠主赛场与苏河湾"第二现场"双场联动。', meta: '上海资讯', stat: '王曼昱卫冕' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">早上好，周日好天气，出门晒晒太阳吧 ♡</div>
+        <div className="greeting">早上好，周一开工大吉，降温记得加衣 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年10月11日 星期日</span>
-          <span>第 038 期</span>
+          <span className="date">2026年10月12日 星期一</span>
+          <span>第 039 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>英伟达洽谈收购 Reflection AI，加码开放权重模型</h3>
-          <p>赛博恋人监管办法引热议；Muse iPad 版一个月 660 万下载、OpenAI 推 textGrain 水印。</p>
+          <h3>REA"逆向灭霸"一天登顶 GitHub，狂揽近 7 万星</h3>
+          <p>蚂蚁"灵光"内测个人智能体、腾讯开源 TeamAI；模思智能 10 亿融资押注全模态交互。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.038</span>
+        <span>我的工作台 · 每日早报 · VOL.039</span>
       </footer>
     </div>
   )
