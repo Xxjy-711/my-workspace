@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'morluto / rea', lang: 'Python', desc: 'REA（Reverse Engineer Anything）"逆向灭霸"：用 Agent 逆向任何东西——从应用行为到原生二进制，一天登顶 GitHub，狂揽近 7 万星。', meta: '逆向工程', stat: '近7万★' },
-  { name: 'Tencent / WeKnora', lang: 'Go', desc: '腾讯开源 LLM 知识平台：把原始文档变成可查询的 RAG 与自主推理 Agent，本月 +11.2K 星。', meta: '知识平台', stat: '本月+11.2K' },
-  { name: 'zhongerxin / iPhone-use', lang: 'Python', desc: '用 Codex 通过 USB 控制真实 iPhone：引导式设置、App 自动化、实时屏幕反馈——LLM 与物理设备桥接新玩法。', meta: '设备控制', stat: 'Trending' },
-  { name: 'openclaw / openclaw', lang: '多语言', desc: 'The AI that really does things：任何系统、任何平台都能干的 AI，热榜 #6，🦞 风格。', meta: 'Agent 平台', stat: '热榜#6' },
-  { name: 'anthropics / financial-services', lang: 'Python', desc: 'Anthropic 开源的金融服务工具集：把 Claude 能力接入金融场景，本月 +4.6K 星。', meta: '金融 AI', stat: '本月+4.6K' },
-  { name: 'insforge', lang: 'TypeScript', desc: '为编码智能体提供数据库、认证、存储、计算、托管与 AI 网关的开源后端平台，13.1K 星。', meta: '后端平台', stat: '13.1K★' }
+  { name: 'morluto / rea', lang: 'Python', desc: 'REA"逆向灭霸"持续霸榜：每天涨数万星，大有年初 OpenClaw 来势——用 Agent 逆向任何东西，从应用行为到原生二进制。', meta: '逆向工程', stat: '持续霸榜' },
+  { name: 'KKKKhazix / AIHOT', lang: 'TypeScript', desc: '自己找热点、自己写日报的网站框架：把信源和精选标准换成你的，它自动出日报，6.3K 星。', meta: 'AI 日报', stat: '6.3K★' },
+  { name: 'diegosouzapw / OmniRoute', lang: 'TypeScript', desc: '免费 MIT AI 网关：一个端点接入 359 家供应商（150+ 免费），"永不停机"的 AI 路由。', meta: 'AI 网关', stat: '359家供应商' },
+  { name: 'deepseek-ai / deepseek-harness', lang: '多语言', desc: 'DeepSeek Harness：Everything is a Plugin——AI Agent 插件化新范式。', meta: 'Agent 框架', stat: '插件化' },
+  { name: 'tw93 / Pake', lang: 'Rust', desc: '用 Rust 把任意网页变成轻量级桌面应用：一行命令搞定跨平台打包，28.3K 星。', meta: '桌面应用', stat: '28.3K★' },
+  { name: 'mediar-ai / screenpipe', lang: '多语言', desc: '24/7 本地 AI 屏幕与麦克风录制：构建拥有完整上下文感知能力的 AI 应用。', meta: '本地 AI', stat: '24/7 录制' }
 ]
 
 const aiCompanion = [
-  { name: '模思智能完成超 10 亿元 Pre-A 轮融资', desc: '新浪科技 10/12：押注下一代 AI 全模态实时交互基座，华控基金领投，国开科创、上海科创基金、徐汇资本等参投，元禾控股等老股东持续加注。', meta: '融资重磅', stat: '超10亿元' },
-  { name: '蚂蚁"灵光"开启新版内测', desc: 'AI 晨报 10/12：升级为具备长期记忆、可主动推进复杂任务的个人智能体，计划本月正式开放。', meta: '个人智能体', stat: '本月开放' },
-  { name: '腾讯云开源 TeamAI', desc: 'AI 晨报 10/12：基于 Git 统一管理团队技能与项目知识，支持跨智能体复用，已适配 16 款主流工具。', meta: '开源动态', stat: '16款工具' },
-  { name: '零一万物推出 AI 游戏搭子 UPUP', desc: '人人都是产品经理 10/12：把 AI 角色定制、实时游戏辅助与玩家交友揉进同一入口，与逗逗、鹅次元、GameBuddy 同台试错——AI 游戏陪伴赛道升温。', meta: 'AI 伴侣', stat: '游戏搭子' },
-  { name: '腾讯秘密测试 AI 数字人游戏伴侣"鹅次元"', desc: 'AIbase 10/12：聚焦情感陪伴而非技术炫技，AI 数字人切入游戏陪玩场景，行业竞速加码。', meta: 'AI 伴侣', stat: '情感陪伴' },
-  { name: 'AI 社交出海：Popia 进美国畅销榜 Top 25', desc: '36氪：AI 聊天框成角色编辑器，面向美国市场，移动端累计收入约 40 万美元——AI 社交出海再"整活"。', meta: '出海观察', stat: '收入40万美元' }
+  { name: 'Meta 发布 Muse Wonder 系列旗舰模型，对标 Anthropic/OpenAI', desc: 'IT之家 10/13：Muse Wonder 与 Muse Wonder Full 在推理、写作与代码测试中得分接近 Anthropic 顶尖模型；通过 Muse 应用访问需每月 20 或 100 美元，将逐步接入 Meta 个人 AI 智能体。', meta: '重磅发布', stat: '旗舰模型' },
+  { name: '扎克伯格：已在 AI 前沿追上竞争对手', desc: 'IT之家 10/13：扎克伯格称 Meta 已"追上"Anthropic 与 OpenAI，承诺继续大规模投入，同时淡化技术失控的风险警示。', meta: '巨头言论', stat: '继续加码' },
+  { name: 'OpenAI 80-90% 研究资源转向 GPT-7/GPT-8', desc: '智源 10/8：OpenAI 全力布局下一代模型——本月先发布能力更强的 GPT-6 Astra，9/22 又推高效低成本的 Sol 与 L 系列，代际迭代全面提速。', meta: '行业观察', stat: '转向GPT-7/8' },
+  { name: '微软计划明年大规模部署 Maia 300 芯片', desc: '每经 10/13：微软自研 AI 芯片 Maia 300 明年规模化部署，目标推理效率提升 40%，云算力自主可控再进一步。', meta: '算力硬件', stat: '推理+40%' },
+  { name: '博通 CEO：AI 投资者如同"赌场赌徒"', desc: '每经 10/13：博通 CEO 泼冷水——许多 AI 投资者像赌场赌徒，AI 发展的最大制约因素是资本，行业泡沫讨论升温。', meta: '行业观点', stat: '资本制约' },
+  { name: 'Open-AutoGLM Phone Agent：让 AI 学会"使用手机"', desc: '数智朋克：首个具备"Phone Use"能力的 AI Agent——ADB 控制+视觉语言模型+智能规划，支持 50+ 中文应用，内置安全防护。', meta: 'Agent 能力', stat: '50+ 应用' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · 个人智能体升温', desc: '蚂蚁"灵光"新版内测（长期记忆+主动推进任务，本月开放）；腾讯云开源 TeamAI；阿里 Qoder 上线 Fast 模式约 3 秒响应；REA 逆向工具一天狂揽近 7 万星。', meta: '数码资讯', stat: '灵光内测' },
-  { name: '游戏文娱 · 国乒两冠收官', desc: 'WTT 中国大满贯收官：王曼昱女单决赛 4:0 横扫日本削球手佐藤瞳卫冕，成就女单女双双冠王、重返世界第一；国乒男线未进决赛；上海大师赛第三轮激战正酣，唯一晋级中国选手继续冲关。', meta: '文娱资讯', stat: '王曼昱卫冕' },
-  { name: '穿搭美妆 · 多云通勤', desc: '今日多云转阴 18~25℃：①云量较多、体感舒适；②昼夜温差约 7℃，通勤路上加件薄外套；③化妆指数"去油防晒"、紫外线弱；下午阴天为主。', meta: '穿搭指南', stat: '18~25℃ 多云转阴' },
-  { name: '理财职场 · 周一开工', desc: '新一周开工日；模思智能超 10 亿 Pre-A 轮融资领跑 AI 交互基座赛道；AI 社交出海验证变现（Popia 累计收入约 40 万美元）；OpenAI 年化收入约 500 亿美元讨论持续。', meta: '财经职场', stat: '新一周' },
-  { name: '健康 · 降温注意保暖', desc: '今日感冒指数"易发"——较前期明显降温，早晚记得加衣；运动指数适宜，通勤可步行锻炼；秋季干燥多补水。', meta: '健康提醒', stat: '感冒易发' }
+  { name: '数码科技 · AI 军备竞赛', desc: 'Meta 发布 Muse Wonder 旗舰模型（Muse 应用每月 20/100 美元）；OpenAI 80-90% 资源转向 GPT-7/8；微软 Maia 300 芯片明年部署；博通 CEO 称 AI 投资者"如赌场赌徒"。', meta: '数码资讯', stat: 'Muse Wonder 发布' },
+  { name: '游戏文娱 · 大师赛再爆冷', desc: '伯格斯击败阿尔卡拉斯（职业生涯最大胜利），兹维列夫锁定 2026 年终世界第一；阿尔卡拉斯赛后吐槽用球引热议；周意惜败胡尔卡奇、中国单打全部出局；今日：兹维列夫 vs 布勃利克、张之臻/周意男双、武汉公开赛张帅出战。', meta: '文娱资讯', stat: '阿尔卡拉斯出局' },
+  { name: '穿搭美妆 · 午后微热', desc: '今日多云 18~26℃（午后最高 27℃ 微热）：①上午局部有雾、雾散后阳光登场；②穿衣指数"短袖"、中午可短袖；③化妆指数"去油防晒"；早晚温差大、通勤带件薄外套。', meta: '穿搭指南', stat: '18~26℃ 午后微热' },
+  { name: '理财职场 · 订阅制定价', desc: '周二开工；Meta Muse 订阅 20/100 美元/月验证 AI 订阅商业模式；AI 资本开支军备竞赛继续（Meta 加码、博通警示泡沫）；微软 Maia 300 芯片明年部署。', meta: '财经职场', stat: 'Muse 订阅制' },
+  { name: '健康 · 雾天防护', desc: '早晨局部有雾（松江大雾黄色预警）出行注意交通安全；午后升温微热、适当补水；珍惜好天气——周四夜间起有降雨，可趁今明安排户外活动。', meta: '健康提醒', stat: '雾天出行' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 10月12日', desc: '多云转阴。18~25℃，北风 1-2级。湿度81%~74%。AQI 优（实时 39）。日出05:54，日落17:26。感冒指数易发：较前期降温明显，适当增加衣服；运动指数适宜。明天（周二）多云 19~27℃；周三前后局部短时小雨。', meta: '今日天气', stat: '18~25℃ 多云转阴' },
-  { name: '本地要闻', desc: '①WTT 中国大满贯收官：王曼昱女单决赛 4:0 横扫日本削球手佐藤瞳（11-2、11-8、11-3、11-9）成功卫冕，再成女单女双双冠王、女单重返世界第一；男单决赛日本选手松岛辉空夺冠。②上海劳力士大师赛 11 日展开第三轮争夺，唯一闯入第三轮的中国选手继续出战；旗忠主赛场与苏河湾"第二现场"双场联动。', meta: '上海资讯', stat: '王曼昱卫冕' }
+  { name: '上海天气 · 10月13日', desc: '多云，上午以前局部有雾（松江区大雾黄色预警：能见度<500米，局部<200米）。18~26℃，午后最高 27℃ 微热，西北风3-4级、沿江沿海4-5级。湿度90%~50%。AQI 优~良（早晨 56 良）。日出05:55，日落17:25。穿衣"短袖"、感冒"少发"。珍惜好天气：周三云系增多，周四夜间至周五有降雨。', meta: '今日天气', stat: '18~26℃ 午前有雾' },
+  { name: '本地要闻', desc: '①上海大师赛再爆冷：伯格斯 10/12 击败阿尔卡拉斯——职业生涯最大胜利，阿尔卡拉斯赛后吐槽用球引热议；兹维列夫锁定 2026 年终世界第一；周意惜败胡尔卡奇后中国单打全部出局；今日焦点：兹维列夫 vs 布勃利克、张之臻/周意男双、武汉公开赛张帅 vs 卡林斯卡娅。②上海劳力士大师赛赛程过半，旗忠主赛场与苏河湾"第二现场"双场联动。', meta: '上海资讯', stat: '大师赛再爆冷' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">早上好，周一开工大吉，降温记得加衣 ♡</div>
+        <div className="greeting">早上好，雾散见阳光，午后微热，珍惜好天气 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年10月12日 星期一</span>
-          <span>第 039 期</span>
+          <span className="date">2026年10月13日 星期二</span>
+          <span>第 040 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>REA"逆向灭霸"一天登顶 GitHub，狂揽近 7 万星</h3>
-          <p>蚂蚁"灵光"内测个人智能体、腾讯开源 TeamAI；模思智能 10 亿融资押注全模态交互。</p>
+          <h3>Meta 发布 Muse Wonder 旗舰模型，正面硬刚 Anthropic 与 OpenAI</h3>
+          <p>OpenAI 80-90% 资源转向 GPT-7/8；微软 Maia 300 芯片明年部署；博通 CEO 泼冷水。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.039</span>
+        <span>我的工作台 · 每日早报 · VOL.040</span>
       </footer>
     </div>
   )
