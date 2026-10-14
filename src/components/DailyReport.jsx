@@ -2,7 +2,7 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'morluto / rea', lang: 'Python', desc: 'REA"逆向灭霸"持续霸榜：每天涨数万星，大有年初 OpenClaw 来势——用 Agent 逆向任何东西，从应用行为到原生二进制。', meta: '逆向工程', stat: '持续霸榜' },
+  { name: 'morluto / rea', lang: 'Python', desc: 'REA 引爆"AI 拆软件"浪潮：通过 MCP 协议把逆向能力接到 AI Agent——直接读二进制与汇编、自主理清控制流，10/10 一天涨 25784 星。', meta: '逆向工程', stat: '单日+25.8K' },
   { name: 'KKKKhazix / AIHOT', lang: 'TypeScript', desc: '自己找热点、自己写日报的网站框架：把信源和精选标准换成你的，它自动出日报，6.3K 星。', meta: 'AI 日报', stat: '6.3K★' },
   { name: 'diegosouzapw / OmniRoute', lang: 'TypeScript', desc: '免费 MIT AI 网关：一个端点接入 359 家供应商（150+ 免费），"永不停机"的 AI 路由。', meta: 'AI 网关', stat: '359家供应商' },
   { name: 'deepseek-ai / deepseek-harness', lang: '多语言', desc: 'DeepSeek Harness：Everything is a Plugin——AI Agent 插件化新范式。', meta: 'Agent 框架', stat: '插件化' },
@@ -11,25 +11,25 @@ const techProjects = [
 ]
 
 const aiCompanion = [
-  { name: 'Meta 发布 Muse Wonder 系列旗舰模型，对标 Anthropic/OpenAI', desc: 'IT之家 10/13：Muse Wonder 与 Muse Wonder Full 在推理、写作与代码测试中得分接近 Anthropic 顶尖模型；通过 Muse 应用访问需每月 20 或 100 美元，将逐步接入 Meta 个人 AI 智能体。', meta: '重磅发布', stat: '旗舰模型' },
-  { name: '扎克伯格：已在 AI 前沿追上竞争对手', desc: 'IT之家 10/13：扎克伯格称 Meta 已"追上"Anthropic 与 OpenAI，承诺继续大规模投入，同时淡化技术失控的风险警示。', meta: '巨头言论', stat: '继续加码' },
-  { name: 'OpenAI 80-90% 研究资源转向 GPT-7/GPT-8', desc: '智源 10/8：OpenAI 全力布局下一代模型——本月先发布能力更强的 GPT-6 Astra，9/22 又推高效低成本的 Sol 与 L 系列，代际迭代全面提速。', meta: '行业观察', stat: '转向GPT-7/8' },
-  { name: '微软计划明年大规模部署 Maia 300 芯片', desc: '每经 10/13：微软自研 AI 芯片 Maia 300 明年规模化部署，目标推理效率提升 40%，云算力自主可控再进一步。', meta: '算力硬件', stat: '推理+40%' },
-  { name: '博通 CEO：AI 投资者如同"赌场赌徒"', desc: '每经 10/13：博通 CEO 泼冷水——许多 AI 投资者像赌场赌徒，AI 发展的最大制约因素是资本，行业泡沫讨论升温。', meta: '行业观点', stat: '资本制约' },
-  { name: 'Open-AutoGLM Phone Agent：让 AI 学会"使用手机"', desc: '数智朋克：首个具备"Phone Use"能力的 AI Agent——ADB 控制+视觉语言模型+智能规划，支持 50+ 中文应用，内置安全防护。', meta: 'Agent 能力', stat: '50+ 应用' }
+  { name: '苹果正式进军智能家居：发布 HomeView 等 3 款新品', desc: '36氪 10/13：苹果"欢迎回家"发布会——首款智能家庭中枢 HomeView（7 英寸屏+Apple Intelligence 新版 Siri+人脸识别，可识别 6 位家庭成员，299 美元起、11/13 开售）、第二代 HomePod mini、全新 Apple TV 4K；总市值再创历史新高。', meta: '重磅发布', stat: 'HomeView 299美元' },
+  { name: 'REA"AI 拆软件"引爆开源圈', desc: '36氪 10/12：闭源软件靠"看不懂"守了二十年的墙开始漏风——开发者用 REA 重写 Photoshop 等 7 款 Adobe 工具为几十 MB 开源平替，Switch《暗黑破坏神2》原生移植 iOS 跑 60 帧，《守望先锋1》私服重构服务端核心。', meta: '开源浪潮', stat: '一天+25.8K星' },
+  { name: 'DeepSeek 将完成 1000 亿元融资', desc: '36氪 10/14：DeepSeek 本轮融资规模达 1000 亿元人民币量级，国产大模型资本热度再攀高峰。', meta: '融资重磅', stat: '1000亿元' },
+  { name: 'Cerebras CEO：很快家家户户都会有人工智能设备', desc: 'IT之家 10/14：Cerebras Systems CEO 费尔德曼在 TechCrunch Disrupt 2026 预测，家家户户配备 AI 设备的时代即将到来。', meta: '行业预言', stat: '家用AI时代' },
+  { name: '麦当劳在美规模化部署 AI 动态定价', desc: '星知：基于位置的 AI 动态定价在美规模化落地，同城巨无霸最高价差达 21%，算法调价加速渗透传统零售，引发效率与公平之争。', meta: 'AI 落地', stat: '同城价差21%' },
+  { name: '"友伴"上线：从 AI 工具到 AI 朋友', desc: '中国档案资讯网 10/14：开云体验 app 品牌升级为"友伴"，从工具型 AI 助手转向 AI 朋友——引入情感陪伴、主动健康管理，AI 从"能用"走向"懂你"。', meta: 'AI 伴侣', stat: '情感陪伴' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · AI 军备竞赛', desc: 'Meta 发布 Muse Wonder 旗舰模型（Muse 应用每月 20/100 美元）；OpenAI 80-90% 资源转向 GPT-7/8；微软 Maia 300 芯片明年部署；博通 CEO 称 AI 投资者"如赌场赌徒"。', meta: '数码资讯', stat: 'Muse Wonder 发布' },
-  { name: '游戏文娱 · 大师赛再爆冷', desc: '伯格斯击败阿尔卡拉斯（职业生涯最大胜利），兹维列夫锁定 2026 年终世界第一；阿尔卡拉斯赛后吐槽用球引热议；周意惜败胡尔卡奇、中国单打全部出局；今日：兹维列夫 vs 布勃利克、张之臻/周意男双、武汉公开赛张帅出战。', meta: '文娱资讯', stat: '阿尔卡拉斯出局' },
-  { name: '穿搭美妆 · 午后微热', desc: '今日多云 18~26℃（午后最高 27℃ 微热）：①上午局部有雾、雾散后阳光登场；②穿衣指数"短袖"、中午可短袖；③化妆指数"去油防晒"；早晚温差大、通勤带件薄外套。', meta: '穿搭指南', stat: '18~26℃ 午后微热' },
-  { name: '理财职场 · 订阅制定价', desc: '周二开工；Meta Muse 订阅 20/100 美元/月验证 AI 订阅商业模式；AI 资本开支军备竞赛继续（Meta 加码、博通警示泡沫）；微软 Maia 300 芯片明年部署。', meta: '财经职场', stat: 'Muse 订阅制' },
-  { name: '健康 · 雾天防护', desc: '早晨局部有雾（松江大雾黄色预警）出行注意交通安全；午后升温微热、适当补水；珍惜好天气——周四夜间起有降雨，可趁今明安排户外活动。', meta: '健康提醒', stat: '雾天出行' }
+  { name: '数码科技 · 苹果进军智能家居', desc: '苹果发布 HomeView 智能家庭中枢+HomePod mini 2+Apple TV 4K，299 美元起；DeepSeek 将完成 1000 亿元融资；REA 把 Adobe 工具重写成开源平替；麦当劳 AI 动态定价引热议。', meta: '数码资讯', stat: 'HomeView 发布' },
+  { name: '游戏文娱 · AI 逆向玩出新花样', desc: '大师赛 Day 10 激战：今日焦点西西帕斯、范德赞舒普 vs 纳达尔等；REA 玩家把 Switch《暗黑破坏神2》原生移植 iOS 跑 60 帧、《守望先锋1》私服重构服务端；AI 拆软件正改写游戏生态。', meta: '文娱资讯', stat: '暗黑2移植iOS' },
+  { name: '穿搭美妆 · 大风天防风', desc: '今日多云转阴 18~25℃：①东北风 4-5 级、沿江沿海阵风 6 级，通勤注意防风；②穿衣指数"短袖"、早晚 18℃ 加件薄外套；③湿度 40%~90%、秋燥明显，补水保湿安排上。', meta: '穿搭指南', stat: '18~25℃ 大风' },
+  { name: '理财职场 · 资本大动作', desc: '周三工作日；苹果总市值再创历史新高、正式切智能家居；DeepSeek 1000 亿元融资传闻发酵；AI 资本开支军备竞赛持续（博通警示泡沫）。', meta: '财经职场', stat: 'DeepSeek千亿融资' },
+  { name: '健康 · 秋燥防火', desc: '今日湿度低至 40%，秋燥多补水；火险等级气象指数 4 级易燃，注意用火用电安全；周末逼近 30℃、下周冷空气来袭，温差大注意增减衣物。', meta: '健康提醒', stat: '火险4级易燃' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 10月13日', desc: '多云，上午以前局部有雾（松江区大雾黄色预警：能见度<500米，局部<200米）。18~26℃，午后最高 27℃ 微热，西北风3-4级、沿江沿海4-5级。湿度90%~50%。AQI 优~良（早晨 56 良）。日出05:55，日落17:25。穿衣"短袖"、感冒"少发"。珍惜好天气：周三云系增多，周四夜间至周五有降雨。', meta: '今日天气', stat: '18~26℃ 午前有雾' },
-  { name: '本地要闻', desc: '①上海大师赛再爆冷：伯格斯 10/12 击败阿尔卡拉斯——职业生涯最大胜利，阿尔卡拉斯赛后吐槽用球引热议；兹维列夫锁定 2026 年终世界第一；周意惜败胡尔卡奇后中国单打全部出局；今日焦点：兹维列夫 vs 布勃利克、张之臻/周意男双、武汉公开赛张帅 vs 卡林斯卡娅。②上海劳力士大师赛赛程过半，旗忠主赛场与苏河湾"第二现场"双场联动。', meta: '上海资讯', stat: '大师赛再爆冷' }
+  { name: '上海天气 · 10月14日', desc: '多云转阴。18~25℃，东北风4-5级、沿江沿海阵风6级，夜里转东到东南风3-4级。湿度90%~40%。AQI 优（实时 26）。日出05:55，日落17:24。火险等级气象指数 4 级易燃。明天（周四）阴 21~25℃；15 日夜间暖湿气流增强、雨水增多；周末逼近 30℃，下周冷空气来袭。', meta: '今日天气', stat: '18~25℃ 大风天' },
+  { name: '本地要闻', desc: '①第九届进博会 11/5-10 在上海举办：国新办 10/16（周五）上午 10 时召开发布会，商务部副部长鄢东、上海市副市长卢山介绍筹备情况。②浦东机场口岸外籍人员入境量连续四天刷新年度纪录、单日最高 2.85 万人次：工博会、国际艺术节·国际演艺大会、上海大师赛、UCI 场地自行车世锦赛密集举办，免签入境占比超六成。③上海劳力士大师赛 Day 10 激战：旗忠主赛场今日焦点西西帕斯等名将出场。', meta: '上海资讯', stat: '进博会倒计时' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">早上好，雾散见阳光，午后微热，珍惜好天气 ♡</div>
+        <div className="greeting">早上好，周三大风天注意防风，秋燥多补水 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年10月13日 星期二</span>
-          <span>第 040 期</span>
+          <span className="date">2026年10月14日 星期三</span>
+          <span>第 041 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>Meta 发布 Muse Wonder 旗舰模型，正面硬刚 Anthropic 与 OpenAI</h3>
-          <p>OpenAI 80-90% 资源转向 GPT-7/8；微软 Maia 300 芯片明年部署；博通 CEO 泼冷水。</p>
+          <h3>苹果正式进军智能家居，发布 HomeView 等 3 款新品</h3>
+          <p>REA 让 AI 学会"拆软件"；DeepSeek 将完成 1000 亿元融资；Cerebras CEO 预言家用 AI 时代。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.040</span>
+        <span>我的工作台 · 每日早报 · VOL.041</span>
       </footer>
     </div>
   )
