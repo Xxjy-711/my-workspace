@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'morluto / rea', lang: 'Python', desc: 'REA 引爆"AI 拆软件"浪潮：通过 MCP 协议把逆向能力接到 AI Agent——直接读二进制与汇编、自主理清控制流，10/10 一天涨 25784 星。', meta: '逆向工程', stat: '单日+25.8K' },
-  { name: 'KKKKhazix / AIHOT', lang: 'TypeScript', desc: '自己找热点、自己写日报的网站框架：把信源和精选标准换成你的，它自动出日报，6.3K 星。', meta: 'AI 日报', stat: '6.3K★' },
-  { name: 'diegosouzapw / OmniRoute', lang: 'TypeScript', desc: '免费 MIT AI 网关：一个端点接入 359 家供应商（150+ 免费），"永不停机"的 AI 路由。', meta: 'AI 网关', stat: '359家供应商' },
-  { name: 'deepseek-ai / deepseek-harness', lang: '多语言', desc: 'DeepSeek Harness：Everything is a Plugin——AI Agent 插件化新范式。', meta: 'Agent 框架', stat: '插件化' },
-  { name: 'tw93 / Pake', lang: 'Rust', desc: '用 Rust 把任意网页变成轻量级桌面应用：一行命令搞定跨平台打包，28.3K 星。', meta: '桌面应用', stat: '28.3K★' },
-  { name: 'mediar-ai / screenpipe', lang: '多语言', desc: '24/7 本地 AI 屏幕与麦克风录制：构建拥有完整上下文感知能力的 AI 应用。', meta: '本地 AI', stat: '24/7 录制' }
+  { name: 'morluto / rea', lang: 'TypeScript', desc: 'REA"AI 拆软件"突破 110K 星：单日再涨 25.6K，从"看懂二进制"到重写整套商业软件，开源圈最猛之势。', meta: '逆向工程', stat: '110K★' },
+  { name: 'storytold / filmcraft', lang: 'Rust', desc: '用 Rust 清洁重实现 Adobe Premiere Pro：开源跨平台专业视频剪辑，REA 浪潮下的"拆巨头"代表作。', meta: '视频剪辑', stat: 'Premiere平替' },
+  { name: 'boykopovar / AnyPS5', lang: 'C++', desc: 'PS5 生态开源项目，单日 +4.0K 星、累计 30.4K——主机平台逆向与工具链热度不减。', meta: '主机开源', stat: '30.4K★' },
+  { name: 'addyosmani / agent-skills', lang: 'JavaScript', desc: '面向 AI 编码 Agent 的生产级工程技能库：把 codex/claude-code 等调教成资深工程师。', meta: 'Agent 技能', stat: '工程级' },
+  { name: 'public-apis / public-apis', lang: '多语言', desc: '免费 API 大全常青榜：数千个无需认证即可调用的公共接口合集。', meta: 'API 合集', stat: '免费API' },
+  { name: 'EbookFoundation / free-programming-books', lang: '多语言', desc: '免费编程书大全：#5 常青项目，覆盖几乎所有语言与主题的开源书单。', meta: '学习资源', stat: '免费书单' }
 ]
 
 const aiCompanion = [
-  { name: '苹果正式进军智能家居：发布 HomeView 等 3 款新品', desc: '36氪 10/13：苹果"欢迎回家"发布会——首款智能家庭中枢 HomeView（7 英寸屏+Apple Intelligence 新版 Siri+人脸识别，可识别 6 位家庭成员，299 美元起、11/13 开售）、第二代 HomePod mini、全新 Apple TV 4K；总市值再创历史新高。', meta: '重磅发布', stat: 'HomeView 299美元' },
-  { name: 'REA"AI 拆软件"引爆开源圈', desc: '36氪 10/12：闭源软件靠"看不懂"守了二十年的墙开始漏风——开发者用 REA 重写 Photoshop 等 7 款 Adobe 工具为几十 MB 开源平替，Switch《暗黑破坏神2》原生移植 iOS 跑 60 帧，《守望先锋1》私服重构服务端核心。', meta: '开源浪潮', stat: '一天+25.8K星' },
-  { name: 'DeepSeek 将完成 1000 亿元融资', desc: '36氪 10/14：DeepSeek 本轮融资规模达 1000 亿元人民币量级，国产大模型资本热度再攀高峰。', meta: '融资重磅', stat: '1000亿元' },
-  { name: 'Cerebras CEO：很快家家户户都会有人工智能设备', desc: 'IT之家 10/14：Cerebras Systems CEO 费尔德曼在 TechCrunch Disrupt 2026 预测，家家户户配备 AI 设备的时代即将到来。', meta: '行业预言', stat: '家用AI时代' },
-  { name: '麦当劳在美规模化部署 AI 动态定价', desc: '星知：基于位置的 AI 动态定价在美规模化落地，同城巨无霸最高价差达 21%，算法调价加速渗透传统零售，引发效率与公平之争。', meta: 'AI 落地', stat: '同城价差21%' },
-  { name: '"友伴"上线：从 AI 工具到 AI 朋友', desc: '中国档案资讯网 10/14：开云体验 app 品牌升级为"友伴"，从工具型 AI 助手转向 AI 朋友——引入情感陪伴、主动健康管理，AI 从"能用"走向"懂你"。', meta: 'AI 伴侣', stat: '情感陪伴' }
+  { name: 'Character.AI 申请破产：迪士尼 2000 万美元接手', desc: '新浪财经 10/15：AI 伴侣鼻祖 Character.AI 向特拉华州法院提交破产法第 11 章重组申请——预计负债 5000 万~1 亿美元，谷歌为最大债权人；迪士尼旗下 Disney Worldwide Services 任"首席竞标方"，拟 2000 万美元收购资产。两年前估值曾传 50 亿美元，创始人是 Transformer 论文作者 Noam Shazeer。', meta: '重磅震动', stat: '迪士尼2000万美元' },
+  { name: 'Anthropic 三季度收入 168 亿美元，环比增近五成', desc: '新浪财经 10/15（FT）：Claude 开发商 Anthropic 向投资者透露 Q3 营收 168 亿美元，环比增长近五成，连续第二个季度实现调整后盈利；5 月完成 650 亿美元 H 轮融资、投后估值达 9650 亿美元。', meta: '业绩爆发', stat: 'Q3收入168亿美元' },
+  { name: '黄仁勋：客户开发"不安全 AI 软件"就断供芯片', desc: '财联社 10/15：英伟达 CEO 黄仁勋最新表态——若客户开发不安全 AI 软件，会停止供应芯片："这只是个假设，但答案是肯定的"；GTC 柏林大会主题演讲定于 10/21（下周三）17:00 开讲。', meta: '行业强音', stat: 'GTC柏林10/21' },
+  { name: 'Meta Muse：发布三周下载数百万，用户与 AI "坠入爱河"', desc: 'Telset 10/15：Meta Muse AI 发布三周下载数百万次，用户与 Agent 建立浪漫关系、甚至自称"结婚"；专家警告黑客与勒索风险，Meta 称合法成人行为不屏蔽——人机恋热度与争议并存。', meta: 'AI 伴侣', stat: '三周数百万下载' },
+  { name: 'REA 突破 11 万星，"拆软件"生态全面开花', desc: 'open-repo 10/14：REA 累计 110K 星、单日 +25.6K；衍生项目涌现——filmcraft 用 Rust 重写 Premiere Pro、artcraft 等开源平替接踵而来，闭源软件围墙加速坍塌。', meta: '开源浪潮', stat: '衍生项目爆发' },
+  { name: 'Modal 完成 7.5 亿美元 D 轮融资', desc: '创业家 10/15：AI 云基础设施公司 Modal 完成 7.5 亿美元 D 轮，投后估值达 157.5 亿美元；同期曝特斯拉 Optimus 人形机器人即将量产。', meta: '资本动态', stat: '估值157.5亿美元' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · 苹果进军智能家居', desc: '苹果发布 HomeView 智能家庭中枢+HomePod mini 2+Apple TV 4K，299 美元起；DeepSeek 将完成 1000 亿元融资；REA 把 Adobe 工具重写成开源平替；麦当劳 AI 动态定价引热议。', meta: '数码资讯', stat: 'HomeView 发布' },
-  { name: '游戏文娱 · AI 逆向玩出新花样', desc: '大师赛 Day 10 激战：今日焦点西西帕斯、范德赞舒普 vs 纳达尔等；REA 玩家把 Switch《暗黑破坏神2》原生移植 iOS 跑 60 帧、《守望先锋1》私服重构服务端；AI 拆软件正改写游戏生态。', meta: '文娱资讯', stat: '暗黑2移植iOS' },
-  { name: '穿搭美妆 · 大风天防风', desc: '今日多云转阴 18~25℃：①东北风 4-5 级、沿江沿海阵风 6 级，通勤注意防风；②穿衣指数"短袖"、早晚 18℃ 加件薄外套；③湿度 40%~90%、秋燥明显，补水保湿安排上。', meta: '穿搭指南', stat: '18~25℃ 大风' },
-  { name: '理财职场 · 资本大动作', desc: '周三工作日；苹果总市值再创历史新高、正式切智能家居；DeepSeek 1000 亿元融资传闻发酵；AI 资本开支军备竞赛持续（博通警示泡沫）。', meta: '财经职场', stat: 'DeepSeek千亿融资' },
-  { name: '健康 · 秋燥防火', desc: '今日湿度低至 40%，秋燥多补水；火险等级气象指数 4 级易燃，注意用火用电安全；周末逼近 30℃、下周冷空气来袭，温差大注意增减衣物。', meta: '健康提醒', stat: '火险4级易燃' }
+  { name: '数码科技 · 冰火两重天', desc: 'AI 赛道两极分化：Character.AI 破产被迪士尼 2000 万美元接盘，Anthropic 却单季收入 168 亿美元、连续两季盈利；REA 11 万星持续霸榜，Modal 7.5 亿美元 D 轮。', meta: '数码资讯', stat: 'AI冰火两重天' },
+  { name: '游戏文娱 · 大师赛 8 强出炉', desc: '上海劳力士大师赛男单 8 强对阵：兹维列夫 VS 德米纳尔、梅德韦杰夫 VS 保罗、霍达尔 VS 鲁德等，1/4 决赛一触即发；开源圈 filmcraft 重写 Premiere Pro 引热议。', meta: '文娱资讯', stat: '8强出炉' },
+  { name: '穿搭美妆 · 夜里雨水上线', desc: '今日多云到阴 18~25℃：①东南风 3-4 级、沿江沿海 4-5 级；②夜间短时阵雨上线，通勤备伞；③湿度 90%~50%，秋燥较昨日缓解；早晚 18℃ 加薄外套。', meta: '穿搭指南', stat: '18~25℃ 夜雨' },
+  { name: '理财职场 · AI 资本大分化', desc: '周四工作日；Anthropic 估值逼近万亿美金（9650 亿美元）连续盈利，Character.AI 却以 2000 万美元贱卖——AI 创业马太效应尽显；特斯拉 Optimus 传即将量产。', meta: '财经职场', stat: '马太效应' },
+  { name: '健康 · 先冲 30℃ 再降温', desc: '今夜起雨水增多、周末湿暖；周日气温短暂冲高至 30℃，下周冷空气来袭（10/21 最低仅 15℃），大温差谨防感冒；湿度回升秋燥缓解，可适当减少补水焦虑。', meta: '健康提醒', stat: '周日30℃后降温' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 10月14日', desc: '多云转阴。18~25℃，东北风4-5级、沿江沿海阵风6级，夜里转东到东南风3-4级。湿度90%~40%。AQI 优（实时 26）。日出05:55，日落17:24。火险等级气象指数 4 级易燃。明天（周四）阴 21~25℃；15 日夜间暖湿气流增强、雨水增多；周末逼近 30℃，下周冷空气来袭。', meta: '今日天气', stat: '18~25℃ 大风天' },
-  { name: '本地要闻', desc: '①第九届进博会 11/5-10 在上海举办：国新办 10/16（周五）上午 10 时召开发布会，商务部副部长鄢东、上海市副市长卢山介绍筹备情况。②浦东机场口岸外籍人员入境量连续四天刷新年度纪录、单日最高 2.85 万人次：工博会、国际艺术节·国际演艺大会、上海大师赛、UCI 场地自行车世锦赛密集举办，免签入境占比超六成。③上海劳力士大师赛 Day 10 激战：旗忠主赛场今日焦点西西帕斯等名将出场。', meta: '上海资讯', stat: '进博会倒计时' }
+  { name: '上海天气 · 10月15日', desc: '多云到阴。18~25℃，东南风3-4级、沿江沿海4-5级。湿度90%~50%。AQI 优（实时 23）。日出05:56，日落17:23。今夜暖湿气流增强、短时阵雨上线；周五和双休日云系较多伴短时阵雨；周日气温短暂冲高至 30℃，下周冷空气来袭（10/21 最低 15℃）。厄尔尼诺持续增强、本月达峰值。', meta: '今日天气', stat: '18~25℃ 夜雨' },
+  { name: '本地要闻', desc: '①上海劳力士大师赛男单 8 强对阵出炉：兹维列夫 VS 德米纳尔、梅德韦杰夫 VS 保罗、霍达尔 VS 鲁德、热亚 VS 福基纳，1/4 决赛即将开打。②第九届进博会 11/5-10 国家会展中心（上海）举办，11/8-10 向社会观众开放、报名火热进行中；国新办明天（10/16）上午 10 时召开发布会介绍筹备情况。③浦东机场口岸外籍人员入境连续 4 天创年度新高，免签入境占比超六成。', meta: '上海资讯', stat: '大师赛8强出炉' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">早上好，周三大风天注意防风，秋燥多补水 ♡</div>
+        <div className="greeting">早上好，周四大风渐缓、夜里记得带伞 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年10月14日 星期三</span>
-          <span>第 041 期</span>
+          <span className="date">2026年10月15日 星期四</span>
+          <span>第 042 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>苹果正式进军智能家居，发布 HomeView 等 3 款新品</h3>
-          <p>REA 让 AI 学会"拆软件"；DeepSeek 将完成 1000 亿元融资；Cerebras CEO 预言家用 AI 时代。</p>
+          <h3>Character.AI 申请破产，迪士尼 2000 万美元接手</h3>
+          <p>AI 伴侣鼻祖陨落，两年前估值曾传 50 亿美元；Anthropic 单季 168 亿美元收入、黄仁勋"断供"表态引热议。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.041</span>
+        <span>我的工作台 · 每日早报 · VOL.042</span>
       </footer>
     </div>
   )
