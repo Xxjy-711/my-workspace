@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'morluto / rea', lang: 'TypeScript', desc: 'AI 逆向风暴持续：发布一周星数冲到 23.9 万、断层领先趋势榜，第二名的增量连零头都摸不着，"让一切软件变免费"。', meta: '逆向工程', stat: '一周23.9万★' },
-  { name: 'esp32-iphone-agent', lang: 'C/ESP32', desc: '开仓五天 2,584 星冲进前五：7 美元的 ESP32 板子插在 iPhone 上，让手机化身可编程 AI 硬件 Agent，硬件极客狂喜。', meta: '硬件 Agent', stat: '五天2.5K★' },
-  { name: 'storytold / filmcraft', lang: 'Rust', desc: '前 Square 工程师 Brandon Thomas 用 Claude Opus 5.5 + Rust 复刻 Adobe 全家桶：受够退订违约金，重写后完全免费。', meta: '视频剪辑', stat: 'Adobe平替' },
-  { name: 'NationalSecurityAgency / ghidra', lang: 'Java', desc: 'NSA 的老牌逆向工程工具被这波逆向热带着涨了 6,614 星：REA 效应让"看懂二进制"成了开源圈新潮流。', meta: '逆向工具', stat: '暴涨6.6K★' },
-  { name: 'obra / superpowers', lang: '多语言', desc: 'Agentic skills 框架与软件开发方法论：让 AI 编程 Agent 具备"超能力"级工程技能。', meta: 'Agent 技能', stat: '热榜前列' },
-  { name: 'EbookFoundation / free-programming-books', lang: '多语言', desc: '免费编程书大全：覆盖几乎所有语言与主题的开源书单，学习常备。', meta: '学习资源', stat: '免费书单' }
+  { name: 'morluto / rea', lang: 'TypeScript', desc: 'AI 逆向风暴继续霸榜：发布至今持续登顶 GitHub 趋势榜（GitHub AI Weekly 第10期 Top1），"让一切软件变免费"运动仍在发酵。', meta: '逆向工程', stat: '趋势榜No.1' },
+  { name: 'storytold / artcraft', lang: 'Rust', desc: 'filmcraft 姊妹项目、Adobe 全家桶开源复刻系列新作：设计/图像工具链也用 Rust 重写，免费平替 Adobe。', meta: '设计工具', stat: '榜单No.2' },
+  { name: 'anthropics / claude-plugins-official', lang: 'TypeScript', desc: 'Anthropic 官方 Claude 插件库登上热榜：把 Claude 的能力插件化、接入开发者工作流，官方下场做生态。', meta: '官方插件', stat: '榜单No.7' },
+  { name: 'earthtojake / text-to-cad', lang: '多语言', desc: '文字直接生成 CAD 设计：用自然语言描述几何与结构，AI 一键出工程图纸，机械/建筑圈狂喜。', meta: 'AIGC CAD', stat: '榜单No.8' },
+  { name: 'ranxianglei / billion-context', lang: '多语言', desc: '十亿级上下文项目：把大模型上下文窗口推到 1B tokens 级别，长文档/代码库全量塞进上下文。', meta: '长上下文', stat: '榜单No.9' },
+  { name: 'mattpocock / skills', lang: 'TypeScript', desc: 'TypeScript 技能的 Agent 化实践：Matt Pocock 的 skills 集合，教 AI 编程助手高效使用类型系统。', meta: 'TS 技能', stat: '榜单No.3' }
 ]
 
 const aiCompanion = [
-  { name: 'Anthropic 600 亿美元芯片融资"北极星项目"', desc: '网易/新浪财经 10/17：向黑石提供超 10% 两位数收益率，采购约 1.5 吉瓦谷歌定制 TPU；黑石旗下基金投 90 亿美元购买以 Anthropic 未来五年芯片租赁付款为支持的债务，预计成迄今最大芯片融资交易。', meta: '资本动态', stat: '600亿美元' },
-  { name: 'Anthropic 秘密游说国会，推动前沿 AI 监管法案', desc: '财联社 10/17：警告 AI 失控风险、呼吁暂停前沿 AI 研发之后，Anthropic 又私下向美国国会议员介绍监管前沿 AI 安全的法案草案——巨头开始主动影响自家技术的规则制定。', meta: '监管博弈', stat: '游说国会' },
-  { name: '字节跳动洽谈采购联发科 AI 芯片', desc: '彭博社 10/17：字节跳动正洽谈采购联发科 AI 芯片用于数据中心算力搭建——国产/台湾芯片厂在大厂算力版图中的分量持续上升。', meta: '算力布局', stat: '采购联发科' },
-  { name: 'REA 一周 23.9 万星：AI 逆向引爆开源圈', desc: '10/17 热榜数据：REA 发布一周星数 23.9 万、断层领先；顺带把 NSA 的 ghidra、7 美元的 ESP32 硬件 Agent 都带火了。', meta: '开源浪潮', stat: '一周23.9万★' },
-  { name: '具身智能国际标准会议杭州举行', desc: '中新网 10/17：国际电信联盟具身智能标准焦点组 2026 年第三次会议在杭州举行，聚焦关键技术、国际标准与行业应用——具身智能正从预设任务走向开放环境自主感知行动。', meta: '标准建设', stat: '杭州开议' },
-  { name: '长鑫存储净赚 1300 亿元', desc: '观察者网硬科技早报 10/17：国产存储龙头长鑫净赚 1300 亿元，国产芯片产业链景气度持续；同日海康威视经营现金流大跌引发关注。', meta: '国产芯片', stat: '净赚1300亿' }
+  { name: 'OpenCode 爆雷：开发者 API Key 遭大规模盗刷', desc: '新智元/凤凰网 10/18：开源 AI 编程工具 OpenCode 遭遇大规模蒸馏攻击安全漏洞，1.4% Console 用户工作区里的 OpenAI/Claude/Gemini 密钥裸奔；黑客几小时内把 Token 全部刷去"训练自己的模型"，有人被刷走 1700 美元；Anthropic 已强制注销疑似泄露密钥，联创 Dax Raad 自己账号也被攻击。', meta: '安全警示', stat: '1.4%用户中招' },
+  { name: 'Reflection 开源 Beam：501B 开放权重模型', desc: 'Reflection AI 10/5 发布 Beam 501B 开放权重模型；FT 报道其与英伟达的收购谈判未证实，此时开源权重被解读为"让 Beam 先普及再说"的主动布局。', meta: '开源模型', stat: '501B开放' },
+  { name: '台积电净利涨 69% 至 236 亿美元', desc: 'DEV 10/17：台积电净利润同比增 69% 至 236 亿美元、营收增 51% 至 470 亿美元，并上调 2026 年资本支出指引——AI 芯片浪潮继续抬轿。', meta: '芯片景气', stat: '净利+69%' },
+  { name: 'Anthropic 官方 Claude 插件生态上线', desc: 'GitHub AI Weekly 10/17：#07 anthropics/claude-plugins-official 上榜——Anthropic 把 Claude 做成官方插件库，AI 编程与工作流插件化提速。', meta: '生态布局', stat: '官方插件上榜' },
+  { name: 'Character.AI 破产后的 AI 陪伴反思', desc: '36氪 10/16：曾经的 AI 陪伴顶流 1200 万用户仍月亏 800-900 万美元、接盘底价仅 2000 万；国内玩家同步"折戟"。中国 7/15 已施行《人工智能拟人化互动服务管理暂行办法》——全球首部禁止"情感成瘾式"AI 伴侣的法律框架。', meta: 'AI 伴侣', stat: '全球首部立法' },
+  { name: '每天互动 60 次：年轻人开始"养"小机器人', desc: '新浪财经 10/18：情感陪伴机器人形态多元——聊天机器人、毛绒玩具宠物、人形机器人各有拥趸；行业共识未定，但"听懂、看懂、记住、自然反馈情绪"已成方向共识。', meta: '陪伴机器人', stat: '日互动60次' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · AI 烧钱战升级', desc: 'Anthropic 600 亿美元芯片融资"北极星项目"向黑石付超 10% 收益率，成史上最大芯片融资；字节跳动洽谈采购联发科 AI 芯片；REA 一周 23.9 万星断层领先。', meta: '数码资讯', stat: '600亿芯片融资' },
-  { name: '游戏文娱 · 大师赛半决赛今日开打', desc: '上海大师赛男单半决赛今天上演：16:30 兹维列夫 VS 达维多维奇-福基纳、19:00 霍达尔 VS 梅德韦杰夫（昨天 1/4 决赛霍达尔 2-1 鲁德、梅德韦杰夫 2-1 保罗），央视频直播，10/18 决出冠军。', meta: '文娱资讯', stat: '半决赛今日' },
-  { name: '穿搭美妆 · 云系多防雨', desc: '今日阴天 24~28℃、东南风4级：①湿度偏高 72%、云系多，体感闷热可穿轻薄长袖；②周日后期受冷暖空气共同影响有明显降水、可能伴雷电，周末出门带伞；③AQI 良（65），可正常户外活动。', meta: '穿搭指南', stat: '24~28℃ 阴' },
-  { name: '理财职场 · AI 高息举债信号', desc: 'Anthropic 愿付超 10% 收益率举债 600 亿美元采购芯片——AI 基建烧钱战进入"高息时代"；长鑫净赚 1300 亿、字节洽谈联发科芯片，国产算力产业链景气度走高。', meta: '财经职场', stat: '高息举债600亿' },
-  { name: '健康 · 蔷琵加强为台风级', desc: '第 30 号台风"蔷琵"今天凌晨加强为台风级（12 级、35 米/秒），18 日傍晚或升级为超强台风，未来 5 天对我国海区无影响；周日后半段上海或迎明显降水+雷电，周末出行留意天气。', meta: '健康提醒', stat: '蔷琵12级' }
+  { name: '数码科技 · OpenCode 爆雷，快查你的 Key', desc: '开源 AI 编程工具 OpenCode 遭大规模蒸馏攻击，1.4% 用户工作区的 OpenAI/Claude/Gemini API Key 泄露被盗刷（最惨被刷 1700 美元）。收到邮件的开发者请立刻去官方控制台吊销并重配 Key——改密码没用！', meta: '安全警报', stat: '快吊销Key' },
+  { name: '游戏文娱 · 大师赛决赛上演"西班牙德比"', desc: '上海大师赛男单决赛今日 16:30 开打：20 岁小将霍达尔（昨日半决赛 2-0 胜梅德韦杰夫）VS 福基纳（淘汰兹维列夫）——无论谁夺冠，都将成为赛事史上首位西班牙男单冠军。', meta: '文娱资讯', stat: '西班牙德比' },
+  { name: '穿搭美妆 · 午后转雨，晚归带伞', desc: '今日上午多云、下午转阴到多云有时有阵雨或雷雨，24~31℃：①偏南风 4-5 级沿江沿海阵风 6 级，下午转西北风 3-4 级，风大易乱发型可扎起；②湿度 90%~60%，体感闷热穿轻薄透气款；③晚归务必带伞，明天小雨降温到 21~23℃。', meta: '穿搭指南', stat: '午后转雨31℃' },
+  { name: '理财职场 · 台积电净利 +69%，AI 浪潮持续', desc: '台积电 Q3 净利 236 亿美元、同比涨 69%，营收 470 亿美元涨 51%，上调 2026 资本开支指引——AI 硬件景气度依旧；同时 OpenCode 事件提醒：API Key 是开发者"第二张身份证"，别乱交给第三方控制台。', meta: '财经职场', stat: '台积电+69%' },
+  { name: '健康 · 今日重阳 + 蔷琵或将升级超强台风', desc: '今天是九月初九重阳节，登高望远记得下午前出发（午后转阵雨）；第 30 号台风"蔷琵"预计 18 日傍晚升级为超强台风，未来 5 天对我国海区无影响；冷空气已在路上，下周最低或降至 15℃ 左右，注意添衣。', meta: '健康提醒', stat: '重阳+蔷琵' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 10月17日', desc: '阴，24~28℃。东南风4级，湿度72%。AQI 良（65）。今日凌晨第30号台风"蔷琵"（CHAMPI）由强热带风暴级加强为台风级（中心附近最大风力12级、35米/秒，位于关岛塞班东南约530公里海面），18日傍晚或升级为超强台风，21日前向西偏北移动、未来5天对我国海区无影响；上海双休日云系较多，周日后期受冷暖空气共同影响有明显降水并可能伴雷电，气温随后下降。', meta: '今日天气', stat: '24~28℃ 云系多' },
-  { name: '本地要闻', desc: '①上海大师赛男单半决赛今日开打：16:30 兹维列夫 VS 达维多维奇-福基纳、19:00 霍达尔 VS 梅德韦杰夫（昨日1/4决赛：霍达尔 2-1 胜鲁德、梅德韦杰夫 2-1 胜保罗，四强全部产生），央视频直播，明日（10/18）决出冠军。②第九届进博会 11/5-10 国家会展中心举办、虹桥论坛同期，4142 家境外企业参展，社会观众报名火热进行中。', meta: '上海资讯', stat: '大师赛半决赛' }
+  { name: '上海天气 · 10月18日', desc: '上午多云，下午转阴到多云有时有阵雨或雷雨（冷暖空气交汇）。24~31℃。偏南风4-5级、沿江沿海阵风6级，下午转西北风3-4级、沿江沿海4-5级。相对湿度90%~60%。AQI 优（23）。日出05:59，日落17:20。明天（10/19）小雨 21~23℃ 明显降温，10/21 最低或降至 15℃ 左右。今日九月初九重阳节。', meta: '今日天气', stat: '午后转雨31℃' },
+  { name: '本地要闻', desc: '①上海大师赛男单决赛今日上演"西班牙德比"：16:30 20岁小将霍达尔（昨日半决赛2-0胜梅德韦杰夫，即时排名升至第12）VS 达维多维奇-福基纳（半决赛淘汰兹维列夫）——无论谁夺冠都将成为赛事史上首位西班牙男单冠军。②第九届进博会 11/5-10 国家会展中心举办、虹桥论坛同期，倒计时 18 天，社会观众报名火热进行中。', meta: '上海资讯', stat: '大师赛决赛' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">早上好，周六云系多、周日或有雷雨 ♡</div>
+        <div className="greeting">早上好，今日重阳、午后或有雷雨 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年10月17日 星期六</span>
-          <span>第 044 期</span>
+          <span className="date">2026年10月18日 星期日</span>
+          <span>第 045 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>Anthropic 600 亿美元芯片融资，AI 烧钱战升级</h3>
-          <p>"北极星项目"向黑石付超 10% 收益率采购谷歌 TPU；字节洽谈联发科芯片；REA 一周 23.9 万星断层领先。</p>
+          <h3>OpenCode 爆雷：开发者 API Key 遭大规模盗刷</h3>
+          <p>1.4% 用户 OpenAI/Claude/Gemini 密钥被黑客"借刀"刷去训练模型，有人损失 1700 美元——API Key 是开发者的第二张身份证。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.044</span>
+        <span>我的工作台 · 每日早报 · VOL.045</span>
       </footer>
     </div>
   )
