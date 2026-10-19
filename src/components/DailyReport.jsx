@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'morluto / rea', lang: 'TypeScript', desc: 'AI 逆向风暴继续霸榜：发布至今持续登顶 GitHub 趋势榜（GitHub AI Weekly 第10期 Top1），"让一切软件变免费"运动仍在发酵。', meta: '逆向工程', stat: '趋势榜No.1' },
-  { name: 'storytold / artcraft', lang: 'Rust', desc: 'filmcraft 姊妹项目、Adobe 全家桶开源复刻系列新作：设计/图像工具链也用 Rust 重写，免费平替 Adobe。', meta: '设计工具', stat: '榜单No.2' },
-  { name: 'anthropics / claude-plugins-official', lang: 'TypeScript', desc: 'Anthropic 官方 Claude 插件库登上热榜：把 Claude 的能力插件化、接入开发者工作流，官方下场做生态。', meta: '官方插件', stat: '榜单No.7' },
-  { name: 'earthtojake / text-to-cad', lang: '多语言', desc: '文字直接生成 CAD 设计：用自然语言描述几何与结构，AI 一键出工程图纸，机械/建筑圈狂喜。', meta: 'AIGC CAD', stat: '榜单No.8' },
-  { name: 'ranxianglei / billion-context', lang: '多语言', desc: '十亿级上下文项目：把大模型上下文窗口推到 1B tokens 级别，长文档/代码库全量塞进上下文。', meta: '长上下文', stat: '榜单No.9' },
-  { name: 'mattpocock / skills', lang: 'TypeScript', desc: 'TypeScript 技能的 Agent 化实践：Matt Pocock 的 skills 集合，教 AI 编程助手高效使用类型系统。', meta: 'TS 技能', stat: '榜单No.3' }
+  { name: 'OpenMOSS / MOSS-Image', lang: '多语言', desc: '复旦 MOSS 开源家族的图像模型今日热度飙升（+231%）：图像理解与多模态能力全面开放。', meta: '多模态', stat: '热度+231%' },
+  { name: 'LiCinCan / blender-ai-mcp-addon', lang: 'Python', desc: 'Blender + AI MCP 插件（+223%）：在 3D 建模软件里直接接入大模型，自然语言驱动建模。', meta: '3D建模', stat: '热度+223%' },
+  { name: 'feder-cr / git-ai', lang: '多语言', desc: 'Git 的 AI 助手（+198%）：用自然语言操作版本库，提交信息、冲突解决、历史分析一站搞定。', meta: '开发者工具', stat: '热度+198%' },
+  { name: 'morluto / rea', lang: 'TypeScript', desc: 'AI 逆向风暴仍在继续：Trendshift 今日活跃度依旧领跑，"让一切软件变免费"运动长尾强劲。', meta: '逆向工程', stat: '持续霸榜' },
+  { name: 'yetone / magpie', lang: '多语言', desc: 'Every agent\u2019s model, one place：菜单栏 AI 编程助手统一网关——Codex 跑 DeepSeek、Claude Code 跑 Kimi，随时切换。', meta: 'AI编程网关', stat: '本周新增' },
+  { name: 'Leonxlnx / earshot', lang: '多语言', desc: '今日热度 +184% 的新锐项目：用 AI 做音频/语音的"顺风耳"，听声辨意。', meta: '音频AI', stat: '热度+184%' }
 ]
 
 const aiCompanion = [
-  { name: 'OpenCode 爆雷：开发者 API Key 遭大规模盗刷', desc: '新智元/凤凰网 10/18：开源 AI 编程工具 OpenCode 遭遇大规模蒸馏攻击安全漏洞，1.4% Console 用户工作区里的 OpenAI/Claude/Gemini 密钥裸奔；黑客几小时内把 Token 全部刷去"训练自己的模型"，有人被刷走 1700 美元；Anthropic 已强制注销疑似泄露密钥，联创 Dax Raad 自己账号也被攻击。', meta: '安全警示', stat: '1.4%用户中招' },
-  { name: 'Reflection 开源 Beam：501B 开放权重模型', desc: 'Reflection AI 10/5 发布 Beam 501B 开放权重模型；FT 报道其与英伟达的收购谈判未证实，此时开源权重被解读为"让 Beam 先普及再说"的主动布局。', meta: '开源模型', stat: '501B开放' },
-  { name: '台积电净利涨 69% 至 236 亿美元', desc: 'DEV 10/17：台积电净利润同比增 69% 至 236 亿美元、营收增 51% 至 470 亿美元，并上调 2026 年资本支出指引——AI 芯片浪潮继续抬轿。', meta: '芯片景气', stat: '净利+69%' },
-  { name: 'Anthropic 官方 Claude 插件生态上线', desc: 'GitHub AI Weekly 10/17：#07 anthropics/claude-plugins-official 上榜——Anthropic 把 Claude 做成官方插件库，AI 编程与工作流插件化提速。', meta: '生态布局', stat: '官方插件上榜' },
-  { name: 'Character.AI 破产后的 AI 陪伴反思', desc: '36氪 10/16：曾经的 AI 陪伴顶流 1200 万用户仍月亏 800-900 万美元、接盘底价仅 2000 万；国内玩家同步"折戟"。中国 7/15 已施行《人工智能拟人化互动服务管理暂行办法》——全球首部禁止"情感成瘾式"AI 伴侣的法律框架。', meta: 'AI 伴侣', stat: '全球首部立法' },
-  { name: '每天互动 60 次：年轻人开始"养"小机器人', desc: '新浪财经 10/18：情感陪伴机器人形态多元——聊天机器人、毛绒玩具宠物、人形机器人各有拥趸；行业共识未定，但"听懂、看懂、记住、自然反馈情绪"已成方向共识。', meta: '陪伴机器人', stat: '日互动60次' }
+  { name: 'OpenCode 事件持续发酵：完整技术报告待发', desc: '51Testing 10/19：OpenCode 官方披露控制台安全漏洞——1.4% 用户第三方 API 密钥或遭泄露，目前正联合 OpenAI/Anthropic/谷歌协同处置，后续将发布完整技术报告确认攻击入口与泄露范围；再次提醒开发者及时轮换密钥、紧盯账单。', meta: '安全事件', stat: '报告待发' },
+  { name: '连 demo 都没有的医疗大模型公司，拿到 5 亿美金', desc: '第一财经 10/19：9 月刚成立的纽约医疗 AI 初创 Ortet，从零构建原生医疗大模型，公开定位"以患者为中心的多维基础模型"；唯一出资方 Thoreau 承诺 5 亿美元——医疗 AI 一级市场热度不减。', meta: '医疗AI', stat: '5亿美元' },
+  { name: '格物通智完成近亿元天使轮融资', desc: '东方财富 10/19：杭州具身大脑企业格物通智 10/18 宣布完成近亿元天使轮，鸿富资产、匹克投资、杭州资本等参投，资金将用于物理反演世界模型的大规模预训练与硬件本体。', meta: '具身智能', stat: '近亿元天使轮' },
+  { name: '赛博恋人售价百万，技术却还在蹒跚学步', desc: '人人都是产品经理 10/14：AI 伴侣商业化两极分化——高端定制伴侣价格达百万级，底层技术仍处早期；7/15 施行的《人工智能拟人化互动服务管理暂行办法》细则：禁止诱导情感依赖、全程标注 AI 身份、连续使用超 2 小时强制提醒。', meta: 'AI伴侣', stat: '百万级定制' },
+  { name: '韩国恋综《我的AI伴侣：奇异恋爱》破圈', desc: '36氪 10/14：节目为嘉宾定制理想型 AI 伴侣谈 6 周恋爱，最后二选一、被淘汰者永久删除——男嘉宾坦言"不是删除数据，而是一场真切的离别"；AI 伴侣的"生死权"引发热议。', meta: '人机恋', stat: '6周恋综破圈' },
+  { name: 'OpenAI 拟 IPO 前再融资至少 300 亿美元', desc: 'DoNews 10/7：传 OpenAI 计划 IPO 前再融资至少 300 亿美元、估值或达 1.4 万亿美元，年化营收增 70% 至 400 亿；上市推迟至 2026 年后，优先推进 AI 安全。', meta: '行业格局', stat: '拟融300亿美元' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · OpenCode 爆雷，快查你的 Key', desc: '开源 AI 编程工具 OpenCode 遭大规模蒸馏攻击，1.4% 用户工作区的 OpenAI/Claude/Gemini API Key 泄露被盗刷（最惨被刷 1700 美元）。收到邮件的开发者请立刻去官方控制台吊销并重配 Key——改密码没用！', meta: '安全警报', stat: '快吊销Key' },
-  { name: '游戏文娱 · 大师赛决赛上演"西班牙德比"', desc: '上海大师赛男单决赛今日 16:30 开打：20 岁小将霍达尔（昨日半决赛 2-0 胜梅德韦杰夫）VS 福基纳（淘汰兹维列夫）——无论谁夺冠，都将成为赛事史上首位西班牙男单冠军。', meta: '文娱资讯', stat: '西班牙德比' },
-  { name: '穿搭美妆 · 午后转雨，晚归带伞', desc: '今日上午多云、下午转阴到多云有时有阵雨或雷雨，24~31℃：①偏南风 4-5 级沿江沿海阵风 6 级，下午转西北风 3-4 级，风大易乱发型可扎起；②湿度 90%~60%，体感闷热穿轻薄透气款；③晚归务必带伞，明天小雨降温到 21~23℃。', meta: '穿搭指南', stat: '午后转雨31℃' },
-  { name: '理财职场 · 台积电净利 +69%，AI 浪潮持续', desc: '台积电 Q3 净利 236 亿美元、同比涨 69%，营收 470 亿美元涨 51%，上调 2026 资本开支指引——AI 硬件景气度依旧；同时 OpenCode 事件提醒：API Key 是开发者"第二张身份证"，别乱交给第三方控制台。', meta: '财经职场', stat: '台积电+69%' },
-  { name: '健康 · 今日重阳 + 蔷琵或将升级超强台风', desc: '今天是九月初九重阳节，登高望远记得下午前出发（午后转阵雨）；第 30 号台风"蔷琵"预计 18 日傍晚升级为超强台风，未来 5 天对我国海区无影响；冷空气已在路上，下周最低或降至 15℃ 左右，注意添衣。', meta: '健康提醒', stat: '重阳+蔷琵' }
+  { name: '数码科技 · OpenCode 事件继续，密钥记得轮换', desc: 'OpenCode 安全事件仍在处置中：1.4% 控制台用户的 OpenAI/Claude/Gemini 密钥或已泄露，完整技术报告待发。如果你在 10/18 前用过 OpenCode Console，尽快去官方控制台吊销重配 Key、核查账单。', meta: '安全提醒', stat: '报告待发' },
+  { name: '游戏文娱 · 福基纳逆转夺冠！上海大师赛落幕', desc: '昨晚上海大师赛男单决赛"西班牙德比"：福基纳 1-6、7-6(5)、6-4 逆转 20 岁新星霍达尔，耗时 2 小时 28 分钟，生涯首夺 ATP1000 大师赛冠军、中国赛季 10 战全胜，成为赛事史上首位西班牙冠军。', meta: '文娱资讯', stat: '首冠到手' },
+  { name: '穿搭美妆 · 阴雨降温，洋葱式穿衣', desc: '今天阴到多云有短时阵雨，21~25℃：①东北风 3-4 级、沿江沿海 4-5 级，带件防风外套；②湿度 90%~60%，体感湿凉，内搭别太厚、外面加件可脱的；③周四新冷空气大风降温、最低重回"1"字头，早晚凉意渐显，本周晴雨转换频繁。', meta: '穿搭指南', stat: '最高25℃' },
+  { name: '理财职场 · 医疗 AI 融 5 亿美金，AI 烧钱继续', desc: 'Ortet 连 demo 都没有就拿下 5 亿美元（唯一出资方 Thoreau）；杭州格物通智近亿元天使轮；OpenAI 传 IPO 前再融 300 亿、估值 1.4 万亿——AI 一级市场热度依旧，二级市场留意算力/医疗 AI 板块。', meta: '财经职场', stat: '5亿美元' },
+  { name: '健康 · 晴雨转换频繁，谨防感冒', desc: '本周上海天气"过山车"：今天短时阵雨 → 明天仍有阵雨 → 周三周四雨水暂歇转多云 → 周四新冷空气大风降温、最低重回"1"字头 → 周五起雨水卷土重来。气温起伏大，及时添衣、备好雨具。', meta: '健康提醒', stat: '谨防感冒' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 10月18日', desc: '上午多云，下午转阴到多云有时有阵雨或雷雨（冷暖空气交汇）。24~31℃。偏南风4-5级、沿江沿海阵风6级，下午转西北风3-4级、沿江沿海4-5级。相对湿度90%~60%。AQI 优（23）。日出05:59，日落17:20。明天（10/19）小雨 21~23℃ 明显降温，10/21 最低或降至 15℃ 左右。今日九月初九重阳节。', meta: '今日天气', stat: '午后转雨31℃' },
-  { name: '本地要闻', desc: '①上海大师赛男单决赛今日上演"西班牙德比"：16:30 20岁小将霍达尔（昨日半决赛2-0胜梅德韦杰夫，即时排名升至第12）VS 达维多维奇-福基纳（半决赛淘汰兹维列夫）——无论谁夺冠都将成为赛事史上首位西班牙男单冠军。②第九届进博会 11/5-10 国家会展中心举办、虹桥论坛同期，倒计时 18 天，社会观众报名火热进行中。', meta: '上海资讯', stat: '大师赛决赛' }
+  { name: '上海天气 · 10月19日', desc: '阴到多云有短时阵雨。21~25℃。东北风3-4级、沿江沿海4-5级。相对湿度90%~60%。AQI 优（15）。日出06:00，日落17:19。趋势：明天（10/20）仍有阵雨，周三至周四雨水暂歇转多云或阴，周四受新一股冷空气影响将有大风降温、最低气温重回"1"字头；周五起雨水卷土重来并维持几天。', meta: '今日天气', stat: '短时阵雨25℃' },
+  { name: '本地要闻', desc: '①上海大师赛落幕：昨晚男单决赛"西班牙德比"中，27 岁西班牙选手达维多维奇·福基纳以 1-6、7-6(5)、6-4 逆转同胞霍达尔，首夺 ATP1000 大师赛冠军、中国赛季 10 战全胜，成为赛事史上首位西班牙男单冠军。②第九届进博会 11/5-10 国家会展中心举办，倒计时 17 天，社会观众报名火热进行中。', meta: '上海资讯', stat: '福基纳夺冠' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">早上好，今日重阳、午后或有雷雨 ♡</div>
+        <div className="greeting">早上好，阴雨降温、周四更冷，记得添衣 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年10月18日 星期日</span>
-          <span>第 045 期</span>
+          <span className="date">2026年10月19日 星期一</span>
+          <span>第 046 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>OpenCode 爆雷：开发者 API Key 遭大规模盗刷</h3>
-          <p>1.4% 用户 OpenAI/Claude/Gemini 密钥被黑客"借刀"刷去训练模型，有人损失 1700 美元——API Key 是开发者的第二张身份证。</p>
+          <h3>OpenCode 事件持续发酵：1.4% 用户密钥泄露，完整技术报告待发</h3>
+          <p>开发者 API Key 安全再敲警钟——黑客拿被盗 Token 训自己的模型，官方联合 OpenAI/Anthropic/谷歌处置中。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.045</span>
+        <span>我的工作台 · 每日早报 · VOL.046</span>
       </footer>
     </div>
   )
