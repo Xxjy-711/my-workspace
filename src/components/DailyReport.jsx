@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'K-Dense-AI / scientific-agent-skills', lang: 'Python', desc: '"把任何 AI agent 变成 AI 科学家"——177 个验证过的即用科研技能 + 100+ 科学数据库，全球 25 万+ 科学家在用，本周新增 4,549 星。', meta: 'AI科研', stat: '53.3K★' },
-  { name: 'Ebony-Vinyl / dsh-our-free-model', lang: 'JavaScript', desc: '无需登录、注册或填 API Key，即可白嫖 DeepSeek V4.1 Flash、Kimi K3 等前沿模型——持续发酵，今日再涨 3,295 星。', meta: '免费AI', stat: '+3,295★' },
-  { name: 'Graphify-Labs / graphify', lang: '多语言', desc: '把代码库连同文档、SQL Schema、配置和 PDF 转成可查询的知识图谱——本地确定性 AST 解析，已配 Claude Code、Cursor、Codex、Gemini CLI 的 /graphify 技能。', meta: '代码图谱', stat: '年度热榜' },
-  { name: 'obra / superpowers', lang: 'TypeScript', desc: 'Agentic skills 框架 + 软件开发方法论，星数 302.5K——把"资深工程师的判断力"封装成 AI 编码代理可执行的技能包。', meta: 'Agent框架', stat: '302.5K★' },
-  { name: 'NousResearch / hermes-agent', lang: '多语言', desc: '"与你一起成长的自适应 AI 代理"，星数 255.5K——NousResearch 出品的个性化智能体，越用越懂你。', meta: 'AI代理', stat: '255.5K★' },
-  { name: 'anomalyco / opencode', lang: '多语言', desc: '开源终端原生编码代理，星数 218.5K——1.4% 用户密钥泄露事件后仍持续霸榜，完整技术报告待发。', meta: '编码代理', stat: '218.5K★' }
+  { name: 'morluto / rea', lang: 'TypeScript', desc: '"用 Agent 逆向一切"——从应用行为一路拆到原生二进制，36 氪专门报道"闭源软件守了二十年的墙开始漏风"，今日新增 9,009 星。', meta: '逆向工程', stat: '361.5K★' },
+  { name: 'DietrichGebert / ponytail', lang: 'JavaScript', desc: '今日新上榜大热项目——"Makes your AI agent..."，让你的 AI 代理效率飙升，今日新增 1,891 星，星数已达 172.4K。', meta: 'AI代理', stat: '+1,891★' },
+  { name: 'K-Dense-AI / scientific-agent-skills', lang: 'Python', desc: '"把任何 AI agent 变成 AI 科学家"——177 个验证过的科研技能 + 100+ 科学数据库，全球 25 万+ 科学家在用，本周新增 4,549 星。', meta: 'AI科研', stat: '53.3K★' },
+  { name: 'Ebony-Vinyl / dsh-our-free-model', lang: 'JavaScript', desc: '无需登录、注册或填 API Key，即可白嫖 DeepSeek V4.1 Flash、Kimi K3 等前沿模型——持续霸榜，35.5K 星。', meta: '免费AI', stat: '35.5K★' },
+  { name: 'Graphify-Labs / graphify', lang: '多语言', desc: '把代码库连同文档、SQL Schema、配置和 PDF 转成可查询的知识图谱——本地确定性 AST 解析，支持 Claude Code/Cursor/Codex/Gemini CLI。', meta: '代码图谱', stat: '年度热榜' },
+  { name: 'obra / superpowers', lang: 'TypeScript', desc: 'Agentic skills 框架 + 软件开发方法论，星数 302.5K——把"资深工程师的判断力"封装成 AI 编码代理可执行的技能包。', meta: 'Agent框架', stat: '302.5K★' }
 ]
 
 const aiCompanion = [
-  { name: 'DeepSeek 新一轮融资：联想君联、吉利入局，聘中信证券', desc: '科创板日报 10/23：DeepSeek 新一轮融资引入多家产业及财务投资者，包括君联资本（Legend Capital）、半导体领域石溪资本以及吉利等；公司已聘请中信证券——上市进程再进一步。', meta: '融资速递', stat: 'DeepSeek' },
-  { name: 'OpenAI 拟募 300 亿美元，估值下调至 1.25 万亿', desc: '腾讯新闻 10/23：OpenAI 接近完成新一轮私募融资，投前估值 1.25 万亿美元，由 Coatue 与阿联酋投资者牵头；已要求投资者本月 30 日前最终决定，条款仍在协商中。', meta: '资本动态', stat: '估值1.25万亿' },
-  { name: 'Anthropic 正式提交 S-1，IPO 启动', desc: 'AIToolsRecap 10/23：Anthropic 已提交 S-1 文件——在 OpenAI 上市前最后一轮融资的同一周，AI 双雄的上市赛跑正式鸣枪。', meta: 'IPO进程', stat: 'S-1 已交' },
-  { name: '免 Key 白嫖前沿模型持续发酵', desc: 'dsh-our-free-model 今日再涨 3,295 星至 35.5K——OpenCode 的 Zen 网关免费开放前沿推理，README 诚实标注"哪些真能用"，成为学生党福音。', meta: '免费生态', stat: '35.5K★' },
-  { name: 'AI 科学家技能库：25 万研究者的新工具', desc: 'K-Dense-AI/scientific-agent-skills 本周新增 4,549 星——177 个验证过的科研技能覆盖生物学等领域，AI 人机协作科研从聊天走进实验室。', meta: '人机协作', stat: '177 个技能' },
-  { name: '风雨潮叠加周末宅家，AI 陪伴需求上升', desc: '超强台风"蔷琵"周末影响上海，本周末减少外出——正好窝在沙发上和 AI 聊聊天、追追剧，AI 伴侣在极端天气里的陪伴价值再次凸显。', meta: 'AI伴侣', stat: '周末宅家' }
+  { name: 'DeepSeek 接近完成 800 亿元融资，腾讯、宁德时代入局', desc: 'Bloomberg 援引知情人士 10/23：DeepSeek 接近完成至少 800 亿元（约 120 亿美元）融资，高于原定约 500 亿元目标；腾讯与电池厂商宁德时代是本轮最大投资方之一，公司计划 2027 年初 IPO。', meta: '融资速递', stat: '800亿元' },
+  { name: 'DeepSeek 上线 Search/Fetch 网页搜索 API', desc: 'RadarAI 10/24：DeepSeek 正式上线 Search/Fetch 网页搜索 API，以每千次 5 元的低价切入搜索基础设施赛道——AI 搜索大战打响。', meta: '产品动态', stat: '每千次5元' },
+  { name: 'StepFun 开放权重发布 600B MoE Step 5 Preview', desc: 'RadarAI 10/24：阶跃星辰以开放权重发布 600B MoE 的 Step 5 Preview，支持 1M 上下文——国产开源大模型竞争再升级。', meta: '开源模型', stat: '600B 参数' },
+  { name: 'Anthropic 披露 Claude Code 代码审查体系', desc: 'RadarAI 10/24：Anthropic 披露 Claude Code 代码审查体系——PR 数量翻倍但回滚率下降 40%，AI 编码代理正式进入企业级质量管控时代。', meta: '工程实践', stat: '回滚降40%' },
+  { name: 'Thinking Machines Lab 获 20 亿美元融资，估值 120 亿', desc: 'AI D-A-M-N 10/21：Mira Murati 创办的 Thinking Machines Lab 完成 20 亿美元融资，估值达 120 亿美元——OpenAI 前 CTO 的创业故事继续。', meta: '明星创业', stat: '估值120亿美元' },
+  { name: '"AI缺钱"重构产业叙事：市场不再相信烧钱就能赢', desc: '财联社 10/24：SpaceX Q3 超智能业务单季营收约 76 亿美元、资本开支高达 164 亿；Meta 同日将全年资本开支提升至 1350-1450 亿并新设无投票权 C 类股票——AI 圈进入精打细算时代。', meta: '行业趋势', stat: '烧钱时代终结' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · AI 科学家技能库火了', desc: 'K-Dense-AI/scientific-agent-skills 本周新增 4,549 星——177 个科研技能 + 100+ 科学数据库，把任何 AI agent 变成科研助手，全球 25 万+ 科学家在用。', meta: '前沿科技', stat: 'AI Scientist' },
-  { name: '游戏文娱 · 台风天周末宅家追剧', desc: '超强台风"蔷琵"今天傍晚到明天风雨最明显，周日上午越过上海同纬度——户外计划全部取消，宅家补番看剧、和 AI 聊天正好。', meta: '周末预警', stat: '暴雨来袭' },
-  { name: '穿搭美妆 · 暴雨天防水鞋+折叠伞', desc: '今天中雨转暴雨、19~21℃，最大小时雨强 30-40 毫米——防水鞋和大折叠伞是今天刚需；早晚微凉，薄外套别脱。', meta: '穿搭指南', stat: '暴雨 50-70mm' },
-  { name: '理财职场 · DeepSeek 融资+OpenAI 估值下调', desc: 'DeepSeek 引入联想君联、吉利等产业资本并聘中信证券；OpenAI 300 亿融资投前估值 1.25 万亿美元（较此前 1.4 万亿预期下调）——AI 一级市场在回归理性。', meta: '财经职场', stat: '1.25万亿美元' },
-  { name: '健康 · 暴雨天注意出行安全', desc: '上海市防汛防台风四级应急响应已启动——今天傍晚至明天尽量减少外出，远离广告牌、临时搭建物；阳台花盆提前收回，关紧门窗。', meta: '健康提醒', stat: '四级响应' }
+  { name: '数码科技 · DeepSeek 搜索 API 上线，5 元/千次', desc: 'DeepSeek 正式上线 Search/Fetch 网页搜索 API，每千次仅 5 元；StepFun 同日开源 600B MoE、支持 1M 上下文——国产 AI 工具越来越便宜好用。', meta: '前沿科技', stat: '每千次5元' },
+  { name: '游戏文娱 · 台风天周六，继续宅家', desc: '台风"蔷琵"今天上午移入东海南部，局地仍可达大到暴雨——别被眼前小雨骗了，今天户外计划继续取消，窝在沙发补番追剧最舒服。', meta: '周末预警', stat: '暴雨未结束' },
+  { name: '穿搭美妆 · 18~19℃ 全天雨，长袖+防水鞋', desc: '今天中雨为主、湿度 95%、体感 22℃——长袖薄外套不脱，防水鞋和折叠伞出门刚需；明天阴 17~21℃ 北风 5 级，依旧偏凉。', meta: '穿搭指南', stat: '湿度95%' },
+  { name: '理财职场 · DeepSeek 800 亿融资，腾讯宁德时代入局', desc: 'Bloomberg：DeepSeek 接近完成至少 800 亿元融资（腾讯、宁德时代领投），计划 2027 年初 IPO——国产大模型资本化提速，关注 AI 产业链。', meta: '财经职场', stat: '800亿元' },
+  { name: '健康 · 双蓝预警生效，别掉以轻心', desc: '上海暴雨蓝色+大风蓝色预警生效中：中心城区 6 小时降雨 70mm 以上短时强降水、阵风 7 级——远离广告牌和临时搭建物，阳台物品已收回。', meta: '健康提醒', stat: '双蓝预警' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 10月23日', desc: '中雨转暴雨，19~21℃。东北风 4-5 级沿江沿海阵风 6-7 级。AQI 优。日出06:01，日落17:14。【台风蔷琵】今年第30号超强台风今天 05 时中心位于台北东南约 405 公里洋面（14 级）；今天下午到 25 日白天影响上海，最明显时段为今天傍晚到明天——暴雨，累积 50~70 毫米、东部南部沿海 90~120 毫米、个别站点约 150 毫米，最大小时雨强 30-40 毫米；24 日夜间距上海海岸线最近约 250 公里，周日上午越过上海同纬度，风雨潮叠加。', meta: '今日天气', stat: '中雨转暴雨19~21℃' },
-  { name: '本地要闻', desc: '①上海市防汛防台风四级应急响应已启动，全市进入临战状态；浦东、虹桥等 29 座机场航班或将受扰，周末出行请密切关注航班动态。②第九届进博会进入最后冲刺，11/5-10 国家会展中心举行，倒计时 13 天——台风过后迎进博。', meta: '上海资讯', stat: '四级应急响应' }
+  { name: '上海天气 · 10月24日', desc: '中雨为主（白天小雨、晚间转中雨），18~19℃。北风 4 级、沿江沿海阵风 6-7 级。相对湿度 95%。AQI 优（27）。日出06:03，日落17:13。【台风蔷琵】昨夜 20 时至今晨 6 时浦东降雨 47.1mm 最大、徐家汇 45.1mm；台风已减弱为台风级，今天上午移入东海南部，预计 25 日傍晚前后越过上海同纬度——局地仍可达大到暴雨。暴雨蓝色+大风蓝色预警生效中，中心城区 6 小时降雨 70mm 以上短时强降水、阵风 7 级；大桥高速限速、列车部分停运。明天阴 17~21℃ 北风 5 级。', meta: '今日天气', stat: '中雨18~19℃' },
+  { name: '本地要闻', desc: '①上海发布暴雨蓝色+大风蓝色双预警：台风"蔷琵"影响未结束，今天局地仍可达大到暴雨，大桥高速限速、部分列车停运，周末出行请查路况和车次。②第九届进博会 11/5-10 国家会展中心举行，倒计时 12 天——台风过后迎进博。', meta: '上海资讯', stat: '双蓝预警' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">早上好，今天下午起暴雨台风来袭，出门带伞、早点回家 ♡</div>
+        <div className="greeting">早上好，台风天周六，雨一直下，宅家最舒服 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年10月23日 星期五</span>
-          <span>第 049 期</span>
+          <span className="date">2026年10月24日 星期六</span>
+          <span>第 050 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>DeepSeek 引入联想君联、吉利入局并聘中信证券；OpenAI 估值下调至 1.25 万亿</h3>
-          <p>AI 双雄融资赛跑：DeepSeek 拿下产业资本，OpenAI 300 亿融资投前估值 1.25 万亿、要求投资者 10/30 前拍板；Anthropic 同期正式提交 S-1。</p>
+          <h3>DeepSeek 接近完成 800 亿元融资：腾讯、宁德时代入局，计划 2027 年初 IPO</h3>
+          <p>Bloomberg 独家：DeepSeek 融资额从此前约 500 亿目标上调至至少 800 亿元；同日上线 Search/Fetch 搜索 API（每千次 5 元），StepFun 开源 600B MoE 模型。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.049</span>
+        <span>我的工作台 · 每日早报 · VOL.050</span>
       </footer>
     </div>
   )
