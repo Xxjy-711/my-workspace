@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'morluto / rea', lang: 'TypeScript', desc: '"用 Agent 逆向一切"——从应用行为一路拆到原生二进制，36 氪专门报道"闭源软件守了二十年的墙开始漏风"，今日新增 9,009 星。', meta: '逆向工程', stat: '361.5K★' },
-  { name: 'DietrichGebert / ponytail', lang: 'JavaScript', desc: '今日新上榜大热项目——"Makes your AI agent..."，让你的 AI 代理效率飙升，今日新增 1,891 星，星数已达 172.4K。', meta: 'AI代理', stat: '+1,891★' },
-  { name: 'K-Dense-AI / scientific-agent-skills', lang: 'Python', desc: '"把任何 AI agent 变成 AI 科学家"——177 个验证过的科研技能 + 100+ 科学数据库，全球 25 万+ 科学家在用，本周新增 4,549 星。', meta: 'AI科研', stat: '53.3K★' },
-  { name: 'Ebony-Vinyl / dsh-our-free-model', lang: 'JavaScript', desc: '无需登录、注册或填 API Key，即可白嫖 DeepSeek V4.1 Flash、Kimi K3 等前沿模型——持续霸榜，35.5K 星。', meta: '免费AI', stat: '35.5K★' },
-  { name: 'Graphify-Labs / graphify', lang: '多语言', desc: '把代码库连同文档、SQL Schema、配置和 PDF 转成可查询的知识图谱——本地确定性 AST 解析，支持 Claude Code/Cursor/Codex/Gemini CLI。', meta: '代码图谱', stat: '年度热榜' },
-  { name: 'obra / superpowers', lang: 'TypeScript', desc: 'Agentic skills 框架 + 软件开发方法论，星数 302.5K——把"资深工程师的判断力"封装成 AI 编码代理可执行的技能包。', meta: 'Agent框架', stat: '302.5K★' }
+  { name: 'morluto / rea', lang: 'TypeScript', desc: '"用 Agent 逆向一切"——从应用行为一路拆到原生二进制，本周新增 88,243 星至 376.9K，持续霸榜 GitHub 周榜第一。', meta: '逆向工程', stat: '376.9K★' },
+  { name: 'DeepOpen / deepopen', lang: 'Python', desc: '开源新模态大模型公司 DeepOpen 开源决策模型：CLINC150 性能第一、Banking77 第二，超越 Meta Llama 2（FT），周下载量过万，今日登上 GitHub 日趋势榜。', meta: '决策模型', stat: '周下载过万' },
+  { name: 'BerriAI / litellm', lang: 'Python', desc: 'AI 网关项目 LiteLLM 今日登上 GitHub 日榜，61.9K 星——自称"最快最轻的 AI Gateway"，声称端到端延迟仅 8ms。', meta: 'AI网关', stat: '61.9K★' },
+  { name: 'OrchestratorInc / agent-orchestrator', lang: 'Go', desc: '本地多编码代理工作台：每个任务一个 worker、一个 agent、一个独立 workspace，看板跟随真实 PR 和 CI 状态——13.5K 星。', meta: 'Agent工作台', stat: '13.5K★' },
+  { name: 'android / skills', lang: 'Kotlin', desc: 'Android 官方 AI Skills 库，本周新增 1,471 星至 9.6K——为 Android 端 AI 助手预置系统级技能。', meta: 'Android', stat: '+1,471★本周' },
+  { name: 'K-Dense-AI / scientific-agent-skills', lang: 'Python', desc: '"把任何 AI agent 变成 AI 科学家"——177 个验证过的科研技能 + 100+ 科学数据库，全球 25 万+ 科学家在用。', meta: 'AI科研', stat: '53.3K★' }
 ]
 
 const aiCompanion = [
-  { name: 'DeepSeek 接近完成 800 亿元融资，腾讯、宁德时代入局', desc: 'Bloomberg 援引知情人士 10/23：DeepSeek 接近完成至少 800 亿元（约 120 亿美元）融资，高于原定约 500 亿元目标；腾讯与电池厂商宁德时代是本轮最大投资方之一，公司计划 2027 年初 IPO。', meta: '融资速递', stat: '800亿元' },
-  { name: 'DeepSeek 上线 Search/Fetch 网页搜索 API', desc: 'RadarAI 10/24：DeepSeek 正式上线 Search/Fetch 网页搜索 API，以每千次 5 元的低价切入搜索基础设施赛道——AI 搜索大战打响。', meta: '产品动态', stat: '每千次5元' },
-  { name: 'StepFun 开放权重发布 600B MoE Step 5 Preview', desc: 'RadarAI 10/24：阶跃星辰以开放权重发布 600B MoE 的 Step 5 Preview，支持 1M 上下文——国产开源大模型竞争再升级。', meta: '开源模型', stat: '600B 参数' },
-  { name: 'Anthropic 披露 Claude Code 代码审查体系', desc: 'RadarAI 10/24：Anthropic 披露 Claude Code 代码审查体系——PR 数量翻倍但回滚率下降 40%，AI 编码代理正式进入企业级质量管控时代。', meta: '工程实践', stat: '回滚降40%' },
-  { name: 'Thinking Machines Lab 获 20 亿美元融资，估值 120 亿', desc: 'AI D-A-M-N 10/21：Mira Murati 创办的 Thinking Machines Lab 完成 20 亿美元融资，估值达 120 亿美元——OpenAI 前 CTO 的创业故事继续。', meta: '明星创业', stat: '估值120亿美元' },
-  { name: '"AI缺钱"重构产业叙事：市场不再相信烧钱就能赢', desc: '财联社 10/24：SpaceX Q3 超智能业务单季营收约 76 亿美元、资本开支高达 164 亿；Meta 同日将全年资本开支提升至 1350-1450 亿并新设无投票权 C 类股票——AI 圈进入精打细算时代。', meta: '行业趋势', stat: '烧钱时代终结' }
+  { name: '月之暗面发布 Kimi K3.1 Pro：3万亿参数全球最大开源模型', desc: '澎湃新闻 10/24：月之暗面发布新一代开源模型 Kimi K3.1 Pro——3 万亿级参数、支持 100 万词元上下文，继续保持全球参数规模最大的开源模型，综合智能水平接近闭源旗舰。', meta: '开源模型', stat: '3万亿参数' },
+  { name: 'DeepSeek 开源内部推理框架 DeepInfer', desc: 'DoNews：DeepSeek 宣布全面开源内部推理框架 DeepInfer，旨在提升大模型推理效率——从模型到基础设施，DeepSeek 的开源版图继续扩大。', meta: '开源框架', stat: 'DeepInfer' },
+  { name: '三个 00 后创办的 AI 公司完成 10 亿美元 A 轮，估值 60 亿', desc: '创业邦 10/24：美国 AI 初创 Flapping Airplanes 完成 10 亿美元 A 轮（Index Ventures、Lux Capital 联合领投，红杉、GV、Kleiner Perkins 参投），估值 60 亿美元——9 个月前估值才 15 亿。', meta: '明星创业', stat: '估值60亿美元' },
+  { name: 'DeepOpen 决策模型登顶两大榜单，超越 Meta Llama 2', desc: '嘉祥融媒 10/24：开源新模态公司 DeepOpen 的决策模型在 CLINC150 性能第一、Banking77 第二，超越 Meta Llama 2（FT），模型周下载量过万——国产开源模型再下一城。', meta: '开源模型', stat: '超越Llama2' },
+  { name: '开源大模型竞争白热化：Kimi、StepFun、DeepSeek 三方齐发', desc: '本周开源大模型密集发布：月之暗面 Kimi K3.1 Pro（3 万亿参数）、StepFun Step 5 Preview（600B MoE）、DeepSeek 开源 DeepInfer 推理框架——国产开源从追赶走向领跑。', meta: '行业趋势', stat: '开源大战' },
+  { name: '台风天收尾，周末宅家 AI 陪伴正当时', desc: '上海台风"蔷琵"今天上午距离最近、下午起风雨渐止——周末窝在家里，和 AI 聊聊天、试试新发布的 Kimi K3.1 Pro，AI 伴侣在极端天气里的陪伴价值再次凸显。', meta: 'AI伴侣', stat: '周末宅家' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · DeepSeek 搜索 API 上线，5 元/千次', desc: 'DeepSeek 正式上线 Search/Fetch 网页搜索 API，每千次仅 5 元；StepFun 同日开源 600B MoE、支持 1M 上下文——国产 AI 工具越来越便宜好用。', meta: '前沿科技', stat: '每千次5元' },
-  { name: '游戏文娱 · 台风天周六，继续宅家', desc: '台风"蔷琵"今天上午移入东海南部，局地仍可达大到暴雨——别被眼前小雨骗了，今天户外计划继续取消，窝在沙发补番追剧最舒服。', meta: '周末预警', stat: '暴雨未结束' },
-  { name: '穿搭美妆 · 18~19℃ 全天雨，长袖+防水鞋', desc: '今天中雨为主、湿度 95%、体感 22℃——长袖薄外套不脱，防水鞋和折叠伞出门刚需；明天阴 17~21℃ 北风 5 级，依旧偏凉。', meta: '穿搭指南', stat: '湿度95%' },
-  { name: '理财职场 · DeepSeek 800 亿融资，腾讯宁德时代入局', desc: 'Bloomberg：DeepSeek 接近完成至少 800 亿元融资（腾讯、宁德时代领投），计划 2027 年初 IPO——国产大模型资本化提速，关注 AI 产业链。', meta: '财经职场', stat: '800亿元' },
-  { name: '健康 · 双蓝预警生效，别掉以轻心', desc: '上海暴雨蓝色+大风蓝色预警生效中：中心城区 6 小时降雨 70mm 以上短时强降水、阵风 7 级——远离广告牌和临时搭建物，阳台物品已收回。', meta: '健康提醒', stat: '双蓝预警' }
+  { name: '数码科技 · Kimi K3.1 Pro 发布，3万亿参数开源', desc: '月之暗面发布 Kimi K3.1 Pro：3 万亿参数、支持 100 万词元上下文，全球参数规模最大的开源模型；DeepSeek 同日开源内部推理框架 DeepInfer。', meta: '前沿科技', stat: '3万亿参数' },
+  { name: '游戏文娱 · 台风天收尾，下午雨停转多云', desc: '台风"蔷琵"已减弱为热带风暴，今天上午距离上海最近（约250~300km），下午起风雨渐止——上午宅家，下午可以出门透透气了。', meta: '周末天气', stat: '下午转多云' },
+  { name: '穿搭美妆 · 18~23℃，上午阵雨下午多云', desc: '今天上午仍有阵雨（最大小时雨强10mm），下午转多云到阴——薄外套+折叠伞上午必备，下午天晴后可单穿卫衣。', meta: '穿搭指南', stat: '18~23℃' },
+  { name: '理财职场 · 三个00后AI公司估值60亿美元', desc: 'Flapping Airplanes 完成 10 亿美元 A 轮，估值 60 亿美元——9 个月从 15 亿涨到 60 亿，Index/Lux/红杉/GV/KP 全部入场，AI 创业神话继续。', meta: '财经职场', stat: '估值60亿美元' },
+  { name: '健康 · 暴雨预警解除，地铁恢复正常', desc: '上海各区暴雨预警已解除，地铁恢复正常运营——但上午仍有阵雨，出门带伞；陆地阵风 6~7 级，注意高空坠物。', meta: '健康提醒', stat: '预警已解除' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 10月24日', desc: '中雨为主（白天小雨、晚间转中雨），18~19℃。北风 4 级、沿江沿海阵风 6-7 级。相对湿度 95%。AQI 优（27）。日出06:03，日落17:13。【台风蔷琵】昨夜 20 时至今晨 6 时浦东降雨 47.1mm 最大、徐家汇 45.1mm；台风已减弱为台风级，今天上午移入东海南部，预计 25 日傍晚前后越过上海同纬度——局地仍可达大到暴雨。暴雨蓝色+大风蓝色预警生效中，中心城区 6 小时降雨 70mm 以上短时强降水、阵风 7 级；大桥高速限速、列车部分停运。明天阴 17~21℃ 北风 5 级。', meta: '今日天气', stat: '中雨18~19℃' },
-  { name: '本地要闻', desc: '①上海发布暴雨蓝色+大风蓝色双预警：台风"蔷琵"影响未结束，今天局地仍可达大到暴雨，大桥高速限速、部分列车停运，周末出行请查路况和车次。②第九届进博会 11/5-10 国家会展中心举行，倒计时 12 天——台风过后迎进博。', meta: '上海资讯', stat: '双蓝预警' }
+  { name: '上海天气 · 10月25日', desc: '上午阵雨（最大小时雨强 10mm，累积 10~20mm），下午转多云到阴，18~23℃。北风 4 级、陆地阵风 6~7 级、江河湖面 7~8 级。相对湿度 80%。AQI 优（45）。日出06:04，日落17:12。【台风蔷琵】已减弱为热带风暴：今晨 04 时中心位于浦东南汇嘴以东约 337km 海面（中心气压 985hPa、最大风力 10 级）；今天 08-11 时距离上海最近约 250~300km，傍晚前后越过上海同纬度（距离 350~400km）。上海各区暴雨预警已解除，地铁恢复正常运营。明天多云 16~23℃，西北风 3 级。', meta: '今日天气', stat: '阵雨转多云18~23℃' },
+  { name: '本地要闻', desc: '①台风"蔷琵"强度持续减弱：上海各区暴雨预警已解除、地铁恢复正常运营，今天傍晚前后台风越过上海同纬度后逐渐远离；②第九届进博会 11/5-10 国家会展中心举行，倒计时 11 天。', meta: '上海资讯', stat: '预警解除' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">早上好，台风天周六，雨一直下，宅家最舒服 ♡</div>
+        <div className="greeting">早上好，台风天收尾，上午还有阵雨，下午就转多云啦 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年10月24日 星期六</span>
-          <span>第 050 期</span>
+          <span className="date">2026年10月25日 星期日</span>
+          <span>第 051 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>DeepSeek 接近完成 800 亿元融资：腾讯、宁德时代入局，计划 2027 年初 IPO</h3>
-          <p>Bloomberg 独家：DeepSeek 融资额从此前约 500 亿目标上调至至少 800 亿元；同日上线 Search/Fetch 搜索 API（每千次 5 元），StepFun 开源 600B MoE 模型。</p>
+          <h3>月之暗面发布 Kimi K3.1 Pro：3万亿参数全球最大开源模型，支持1M上下文</h3>
+          <p>月之暗面 10/24 发布 Kimi K3.1 Pro——3 万亿级参数、100 万词元上下文，综合智能接近闭源旗舰；DeepSeek 同日开源内部推理框架 DeepInfer，国产开源大模型竞争白热化。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.050</span>
+        <span>我的工作台 · 每日早报 · VOL.051</span>
       </footer>
     </div>
   )
