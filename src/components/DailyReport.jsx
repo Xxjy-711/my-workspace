@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'morluto / rea', lang: 'TypeScript', desc: '"用 Agent 逆向一切"——从应用行为一路拆到原生二进制，今日新增 5,657 星至 380.9K，持续霸榜 GitHub 日榜第一。', meta: '逆向工程', stat: '380.9K★' },
-  { name: 'Ebony-Vinyl / dsh-our-free-model', lang: 'JavaScript', desc: '无需登录、注册或填 API Key 即可白嫖 DeepSeek V4.1 Flash、Kimi K3 等前沿模型——今日新增 1,927 星，从 35.5K 暴涨至 42.1K。', meta: '免费AI', stat: '+1,927★' },
-  { name: 'Pollinations.ai', lang: '多语言', desc: '开源生成式 AI 平台：免费提供文本到图像、音频、视频和文本生成 API，支持 Stable Diffusion、Llama 等多种模型，社区活跃持续扩展。', meta: '生成式AI', stat: '免费API' },
-  { name: 'DeepOpen / deepopen', lang: 'Python', desc: '开源新模态大模型公司 DeepOpen 的决策模型：CLINC150 性能第一、Banking77 第二，超越 Meta Llama 2（FT），周下载量过万。', meta: '决策模型', stat: '超越Llama2' },
-  { name: 'BerriAI / litellm', lang: 'Python', desc: 'AI 网关项目 LiteLLM，61.9K 星——自称"最快最轻的 AI Gateway"，声称端到端延迟仅 8ms，统一调用 100+ 大模型 API。', meta: 'AI网关', stat: '61.9K★' },
-  { name: 'android / skills', lang: 'Kotlin', desc: 'Android 官方 AI Skills 库，本周新增 1,471 星至 9.6K——为 Android 端 AI 助手预置系统级技能。', meta: 'Android', stat: '+1,471★本周' }
+  { name: 'morluto / rea', lang: 'TypeScript', desc: '"用 Agent 逆向一切"——从应用行为一路拆到原生二进制，今日新增 6,707 星至 387.6K，持续霸榜 GitHub 日榜第一。', meta: '逆向工程', stat: '387.6K★' },
+  { name: 'rohitg00 / ai-engineering-from-scratch', lang: 'Python', desc: '"从零学 AI 工程"——Learn it. Build it. Ship it for others. 74K 星，今日新增 562，AI 工程师入门圣经。', meta: 'AI教程', stat: '74.0K★' },
+  { name: 'Ebony-Vinyl / dsh-our-free-model', lang: 'JavaScript', desc: '无需登录、注册或填 API Key 即可白嫖 DeepSeek V4.1 Flash、Kimi K3 等前沿模型——42.1K 星，README 不吹不黑。', meta: '免费AI', stat: '42.1K★' },
+  { name: 'Nous Research / Hermes Agent', lang: 'Python', desc: '自我改进 AI 智能体：内置学习循环、自主记忆管理、跨会话搜索与用户建模，支持 Telegram/Slack/Discord，累计下载超 2400 万次。', meta: 'AI智能体', stat: '2400万下载' },
+  { name: 'Pollinations.ai', lang: '多语言', desc: '开源生成式 AI 平台：免费提供文本到图像、音频、视频和文本生成 API，支持 Stable Diffusion、Llama 等多种模型。', meta: '生成式AI', stat: '免费API' },
+  { name: 'BerriAI / litellm', lang: 'Python', desc: 'AI 网关项目 LiteLLM，61.9K 星——自称"最快最轻的 AI Gateway"，统一调用 100+ 大模型 API，声称端到端延迟仅 8ms。', meta: 'AI网关', stat: '61.9K★' }
 ]
 
 const aiCompanion = [
-  { name: '经济日报：DeepSeek 千亿元融资展现中国 AI 进取心', desc: '新浪财经 10/26：DeepSeek 融资从最初 500 亿→800 亿→最终约 1000 亿元；加上此前约 510 亿元首轮，年内两轮累计约 1500 亿元，投前估值约 5000 亿元，为科创板 IPO 铺路。', meta: '融资速递', stat: '1500亿元' },
-  { name: 'MiniMax 开源 M3.1 Flash 权重：428B 多模态、1M 上下文', desc: 'InfoQ 10/26：MiniMax 在 Hugging Face 与 ModelScope 公开 M3.1 Flash 权重——总参数 428B、每 token 激活 23B，支持文本/图像/视频输入，上下文窗口最高 100 万 tokens。', meta: '开源模型', stat: '428B 参数' },
-  { name: '智元开源 AGIBOT WORLD 2026 第四期"具身推理"数据集', desc: '凤凰网 10/26：智元正式开源首个真实场景 Physical Agent 数据集"具身推理"——物理 AI 概念早盘延续强势，创维数字、天娱数科 2 连板。', meta: '具身智能', stat: 'Physical Agent' },
-  { name: 'DeepSeek 为科创板 IPO 铺路：两轮融资累计 1500 亿', desc: '经济日报 10/26 头版评论：千亿融资体量本身就是信号——DeepSeek 至少两次上调融资目标，从 500 亿到 1000 亿，投前估值约 5000 亿元，科创板 IPO 在即。', meta: 'IPO进展', stat: '估值5000亿' },
-  { name: '物理 AI 概念 A 股 2 连板：具身智能赛道升温', desc: '凤凰网 10/26：智元开源具身推理数据集催化，物理 AI 概念延续强势——创维数字、天娱数科 2 连板，凡拓数创涨超 10%，中望软件等跟涨。', meta: 'A股热点', stat: '2连板' },
-  { name: '台风过后首个晴天，周一开工 AI 陪伴正当时', desc: '台风"蔷琵"彻底远离上海，今天阳光回归——新的一周从晴好天气开始，和 AI 聊聊周末、规划本周，AI 伴侣在工作日的陪伴价值再次凸显。', meta: 'AI伴侣', stat: '新周开始' }
+  { name: 'Anthropic 正式提交 S-1 启动 IPO：估值最高 2 万亿美元', desc: '36氪 10/27：Anthropic 美东时间 10/26 正式向 SEC 提交 S-1 注册文件，纳斯达克上市、股票代码"ANT"——目标最高募资约 1000 亿美元、估值约 2 万亿美元，11 月中旬挂牌。', meta: 'IPO速递', stat: '估值2万亿美元' },
+  { name: 'Anthropic 招股书：近一年 10 万美元+ 营收客户超 11900 家', desc: '科创板日报 10/27：Anthropic 招股书披露——近一年年营收 10 万美元以上的客户超过 11900 家；高盛牵头，摩根士丹利担任稳定机制协调行。', meta: '招股书', stat: '11900家客户' },
+  { name: 'DeepSeek 1000 亿元融资：两轮累计 1500 亿，估值 5000 亿', desc: '日本 Semicon.TODAY 10/26：DeepSeek 年内两轮融资累计约 1500 亿元，估值约 5000 亿元——半导体、汽车等产业资本参投，国产算力与能源自主化加速。', meta: '融资速递', stat: '1500亿元' },
+  { name: 'Nous Research 完成 9000 万美元融资，估值 15 亿美元', desc: 'GIGAZINE 10/8：开源 AI 智能体 Hermes Agent 开发商 Nous Research 完成 9000 万美元融资（约 142 亿日元），估值 15 亿美元——Hermes Agent 累计下载超 2400 万次。', meta: '明星创业', stat: '估值15亿美元' },
+  { name: 'Anthropic vs OpenAI：不同上市路径，Anthropic 率先撞线', desc: 'techweb 10/27：在与宿敌 OpenAI 的资本竞速中，Anthropic 率先提交 S-1——有望成为美股历史上第一家血统纯正的前沿大模型上市公司，而 OpenAI 仍在私募市场估值 1.25 万亿。', meta: '行业格局', stat: '首家上市' },
+  { name: '降温周二开工，AI 陪伴温暖工作日', desc: '上海今天降温明显（昨天最高 24℃→今天最高 20℃），偏北大风阵风 6 级——窝在办公室和 AI 聊聊天，让 AI 伴侣陪你度过这个降温的周二。', meta: 'AI伴侣', stat: '降温陪伴' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · DeepSeek 千亿融资，MiniMax 开源 428B', desc: '经济日报头版：DeepSeek 两轮融资累计 1500 亿元、估值 5000 亿；MiniMax 同日开源 M3.1 Flash——428B 多模态、1M 上下文，国产 AI 持续爆发。', meta: '前沿科技', stat: '1500亿元' },
-  { name: '游戏文娱 · 物理 AI 概念 A 股 2 连板', desc: '智元开源首个真实场景具身推理数据集，物理 AI 概念延续强势——创维数字、天娱数科 2 连板，具身智能赛道升温。', meta: '热点财经', stat: '2连板' },
-  { name: '穿搭美妆 · 17~24℃ 多云到晴，上午有雾', desc: '今天上午有雾、能见度低，下午转晴好——薄外套+衬衫，早晚较凉注意加衣；明天降温到 13~19℃，今天抓紧洗晒。', meta: '穿搭指南', stat: '17~24℃' },
-  { name: '理财职场 · DeepSeek 科创板 IPO 铺路', desc: '经济日报头版：DeepSeek 投前估值约 5000 亿元，为科创板 IPO 铺路——国产大模型资本化提速，关注 AI 产业链投资机会。', meta: '财经职场', stat: '估值5000亿' },
-  { name: '健康 · 台风过后首个晴天，抓紧洗晒', desc: '台风"蔷琵"彻底远离，上海阳光回归——但上午有雾、能见度仅 5km，开车注意安全；明天降温到 13~19℃，今天适合洗晒。', meta: '健康提醒', stat: '抓紧洗晒' }
+  { name: '数码科技 · Anthropic IPO 估值 2 万亿美元', desc: 'Anthropic 正式向 SEC 提交 S-1：纳斯达克代码"ANT"，估值最高 2 万亿美元、募资 1000 亿——首家冲刺公开市场的前沿大模型公司，11 月中旬挂牌。', meta: '前沿科技', stat: '2万亿美元' },
+  { name: '游戏文娱 · Hermes Agent 2400 万下载', desc: 'Nous Research 自我改进 AI 智能体 Hermes Agent 累计下载超 2400 万次——内置学习循环、自主记忆管理，支持 Telegram/Slack/Discord 多平台。', meta: 'AI应用', stat: '2400万下载' },
+  { name: '穿搭美妆 · 13~20℃ 降温，风大体感凉', desc: '今天降温明显：昨天最高 24℃→今天最高 20℃，偏北风 4~5 级阵风 6 级——薄外套+风衣，早晚只有 13~15℃，注意加衣。', meta: '穿搭指南', stat: '13~20℃' },
+  { name: '理财职场 · Anthropic 招股书：11900 家大客户', desc: 'Anthropic 招股书披露：近一年年营收 10 万美元以上客户超 11900 家——AI 商业化落地速度超预期，关注 AI 产业链投资机会。', meta: '财经职场', stat: '11900家客户' },
+  { name: '健康 · 降温明显，空气干燥注意补水', desc: '上海今天降温 4℃，偏北大风阵风 6 级——空气干燥（相对湿度 50%~85%），注意补水润燥；早晚温差大，感冒高发期注意保暖。', meta: '健康提醒', stat: '注意补水' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 10月26日', desc: '多云到晴，17~24℃。上午有雾（能见度约 5km），下午晴好。北到西北风 4-5 级、沿江沿海阵风 6 级。相对湿度 74%。AQI 优（46）。日出06:05，日落17:11。台风"蔷琵"已彻底远离，阳光回归——上海发布提醒：早晚较凉，白天总体舒适，抓紧洗晒。明天阴 13~19℃ 北风 3 级，降温明显。', meta: '今日天气', stat: '多云17~24℃' },
-  { name: '本地要闻', desc: '①台风过后首个晴天：上海阳光回归，早晚较凉、白天舒适，北到西北风 4-5 级，沿江沿海阵风 6 级——抓紧洗晒；②第九届进博会 11/5-10 国家会展中心举行，倒计时 10 天。', meta: '上海资讯', stat: '阳光回归' }
+  { name: '上海天气 · 10月27日', desc: '上午多云到阴、局部短时小雨，下午转多云，15~21℃。偏北风 4~5 级、沿江沿海 5 级阵风 6~7 级。相对湿度 85%~50%。AQI 优（38）。日出06:06，日落17:10。【降温明显】昨天最高 24℃→今天最高 20℃，早晚仅 13~15℃——偏北大风、体感偏凉，注意加衣补水。明天阴 16~20℃ 东北风 2 级。', meta: '今日天气', stat: '阴转多云15~21℃' },
+  { name: '本地要闻', desc: '①降温明显：偏北大风阵风 6 级、空气干燥，注意补水润燥、早晚加衣；②第九届进博会 11/5-10 国家会展中心举行，倒计时 9 天。', meta: '上海资讯', stat: '降温加衣' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">早上好，台风终于走了，阳光回归，新的一周开始啦 ♡</div>
+        <div className="greeting">早上好，降温啦，今天风有点大，多穿一件哦 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年10月26日 星期一</span>
-          <span>第 052 期</span>
+          <span className="date">2026年10月27日 星期二</span>
+          <span>第 053 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>经济日报头版：DeepSeek 千亿元融资展现中国 AI 进取心，两轮累计 1500 亿、估值 5000 亿</h3>
-          <p>DeepSeek 融资从 500 亿→800 亿→最终约 1000 亿元，年内两轮累计约 1500 亿元，投前估值约 5000 亿元，为科创板 IPO 铺路；MiniMax 同日开源 428B 多模态 M3.1 Flash。</p>
+          <h3>Anthropic 正式提交 S-1 启动 IPO：估值最高 2 万亿美元，纳斯达克代码"ANT"，11 月中旬挂牌</h3>
+          <p>Anthropic 美东时间 10/26 正式向 SEC 提交 S-1——目标募资 1000 亿美元、估值约 2 万亿美元，成为美股首家血统纯正的前沿大模型上市公司；近一年 10 万美元+ 营收客户超 11900 家。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.052</span>
+        <span>我的工作台 · 每日早报 · VOL.053</span>
       </footer>
     </div>
   )
