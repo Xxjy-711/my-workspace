@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'Ebony-Vinyl / dsh-our-free-model', lang: 'JavaScript', desc: 'DSH 白嫖插件——免登录免 Key 直接用 DeepSeek V4.1 Flash、Kimi K3 等前沿模型，49.9K 星、今日 +2,130，即将突破 5 万大关。', meta: '免费AI', stat: '49.9K★' },
-  { name: 'morluto / rea', lang: 'TypeScript', desc: '"用 Agent 逆向一切"——从应用行为拆到原生二进制，399.5K 星，即将突破 40 万星。', meta: '逆向工程', stat: '399.5K★' },
-  { name: 'f / prompts.chat', lang: 'TypeScript', desc: '原 Awesome ChatGPT Prompts——社区分享、发现和收藏 Prompt 的开源平台，174.9K 星，可自托管。', meta: 'Prompt库', stat: '174.9K★' },
-  { name: 'anujasid / blender-ai-mcp-addon', lang: 'Python', desc: '把 AI 助手塞进 Blender 侧边栏——聊天、审批、Agent 团队全在 3D 软件里完成，今日 +327% 飙升。', meta: 'AI+3D', stat: '+327%' },
-  { name: 'rohitg00 / ai-engineering-from-scratch', lang: 'Python', desc: '"从零学 AI 工程"——523 节课、20 个阶段、约 342 小时，从线性代数教到自主 Agent，74K 星。', meta: 'AI教程', stat: '74.0K★' },
-  { name: 'BerriAI / litellm', lang: 'Python', desc: 'AI 网关 LiteLLM，61.9K 星——统一调用 140+ 家大模型 API，开源自托管 AI 网关事实标准。', meta: 'AI网关', stat: '61.9K★' }
+  { name: 'HKUDS / DeepTutor', lang: 'Python', desc: '港大 LightRAG 团队出品——你的私人导师，读你自己的书、视频和笔记，能针对 B 站/YouTube 视频按 timestamp 答疑，生成测验和掌握度训练。', meta: 'AI教育', stat: 'Trending' },
+  { name: 'deepseek-ai / deep-infer', lang: 'Python', desc: 'DeepSeek 开源推理框架——本地部署大模型推理加速，2026 年 10 月新晋热门仓库，开发者可直接套用到自己的模型服务。', meta: '推理框架', stat: 'DeepSeek' },
+  { name: 'Ebony-Vinyl / dsh-our-free-model', lang: 'JavaScript', desc: 'DSH 白嫖插件——免登录免 Key 直接用 DeepSeek V4.1 Flash、Kimi K3 等前沿模型，今日突破 5 万星大关。', meta: '免费AI', stat: '50K★' },
+  { name: 'morluto / rea', lang: 'TypeScript', desc: '"用 Agent 逆向一切"——从应用行为拆到原生二进制，突破 40 万星，GitHub 史上增长最快项目之一。', meta: '逆向工程', stat: '400K★' },
+  { name: 'f / prompts.chat', lang: 'TypeScript', desc: '原 Awesome ChatGPT Prompts——社区分享、发现和收藏 Prompt 的开源平台，175.2K 星，可自托管。', meta: 'Prompt库', stat: '175.2K★' },
+  { name: 'anujasid / blender-ai-mcp-addon', lang: 'Python', desc: '把 AI 助手塞进 Blender 侧边栏——聊天、审批、Agent 团队全在 3D 软件里完成，连续多日飙升 +327%。', meta: 'AI+3D', stat: '+327%' }
 ]
 
 const aiCompanion = [
-  { name: 'Anthropic IPO 效应发酵：英伟达、英特尔集体大涨', desc: '福布斯 10/30：Anthropic 提交 S-1 招股书后，英伟达、英特尔等科技股大幅上涨，市场预期这场 11 月上市或将创下纪录——募资或达 1000 亿美元，估值超 2 万亿美元。', meta: 'IPO引爆', stat: '2万亿估值' },
-  { name: 'Anthropic 公开招股书：半年狂揽 163 亿美元', desc: '36氪 10/27：Claude 母公司正式向 SEC 提交 S-1，股票代码 ANT 登陆纳斯达克——半年营收暴增，手握 1317 亿美元现金，AI 史诗级 IPO 来了。', meta: '招股书', stat: '163亿美元' },
-  { name: 'OpenAI 即将完成 300 亿美元融资，估值 1.25 万亿', desc: 'DoNews 10/29：OpenAI 正以 1.25 万亿美元估值融资至多 300 亿美元，为 IPO 做准备；已秘密提交招股书，目标 2027 年上市。', meta: 'OpenAI', stat: '1.25万亿' },
-  { name: 'DeepSeek 半年融资 1500 亿，创中国 AI 纪录', desc: '36氪：DeepSeek 新一轮 1000 亿融资超募，叠加 6 月首轮约 500 亿，半年累计逼近 1500 亿；投资方含腾讯、宁德时代、吉利、君联等。', meta: '国产AI', stat: '1500亿' },
-  { name: 'Blender AI 插件飙升：+327%，3D 工作流被 Agent 接管', desc: 'heatdrop 10/30：blender-ai-mcp-addon 把聊天、审批、Agent 团队全塞进 3D 软件侧边栏——DCC 工具正在变成 Agent 的操作台。', meta: 'AI+创作', stat: '+327%' },
-  { name: '周五晴好，AI 陪伴温暖周末', desc: '上海今天上午有雾，中午转晴，16~24℃——晴好天气适合出门晒太阳，晚上窝在屋里和 AI 聊聊天，迎接周末。', meta: 'AI伴侣', stat: '周五快乐' }
+  { name: '黑石预警：Anthropic 上市后或失投资级评级', desc: '微博 10/31：黑石集团预计 Anthropic 上市后可能无法获得投资级评级，融资成本面临上升压力——Anthropic 正推进 630 亿美元芯片融资，其中 180 亿为次级债务。', meta: 'IPO风险', stat: '630亿芯片' },
+  { name: 'Anthropic 接近 1 万亿估值，完成 65 亿融资', desc: 'AI D-A-M-N 10/31：Anthropic 在 IPO 前再完成一轮 65 亿美元融资，估值逼近 1 万亿美元——与 SpaceX 的史上最大 IPO 之争进入白热化。', meta: 'Anthropic', stat: '1万亿估值' },
+  { name: 'DeepSeek B 轮 1055 亿人民币，国资国家队入场', desc: '证券之星 10/30：天眼查显示 DeepSeek B 轮融资 1055 亿人民币，投资方含国家 AI 产业基金、中国移动、中国电信、腾讯、宁德时代、吉利、君联等。', meta: '国产AI', stat: '1055亿' },
+  { name: 'OpenAI 加速融资，估值或超 1.4 万亿美元', desc: 'DoNews 10/30：OpenAI 正加速推进约 300 亿美元新一轮融资，估值从此前 1.25 万亿上调至或超 1.4 万亿，为 2027 年 IPO 蓄力。', meta: 'OpenAI', stat: '1.4万亿' },
+  { name: 'DeepTutor 港大出品：你的私人 AI 导师', desc: 'ghtrends 10/31：HKUDS/DeepTutor 登顶趋势——读你自己的书、笔记和 B 站视频，按时间戳答疑，生成测验和掌握度训练，自建知识库基于 LightRAG。', meta: 'AI教育', stat: '港大出品' },
+  { name: '周六晴好，AI 陪伴温暖周末', desc: '上海今天晴到多云 15~25℃——上午有雾有霾，下午空气转好。适合出门晒晒太阳，晚上窝在屋里和 AI 聊聊天，迎接周末。', meta: 'AI伴侣', stat: '周六快乐' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · Anthropic IPO 引爆科技股', desc: '福布斯 10/30：Anthropic 提交 S-1 后英伟达、英特尔集体大涨——11 月上市或成史上最大科技 IPO，募资 1000 亿美元。', meta: '前沿科技', stat: 'IPO引爆' },
-  { name: '游戏文娱 · DSH 白嫖插件即将破 5 万星', desc: 'Ebony-Vinyl/dsh-our-free-model 今日 +2,130 星——免登录免 Key 白嫖前沿模型，开源圈最火的"免费午餐"。', meta: '开源工具', stat: '49.9K★' },
-  { name: '穿搭美妆 · 16~24℃ 晴好，长袖+薄外套', desc: '今天上午有雾中午转晴，16~24℃昼夜温差大——长袖 T 恤加薄外套，早晚凉中午暖，适合洗晒和出行。', meta: '穿搭指南', stat: '16~24℃' },
-  { name: '理财职场 · Anthropic 半年狂揽 163 亿美元', desc: 'Claude 母公司公开招股书：半年营收暴增，手握 1317 亿现金——AI 赛道估值狂飙，关注科技股机会。', meta: '财经职场', stat: '163亿美元' },
-  { name: '健康 · 上午有雾，出行注意能见度', desc: '今天上午上海有雾，能见度仅 4.6 公里——驾车注意减速、开雾灯；中午转晴后空气转好，适合户外活动。', meta: '健康提醒', stat: '上午有雾' }
+  { name: '数码科技 · 黑石预警 Anthropic 评级风险', desc: '微博 10/31：黑石预计 Anthropic 上市后或无法获得投资级评级——630 亿美元芯片融资压顶，AI 巨兽的甜蜜烦恼。', meta: '前沿科技', stat: 'IPO风险' },
+  { name: '游戏文娱 · DeepTutor 港大出品私人导师', desc: 'HKUDS/DeepTutor 登顶趋势——读你的书、笔记和 B 站视频，按时间戳答疑，生成测验和掌握度训练，学习党的福音。', meta: 'AI学习', stat: 'Trending' },
+  { name: '穿搭美妆 · 15~25℃ 晴好，长袖+薄外套', desc: '今天晴到多云 15~25℃，昼夜温差大——长袖 T 恤加薄外套，上午有霾下午转好，适合周末出门逛街喝咖啡。', meta: '穿搭指南', stat: '15~25℃' },
+  { name: '理财职场 · DeepSeek B 轮 1055 亿，国资入场', desc: '证券之星 10/30：天眼查显示 DeepSeek B 轮 1055 亿，国家 AI 产业基金、中国移动、中国电信等国家队入场——国产 AI 进入资本收割期。', meta: '财经职场', stat: '1055亿' },
+  { name: '健康 · 上午有霾，敏感人群减少外出', desc: '今天上午上海有霾，AQI 短时 107 轻度污染，能见度 5km——敏感人群上午减少外出，午后空气转良(57)，适合户外活动。', meta: '健康提醒', stat: '上午有霾' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 10月30日', desc: '晴到多云，16~24℃。上午有雾（能见度 4.6km），中午转晴。西北风 3~4 级，沿江沿海 4~5 级。相对湿度 70%→40%。AQI 良（91）。日出06:08，日落17:08。【上午有雾】驾车注意安全；明天继续晴 18~23℃。', meta: '今日天气', stat: '晴16~24℃' },
-  { name: '本地要闻', desc: '①上午有雾能见度低，驾车出行注意减速、保持车距；②第九届进博会 11/5-10 国家会展中心举行，倒计时 6 天。', meta: '上海资讯', stat: '雾天注意' }
+  { name: '上海天气 · 10月31日', desc: '晴到多云，15~25℃。上午局部有雾+霾（能见度 5km），下午晴好转良。东南风 3~4 级，沿江沿海 4~5 级，夜里转偏南风 4~5 级阵风 6 级。相对湿度 87%→50%。AQI 上午 107 轻度→下午良(57)。日出06:09，日落17:07。【上午有霾】敏感人群减少外出；明天（11/1）小雨 15~25℃。', meta: '今日天气', stat: '晴15~25℃' },
+  { name: '本地要闻', desc: '①上午有霾敏感人群减少外出，午后空气转好适合活动；②第九届进博会 11/5-10 国家会展中心举行，倒计时 5 天。', meta: '上海资讯', stat: '霾天注意' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">早上好，今天转晴啦，上午有雾中午就放晴 ♡</div>
+        <div className="greeting">周六早安，今天晴到多云，上午有霾下午就放晴啦 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年10月30日 星期五</span>
-          <span>第 056 期</span>
+          <span className="date">2026年10月31日 星期六</span>
+          <span>第 057 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>Anthropic IPO 效应发酵：提交 S-1 后英伟达、英特尔集体大涨，11 月上市或成史上最大科技 IPO</h3>
-          <p>福布斯 10/30：Anthropic 提交招股书后，英伟达、英特尔等科技股大幅上涨——募资或达 1000 亿美元，估值超 2 万亿美元，半年狂揽 163 亿美元营收。</p>
+          <h3>黑石预警：Anthropic 上市后或失投资级评级——630 亿美元芯片融资压顶，AI 巨兽的甜蜜烦恼</h3>
+          <p>微博 10/31：黑石集团预计 Anthropic 上市后可能无法获得投资级评级，融资成本面临上升压力——Anthropic 正推进 630 亿美元芯片融资，其中 180 亿为次级债务。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.056</span>
+        <span>我的工作台 · 每日早报 · VOL.057</span>
       </footer>
     </div>
   )
