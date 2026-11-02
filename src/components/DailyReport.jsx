@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'morluto / rea', lang: 'TypeScript', desc: '"用 Agent 逆向一切"——从应用行为拆到原生二进制，今日突破 41.3 万星（+3,726/日），GitHub 史上增长最快项目之一。', meta: '逆向工程', stat: '413K★' },
-  { name: 'DietrichGebert / ponytail', lang: 'JavaScript', desc: '让你的 AI Agent 像房间里最懒的高级开发——"最少改动、最狠删代码"，18.1 万星（+638/日），编码 Agent 新范式。', meta: '编码Agent', stat: '181K★' },
-  { name: 'n8n-io / n8n', lang: 'TypeScript', desc: 'fair-code 工作流自动化平台，原生 AI 能力——可视化编排+自定义代码，400+ 集成，20.9 万星，可自托管。', meta: '工作流', stat: '209K★' },
-  { name: 'deepseek-ai / DeepInfer', lang: 'Python', desc: 'DeepSeek 官方高性能推理框架——10 月 16 日创建，24K 星，大规模本地部署 DeepSeek 模型的首选方案。', meta: '推理框架', stat: '24K★' },
-  { name: 'Ebony-Vinyl / dsh-our-free-model', lang: 'JavaScript', desc: 'DSH 白嫖插件——免登录免 Key 直接用 DeepSeek V4.1 Flash、Kimi K3 等前沿模型，5 万星持续上涨。', meta: '免费AI', stat: '50K★' },
-  { name: 'github / replica', lang: 'TypeScript', desc: 'GitHub Design 开源的 AI 原型工具——用你自己的设计系统把想法变成可交互原型，MIT 协议免费商用。', meta: 'AI原型', stat: 'MIT' }
+  { name: 'morluto / rea', lang: 'TypeScript', desc: '"用 Agent 逆向一切"——从应用行为拆到原生二进制，今日 41.3 万星（+3,726/日），GitHub 史上增长最快项目之一。', meta: '逆向工程', stat: '413K★' },
+  { name: 'DietrichGebert / ponytail', lang: 'JavaScript', desc: '让 AI Agent 像房间里最懒的高级开发——"最少改动、最狠删代码"，18.1 万星，编码 Agent 新范式。', meta: '编码Agent', stat: '181K★' },
+  { name: 'deepseek-ai / super-agent', lang: 'Python', desc: 'DeepSeek 周六发布的开源编程智能体——主动监控开发者群聊获取反馈，正面对标 Anthropic Claude Code。', meta: '新发布', stat: '对标Claude' },
+  { name: 'OpenClaw Foundation / openclaw', lang: 'TypeScript', desc: 'GitHub Octoverse 2026 年度报告最活跃开源社区——独立开发者社区第一，Agent 时代的开源协作样本。', meta: '年度第一', stat: 'Octoverse#1' },
+  { name: 'NousResearch / hermes-agent', lang: 'Python', desc: 'GitHub Octoverse 2026 最活跃单一厂商产品——Nous Research 的 Hermes Agent 框架，智能体开源标杆。', meta: '年度第一', stat: 'Octoverse#1' },
+  { name: 'n8n-io / n8n', lang: 'TypeScript', desc: 'fair-code 工作流自动化平台，原生 AI 能力——可视化编排+自定义代码，400+ 集成，20.9 万星。', meta: '工作流', stat: '209K★' }
 ]
 
 const aiCompanion = [
-  { name: 'Anthropic 史上最大 IPO：11 月中旬登陆纳斯达克', desc: '中国新闻网 11/1：Anthropic 已向 SEC 递交招股书，计划 11 月中旬挂牌，募资最高 1000 亿美元，估值预期 1.5-2 万亿美元——若上限落地将超越 SpaceX 6 月创下的 1.77 万亿纪录。', meta: 'IPO', stat: '1000亿募资' },
-  { name: 'DeepSeek 千亿融资细节曝光：近 30 家机构参投', desc: '第一财经 11/1：DeepSeek 第二轮 1055 亿人民币融资细节浮出，投后估值 6155 亿（约 860 亿美元）。腾讯、宁德时代前两大；新增长鑫存储朱一明、中芯国际、vivo、美团。', meta: '国产AI', stat: '6155亿估值' },
-  { name: 'OpenAI 融资遇冷：300 亿目标只拿到 110 亿', desc: '韩媒 11/1：OpenAI 新一轮融资目标从 300 亿美元下调至 200 亿，目前仅拿到约 110 亿；估值目标从 1.4 万亿下调至 1.25 万亿——AI 概念股回调压力。', meta: 'OpenAI', stat: '估值下调' },
-  { name: 'iPhone 国行 AI 下周开放测试', desc: '第一财经 11/1：苹果 Apple Intelligence 国行版下周开放公测——中国区用户终于能用 Siri 大模型、智能写作、AI 摘要等功能，运营商推送已就绪。', meta: '苹果AI', stat: '下周公测' },
-  { name: 'ponytail 爆火：让 AI 像最懒高级开发', desc: 'ngjoo 11/1：DietrichGebert/ponytail 18.1 万星——"让 AI Agent 像房间里最懒的高级开发"，最少改动、最狠删代码，编码 Agent 从"堆代码"转向"做减法"。', meta: '编码Agent', stat: '181K★' },
-  { name: '周日上午晴下午雨，AI 陪伴温暖周末', desc: '上海今天上午晴好 23~25℃，下午 3 点转小雨，夜里雨持续——上午出门晒太阳，下午窝在屋里和 AI 聊聊天，迎接新一周。', meta: 'AI伴侣', stat: '周日愉快' }
+  { name: 'DeepSeek 发布 Super-Agent：开源编程智能体正面对标 Claude Code', desc: 'Bloomberg 11/2：DeepSeek Harness 团队周六发布开源"Super-Agent"——能主动监控开发者群聊、获取编程问题反馈，自主性大幅提升，直接挑战 Anthropic 的 Claude Code。', meta: '头条', stat: '开源对标' },
+  { name: '千问将集成至 Apple Intelligence', desc: 'AI 早报 11/2：阿里通义千问将集成进苹果 Apple Intelligence——国行 iPhone 下周公测后，Siri 背后将接入千问大模型，苹果中国 AI 版图落定。', meta: '苹果AI', stat: '国行落地' },
+  { name: 'OpenAI 融资目标再下调 100 亿美元', desc: '众播 11/2：OpenAI 将新一轮融资目标从 300 亿下调至 200 亿美元，估值对应 1.25 万亿（原计划 1.4 万亿）——AI 估值泡沫继续挤水分。', meta: 'OpenAI', stat: '估值1.25万亿' },
+  { name: '马斯克挖走 Claude 最强"产品大脑"Jenny Wen', desc: '投资界 11/2：Anthropic Claude Cowork 核心设计者 Jenny Wen 加入 Cursor 任设计负责人，将助力打造 Grok Bot——AI 人才争夺战白热化。', meta: '人才战', stat: 'Cursor+Grok' },
+  { name: 'Anthropic Mythos 5.5 或 11/3-4 正式发布', desc: '链捕手 11/2：Anthropic 已在官网嵌入 Mythos 5.5 代码，开发者盲测认为本周三/四是发布窗口；OpenAI 则跳过 6.1 直接发 GPT-6.2 Astra。', meta: '模型大战', stat: '本周发布' },
+  { name: '周一开工：AI 编程工具大战升温', desc: 'DeepSeek Super-Agent、Claude Code、Grok Bot、Cursor 四方混战——你写测试脚本的效率，可能下周又要被重新定义了。', meta: 'AI伴侣', stat: '开工加油' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · Anthropic 史上最大 IPO', desc: '中国新闻网 11/1：Anthropic 11 月中旬登陆纳斯达克，募资最高 1000 亿美元，估值 1.5-2 万亿——若上限落地将超越 SpaceX 创历史纪录。', meta: '前沿科技', stat: '1000亿募资' },
-  { name: '游戏文娱 · ponytail 让 AI 像最懒高级开发', desc: 'ngjoo 11/1：DietrichGebert/ponytail 18.1 万星——"让 AI Agent 像房间里最懒的高级开发"，最少改动、最狠删代码，编码 Agent 新范式。', meta: 'AI开发', stat: '181K★' },
-  { name: '穿搭美妆 · 15~25℃ 上午晴下午雨', desc: '今天上午晴好 23~25℃，下午 3 点转小雨——长袖 T 恤加薄外套，上午出门逛街，下午带伞回家，温差大注意别着凉。', meta: '穿搭指南', stat: '15~25℃' },
-  { name: '理财职场 · DeepSeek 投后估值 6155 亿', desc: '第一财经 11/1：DeepSeek 第二轮 1055 亿融资细节曝光，投后估值 6155 亿（约 860 亿美元），腾讯、宁德时代前两大——国产 AI 估值锚点确立。', meta: '财经职场', stat: '6155亿' },
-  { name: '健康 · 上午空气优，AQI 42 适合户外', desc: '今天上午上海 AQI 42 优，能见度 21km——适合晨跑、散步、晒被子；下午转雨后空气湿度上升，注意关节保暖。', meta: '健康提醒', stat: 'AQI 42 优' }
+  { name: '数码科技 · DeepSeek Super-Agent 对标 Claude Code', desc: 'Bloomberg 11/2：DeepSeek 发布开源编程智能体 Super-Agent，主动监控开发者群聊获取反馈——国产 AI 正面对标 Claude Code。', meta: '前沿科技', stat: '开源发布' },
+  { name: '游戏文娱 · Octoverse 2026 开源年度榜', desc: 'GitHub 10/28：OpenClaw Foundation 成最活跃开源社区，Nous Research hermes-agent 成最活跃单一厂商产品——Agent 时代开源版图。', meta: '开源榜单', stat: '年度报告' },
+  { name: '穿搭美妆 · 14~22℃ 上午有雾下午晴', desc: '今天上午有雾（能见度5km），下午转晴 21℃——薄毛衣加风衣，上午开车慢点开，下午阳光好适合散步。', meta: '穿搭指南', stat: '14~22℃' },
+  { name: '理财职场 · OpenAI 估值下调至 1.25 万亿', desc: '众播 11/2：OpenAI 融资目标从 300 亿砍到 200 亿，估值从 1.4 万亿降到 1.25 万亿——AI 赛道估值回归理性，跳槽谈薪多留个心眼。', meta: '财经职场', stat: '估值1.25万亿' },
+  { name: '健康 · 上午雾天能见度5km，开车注意', desc: '今天上午上海有雾，能见度仅 5km，AQI 93 良——出门开车开雾灯、保持车距；敏感人群上午减少户外，下午空气转好。', meta: '健康提醒', stat: '雾天慢行' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 11月1日', desc: '晴转小雨，15~25℃。上午晴好 23~25℃，下午 15 点转小雨（80% 降水概率），傍晚到夜里小雨持续（90%）。西风 2 级转西北风 2 级。相对湿度 53%→85%。AQI 全天优（35~48）。日出06:09，日落17:06。【上午户外、下午带伞】；明天（11/2）晴 14~21℃。', meta: '今日天气', stat: '晴转雨15~25℃' },
-  { name: '本地要闻', desc: '①上午空气优能见度 21km 适合户外活动，下午 3 点后出门带伞；②第九届进博会 11/5-10 国家会展中心举行，倒计时 4 天。', meta: '上海资讯', stat: '下午带伞' }
+  { name: '上海天气 · 11月2日', desc: '多云转晴，14~22℃。上午有雾（能见度 5km）转晴，白天晴好 21℃，夜里转阴。西北风 3-4 级。相对湿度 71%。AQI 全天良（57~93）。日出06:10，日落17:05。【上午雾天慢行、下午晴好】；明天（11/3）小雨 16~20℃。', meta: '今日天气', stat: '晴14~22℃' },
+  { name: '本地要闻', desc: '①上午有雾能见度 5km，开车注意安全、保持车距；②第九届进博会 11/5-10 国家会展中心举行，倒计时 3 天。', meta: '上海资讯', stat: '雾天慢行' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">周日早安，今天上午晴好下午转雨，上午出门晒太阳下午窝家啦 ♡</div>
+        <div className="greeting">周一早安，上午有雾下午转晴，新的一周开工啦，加油 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年11月1日 星期日</span>
-          <span>第 058 期</span>
+          <span className="date">2026年11月2日 星期一</span>
+          <span>第 059 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>Anthropic 史上最大 IPO：11 月中旬登陆纳斯达克，募资最高 1000 亿美元，估值 1.5-2 万亿</h3>
-          <p>中国新闻网 11/1：Anthropic 已向 SEC 递交招股书，计划 11 月中旬挂牌纳斯达克，募资最高 1000 亿美元，估值预期 1.5-2 万亿美元——若上限落地将超越 SpaceX 6 月创下的 1.77 万亿纪录。</p>
+          <h3>DeepSeek 发布 Super-Agent：开源编程智能体正面对标 Claude Code，主动监控开发者群聊获取反馈</h3>
+          <p>Bloomberg 11/2：DeepSeek Harness 团队周六发布开源"Super-Agent"——能主动监控开发者群聊、获取编程问题反馈，自主性大幅提升，直接挑战 Anthropic 的 Claude Code。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.058</span>
+        <span>我的工作台 · 每日早报 · VOL.059</span>
       </footer>
     </div>
   )
