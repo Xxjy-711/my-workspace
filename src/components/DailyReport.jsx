@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'NousResearch / hermes-agent', lang: 'Python', desc: 'GitHub 新宠——自文档化 AI 智能体，自动创建并改进自己的技能蓝图，9 万+ 星，智能体开源标杆。', meta: '自文档化', stat: '90K★' },
-  { name: 'thedotmack / claude-mem', lang: 'TypeScript', desc: '跨会话持久上下文——捕获 Agent 每次会话行为、AI 压缩后注入未来会话，兼容 Claude Code/OpenClaw/Codex/Gemini/Hermes/Copilot，月增 1.4 万星。', meta: '持久记忆', stat: '110K★/月+14K' },
-  { name: 'morluto / rea', lang: 'TypeScript', desc: '"用 Agent 逆向一切"——从应用行为拆到原生二进制，41.3 万星，GitHub 史上增长最快项目之一。', meta: '逆向工程', stat: '413K★' },
-  { name: 'f / prompts.chat', lang: 'JavaScript', desc: '原 Awesome ChatGPT Prompts——社区分享、发现、收集提示词，可自托管完全隐私，17.6 万星。', meta: '提示词库', stat: '176K★' },
-  { name: 'n8n-io / n8n', lang: 'TypeScript', desc: 'fair-code 工作流自动化平台，原生 AI 能力——可视化编排+自定义代码，400+ 集成，20.9 万星。', meta: '工作流', stat: '209K★' },
-  { name: 'deepseek-ai / super-agent', lang: 'Python', desc: 'DeepSeek 开源编程智能体——主动监控开发者群聊获取反馈，上线两天 6.6k 星，正面对标 Claude Code。', meta: '开源对标', stat: '6.6K★' }
+  { name: 'morluto / rea', lang: 'TypeScript', desc: '"用 Agent 逆向一切"——从应用行为拆到原生二进制，月增 42.2 万星、累计 42.3 万，GitHub 史上增长最快项目。', meta: '逆向工程', stat: '423K★/月+422K' },
+  { name: 'heygen-com / hyperframes', lang: 'TypeScript', desc: '写 HTML 直接渲染视频，为 Agent 打造——文本即视频脚本，月增 2.2 万星、累计 7.8 万，Agent 内容生成新范式。', meta: '视频生成', stat: '77K★/月+22K' },
+  { name: 'thedotmack / claude-mem', lang: 'TypeScript', desc: '跨会话持久上下文——捕获 Agent 会话行为、AI 压缩后注入未来，兼容 Claude Code/OpenClaw/Codex/Gemini/Hermes/Copilot，11 万星。', meta: '持久记忆', stat: '110K★' },
+  { name: 'NousResearch / hermes-agent', lang: 'Python', desc: '自文档化 AI 智能体——自动创建并改进自己的技能蓝图，9 万+ 星，设置简单、开发者最爱。', meta: '自文档化', stat: '90K★' },
+  { name: 'openclaw / openclaw', lang: 'Python', desc: 'OSS Agent 框架综合分第一（99.8），39.4 万星、8.3 万 fork、30 天 1.96 万次提交——开源智能体框架龙头。', meta: 'Agent框架', stat: '394K★' },
+  { name: 'n8n-io / n8n', lang: 'TypeScript', desc: 'fair-code 工作流自动化平台，原生 AI 能力——可视化编排+自定义代码，400+ 集成，20.9 万星。', meta: '工作流', stat: '209K★' }
 ]
 
 const aiCompanion = [
-  { name: 'DeepSeek 又崩了！昨天 16:58 起网页/APP 对话全线故障', desc: '中国能源网/今日头条 11/4：11/3 下午 16:58 起 DeepSeek 网页、APP 对话均报"服务器繁忙"，官网显示网页/API 部分中断，影响对话服务、V4 Pro API、V4.1 Flash API——网页已恢复，APP 仍故障。', meta: '头条', stat: '服务中断' },
-  { name: 'Anthropic 官网上线 Claude Opus 5.5 + Haiku 5.5', desc: 'Anthropic Newsroom 11/4：Claude Opus 5.5 领先 agentic coding 与知识工作，典型工作负载成本比 Opus 5 降 40%；Haiku 5.5 是最快最强小模型，面向摘要、子 Agent、浏览器使用。', meta: '新模型', stat: 'Opus 5.5' },
-  { name: 'GPT-6.2 Astra + Claude 5.5 同日泄露，硅谷炸锅', desc: '钛媒体 11/2：OpenAI 跳过 6.1、把回炉重炼一个月的模型升级为 GPT-6.2 Astra 在 Codex 灰度；Anthropic 官网源码曝光同底座双版本 Claude 5.5 系列——泄露是军备竞赛的新武器。', meta: '模型大战', stat: '双旗舰泄露' },
-  { name: 'Hermes Agent 9 万星：GitHub 新宠怎么 Storm 起来的', desc: 'AI D-A-M-N 11/3：Nous Research 的 Hermes Agent 破 9 万星，自文档化、设置简单、开发者最爱——集成派 vs 能力派两条路线正在分化。', meta: '开源热度', stat: '90K★' },
-  { name: 'claude-mem 月增 1.4 万星：Agent 记忆成刚需', desc: 'GitHub Trending 月度榜：thedotmack/claude-mem 11 万星、月增 14,011——跨会话持久上下文，兼容 Claude Code/OpenClaw/Codex/Gemini/Hermes/Copilot 全主流 Agent。', meta: 'Agent记忆', stat: '月+14K' },
-  { name: '周三开工：AI 服务稳定性才是真痛点', desc: 'DeepSeek 崩了、Opus 5.5 降本 40%——个人 Agent 越来越强，但服务稳定性和成本控制才是日常使用的真正分水岭。', meta: 'AI伴侣', stat: '开工加油' }
+  { name: 'Claude Code 前负责人 Cat Wu 离职仅一天即加盟 OpenAI', desc: '凤凰网科技 11/5 援引商业内幕：Anthropic 旗下 AI 编程工具 Claude Code 前产品负责人 Cat Wu 宣布加入 OpenAI，领导核心产品团队的产品管理工作——AI 编程人才争夺战白热化。', meta: '头条', stat: '人才跳槽' },
+  { name: 'OpenAI 总裁：大部分收入来自企业销售，2027 年做好上市准备', desc: '新浪财经 11/5：Greg Brockman 在纳帕科技大会表示，公司大部分收入来自企业销售以应对 Anthropic 挑战；Anthropic 很可能年底前上市，OpenAI 正大力推广 Codex 智能体。', meta: 'IPO动态', stat: '2027上市准备' },
+  { name: 'OpenAI 推出 GPT-6.1 Terra', desc: 'OpenAI 产品发布页 11/4：GPT-6.1 Terra 正式推出，持续补全 GPT-6 家族；此前 GPT-6 Rosalind Research 已面向少量获批 Research 客户开放，专攻多步骤生命科学研究。', meta: 'OpenAI', stat: 'GPT-6.1 Terra' },
+  { name: 'OpenAI 用数千个 AI 智能体挖掘脑细胞数据新线索', desc: 'OpenAI 研究 11/3：联合 PerturbAI、斯克里普斯研究所，利用分布式 AI 智能体从数百万个脑细胞数据中发掘有潜力的研究线索——Agent 集群做科研。', meta: 'AI科研', stat: '数千Agent' },
+  { name: 'Agent 框架榜：OpenClaw 39.4 万星综合第一', desc: 'AI Hippo 11/2：开源 Agent 框架 OpenClaw 综合分 99.8，39.4 万星、8.3 万 fork；claude-mem 月增 1.4 万星——记忆层与框架层同步升温。', meta: '开源热度', stat: '框架第一' },
+  { name: '周四开工：AI 编程从模型之争转向人才与生态之争', desc: 'Cat Wu 跳槽、Codex 加码推广、Agent 记忆/框架开源齐涨——选工具多看生态与活跃度，别只看单模型分数。', meta: 'AI伴侣', stat: '开工加油' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · DeepSeek 又崩了', desc: '中国能源网 11/4：11/3 下午 16:58 起 DeepSeek 网页/APP 对话故障，V4 Pro/V4.1 Flash API 中断——网页已恢复，APP 仍故障，重要任务记得留备份通道。', meta: '前沿科技', stat: '服务中断' },
-  { name: '游戏文娱 · Claude Opus 5.5 上线成本降 40%', desc: 'Anthropic 11/4：Claude Opus 5.5 领先 agentic coding，典型负载成本比 Opus 5 降 40%；Haiku 5.5 成最快最强小模型——AI 编程成本继续下探。', meta: '模型发布', stat: '降本40%' },
-  { name: '穿搭美妆 · 15~19℃ 全天雨穿防水鞋', desc: '今天大雨转阴 15~19℃，上午中雨、傍晚又中雨——薄毛衣加风衣、防水鞋必备，伞别忘；湿度 94% 闷闷的，选透气面料。', meta: '穿搭指南', stat: '15~19℃雨' },
-  { name: '理财职场 · DeepSeek 概念股短期波动', desc: 'DeepSeek 服务故障引发 AI 板块短期震荡——AI 人工智能 ETF 回调蓄势，长期逻辑未变，短期别追高、别割肉。', meta: '财经职场', stat: '板块震荡' },
-  { name: '健康 · 湿度 94% 关节保暖', desc: '今天相对湿度 94%、能见度 9.1km，全天雨——关节注意保暖、鞋别湿透；AQI 全天优（25~31），空气干净但出门还是带伞。', meta: '健康提醒', stat: '湿度94%' }
+  { name: '数码科技 · Claude Code 前负责人跳槽 OpenAI', desc: '凤凰网科技 11/5：Claude Code 前产品负责人 Cat Wu 离职一天即宣布加入 OpenAI、执掌核心产品团队产品管理——AI 编程赛道人才争夺开打。', meta: '前沿科技', stat: '人才跳槽' },
+  { name: '游戏文娱 · OpenAI 大力推广 Codex 智能体', desc: '新浪财经 11/5：面对 Anthropic 年底或上市的竞争压力，OpenAI 正大力推广 Codex 编程智能体，企业销售成主要收入来源。', meta: '模型竞争', stat: 'Codex加码' },
+  { name: '穿搭美妆 · 16~20℃ 大风天穿防风外套', desc: '今天北到西北风 4~5 级阵风 6 级、沿江沿海阵风 7 级——薄毛衣加防风风衣，别穿裙摆太大、帽子戴紧，风大头发易乱。', meta: '穿搭指南', stat: '16~20℃防风' },
+  { name: '理财职场 · 两大巨头 IPO 节奏：Anthropic 年底、OpenAI 2027', desc: '新浪财经 11/5：Anthropic 很可能年底前上市，OpenAI 称 2027 年做好准备——AI 板块长期受巨头上市预期支撑，短期注意情绪波动。', meta: '财经职场', stat: 'IPO预期' },
+  { name: '健康 · AQI 良、PM2.5 偏高，防风防尘', desc: '今天 AQI 良（50~90，首要污染物 PM2.5），大风扬尘天敏感人群（鼻炎、咳嗽）出门戴口罩；夜间降温到 13~14℃，早晚加件外套。', meta: '健康提醒', stat: 'PM2.5偏高' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 11月4日', desc: '阵雨转大雨转阴，15~19℃。上午中雨 17℃ 空气优，下午小雨，傍晚 18 点中雨，夜里 21 点后转多云。东南风 4-5 级。相对湿度 94%。AQI 全天优（25~31）。日出06:12，日落17:03。【全天雨、穿防水鞋】；明天（11/5）阴 13~18℃ 进博会开幕。', meta: '今日天气', stat: '大雨15~19℃' },
-  { name: '本地要闻', desc: '①今天大雨转阴、出门带伞穿防水鞋，夜里雨停转多云；②明天（11/5）第九届进博会国家会展中心开幕，11/5-10 持续 6 天，周边交通注意管控。', meta: '上海资讯', stat: '进博会明天开幕' }
+  { name: '上海天气 · 11月5日', desc: '阴转多云，16~19℃（实测 13~18℃）。上午阴 17℃ 空气优，全天降水概率 0%、无雨，傍晚转阴 16℃。北到西北风 4~5 级阵风 6 级，沿江沿海 5~6 级阵风 7 级，需防风。相对湿度 76%（90%~65%）。AQI 良（50~90，首要 PM2.5）。日出06:13，日落17:03。【风大穿防风外套】；明天（11/6）阴 14~20℃ 东北风3级。', meta: '今日天气', stat: '阴16~19℃大风' },
+  { name: '本地要闻', desc: '①第九届进博会今天（11/5）国家会展中心（虹桥）开幕，会期 11/5-10 共 6 天，周边道路和轨交 2、17 号线客流大、交通管控，出行注意绕行；②今天沿江沿海阵风 7 级，注意高空坠物、广告牌和阳台物品收纳。', meta: '上海资讯', stat: '进博会开幕' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">周三早安，今天大雨转阴，穿防水鞋带好伞，新的一天加油 ♡</div>
+        <div className="greeting">周四早安，今天进博会开幕、大风无雨，穿好防风外套，新的一天加油 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年11月4日 星期三</span>
-          <span>第 061 期</span>
+          <span className="date">2026年11月5日 星期四</span>
+          <span>第 062 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>DeepSeek 又崩了！昨天 16:58 起网页/APP 对话全线故障，V4 Pro/V4.1 Flash API 中断</h3>
-          <p>中国能源网/今日头条 11/4：11/3 下午 16:58 起 DeepSeek 网页、APP 对话均报"服务器繁忙"，官网显示网页/API 部分中断——网页已恢复，APP 仍故障，重要任务记得留备份通道。</p>
+          <h3>Claude Code 前负责人 Cat Wu 离职仅一天即加盟 OpenAI，执掌核心产品团队——AI 编程人才争夺战白热化</h3>
+          <p>凤凰网科技 11/5 援引商业内幕：Anthropic 旗下 Claude Code 前产品负责人 Cat Wu 宣布加入 OpenAI，领导核心产品团队产品管理；同期 OpenAI 总裁称 2027 年做好上市准备、正大力推广 Codex 智能体。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.061</span>
+        <span>我的工作台 · 每日早报 · VOL.062</span>
       </footer>
     </div>
   )
