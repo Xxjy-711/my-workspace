@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'morluto / rea', lang: 'TypeScript', desc: '"用 Agent 逆向一切"——从应用行为拆到原生二进制，月增 42.2 万星、累计 42.3 万，GitHub 史上增长最快项目。', meta: '逆向工程', stat: '423K★/月+422K' },
-  { name: 'heygen-com / hyperframes', lang: 'TypeScript', desc: '写 HTML 直接渲染视频，为 Agent 打造——文本即视频脚本，月增 2.2 万星、累计 7.8 万，Agent 内容生成新范式。', meta: '视频生成', stat: '77K★/月+22K' },
-  { name: 'thedotmack / claude-mem', lang: 'TypeScript', desc: '跨会话持久上下文——捕获 Agent 会话行为、AI 压缩后注入未来，兼容 Claude Code/OpenClaw/Codex/Gemini/Hermes/Copilot，11 万星。', meta: '持久记忆', stat: '110K★' },
-  { name: 'NousResearch / hermes-agent', lang: 'Python', desc: '自文档化 AI 智能体——自动创建并改进自己的技能蓝图，9 万+ 星，设置简单、开发者最爱。', meta: '自文档化', stat: '90K★' },
-  { name: 'openclaw / openclaw', lang: 'Python', desc: 'OSS Agent 框架综合分第一（99.8），39.4 万星、8.3 万 fork、30 天 1.96 万次提交——开源智能体框架龙头。', meta: 'Agent框架', stat: '394K★' },
-  { name: 'n8n-io / n8n', lang: 'TypeScript', desc: 'fair-code 工作流自动化平台，原生 AI 能力——可视化编排+自定义代码，400+ 集成，20.9 万星。', meta: '工作流', stat: '209K★' }
+  { name: 'heygen-com / hyperframes', lang: 'TypeScript', desc: '写 HTML 直接渲染视频、为 Agent 打造——文本即视频脚本，月增 2.26 万星、累计 7.95 万，Agent 内容生成新范式。', meta: '视频生成', stat: '79K★/月+23K' },
+  { name: 'anthropics / knowledge-work-plugins', lang: 'Python', desc: 'Anthropic 官方开源知识库工作插件集，月增 8,764 星、累计 3.48 万——让 Agent 直接接入文档与知识工作流。', meta: '官方插件', stat: '35K★/月+9K' },
+  { name: 'ccch1mneyyy / dsh-Go', lang: 'Dart', desc: 'DeepSeek Harness 装进口袋：手机本机运行、也能遥控电脑，单日新增近 2,000 星、累计 1.06 万。', meta: '移动端Agent', stat: '11K★/日+2K' },
+  { name: 'f / prompts.chat', lang: 'JavaScript', desc: '原 Awesome ChatGPT Prompts——社区分享、发现、收集提示词，可自托管完全隐私，17.6 万星，日增约 92 星。', meta: '提示词库', stat: '176K★' },
+  { name: 'openclaw / openclaw', lang: 'Python', desc: '本地运行的开源 AI 助手，5 个月冲到 GitHub 最热门仓库之一（34.6 万+ 星）；微软 Scout 个人助手公开借鉴其 Agent 工作流。', meta: '开源助手', stat: '346K★' },
+  { name: 'deepseek-ai / harness', lang: 'Python', desc: 'DeepSeek Harness 开发者预览——面向 Agent 基础设施的运行时方案，登上 Hacker News 747 分、314 条讨论，不止是编程助手。', meta: 'Agent运行时', stat: 'HN 747分' }
 ]
 
 const aiCompanion = [
-  { name: 'Claude Code 前负责人 Cat Wu 离职仅一天即加盟 OpenAI', desc: '凤凰网科技 11/5 援引商业内幕：Anthropic 旗下 AI 编程工具 Claude Code 前产品负责人 Cat Wu 宣布加入 OpenAI，领导核心产品团队的产品管理工作——AI 编程人才争夺战白热化。', meta: '头条', stat: '人才跳槽' },
-  { name: 'OpenAI 总裁：大部分收入来自企业销售，2027 年做好上市准备', desc: '新浪财经 11/5：Greg Brockman 在纳帕科技大会表示，公司大部分收入来自企业销售以应对 Anthropic 挑战；Anthropic 很可能年底前上市，OpenAI 正大力推广 Codex 智能体。', meta: 'IPO动态', stat: '2027上市准备' },
-  { name: 'OpenAI 推出 GPT-6.1 Terra', desc: 'OpenAI 产品发布页 11/4：GPT-6.1 Terra 正式推出，持续补全 GPT-6 家族；此前 GPT-6 Rosalind Research 已面向少量获批 Research 客户开放，专攻多步骤生命科学研究。', meta: 'OpenAI', stat: 'GPT-6.1 Terra' },
-  { name: 'OpenAI 用数千个 AI 智能体挖掘脑细胞数据新线索', desc: 'OpenAI 研究 11/3：联合 PerturbAI、斯克里普斯研究所，利用分布式 AI 智能体从数百万个脑细胞数据中发掘有潜力的研究线索——Agent 集群做科研。', meta: 'AI科研', stat: '数千Agent' },
-  { name: 'Agent 框架榜：OpenClaw 39.4 万星综合第一', desc: 'AI Hippo 11/2：开源 Agent 框架 OpenClaw 综合分 99.8，39.4 万星、8.3 万 fork；claude-mem 月增 1.4 万星——记忆层与框架层同步升温。', meta: '开源热度', stat: '框架第一' },
-  { name: '周四开工：AI 编程从模型之争转向人才与生态之争', desc: 'Cat Wu 跳槽、Codex 加码推广、Agent 记忆/框架开源齐涨——选工具多看生态与活跃度，别只看单模型分数。', meta: 'AI伴侣', stat: '开工加油' }
+  { name: 'DeepSeek 新一轮融资至少 800 亿元、逼近千亿，腾讯+宁德时代入局', desc: '彭博社（IT之家/Agentopia 转述）11/5：DeepSeek 新一轮融资接近完成交割，规模至少 800 亿元人民币、可能逼近 1000 亿；宁德时代与腾讯为出资最大投资方，为 2027 年初 IPO 铺路。', meta: '头条', stat: '融资近千亿' },
+  { name: 'OpenAI 收购开发者工具公司 Pierre，同日挖走 Claude Code 负责人 Cat Wu', desc: '第一财经 YiMagazine 11/6：当地时间 11/4 OpenAI 宣布协议收购开发者工具初创 Pierre Computer Company；同日 Claude Code 及桌面智能体 Cowork 产品负责人 Cat Wu 离开 Anthropic、加入 OpenAI 核心产品团队。', meta: '收购挖角', stat: 'Pierre收购' },
+  { name: 'Anthropic IPO 生变：投资者怀疑能否赶 11 月上市', desc: '华尔街见闻 11/6：潜在投资者质疑下周开展路演、赶在 11 月上市的可行性，要求更有吸引力估值；1.5 万亿美元估值处于预期高端，市场正急切等待其 10 月营收数据。', meta: 'IPO变数', stat: '估值分歧' },
+  { name: 'OpenAI 连发 GPT-6 Cyber 安全模型与 Images 2.6', desc: '腾讯新闻/新浪财经 11/6：GPT-6 Cyber 主打安全研究、漏洞利用基准领先；Images 2.6 支持一张照片变 GIF、生图提速 50%；OpenAI 同时承诺提升数据中心建设透明度。', meta: '产品更新', stat: '双连发' },
+  { name: '王慧文再押注 AI Agent 创业公司；隔夜费半暴跌 12%', desc: '新浪财经晨间速递 11/6：继 Kimi、Manus 之后，王慧文又投资 AirBuild；隔夜费城半导体指数因 AI 监管恐慌暴跌 12%，美国首家人形机器人上市公司诞生。', meta: '资本动向', stat: '板块回调' },
+  { name: '周五开工：巨头并购挖角 + Agent 创业融资双线并进', desc: 'DeepSeek 拿融资铺路 IPO、OpenAI 并购挖人补产品、王慧文持续下注 Agent——个人选工具可多关注开源可自托管方案，巨头风云对日常使用影响有限。', meta: 'AI伴侣', stat: '周五加油' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · Claude Code 前负责人跳槽 OpenAI', desc: '凤凰网科技 11/5：Claude Code 前产品负责人 Cat Wu 离职一天即宣布加入 OpenAI、执掌核心产品团队产品管理——AI 编程赛道人才争夺开打。', meta: '前沿科技', stat: '人才跳槽' },
-  { name: '游戏文娱 · OpenAI 大力推广 Codex 智能体', desc: '新浪财经 11/5：面对 Anthropic 年底或上市的竞争压力，OpenAI 正大力推广 Codex 编程智能体，企业销售成主要收入来源。', meta: '模型竞争', stat: 'Codex加码' },
-  { name: '穿搭美妆 · 16~20℃ 大风天穿防风外套', desc: '今天北到西北风 4~5 级阵风 6 级、沿江沿海阵风 7 级——薄毛衣加防风风衣，别穿裙摆太大、帽子戴紧，风大头发易乱。', meta: '穿搭指南', stat: '16~20℃防风' },
-  { name: '理财职场 · 两大巨头 IPO 节奏：Anthropic 年底、OpenAI 2027', desc: '新浪财经 11/5：Anthropic 很可能年底前上市，OpenAI 称 2027 年做好准备——AI 板块长期受巨头上市预期支撑，短期注意情绪波动。', meta: '财经职场', stat: 'IPO预期' },
-  { name: '健康 · AQI 良、PM2.5 偏高，防风防尘', desc: '今天 AQI 良（50~90，首要污染物 PM2.5），大风扬尘天敏感人群（鼻炎、咳嗽）出门戴口罩；夜间降温到 13~14℃，早晚加件外套。', meta: '健康提醒', stat: 'PM2.5偏高' }
+  { name: '数码科技 · DeepSeek 融资近千亿、OpenAI 收购 Pierre', desc: '彭博社 11/5：DeepSeek 融资至少 800 亿、腾讯与宁德时代入局；OpenAI 11/4 收购开发者工具公司 Pierre Computer 并挖来 Cat Wu——国产与海外大厂同步加码 Agent。', meta: '前沿科技', stat: '大厂加码' },
+  { name: '游戏文娱 · OpenAI Images 2.6：照片变 GIF、生图提速 50%', desc: '新浪财经 11/6：OpenAI 推出 Images 2.6，支持一张照片直接转 GIF、生成速度提升 50%，做表情包和动态素材更顺手。', meta: '创作工具', stat: '生图提速' },
+  { name: '穿搭美妆 · 15~20℃ 上午有雾、东北风阵风6级', desc: '今天多云、上午前局部有雾，东北风 4-5 级沿江沿海阵风 6 级——薄针织衫加轻便风衣即可，风大避免长摆裙子；雾天骑车/开车注意距离。', meta: '穿搭指南', stat: '15~20℃雾风' },
+  { name: '理财职场 · AI 板块短期波动，别追高也别恐慌割肉', desc: '隔夜费半暴跌 12%、Anthropic 1.5 万亿估值遭质疑，但 DeepSeek 800 亿融资利好国产 AI 链——板块情绪波动大，定投者坚持纪律，短线注意控制仓位。', meta: '财经职场', stat: '波动加大' },
+  { name: '健康 · 雾天慢行 + 秋季火险4级注意用火', desc: '上午能见度约 5km、局部轻度污染，出门戴口罩、晨练推迟到雾散后；今天火险等级 4 级易燃，厨房油烟、阳台杂物和户外烟头都要注意安全。', meta: '健康提醒', stat: '火险4级' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 11月5日', desc: '阴转多云，16~19℃（实测 13~18℃）。上午阴 17℃ 空气优，全天降水概率 0%、无雨，傍晚转阴 16℃。北到西北风 4~5 级阵风 6 级，沿江沿海 5~6 级阵风 7 级，需防风。相对湿度 76%（90%~65%）。AQI 良（50~90，首要 PM2.5）。日出06:13，日落17:03。【风大穿防风外套】；明天（11/6）阴 14~20℃ 东北风3级。', meta: '今日天气', stat: '阴16~19℃大风' },
-  { name: '本地要闻', desc: '①第九届进博会今天（11/5）国家会展中心（虹桥）开幕，会期 11/5-10 共 6 天，周边道路和轨交 2、17 号线客流大、交通管控，出行注意绕行；②今天沿江沿海阵风 7 级，注意高空坠物、广告牌和阳台物品收纳。', meta: '上海资讯', stat: '进博会开幕' }
+  { name: '上海天气 · 11月6日', desc: '多云，上午前局部有雾（17℃、能见度约 5km），转多云转阴，15~20℃（市区实测 15~18℃）。东北风 4-5 级、沿江沿海阵风 6 级。相对湿度 78%（区间 40%~90%）。AQI 市区优（38~51），青浦局部轻度污染（105~125）。日出06:14，日落17:02。【雾天+大风、开车慢行】；明天（11/7）阴 15~20℃ 东风4级，周日（11/8）小雨约16mm、明显降温。', meta: '今日天气', stat: '多云15~20℃雾' },
+  { name: '本地要闻', desc: '①进博会进入第二天（11/5-10），虹桥国家会展中心客流与周边交通管控持续，2/17 号线高峰预留时间；②今天秋季干燥、火险等级 4 级易燃，注意阳台堆放物、户外烧烤和烟头安全。', meta: '上海资讯', stat: '进博会第2天' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">周四早安，今天进博会开幕、大风无雨，穿好防风外套，新的一天加油 ♡</div>
+        <div className="greeting">周五早安，上午有雾、午后转阴，雾散后多穿件薄外套，轻松收尾本周 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年11月5日 星期四</span>
-          <span>第 062 期</span>
+          <span className="date">2026年11月6日 星期五</span>
+          <span>第 063 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>Claude Code 前负责人 Cat Wu 离职仅一天即加盟 OpenAI，执掌核心产品团队——AI 编程人才争夺战白热化</h3>
-          <p>凤凰网科技 11/5 援引商业内幕：Anthropic 旗下 Claude Code 前产品负责人 Cat Wu 宣布加入 OpenAI，领导核心产品团队产品管理；同期 OpenAI 总裁称 2027 年做好上市准备、正大力推广 Codex 智能体。</p>
+          <h3>DeepSeek 新一轮融资至少 800 亿元、逼近千亿，腾讯与宁德时代入局，为 2027 年初 IPO 铺路</h3>
+          <p>彭博社报道：融资接近完成交割，宁德时代与腾讯为最大出资方；同期 OpenAI 收购开发者工具公司 Pierre、挖走 Claude Code 负责人 Cat Wu，Anthropic 1.5 万亿 IPO 估值遭投资者质疑。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.062</span>
+        <span>我的工作台 · 每日早报 · VOL.063</span>
       </footer>
     </div>
   )
