@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
+  { name: 'anthropics / claude-code', lang: 'TypeScript', desc: 'Anthropic 官方终端编码 Agent：读懂整个代码库、在命令行里改代码、跑测试、提交 PR，累计约 14.5 万星，是当前最主流的本地编码助手之一。', meta: '编码Agent', stat: '145K★' },
+  { name: 'The-PR-Agent / pr-agent', lang: 'Python', desc: '开源 PR 评审 Agent 原版项目，自动分析变更、给评审意见与建议，本周新增约 1,355 星、累计 1.53 万星，适合测试与研发团队接入流水线。', meta: '代码评审', stat: '15.3K★/周+1.4K' },
   { name: 'morluto / rea', lang: 'TypeScript', desc: '"用 Agent 逆向一切"——从应用行为拆到原生二进制，累计 43.7 万星、月增 43.1 万，连续多周霸占 GitHub 月榜第一。', meta: '逆向工程', stat: '437K★月榜第一' },
-  { name: 'n8n-io / n8n', lang: 'TypeScript', desc: 'Fair-code 工作流自动化平台，原生支持 AI 能力、可视化搭建+自定义代码、可自托管，集成超 400 个应用，累计 20.9 万星。', meta: '自动化工作流', stat: '209K★/400+集成' },
-  { name: 'langchain-ai / langchain', lang: 'Python', desc: '事实标准的 Agent 工程平台，串联模型、工具调用、检索与记忆，累计 14.9 万星，第44周 AI Agent 类项目仍占上榜数一半以上。', meta: 'Agent框架', stat: '149K★' },
-  { name: 'boykopovar / AnyPS5', lang: 'C++', desc: 'PS5 可执行文件自动移植到 Linux/Windows 的开源工具，月增 4.72 万星、累计 5.17 万——主机游戏跨平台移植的热门新方案。', meta: '游戏移植', stat: '52K★/月+47K' },
+  { name: 'n8n-io / n8n', lang: 'TypeScript', desc: 'Fair-code 工作流自动化平台，原生支持 AI、可视化搭建+自定义代码、可自托管，集成超 400 个应用，累计 20.9 万星。', meta: '自动化工作流', stat: '209K★/400+集成' },
   { name: 'thedotmack / claude-mem', lang: 'TypeScript', desc: 'Agent 跨会话持久记忆：捕获会话行为、AI 压缩后注入未来上下文，兼容 Claude Code/OpenClaw/Codex 等，10.9 万星、9.5 千 fork。', meta: '长期记忆', stat: '109K★' },
-  { name: 'anthropics / knowledge-work-plugins', lang: 'Python', desc: 'Anthropic 面向 Claude Cowork 的知识工作者插件开源仓库，配套公开 Agent Skills 技能库，让智能体直接接入办公流程。', meta: '官方插件', stat: '官方Skills' }
+  { name: 'f / prompts.chat', lang: 'Markdown', desc: '原 Awesome ChatGPT Prompts 社区站，收集、分享与发现高质量提示词，可自托管保护隐私，累计约 17.6 万星，入门写提示词的常用素材库。', meta: '提示词库', stat: '176K★' }
 ]
 
 const aiCompanion = [
-  { name: 'Anthropic 第三季度营收约 170 亿美元，同比暴涨约 11 倍', desc: 'DoNews 11/7：Anthropic Q3 营收约 168~170 亿美元、同比增长约 11 倍——这正是此前投资者等待的"10 月营收"关键数据，为 IPO 提供基本面支撑，但其 1.5 万亿估值仍存分歧。', meta: '头条', stat: '营收170亿' },
-  { name: 'OpenAI 本轮融资目标由 300 亿下调至约 200 亿美元', desc: 'DoNews 11/1 口径：受科技股回调、AI 投资趋缓及竞品上市影响，OpenAI 将最新融资规模从 300 亿缩减至约 200 亿美元、估值约 1.25 万亿；与 Anthropic 的营收高增形成分化对照。', meta: '融资降温', stat: '目标200亿' },
-  { name: 'DeepSeek 完成约 1000 亿元融资，刷新中国 AI 单轮纪录', desc: '证券时报 10/23：DeepSeek 近日完成约 1000 亿元人民币（约 150 亿美元）融资，目标由 800 亿上调至千亿；老股东宁德时代、腾讯等产业资本携资源入局。', meta: '国产融资', stat: '约1000亿元' },
-  { name: 'GPT Image 2.6 上线 Lovart，主打"每次编辑一行"', desc: 'InfoQ AI 简报 11/8：GPT Image 2.6 已在 Lovart 上线，编辑方式为逐行修改，升级后可享最长 31 天不限量生成；生图工具生态继续向第三方平台扩散。', meta: '产品动态', stat: 'GPT Image 2.6' },
-  { name: 'GitHub 第44周：63 个上榜仓库，AI Agent/技能类占 54%', desc: 'CSDN 趋势周报 11/6：本周 63 个有效上榜仓库中，AI Agent/技能库/垂直应用 34 个占比约 54%，编码 Agent、MCP 技能服务、长期记忆插件、行业智能体是四大主力。', meta: '开源趋势', stat: 'Agent占半数' },
-  { name: '周末慢读：DeepSeek-V4-Pro 到底强在哪', desc: 'LLM 模型图鉴 11/6：DeepSeek-V4-Pro 为 MoE 架构、总参数 1.6 万亿/激活 49B、原生 100 万 Token 上下文、MIT 完全开源，SWE-bench Verified 80.6%、Codeforces 3206 分，个人本地学习可关注开源可复现优势。', meta: 'AI伴侣', stat: '开源旗舰' }
+  { name: 'OpenAI 110 亿美元融资资金到账，CFO 称持续加码数据中心', desc: '网易人工智能早参 11/9：OpenAI 以 1.25 万亿美元估值完成 110 亿美元新一轮融资、初始资金承诺已于周五到账；CFO 表示无论外部环境如何变化，都将持续投资 AI 数据中心与算力。', meta: '头条', stat: '资金已到账' },
+  { name: 'Anthropic IPO 估值预期被下调至多 40%，拟感恩节前上市', desc: '第一财经/Reportify 11/8-9：部分潜在投资者给 Anthropic 的 IPO 估值约 1.2~1.3 万亿美元，较此前 2 万亿预期回落至多 40%；公司拟感恩节前完成 IPO、募资 800 亿~1000 亿美元，当前估值约 9650 亿。', meta: 'IPO降温', stat: '预期下调40%' },
+  { name: 'Anthropic 官方拆解智能体记忆：memory notes 与 CL-Bench', desc: 'Agentopia 11/8：Anthropic 研究提出 Agent 经验以 memory notes 跨会话留存，可做显著性标注与预测性记录，并发布 CL-Bench 基准衡量记忆在长程任务中的作用——与 claude-mem 等开源记忆项目方向一致。', meta: '技术研究', stat: 'Agent记忆' },
+  { name: 'GitHub Octoverse 2026：带 Agent 配置的仓库提交数达普通仓库 8 倍', desc: 'GitHub 官方博客 10/28：今年新建仓库中，带 Agent 配置文件的仓库平均提交数约为普通仓库的 8 倍；截至 9 月，开发者发起的 PR 中超 40% 由 Agent 起步生成，编码 Agent 已成主流工作方式。', meta: '行业趋势', stat: '40%+ PR' },
+  { name: 'DeepSeek V4 家族双档现役：v4.1-flash 与 v4-pro，MIT 开源', desc: 'QCode 模型雷达 11/8：现役为 deepseek-v4.1-flash（10/17 升级 1017 版）与 deepseek-v4-pro（8/13 GA），均为 MIT 权重、支持 100 万 Token 上下文，个人学习与本地部署可免费使用。', meta: '开源模型', stat: 'MIT/1M上下文' },
+  { name: '周一职场：会用编码 Agent 正在成为测试/研发通用技能', desc: 'claude-code 14.5 万星、pr-agent 周增 1.4 千星——日常写脚本、审变更、补测试用例都能让 Agent 先出草稿；转行或求职时，把"熟练使用 AI 编码工具提效"写进技能项，比只会手工执行更有竞争力。', meta: 'AI伴侣', stat: '职场提效' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · Anthropic 营收暴涨 11 倍、GPT Image 2.6 扩散', desc: 'DoNews 11/7：Anthropic Q3 营收约 170 亿美元同比大增；InfoQ 11/8：GPT Image 2.6 上线 Lovart 第三方平台——AI 公司营收与工具生态都在加速。', meta: '前沿科技', stat: '基本面亮眼' },
-  { name: '游戏宅家 · 阴雨天正好折腾开源移植工具', desc: '周日有阵雨，适合在家：GitHub 热门 AnyPS5（5.2 万星）尝试了解主机游戏跨平台移植趋势；搭配本地游戏或经典影视，雨天不出门也轻松。', meta: '雨天娱乐', stat: '宅家指南' },
-  { name: '穿搭美妆 · 15~18℃ 阵雨+傍晚阵风6级，防风防水是重点', desc: '今天阴有时有阵雨、湿度 83%、傍晚风增强到 6 级阵风 7-8 级——穿防风外套或薄风衣、配防水鞋，避免易湿的真丝长裙和单薄下装；围巾可选薄款应对傍晚降温。', meta: '穿搭指南', stat: '阵雨大风' },
-  { name: '理财职场 · AI 公司开始分化，看营收别只看估值头条', desc: 'Anthropic 营收同比约 11 倍高增，OpenAI 融资目标却下调——行业从"拼估值"转向"拼基本面"；个人关注相关投资时区分一级融资传闻与实际收入，避免被头条情绪带动追涨杀跌。', meta: '财经职场', stat: '关注营收' },
-  { name: '健康 · 湿冷+大风+明日降温，注意保暖防潮', desc: '今天湿度 83%~87%、傍晚阵风大，明天起明显降温到 9~12℃；居家可关窗防潮、睡前泡脚，外出避开江边风口；温差和湿冷交替易诱发感冒，备好长袖薄毛衣。', meta: '健康提醒', stat: '明日降温' }
+  { name: '数码科技 · Agent 已参与超四成代码 PR', desc: 'GitHub Octoverse 2026：超 40% PR 由 Agent 起步；OpenAI 110 亿美元融资到账继续投算力——AI 工具不是概念，而是日常开发流水线的一部分，值得从一个小脚本开始上手。', meta: '前沿科技', stat: 'Agent进流水线' },
+  { name: '职场工具 · 开源 PR 评审 Agent 可借鉴到测试脚本', desc: 'pr-agent（1.53 万星）自动评审代码变更；做软件测试的同学可借鉴其"规则化检查+自动评论"思路，把常用测试规范写成脚本或 Agent 规则，减少重复人工核对。', meta: '职场提效', stat: 'Python开源' },
+  { name: '穿搭美妆 · 11~13℃ 大风风寒，厚外套可以正式上身了', desc: '今天西北风 6 级阵风 7-8 级、体感仅 9℃，风寒效应明显：厚棉服/轻羽绒+长裤+围巾最稳妥，帽子能挡阵风；薄风衣和短裙今天别穿，明晨郊区更冷，直接按冬天通勤着装准备。', meta: '穿搭指南', stat: '体感9℃大风' },
+  { name: '理财职场 · 一级市场估值回落，求职与投资都别追叙事', desc: 'Anthropic IPO 估值预期下调至多 40%、OpenAI 融资落地但估值区间收窄——AI 一级市场从"拼故事"转向"拼营收"；个人求职优先选有真实业务与现金流的岗位，理财上对高估值概念保持耐心。', meta: '财经职场', stat: '估值降温' },
+  { name: '健康 · 大风降温防感冒，通勤护口鼻、午后注意保湿', desc: '今天阵风大、体感冷，清晨湿度高午后降到约 61% 偏干：通勤戴口罩护口鼻、进室内及时补水；明晨（11/10）市区约 10℃、郊区个位数为下半年新低，睡前备好厚衣，温差交替最易着凉。', meta: '健康提醒', stat: '明晨最冷' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 11月8日', desc: '阴有时有阵雨，15~18℃（实时 16℃、体感 17℃）。东到东南风 4-5 级，傍晚减弱后增强到 6 级、阵风 7-8 级。相对湿度 83%~87%。AQI 优（20~34）。日出06:15，日落17:00。【白天防雨、傍晚防风】；明天（11/9）雨水渐止、明显降温，9~12℃（官方口径12~15℃）、西北风 4 级，需添厚衣。', meta: '今日天气', stat: '阵雨15~18℃风大' },
-  { name: '本地要闻', desc: '①进博会第 4 天（11/5-10），周日国家会展中心客流大、2/17 号线及周边道路客流管控明显，非必要不往虹桥方向挤；②今日傍晚到夜间风雨加大、明晨明显偏冷，夜间外出带防雨防风外套，明早出门直接换厚外套更稳妥。', meta: '上海资讯', stat: '傍晚阵风强' }
+  { name: '上海天气 · 11月9日', desc: '阴到多云、局部地区短时小雨，11~13℃（实时 11℃、体感仅 9℃）。西北风 6 级阵风 7-8 级，沿江沿海 7 级阵风 8-9 级，夜里起减弱到 4-5 级。相对湿度 61%~79%（清晨高、午后下降）。AQI 优（19~44，青浦局部优至良 35~55）。日出06:16，日落17:00。风寒效应明显、有冬天体感；明天（11/10）清晨市区约10℃、郊区个位数为下半年新低，周四起最高温重回20℃上下。', meta: '今日天气', stat: '11~13℃大风冷' },
+  { name: '本地要闻', desc: '①进博会第 5 天（11/5-10，明天闭幕），周一工作日虹桥周边客流与早高峰通勤叠加，2/17 号线预留时间；②冷空气大风持续：沿江沿海阵风可达 8-9 级，电动车与骑行通勤减速、远离广告牌和临时搭建物；夜间到明晨最冷，外出带防风厚外套。', meta: '上海资讯', stat: '大风+进博会' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">周日早安，今天阴有阵雨、傍晚风变大，适合宅家慢节奏，出门记得带伞加件防风外套 ♡</div>
+        <div className="greeting">周一早安，今天大风降温、体感像冬天，出门穿厚一点护住脖子和耳朵，新的一周稳稳开始 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年11月8日 星期日</span>
-          <span>第 065 期</span>
+          <span className="date">2026年11月9日 星期一</span>
+          <span>第 066 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>Anthropic 第三季度营收约 170 亿美元、同比暴涨约 11 倍，IPO 前夜交出关键成绩单</h3>
-          <p>DoNews 11/7：Anthropic Q3 营收约 168~170 亿美元、同比约 11 倍增长，回应市场对其基本面的等待；同期 OpenAI 本轮融资目标由 300 亿下调至约 200 亿美元，AI 头部公司进入"营收与估值"分化阶段。</p>
+          <h3>OpenAI 110 亿美元融资资金到账、坚定投入数据中心；Anthropic IPO 估值预期被下调至多 40%</h3>
+          <p>网易早参 11/9：OpenAI 以 1.25 万亿估值完成 110 亿美元融资、资金周五到账，CFO 称持续加码算力；第一财经同日报道 Anthropic 部分投资者给出 1.2~1.3 万亿估值、较此前预期回落至多 40%，拟感恩节前募资 800~1000 亿美元上市，AI 头部公司进入"资金落地、估值分化"阶段。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.065</span>
+        <span>我的工作台 · 每日早报 · VOL.066</span>
       </footer>
     </div>
   )
