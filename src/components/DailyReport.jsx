@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'mattpocock / skills', lang: 'Shell', desc: 'TypeScript 布道师 Matt Pocock 开源的"工程师实战 Agent 技能集"，直接来自自己 .agents 目录，覆盖日常工程任务的规则与脚本，累计约 31.8 万星，近期趋势榜高位。', meta: 'Agent技能集', stat: '317.9K★' },
-  { name: 'addyosmani / agent-skills', lang: 'JavaScript', desc: 'Google 前工程师 Addy Osmani 出品的生产级 AI 编码 Agent 技能库，强调工程规范、测试与可维护性，约 8.4 万星、9 千 fork，适合直接喂给 Claude Code / Codex。', meta: '工程技能库', stat: '84K★/9K fork' },
-  { name: 'oraios / serena', lang: 'Python', desc: '面向编码 Agent 的语义检索与代码编辑 MCP 工具箱（又称 Agent IDE），用 LSP 做结构化符号理解，最近一周新增约 230 星，适合大代码库精修。', meta: 'MCP编码工具', stat: '周+230★' },
-  { name: 'morluto / rea', lang: 'TypeScript', desc: '"用 Agent 逆向一切"——从应用行为拆到原生二进制，累计 43.7 万星、长期占据 GitHub AI Agent 榜前列。', meta: '逆向工程', stat: '437K★' },
-  { name: 'anthropics / claude-code', lang: 'TypeScript', desc: 'Anthropic 官方终端编码 Agent，随 Fable 5.2 发布持续更新；读懂代码库、改代码、跑测试、提 PR，累计约 14.5 万星。', meta: '编码Agent', stat: '145K★' },
-  { name: 'f / prompts.chat', lang: 'Markdown', desc: '原 Awesome ChatGPT Prompts 社区站，收集、分享高质量提示词，可自托管保护隐私，累计约 17.7 万星、单日新增约 237 星。', meta: '提示词库', stat: '176.7K★' }
+  { name: 'openclaw / openclaw', lang: 'TypeScript', desc: '现象级开源个人 AI 助手，MIT 许可，可用 TypeScript 快速部署到 macOS / Windows / Linux，累计约 39.4 万星、HelloGitHub 评分 9.4，是当前个人 Agent 框架头部项目。', meta: '个人Agent助手', stat: '394.3K★' },
+  { name: 'vercel-labs / agent-desktop', lang: 'Rust', desc: 'Vercel Labs 出品的 Agent 桌面端，今日飙升榜新增约 3.8K 星、累计约 1.3 万星，把编码/执行 Agent 放进桌面应用界面，适合关注桌面 Agent 形态。', meta: 'Agent桌面端', stat: '13.0K★/日+3.8K' },
+  { name: 'sherlock-project / sherlock', lang: 'Python', desc: '经典开源工具：按用户名在各大社交平台批量检索账号是否存在，11/10 日榜新增约 3,291 星，仍是排查个人网络足迹与账号一致性的常用脚本。', meta: '用户名排查', stat: '日+3.3K' },
+  { name: 'meta / astryx', lang: 'TypeScript', desc: 'Meta 系新上趋势项目，11/10 日榜新增约 3,170 星，与 sherlock、rea 同日跻身增速前三，具体能力以仓库 README 为准，适合持续观察其后续迭代。', meta: '趋势新项目', stat: '日+3.2K' },
+  { name: 'thedotmack / claude-mem', lang: 'TypeScript', desc: 'Agent 跨会话持久记忆：捕获会话行为、AI 压缩后注入未来上下文，兼容 Claude Code / OpenClaw / Codex 等；今日再增约 1.1K 星、累计约 11.2 万星。', meta: '长期记忆', stat: '112K★/日+1.1K' },
+  { name: 'morluto / rea', lang: 'TypeScript', desc: '"用 Agent 逆向一切"——从应用行为拆到原生二进制，累计约 43.7 万星，11/10 日榜再增约 3,254 星，长期占据 AI Agent 榜前列。', meta: '逆向工程', stat: '437K★/日+3.3K' }
 ]
 
 const aiCompanion = [
-  { name: '头条 · Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2 双旗舰', desc: '网易/Agentopia 11/10：周一 Anthropic 官宣新一代旗舰，复杂编程、科研推理、图表理解与机器人控制显著提升，输出速度较上代最高提升 30%；API 价格下调 20%。Fable 5.2 可同时协调 1000 多个智能体处理长期复杂任务。', meta: '头条', stat: '双旗舰+降价20%' },
-  { name: 'Fable 5.2 实测：完成此前不可行的软件迁移、解出两个黑洞开放问题', desc: 'Reportify/Agentopia 11/10：预发布测试中工程师用其完成原本做不到的大型软件迁移，并在科研侧解决两个黑洞物理开放问题；Mythos 5.2 定向开放给审核机构，强化网络安全与生命科学能力。', meta: '模型能力', stat: '1000+Agent协同' },
-  { name: 'DeepSeek Harness 官宣官方插件市场与作者扶持计划', desc: '智源社区 11/9：官方博文《Growing Together with Our Plugin Community》披露 154 万日活、约 3.5 万个第三方插件；将建官方插件市场、提升插件 API 稳定性与安全，并向作者提供 token 补贴扶持。', meta: '生态扩张', stat: '154万日活' },
-  { name: '字节 Seedream 5.5 转向像素级精修；中国开源模型占企业支出 89%', desc: 'RadarAI 11/10：Seedream 5.5 把 AI 作图从"抽卡"推向像素级精修与多轮编辑；同期数据显示中国开源模型拿下约 89% 的企业 AI 支出份额，国产开源生态落地速度加快。', meta: '国产动态', stat: '89%企业支出' },
-  { name: 'GitHub 趋势：9 月 61% Copilot 用户跨用多个模型', desc: 'GitHub Octoverse：9 月 61% 的 Copilot 用户同时使用多个模型，请求分散在通用、深度推理规划、轻量快速三类——"主模型+专项模型组合"取代单一模型选型。', meta: '行业趋势', stat: '61%多模型' },
-  { name: '理性面：5.2 仍会自作主张、堆砌规则拖慢进度', desc: '网易科技 11/10：新模型在大型任务上成本仍高，且存在自作主张、自我堆砌规则导致进度变慢等问题，开发者普遍按需搭配多个模型与工具，不会全流程交给单一旗舰。', meta: '使用建议', stat: '多模型搭配' }
+  { name: '头条 · Anthropic 冲刺史上最大 IPO，目标市值约 1 万亿美元', desc: '金融界 11/11：Anthropic 推进 IPO 估值目标约 1 万亿美元；招股书披露 Fable 5.2 / Mythos 5.2 降价与合同折扣，抵消了第三季度约 6 亿美元因用量增长带来的收入增量，更大压力来自采购与租赁合同承诺等资本开支。', meta: '头条IPO', stat: '目标约1万亿' },
+  { name: 'Fable 5.2 刷 72 项世界纪录：30 小时完成费马大定理形式化验证', desc: '智源社区 11/11：新旗舰在数学与工程领域表现惊艳，Fable 5.2 仅用 30 小时完成费马大定理形式化验证，并在极简提示下自主推进任务；此前已解出两个黑洞物理开放问题，科学推理能力再被验证。', meta: '模型能力', stat: '72项纪录' },
+  { name: 'Meta 发布 Muse Ember：跑分媲美 Haiku 5.5，单任务成本仅 1/3', desc: 'IT之家/智东西 11/10：Meta 迄今最小、最省的模型，面向 Agent 日常反复的工具调用、编码子任务、路由与文档抽取；Artificial Analysis 表现媲美 Claude Haiku 5.5，多项测试超 GPT-6 Luna，输入 $0.10 / 百万 token。', meta: '轻量模型', stat: '成本1/3' },
+  { name: 'Anthropic FlashProve：用 zkSNARK 密码学验证 AI 推理', desc: 'RadarAI 11/11：FlashProve 原型借助 zkSNARK 让模型响应可验证、却不暴露权重，尝试用密码学手段重建 AI 推理的信任基础，对应内容真实性与模型审计方向。', meta: '可信AI', stat: '推理可验证' },
+  { name: 'DeepSeek 下一代 V5 拟迁移至华为昇腾；V4 Flash 0731 开源登顶前三', desc: 'RadarAI/AI工具宝箱 11/11：DeepSeek 计划将下一代 V5 预训练迁移至昇腾芯片；开源的 V4 Flash 0731 采用 MIT 许可，总参数 284B（激活 13B），Artificial Analysis 智能指数 50，位列开源模型前三。', meta: '国产动态', stat: '284B/激活13B' },
+  { name: 'OpenAI 收购 Pierre Computer Company；DSH 移动端 10 天近 2 万星', desc: 'OpenAI 新闻中心 11/4：宣布收购 Pierre Computer Company, Inc.，继续补强硬件与端侧能力；36氪 11/11 报道 DeepSeek Harness 移动端上线后 10 天狂揽近 2 万星，由 00 后大学生团队做出，Agent 端侧落地加速。', meta: '生态动态', stat: '并购+端侧' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · 旗舰模型 API 降价 20%，个人可低成本试用', desc: 'Claude Fable 5.2 发布同时 API 价格下调 20%；做自动化脚本、写提示词或小工具时，可先用免费额度/小额账单验证效果，不必一上来买订阅，按调用量控制成本。', meta: '工具省钱', stat: 'API降价20%' },
-  { name: '创作者 · 大模型开始自制修图剪辑小工具', desc: '网易科技 11/10：不少创作者用新模型自己搭修图、剪辑自动化工具并退订部分商业软件；个人做内容也可把重复操作写成 Agent 流程，先从一个最烦的小环节切入。', meta: '效率创作', stat: '自建小工具' },
-  { name: '穿搭美妆 · 今晨下半年最冷，洋葱式穿搭早晚可脱卸', desc: '今晨市区约 9℃、郊区个位数创下半年新低，白天多云回升到 14~15℃、昼夜温差大：厚外套+薄内搭最实用，进室内能脱、出门防风；围巾手套别省，明晨郊区还有 4~7℃，比今天更冷。', meta: '穿搭指南', stat: '早晚温差大' },
-  { name: '理财职场 · 岗位更看重落地整合与插件开发能力', desc: 'DeepSeek 插件生态（3.5 万第三方插件）与开源模型高企业占比说明：纯"会聊天"的竞争力在下降，能把模型接进工作流、写插件/脚本、做测试验证的人更吃香；转行求职可把 AI 工具落地案例写进简历。', meta: '职场趋势', stat: '重落地能力' },
-  { name: '健康 · 冷空气末梢防晨寒，湿度偏低注意润唇保湿', desc: '今天湿度约 53%~68%、体感偏干，清晨出门加件外套护颈背；昼夜温差 5~6℃，别一早穿太少；明后两天转晴回暖、最高回到 19~20℃，适合洗晒换季衣物，本周后半段体感会明显舒服。', meta: '健康提醒', stat: '回暖在即' }
+  { name: '数码科技 · 重复任务优先选轻量模型，不必都挂旗舰', desc: 'Muse Ember 用三分之一成本对标 Haiku 5.5，适合工具调用、信息抽取、路由分流这类 Agent 日常重复活；做自动化脚本时可分层：简单重复走小模型、复杂推理再上旗舰，按调用量控成本。', meta: '选型省钱', stat: '分层调用' },
+  { name: '效率工具 · Agent 长期记忆值得纳入个人工作流', desc: 'claude-mem 今日再涨 1.1K 星：把常用规则、偏好、历史约定沉淀成可复用记忆，下次开工不用重复交代背景；搭自己的小助手时，"记住你的习惯"比单次长提示词更实用。', meta: '职场提效', stat: '记忆复用' },
+  { name: '穿搭美妆 · 昼夜温差超 15℃，洋葱式穿搭中午可脱', desc: '今晨郊区 3~6℃、白天最高冲到约 19℃，郊区昼夜温差可达 15℃ 以上：早晨厚外套+内搭，中午热了能脱；午后多云、紫外线 4 级，出门记得防晒；今天是本周难得的晴天洗晒窗口。', meta: '穿搭指南', stat: '昼夜温差大' },
+  { name: '理财职场 · AI 大厂"增收不增利"，求职看落地付费能力', desc: 'Anthropic 招股书显示降价与折扣吃掉约 6 亿美元用量增量收入，头部公司也面临资本开支与商业化压力；个人求职优先选有真实业务、能为 AI 付费的岗位；轻量模型降价也降低了个人开发者的调用门槛。', meta: '职场财经', stat: '看落地付费' },
+  { name: '健康 · 早晚加衣午间补水，明起转阴雨提前备伞', desc: '昼夜温差 10℃ 以上、午后湿度降到 43% 偏干：早晚护好颈背、午间多喝温水润唇；明天（11/12）转阴、降水概率 60%，13~15 日多小雨过程，趁今天晴天把被褥厚衣晒一晒，敏感人群上午空气一般、午后再锻炼。', meta: '健康提醒', stat: '明起转雨' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 11月10日', desc: '多云到阴，8~14℃（官方口径 8~15℃；实时 9℃、体感仅 7℃）。今晨全市最低温全面跌至个位数、市区约 9℃、郊区更低，刷新今年下半年新低；偏北风 4-5 级、沿江沿海阵风 6 级，风力较昨日减弱。相对湿度 53%~68%，AQI 优至良（42~53）。日出06:17，日落16:59。明天清晨郊区仍低至 4~7℃；冷空气过后明后天转晴、最高气温重返 19~20℃，适合洗晒。', meta: '今日天气', stat: '8~14℃今晨最冷' },
-  { name: '本地要闻', desc: '①进博会今日（11/10）闭幕，闭幕日虹桥周边客流逐步回落、通勤恢复常态，晚高峰留意展馆周边收尾车流；②冷空气最后影响日：清晨最冷、白天风力减小、紫外线偏弱（2级），回暖从周四开始，可趁明后两天晴天把换季厚衣、被子晒一晒。', meta: '上海资讯', stat: '进博会闭幕' }
+  { name: '上海天气 · 11月11日', desc: '晴转多云，12~19℃（实时 13℃、体感 12℃）。今晨市区 8.6℃、郊区 3~6℃（金山 3.7℃，奉贤/青浦/崇明 4℃，松江石湖荡 2.9℃ 最低）；白天阳光在线、最高回升至 19℃ 附近。偏北风中午转东南风 3~4 级、沿江沿海 4~5 级。相对湿度 40%~90%，午后偏干。AQI 良（69~88，部分口径轻度污染，午后转好）。日出06:18，日落16:58。昼夜温差大；明天阴 14~19℃、降水概率 60%，13~15 日多小雨过程。', meta: '今日天气', stat: '12~19℃回暖' },
+  { name: '本地要闻', desc: '①今天白天晴好、午后云量增多，是本周少有的洗晒与外出窗口，抓紧晾晒被褥衣物；②明起转阴雨、周三到周五多小雨到中雨量级，通勤记得提前备伞、预留路上时间；上午空气质量一般，老人与呼吸道敏感人群建议午后再外出活动。', meta: '上海资讯', stat: '明起转雨' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">周二早安，今晨是下半年最冷的一个早晨，出门把厚外套和围巾系好；白天会慢慢回暖，熬到周四就舒服啦 ♡</div>
+        <div className="greeting">周三早安，冷空气收尾、白天回温到 19℃，今天是本周难得的晴天洗晒窗口；早晚还偏冷，出门外套先别急着收 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年11月10日 星期二</span>
-          <span>第 067 期</span>
+          <span className="date">2026年11月11日 星期三</span>
+          <span>第 068 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>Anthropic 发布 Claude Fable 5.2 / Mythos 5.2 双旗舰：编程科研视觉机器人全面升级、API 降价 20%</h3>
-          <p>网易/Agentopia 11/10：新一代旗舰在复杂编程、科研推理、图表理解、机器人控制上提升，输出速度最高快 30%；Fable 5.2 可协调上千个智能体完成长期复杂任务，预发布阶段完成了此前不可行的大型软件迁移、解出两个黑洞物理开放问题；Mythos 5.2 定向强化网安与生命科学，API 价格下调 20%。同期 DeepSeek Harness 官宣插件市场、披露 154 万日活。</p>
+          <h3>Anthropic 冲刺约 1 万亿美元市值 IPO；Fable 5.2 刷 72 项世界纪录，Meta 同步推低成本模型 Muse Ember</h3>
+          <p>金融界 11/11：Anthropic 推进 IPO、目标市值约 1 万亿美元，但招股书显示新模型降价与折扣抵消了 Q3 约 6 亿美元用量增量收入；智源同日披露 Fable 5.2 用 30 小时完成费马大定理形式化验证。另一侧 Meta 发布 Muse Ember，以约三分之一成本对标 Claude Haiku 5.5，轻量 Agent 模型价格战加剧；DeepSeek 被曝下一代 V5 预训练拟迁移至昇腾芯片。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.067</span>
+        <span>我的工作台 · 每日早报 · VOL.068</span>
       </footer>
     </div>
   )
