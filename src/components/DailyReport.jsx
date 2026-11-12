@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'openclaw / openclaw', lang: 'TypeScript', desc: '现象级开源个人 AI 助手，MIT 许可，可用 TypeScript 快速部署到 macOS / Windows / Linux，累计约 39.4 万星、HelloGitHub 评分 9.4，是当前个人 Agent 框架头部项目。', meta: '个人Agent助手', stat: '394.3K★' },
-  { name: 'vercel-labs / agent-desktop', lang: 'Rust', desc: 'Vercel Labs 出品的 Agent 桌面端，今日飙升榜新增约 3.8K 星、累计约 1.3 万星，把编码/执行 Agent 放进桌面应用界面，适合关注桌面 Agent 形态。', meta: 'Agent桌面端', stat: '13.0K★/日+3.8K' },
-  { name: 'sherlock-project / sherlock', lang: 'Python', desc: '经典开源工具：按用户名在各大社交平台批量检索账号是否存在，11/10 日榜新增约 3,291 星，仍是排查个人网络足迹与账号一致性的常用脚本。', meta: '用户名排查', stat: '日+3.3K' },
-  { name: 'meta / astryx', lang: 'TypeScript', desc: 'Meta 系新上趋势项目，11/10 日榜新增约 3,170 星，与 sherlock、rea 同日跻身增速前三，具体能力以仓库 README 为准，适合持续观察其后续迭代。', meta: '趋势新项目', stat: '日+3.2K' },
-  { name: 'thedotmack / claude-mem', lang: 'TypeScript', desc: 'Agent 跨会话持久记忆：捕获会话行为、AI 压缩后注入未来上下文，兼容 Claude Code / OpenClaw / Codex 等；今日再增约 1.1K 星、累计约 11.2 万星。', meta: '长期记忆', stat: '112K★/日+1.1K' },
-  { name: 'morluto / rea', lang: 'TypeScript', desc: '"用 Agent 逆向一切"——从应用行为拆到原生二进制，累计约 43.7 万星，11/10 日榜再增约 3,254 星，长期占据 AI Agent 榜前列。', meta: '逆向工程', stat: '437K★/日+3.3K' }
+  { name: 'openclaw / openclaw', lang: 'TypeScript', desc: '现象级开源个人 AI 助手，OSS Agent 框架榜第 1，累计约 39.4 万星、8.3 万 fork，可快速部署到 macOS / Windows / Linux，仍是个人 Agent 头部项目。', meta: '个人Agent框架', stat: '394.3K★' },
+  { name: 'addyosmani / agent-skills', lang: 'JavaScript', desc: 'Addy Osmani 出品的生产级工程技能包，把资深工程师的工作流、质量门禁与最佳实践固化成 Agent 可复用技能，含 8 个覆盖研发生命周期的斜杠命令，MIT 许可，约 11.3 万星。', meta: '工程技能库', stat: '113K★/周+2.1K' },
+  { name: 'DietrichGebert / ponytail', lang: 'JavaScript', desc: '极简主义编码技能：把"最懒的资深工程师"思维塞进 Agent，专治过度设计、多余代码与重复造轮子，口号是"最好的代码是不必写出来的代码"，约 18.1 万星、9.9K fork。', meta: '极简编码', stat: '181K★' },
+  { name: 'mvanhorn / last30days-skill', lang: 'Python', desc: '调研型 Agent 技能：跨 Reddit、X、YouTube、HN、Polymarket 与网页检索任一主题，再综合成有据可依的摘要，约 5.7 万星、5K fork，适合做选题与背景调研。', meta: '调研摘要', stat: '57K★' },
+  { name: 'morluto / rea', lang: 'TypeScript', desc: '"用 Agent 逆向一切"——从应用行为拆到原生二进制，累计约 43.7 万星，长期占据 AI Agent 榜前列，适合研究软件内部机制与协议实现。', meta: '逆向工程', stat: '437K★' },
+  { name: 'skills', lang: 'Python', desc: 'Agent Skills 公共仓库，约 18.98 万星、2.24 万 fork，汇集可被各类编码 Agent 加载的技能定义，是浏览与挑选现成 Agent 工作流的常用入口。', meta: '技能集合', stat: '189.8K★' }
 ]
 
 const aiCompanion = [
-  { name: '头条 · Anthropic 冲刺史上最大 IPO，目标市值约 1 万亿美元', desc: '金融界 11/11：Anthropic 推进 IPO 估值目标约 1 万亿美元；招股书披露 Fable 5.2 / Mythos 5.2 降价与合同折扣，抵消了第三季度约 6 亿美元因用量增长带来的收入增量，更大压力来自采购与租赁合同承诺等资本开支。', meta: '头条IPO', stat: '目标约1万亿' },
-  { name: 'Fable 5.2 刷 72 项世界纪录：30 小时完成费马大定理形式化验证', desc: '智源社区 11/11：新旗舰在数学与工程领域表现惊艳，Fable 5.2 仅用 30 小时完成费马大定理形式化验证，并在极简提示下自主推进任务；此前已解出两个黑洞物理开放问题，科学推理能力再被验证。', meta: '模型能力', stat: '72项纪录' },
-  { name: 'Meta 发布 Muse Ember：跑分媲美 Haiku 5.5，单任务成本仅 1/3', desc: 'IT之家/智东西 11/10：Meta 迄今最小、最省的模型，面向 Agent 日常反复的工具调用、编码子任务、路由与文档抽取；Artificial Analysis 表现媲美 Claude Haiku 5.5，多项测试超 GPT-6 Luna，输入 $0.10 / 百万 token。', meta: '轻量模型', stat: '成本1/3' },
-  { name: 'Anthropic FlashProve：用 zkSNARK 密码学验证 AI 推理', desc: 'RadarAI 11/11：FlashProve 原型借助 zkSNARK 让模型响应可验证、却不暴露权重，尝试用密码学手段重建 AI 推理的信任基础，对应内容真实性与模型审计方向。', meta: '可信AI', stat: '推理可验证' },
-  { name: 'DeepSeek 下一代 V5 拟迁移至华为昇腾；V4 Flash 0731 开源登顶前三', desc: 'RadarAI/AI工具宝箱 11/11：DeepSeek 计划将下一代 V5 预训练迁移至昇腾芯片；开源的 V4 Flash 0731 采用 MIT 许可，总参数 284B（激活 13B），Artificial Analysis 智能指数 50，位列开源模型前三。', meta: '国产动态', stat: '284B/激活13B' },
-  { name: 'OpenAI 收购 Pierre Computer Company；DSH 移动端 10 天近 2 万星', desc: 'OpenAI 新闻中心 11/4：宣布收购 Pierre Computer Company, Inc.，继续补强硬件与端侧能力；36氪 11/11 报道 DeepSeek Harness 移动端上线后 10 天狂揽近 2 万星，由 00 后大学生团队做出，Agent 端侧落地加速。', meta: '生态动态', stat: '并购+端侧' }
+  { name: '头条 · Anthropic 启动 IPO 路演，估值 9170 亿~1.02 万亿美元', desc: '智源 11/12：Anthropic 正式启动路演，拟发行 8.25 亿股、发行价区间 70–78 美元/股，上限募资超 600 亿美元，另含 260 亿美元私募配售；结合流通股估值 9170 亿~1.02 万亿美元，较此前 2 万亿峰值显著回落。澳洲投资者已可认购，股票料 11/20 在纳斯达克上市。', meta: '头条IPO', stat: '估值约1万亿' },
+  { name: '谷歌 DeepMind 发布基因组模型 AlphaGenome 2', desc: '科创板日报 11/12：基于 1.07 亿单细胞图谱训练，可预测 DNA 序列及其变异对特定人类细胞类型和状态的影响，致病变异识别率达 30%，目前已开放非商业研究使用，推动基因疾病研究。', meta: '科研模型', stat: '识别率30%' },
+  { name: '智元发布终身具身智能框架 LIFE', desc: '36氪 11/12：LIFE（Learning to Live）把持续感知、长期记忆与能力复用结合，支持机器人在任务执行期间及间隔期获取环境信息，并将历史观察用于后续决策；论文、项目主页与 RoboBeats 系列模型已同步公开。', meta: '具身智能', stat: '终身学习' },
+  { name: 'MiniMax 开源 H3-Image 图像模型并开放权重', desc: '证券日报 11/12：由 H3 衍生，支持文生图、图像参考与图像编辑；在广泛图像能力基础上强化后训练链路，覆盖数据、强化学习、步数压缩与部署优化，模型权重同步开放。', meta: '开源图像', stat: '权重开放' },
+  { name: '优必选×沐曦合资公司完成 5 亿元天使轮；平头哥交表独立上市', desc: '每经 11/12：曦选创智（沐曦与优必选 5 月合资）完成 5 亿元天使轮，纪源资本、经纬创投联合领投，建自主可控具身智能计算平台；阿里平头哥已向港交所交表，真武 AI 芯片累计出货 56 万片、服务 650+ 企业。', meta: '算力融资', stat: '5亿天使轮' },
+  { name: 'OpenAI 下调融资至 200 亿美元；Anthropic 推介定制芯片', desc: 'DoNews 11/11：受科技股回调、AI 投资趋缓及竞品上市影响，OpenAI 新一轮融资规模由 300 亿缩减至 200 亿美元、估值降至 1.25 万亿；Anthropic 同时向投资者推介定制芯片设计能力，多路布局算力以缓解资本开支压力。', meta: '资本动态', stat: '估值回调' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · 重复任务优先选轻量模型，不必都挂旗舰', desc: 'Muse Ember 用三分之一成本对标 Haiku 5.5，适合工具调用、信息抽取、路由分流这类 Agent 日常重复活；做自动化脚本时可分层：简单重复走小模型、复杂推理再上旗舰，按调用量控成本。', meta: '选型省钱', stat: '分层调用' },
-  { name: '效率工具 · Agent 长期记忆值得纳入个人工作流', desc: 'claude-mem 今日再涨 1.1K 星：把常用规则、偏好、历史约定沉淀成可复用记忆，下次开工不用重复交代背景；搭自己的小助手时，"记住你的习惯"比单次长提示词更实用。', meta: '职场提效', stat: '记忆复用' },
-  { name: '穿搭美妆 · 昼夜温差超 15℃，洋葱式穿搭中午可脱', desc: '今晨郊区 3~6℃、白天最高冲到约 19℃，郊区昼夜温差可达 15℃ 以上：早晨厚外套+内搭，中午热了能脱；午后多云、紫外线 4 级，出门记得防晒；今天是本周难得的晴天洗晒窗口。', meta: '穿搭指南', stat: '昼夜温差大' },
-  { name: '理财职场 · AI 大厂"增收不增利"，求职看落地付费能力', desc: 'Anthropic 招股书显示降价与折扣吃掉约 6 亿美元用量增量收入，头部公司也面临资本开支与商业化压力；个人求职优先选有真实业务、能为 AI 付费的岗位；轻量模型降价也降低了个人开发者的调用门槛。', meta: '职场财经', stat: '看落地付费' },
-  { name: '健康 · 早晚加衣午间补水，明起转阴雨提前备伞', desc: '昼夜温差 10℃ 以上、午后湿度降到 43% 偏干：早晚护好颈背、午间多喝温水润唇；明天（11/12）转阴、降水概率 60%，13~15 日多小雨过程，趁今天晴天把被褥厚衣晒一晒，敏感人群上午空气一般、午后再锻炼。', meta: '健康提醒', stat: '明起转雨' }
+  { name: '数码科技 · Agent 出初稿、人来把关，先复用别重复造轮子', desc: '超四成 PR 已由 Agent 发起：写代码可先让 Agent 出方案与初稿，人做 review 与取舍；优先复用成熟库和现成技能（如 agent-skills、ponytail），避免一上来堆代码，简单任务别过度设计。', meta: '编码提效', stat: '人审Agent' },
+  { name: '图像创作 · 开源图像模型可省版权成本', desc: 'MiniMax H3-Image 开放权重，支持文生图、参考图与图像编辑；做配图、参考稿、社媒素材时可先试用开源模型出初稿，再按需要精修，减少商用图库版权顾虑。', meta: '创作工具', stat: '权重开源' },
+  { name: '穿搭美妆 · 阴雨湿度大，外套选防风防水、内搭薄针织', desc: '今天阴有间歇小雨、湿度 70% 以上，气温 15~18℃ 不算冷：外套挑防风防水面料，内搭薄针织即可；鞋子选防滑款。湿气重时护肤以补水保湿为主，避开过于厚重闷肤的产品。', meta: '雨天穿搭', stat: '湿度70%+' },
+  { name: '理财职场 · AI 估值回调，优先选现金流健康的机会', desc: '头部 AI 公司出现融资缩量与估值回落，求职或看机会优先选现金流健康、有真实付费场景的公司；具身智能算力（沐曦×优必选 5 亿天使轮）、国产 AI 芯片（平头哥上市）是产业链长期方向，可留意相关岗位。', meta: '职场财经', stat: '看现金流' },
+  { name: '健康 · 阴雨关节保暖，趁午后空气优通风短外出', desc: '湿度大、气温略降，关节与呼吸道敏感人群注意颈背保暖；今天下午到夜间空气优到良，可趁午后开窗通风、短时间外出；明天转良到轻度污染，晨练时长适当缩短；雨天鞋袜湿了及时更换，通勤慢行防摔。', meta: '健康提醒', stat: '午后通风' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 11月11日', desc: '晴转多云，12~19℃（实时 13℃、体感 12℃）。今晨市区 8.6℃、郊区 3~6℃（金山 3.7℃，奉贤/青浦/崇明 4℃，松江石湖荡 2.9℃ 最低）；白天阳光在线、最高回升至 19℃ 附近。偏北风中午转东南风 3~4 级、沿江沿海 4~5 级。相对湿度 40%~90%，午后偏干。AQI 良（69~88，部分口径轻度污染，午后转好）。日出06:18，日落16:58。昼夜温差大；明天阴 14~19℃、降水概率 60%，13~15 日多小雨过程。', meta: '今日天气', stat: '12~19℃回暖' },
-  { name: '本地要闻', desc: '①今天白天晴好、午后云量增多，是本周少有的洗晒与外出窗口，抓紧晾晒被褥衣物；②明起转阴雨、周三到周五多小雨到中雨量级，通勤记得提前备伞、预留路上时间；上午空气质量一般，老人与呼吸道敏感人群建议午后再外出活动。', meta: '上海资讯', stat: '明起转雨' }
+  { name: '上海天气 · 11月12日', desc: '阴有间歇小雨，15~18℃（实时 18℃、体感 19℃）。东南风 3~4 级、沿江沿海 4~5 级，下午起转偏北风。相对湿度 69%~85%，体感偏湿。AQI 优（实时 46；闵行口径 60 良）。日出06:19，日落16:58。中午前后、傍晚到夜间有小雨时段，降水分散、伴随多云穿插；明天阴 16~21℃、良到轻度污染，14~15 日仍有小雨过程。', meta: '今日天气', stat: '15~18℃间歇雨' },
+  { name: '本地要闻', desc: '①全天阵性小雨分散在中午前后与傍晚夜间，出门带伞、路面湿滑，通勤预留时间、放慢节奏；②今天午后到夜间空气优到良，适合开窗通风与短时间外出；明天转良到轻度污染，敏感人群户外活动尽量安排在今天；近期雨水偏多，衣物晾晒需等晴好窗口。', meta: '上海资讯', stat: '备伞通勤' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">周三早安，冷空气收尾、白天回温到 19℃，今天是本周难得的晴天洗晒窗口；早晚还偏冷，出门外套先别急着收 ♡</div>
+        <div className="greeting">周四早安，今天阴有间歇小雨、15~18℃ 不算冷，但湿度偏大；出门记得带伞，午后空气优到良，通风短外出正合适 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年11月11日 星期三</span>
-          <span>第 068 期</span>
+          <span className="date">2026年11月12日 星期四</span>
+          <span>第 069 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>Anthropic 冲刺约 1 万亿美元市值 IPO；Fable 5.2 刷 72 项世界纪录，Meta 同步推低成本模型 Muse Ember</h3>
-          <p>金融界 11/11：Anthropic 推进 IPO、目标市值约 1 万亿美元，但招股书显示新模型降价与折扣抵消了 Q3 约 6 亿美元用量增量收入；智源同日披露 Fable 5.2 用 30 小时完成费马大定理形式化验证。另一侧 Meta 发布 Muse Ember，以约三分之一成本对标 Claude Haiku 5.5，轻量 Agent 模型价格战加剧；DeepSeek 被曝下一代 V5 预训练拟迁移至昇腾芯片。</p>
+          <h3>Anthropic 启动 IPO 路演、估值约 1 万亿美元；DeepMind 发基因组模型 AlphaGenome 2，智元推终身具身框架 LIFE</h3>
+          <p>智源 11/12：Anthropic 路演发行价 70–78 美元/股，估值 9170 亿~1.02 万亿美元，较 2 万亿峰值回落，股票料 11/20 纳斯达克上市。同日谷歌 DeepMind 发布 AlphaGenome 2，基于 1.07 亿单细胞图谱训练、致病变异识别率 30%；智元开源终身具身智能框架 LIFE，强调长期记忆与能力复用。另一侧 MiniMax 开源 H3-Image，优必选×沐曦合资公司完成 5 亿元天使轮；OpenAI 则被曝下调融资规模至 200 亿美元。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.068</span>
+        <span>我的工作台 · 每日早报 · VOL.069</span>
       </footer>
     </div>
   )
