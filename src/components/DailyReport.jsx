@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'openclaw / openclaw', lang: 'TypeScript', desc: '现象级开源个人 AI 助手，OSS Agent 框架榜第 1，累计约 39.4 万星、8.3 万 fork，可快速部署到 macOS / Windows / Linux，仍是个人 Agent 头部项目。', meta: '个人Agent框架', stat: '394.3K★' },
-  { name: 'Lee-xeo / Claude-Cage', lang: 'Go', desc: '当日日榜第 2：在隔离虚拟机工作台里运行 Claude Code 与 Claude Desktop，自带独立代理网络，时区与语言跟随出口节点；只共享你选定的项目目录，可按账号管理多个订阅与配额视图。', meta: '隔离工作台', stat: '日榜第2' },
-  { name: 'yetone / magpie', lang: 'Go', desc: '菜单栏一站式给各 Agent 配模型：Codex 走 DeepSeek、Claude Code 走 Kimi，从菜单直接切换，约 3.41 万星，解决多 Agent 多 Key 混接问题。', meta: '模型路由', stat: '34.1K★' },
-  { name: 'vercel-labs / agent-browser', lang: 'Rust', desc: '面向 AI Agent 的浏览器自动化 CLI，约 4.91 万星、24 小时新增 775 星，供编码与调研 Agent 自动打开页面、抓取内容并回传结果。', meta: '浏览器自动化', stat: '49.1K★/日+775' },
+  { name: 'debpalash / VoiceStudio', lang: 'Python', desc: '约 11 万星、近 7 天新增 7.2K：开源、全本地的 ElevenLabs 替代，支持声音克隆、语音设计、视频配音、听写、转写与有声书创作，覆盖 646 种语言，是本地语音方向近期最热门的仓库之一。', meta: '语音克隆', stat: '110K★/周+7.2K' },
+  { name: 'addyosmani / agent-skills', lang: 'JavaScript', desc: '约 8.4 万星、9K fork：面向 AI 编码 Agent 的生产级工程技能库，把代码规范、评审、测试等可复用工作流封装成技能单元，供各类编码 Agent 直接加载。', meta: '工程技能库', stat: '84K★' },
   { name: 'mvanhorn / last30days-skill', lang: 'Python', desc: '调研型 Agent 技能：跨 Reddit、X、YouTube、HN、Polymarket 与网页检索任一主题，再综合成有据可依的摘要，约 5.7 万星、5K fork，适合做选题与背景调研。', meta: '调研摘要', stat: '57K★' },
+  { name: 'langchain-ai / langchain', lang: 'Python', desc: '约 14.94 万星：开源 Python 框架，以统一接口构建 LLM 应用、RAG 管线与自主 Agent，跨多家模型提供商调度，是 LLM 应用层最常用的基础框架之一。', meta: 'LLM 框架', stat: '149.4K★' },
+  { name: 'yetone / magpie', lang: 'Go', desc: '菜单栏一站式给各 Agent 配模型：Codex 走 DeepSeek、Claude Code 走 Kimi，从菜单直接切换，约 3.41 万星，解决多 Agent 多 Key 混接问题。', meta: '模型路由', stat: '34.1K★' },
   { name: 'skills', lang: 'Python', desc: 'Agent Skills 公共仓库，约 18.98 万星、2.24 万 fork，汇集可被各类编码 Agent 加载的技能定义，是浏览与挑选现成 Agent 工作流的常用入口。', meta: '技能集合', stat: '189.8K★' }
 ]
 
 const aiCompanion = [
-  { name: '头条 · OpenAI 私募融 150 亿美元；Anthropic 下周登陆美股', desc: '金融界转 CNBC 11/13：OpenAI 最新一轮私募融资筹得 150 亿美元，融前估值 1.25 万亿美元，尚未正式结束、预计几周内完成，属为 2027 年潜在 IPO 筹备的机会性融资。另一侧 Anthropic 下周登陆美股，募资最高 644 亿美元、估值直逼 1.4 万亿美元，拟 11/19 或 20 日在纳斯达克上市。', meta: '头条资本', stat: '估值1.25万亿' },
-  { name: 'OpenAI 发布网络安全模型 GPT-6 Cyber', desc: 'OpenAI System Card：GPT-6 Cyber 在 ExploitGym 上意图利用成功率 48.5%，高于 GPT-6 Astra 的 42.4%，较前代 GPT-5.6 Cyber（32.1%）相对提升约 51%；蜜罐测试中 99.93% 不越界，目前定向客户开放。', meta: '安全模型', stat: '48.5%' },
-  { name: 'Thinking Machines 发布 Inkling 2 Small 并开放 Tinker 微调', desc: 'RadarAI 11/13：Thinking Machines 推出轻量模型 Inkling 2 Small，同时开放 Tinker 微调方案，方便开发者在自有数据上定制，模型生态继续向小尺寸、可微调方向细分。', meta: '轻量模型', stat: '开放微调' },
-  { name: '模型生态走向自由组合：豆包接入第三方模型，百度推 Token Exchange', desc: 'RadarAI 11/13：AI 模型生态从单点竞争走向自由组合，豆包接入 Kimi、DeepSeek 等第三方模型；百度推出 Token Exchange 模型交易平台，应用侧可按任务在多家模型间调度与比价。', meta: '生态组合', stat: '多模型调度' },
-  { name: 'DeepSeek 开源 DeepInfer 推理框架', desc: 'Houdao 11/13：DeepSeek 开源内部推理框架 DeepInfer，支持分布式推理、投机解码、异步调度与结构化输出；官方技术报告称单集群日均服务吞吐 155 万亿 Tokens，整体收入约 38 美元/GPU·小时。', meta: '开源推理', stat: '155万亿tokens/日' },
-  { name: 'Anthropic 上市或复制 SpaceX 被动买入剧本', desc: '凤凰网 11/13：Anthropic 上市头两周股价未必由主动买盘决定，追踪指数的数万亿美元被动资金预计在 5~15 天内蜂拥建仓；这套被动买入剧本由今年 6 月上市、三天暴涨 50% 的 SpaceX 开创，值得持续观察。', meta: '市场观察', stat: '被动资金建仓' }
+  { name: '头条 · DeepSeek 开放全家桶应用 API，语音能力独立成接口', desc: '澎湃 11/13、网易与头条 11/14：DeepSeek 宣布开放全家桶应用 API，在原有 API 中开启对应参数即可获得深度思考搜索、文件输入等对话功能；语音及底层能力也开放独立接口，含 OCR、ASR、TTS，支持单独或组合调用，开发者可在自己应用里 1:1 复刻完整 DeepSeek App。', meta: '头条 API', stat: 'OCR/ASR/TTS' },
+  { name: 'Anthropic IPO 认购约 6 倍，估值约 1.4 万亿美元', desc: '财新/彭博/网易 11/11-14：Anthropic 首次公开募股认购需求约为可供认购股份的 6 倍；基础发行拟募最高 644 亿美元，同步私募配售 260 亿，合计最高 904 亿美元；完全摊薄估值约 1.4 万亿美元，发行价区间 70-78 美元/股，纳斯达克代码 ANT；据报道已排除中国大陆及香港机构投资者。', meta: 'IPO 进展', stat: '认购6倍' },
+  { name: 'Google DeepMind 发布 Gemini 4 Hydrogen', desc: 'AI圈报转 MarkTechPost 11/14：闭源模型 Gemini 4 Hydrogen 定位编码与智能体工作流，速度比 Gemini 3.8 Flash 快 2.5 倍；Terminal-Bench 4.1 得分 57%，而 3.8 Flash 为 18.2%，编码与 Agent 任务能力明显抬升。', meta: '新模型', stat: '速度2.5倍' },
+  { name: 'Perplexity Mac 版上线 AI 队友 Teammates', desc: 'IT之家 11/14：Perplexity 邀请付费 Max 订阅用户在 Mac 平台体验 AI 智能体功能 Teammates，组建全天候数字员工；该功能此前仅支持 iOS 与网页端，本次进一步覆盖桌面办公场景。', meta: '桌面 Agent', stat: 'Mac 上线' },
+  { name: '上海创新研究院开源 321B 多模态 Agent 模型 Nex-N2.6', desc: '蚁工厂微博 11/14：由上海创新研究院（SII）Nex-AGI 团队研发的新一代多模态智能体模型 Nex-N2.6，以 Apache 2.0 协议全面开源，权重与代码在 Hugging Face 与 GitHub 同步开放。', meta: '国产开源', stat: '321B 多模态' },
+  { name: '我国发布"星云星座计划"，太空算力网加快部署', desc: '科创板日报 11/14：在 11 月 9 日举办的 2026 太空云产业生态大会上，"星云星座计划"等太空云产业化成果发布；该计划由中科院空天信息创新研究院与国内科创企业联合研发，是全栈国产化太空算力网，标志我国太空云从技术验证走向产业化布局。', meta: '产业政策', stat: '太空算力网' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · Agent 跑隔离工作台，多 Key 用菜单栏切换', desc: '让 Agent 操作代码时优先放进隔离工作台（如 Claude-Cage 式虚拟机），只共享选定目录；同时用 magpie 这类菜单栏工具给不同 Agent 分配不同模型与 Key，避免混接；需要自动开页面抓内容时，可接 agent-browser 这类 CLI。', meta: 'Agent 安全', stat: '隔离运行' },
-  { name: '模型选型 · 按任务组合多家模型，不必绑定单一厂商', desc: '模型生态正走向自由组合，一个应用可按任务难度、成本与速度接多家模型；个人选型先看真实场景效果和调用成本，轻量日常任务用小模型、复杂推理再上旗舰，避免一刀切。', meta: '选型思路', stat: '按任务选模型' },
-  { name: '穿搭美妆 · 晨雾湿度大，薄外套防风、护肤以补水为主', desc: '今晨有雾、湿度 88%~100%，气温 16~20℃ 不冷：外套选薄款防风面料，内搭针织即可；雾天能见度低，骑车开车注意安全。湿气重时护肤以补水保湿为主，避开过于厚重闷肤的产品。', meta: '雾天穿搭', stat: '湿度90%+' },
-  { name: '理财职场 · 周五盘点：AI 融资上市提速，求职仍看现金流', desc: '本周头部 AI 公司融资与上市节奏加快（OpenAI 150 亿私募、Anthropic 下周上市），但估值仍有波动；看机会优先选现金流健康、有真实付费落地的公司。网安专用模型落地，安全测试与攻防方向是可留意的新增岗位。', meta: '职场财经', stat: '周五盘点' },
-  { name: '健康 · 晨雾戴口罩，锻炼放上午；明天大雨提前备伞', desc: '晨雾湿度大，呼吸道敏感人群出门可戴口罩；上午空气良、下午转良到轻度污染（PM2.5），户外锻炼尽量安排在上午。明天有较明显小雨（约 18.3mm），今天下班顺路检查雨具、把衣物晾好。', meta: '健康提醒', stat: '上午锻炼' }
+  { name: '数码科技 · 语音助手先调 API，离线克隆再上本地工具', desc: 'DeepSeek 已把 ASR、TTS、OCR 开放成独立接口，个人做语音助手可先接 API 快速跑通，不必一上来本地硬跑模型；想离线保留音色、不依赖云端，再试 VoiceStudio 这类全本地克隆工具，周末有空可以装来玩玩。', meta: '语音工具', stat: '先 API 后本地' },
+  { name: '数码科技 · 编码模型提速，桌面端 AI 队友开始普及', desc: 'Gemini 4 Hydrogen 主打编码与 Agent 工作流、速度比上代 Flash 快 2.5 倍；Perplexity 把 AI 队友 Teammates 搬上 Mac，付费 Max 用户可在桌面挂数字员工处理重复事务。日常写代码、查资料可以留意这类桌面 Agent。', meta: '效率工具', stat: '桌面 Agent' },
+  { name: '穿搭美妆 · 全天小雨湿度大，防风防水+持妆控油', desc: '周六全天小雨、15~18℃、湿度 93% 以上：出门穿防风防水外套、内搭针织，鞋子选防滑款；雨天妆容以控油持妆为主，避免底妆花掉，护肤注意补水防潮，回到家及时擦干鞋袜。', meta: '雨天穿搭', stat: '湿度93%+' },
+  { name: '理财职场 · 周末复盘：AI 资本火热，求职仍看落地', desc: '本周 AI 头部公司资本动作密集：Anthropic 认购 6 倍、估值约 1.4 万亿，但已排除中港机构，估值仍有波动。看机会优先选现金流健康、有真实付费落地的公司；语音、多模态开源模型密集发布，相关测试与工程岗位可重点留意。', meta: '职场财经', stat: '周末复盘' },
+  { name: '健康 · 雨天防滑保暖，居家拉伸为主', desc: '雨天湿度大、能见度低，外出带伞、走路骑车注意防滑；关节和呼吸道敏感人群注意保暖。居家日适合室内拉伸、轻量活动，避免长时间淋雨外出；开窗通风选雨歇的间隙，别在雨最大的时候开窗。', meta: '健康提醒', stat: '居家轻运动' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 11月13日', desc: '雾转多云到阴，16~20℃（实时 17℃、体感 18℃）。东北风转东南风 2~3 级。相对湿度 88%~100%，体感偏湿；上午有雾、能见度约 5 公里。AQI 上午良、下午良到轻度污染（首要污染物 PM2.5），夜间转良。日出06:19，日落16:57。傍晚 17 点、夜间 20 点前后有零星小雨；明天小雨 15~18℃、雨量约 18.3mm，15 日转阴 13~18℃。', meta: '今日天气', stat: '16~20℃雾转阴' },
-  { name: '本地要闻', desc: '①今晨有雾、能见度偏低，早高峰开车、骑行减速慢行，保持车距；②明天有较明显小雨（约 18.3mm），今天下班顺路检查雨具、提前晾好衣物；今天傍晚到夜间湿度接近饱和、衣物不易干，开窗通风选上午空气较优的时段。', meta: '上海资讯', stat: '雾天慢行' }
+  { name: '上海天气 · 11月14日', desc: '小雨转阴，15~18℃（实时 18℃、体感 20℃）。东风转东北/偏北风 2~3 级。相对湿度 93%~99%，体感很湿；上午中雨、局部雨量中等，午后到傍晚间歇小雨，夜间转多云；上午局部有雾、能见度约 3.4 公里。AQI 上午优、午后良。日出06:20，日落16:57。明天阴 14~19℃、北风 3 级、湿度 75%、AQI 95 良。', meta: '今日天气', stat: '15~18℃小雨转阴' },
+  { name: '本地要闻', desc: '①全天阵性降雨、局部中雨，周末出门带伞，骑行、开车减速防滑；②湿度接近饱和、衣物不易干，居家先把衣物收纳好，开窗选雨歇时段；明天转阴、气温略升，更适合安排户外活动。', meta: '上海资讯', stat: '雨天防滑' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">周五早安，今晨有雾、湿度很大，16~20℃ 不冷；上午空气尚可，下午转良到轻度污染，锻炼放上午，明天有大雨记得提前备伞 ♡</div>
+        <div className="greeting">周六早安，今天全天小雨、局部中雨，15~18℃ 湿度很大；出门带伞防滑，居家日适合休息折腾点小工具，明天转阴就舒服些啦 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年11月13日 星期五</span>
-          <span>第 070 期</span>
+          <span className="date">2026年11月14日 星期六</span>
+          <span>第 071 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>OpenAI 私募融 150 亿美元、估值 1.25 万亿；Anthropic 下周登陆美股；GPT-6 Cyber 网安模型亮相</h3>
-          <p>金融界转 CNBC 11/13：OpenAI 最新一轮私募筹得 150 亿美元、融前估值 1.25 万亿，为 2027 年潜在 IPO 筹备资金。Anthropic 下周登陆美股，募资最高 644 亿、估值直逼 1.4 万亿，拟 11/19-20 纳斯达克上市。模型侧 OpenAI 发布网安专用 GPT-6 Cyber（ExploitGym 48.5%），Thinking Machines 推出 Inkling 2 Small 并开放微调；DeepSeek 开源 DeepInfer 推理框架；豆包接入 Kimi、DeepSeek 等第三方模型，百度上线 Token Exchange 平台。</p>
+          <h3>DeepSeek 开放全家桶应用 API；Anthropic IPO 认购 6 倍、估值约 1.4 万亿；Gemini 4 Hydrogen 与 Nex-N2.6 开源亮相</h3>
+          <p>澎湃 11/13：DeepSeek 开放全家桶应用 API，深度思考搜索、文件输入开参数即用，OCR/ASR/TTS 语音能力独立成接口，可 1:1 复刻完整 App。资本侧 Anthropic IPO 认购约 6 倍，IPO+私募合计最高募 904 亿美元、估值约 1.4 万亿，代码 ANT。模型侧 Google DeepMind 发布 Gemini 4 Hydrogen（编码/Agent，速度 2.5×）；Perplexity Mac 上线 Teammates；上海创新研究院开源 321B 多模态 Agent 模型 Nex-N2.6；我国"星云星座计划"太空算力网发布。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.070</span>
+        <span>我的工作台 · 每日早报 · VOL.071</span>
       </footer>
     </div>
   )
