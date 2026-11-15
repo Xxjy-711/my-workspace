@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'debpalash / VoiceStudio', lang: 'Python', desc: '约 11 万星、近 7 天新增 7.2K：开源、全本地的 ElevenLabs 替代，支持声音克隆、语音设计、视频配音、听写、转写与有声书创作，覆盖 646 种语言，是本地语音方向近期最热门的仓库之一。', meta: '语音克隆', stat: '110K★/周+7.2K' },
-  { name: 'addyosmani / agent-skills', lang: 'JavaScript', desc: '约 8.4 万星、9K fork：面向 AI 编码 Agent 的生产级工程技能库，把代码规范、评审、测试等可复用工作流封装成技能单元，供各类编码 Agent 直接加载。', meta: '工程技能库', stat: '84K★' },
-  { name: 'mvanhorn / last30days-skill', lang: 'Python', desc: '调研型 Agent 技能：跨 Reddit、X、YouTube、HN、Polymarket 与网页检索任一主题，再综合成有据可依的摘要，约 5.7 万星、5K fork，适合做选题与背景调研。', meta: '调研摘要', stat: '57K★' },
-  { name: 'langchain-ai / langchain', lang: 'Python', desc: '约 14.94 万星：开源 Python 框架，以统一接口构建 LLM 应用、RAG 管线与自主 Agent，跨多家模型提供商调度，是 LLM 应用层最常用的基础框架之一。', meta: 'LLM 框架', stat: '149.4K★' },
-  { name: 'yetone / magpie', lang: 'Go', desc: '菜单栏一站式给各 Agent 配模型：Codex 走 DeepSeek、Claude Code 走 Kimi，从菜单直接切换，约 3.41 万星，解决多 Agent 多 Key 混接问题。', meta: '模型路由', stat: '34.1K★' },
-  { name: 'skills', lang: 'Python', desc: 'Agent Skills 公共仓库，约 18.98 万星、2.24 万 fork，汇集可被各类编码 Agent 加载的技能定义，是浏览与挑选现成 Agent 工作流的常用入口。', meta: '技能集合', stat: '189.8K★' }
+  { name: 'meta / astryx', lang: 'TypeScript', desc: '约 2 万星、1.5K fork：Meta 开源的企业级 React 设计系统，源自内部八年实践、覆盖 13000+ 应用，提供 150+ 无障碍组件、多主题体系、CLI 与模板，面向人机协作与 AI 辅助编程场景，MIT 协议。', meta: '设计系统', stat: '20K★' },
+  { name: 'anefzaoui / misterdownloadmanager', lang: 'Rust', desc: '约 5.8K 星、单日新增约 4.7K：纯 Rust 干净室从零编写的下载管理器，支持 Windows、macOS 与 Linux，界面清爽、注重隐私，近期增长很快。', meta: '下载工具', stat: '5.8K★/日+4.7K' },
+  { name: 'deepseek-ai / deepseek-harness', lang: 'TypeScript', desc: '约 27.9 万星、近 7 天新增 6.1K：DeepSeek 插件化工程框架，理念"Everything is a Plugin"，把工具、技能与工作流封装为可插拔模块，供 Agent 调用组合。', meta: '工程框架', stat: '279K★' },
+  { name: 'microsoft / VibeVoice', lang: 'Python', desc: '约 5.61 万星、6.3K fork，MIT 协议：开源前沿级语音合成，支持语音克隆与多说话人合成，全流程跑在开源基础设施上，是开源语音方向的代表项目之一。', meta: '语音合成', stat: '56.1K★' },
+  { name: 'zylon-ai / private-gpt', lang: 'Python', desc: '面向本地模型的私有 AI 应用层：提供 RAG、skills、tools、MCP、text-to-sql 等完整 API，数据不出本机，适合搭建不依赖云端的私有问答与知识库。', meta: '私有本地 AI', stat: '本地 RAG/MCP' },
+  { name: 'mastra-ai / mastra', lang: 'TypeScript', desc: '约 2.9 万星、版本 1.81.0：TypeScript 优先的 Agent 框架，内置 agents、workflows、memory、workspaces 与可观测性，可对接 React/Next.js/Node，月 NPM 下载量百万级。', meta: 'Agent 框架', stat: '29K★' }
 ]
 
 const aiCompanion = [
-  { name: '头条 · DeepSeek 开放全家桶应用 API，语音能力独立成接口', desc: '澎湃 11/13、网易与头条 11/14：DeepSeek 宣布开放全家桶应用 API，在原有 API 中开启对应参数即可获得深度思考搜索、文件输入等对话功能；语音及底层能力也开放独立接口，含 OCR、ASR、TTS，支持单独或组合调用，开发者可在自己应用里 1:1 复刻完整 DeepSeek App。', meta: '头条 API', stat: 'OCR/ASR/TTS' },
-  { name: 'Anthropic IPO 认购约 6 倍，估值约 1.4 万亿美元', desc: '财新/彭博/网易 11/11-14：Anthropic 首次公开募股认购需求约为可供认购股份的 6 倍；基础发行拟募最高 644 亿美元，同步私募配售 260 亿，合计最高 904 亿美元；完全摊薄估值约 1.4 万亿美元，发行价区间 70-78 美元/股，纳斯达克代码 ANT；据报道已排除中国大陆及香港机构投资者。', meta: 'IPO 进展', stat: '认购6倍' },
-  { name: 'Google DeepMind 发布 Gemini 4 Hydrogen', desc: 'AI圈报转 MarkTechPost 11/14：闭源模型 Gemini 4 Hydrogen 定位编码与智能体工作流，速度比 Gemini 3.8 Flash 快 2.5 倍；Terminal-Bench 4.1 得分 57%，而 3.8 Flash 为 18.2%，编码与 Agent 任务能力明显抬升。', meta: '新模型', stat: '速度2.5倍' },
-  { name: 'Perplexity Mac 版上线 AI 队友 Teammates', desc: 'IT之家 11/14：Perplexity 邀请付费 Max 订阅用户在 Mac 平台体验 AI 智能体功能 Teammates，组建全天候数字员工；该功能此前仅支持 iOS 与网页端，本次进一步覆盖桌面办公场景。', meta: '桌面 Agent', stat: 'Mac 上线' },
-  { name: '上海创新研究院开源 321B 多模态 Agent 模型 Nex-N2.6', desc: '蚁工厂微博 11/14：由上海创新研究院（SII）Nex-AGI 团队研发的新一代多模态智能体模型 Nex-N2.6，以 Apache 2.0 协议全面开源，权重与代码在 Hugging Face 与 GitHub 同步开放。', meta: '国产开源', stat: '321B 多模态' },
-  { name: '我国发布"星云星座计划"，太空算力网加快部署', desc: '科创板日报 11/14：在 11 月 9 日举办的 2026 太空云产业生态大会上，"星云星座计划"等太空云产业化成果发布；该计划由中科院空天信息创新研究院与国内科创企业联合研发，是全栈国产化太空算力网，标志我国太空云从技术验证走向产业化布局。', meta: '产业政策', stat: '太空算力网' }
+  { name: '头条 · DeepSeek 开源首个多模态模型 V4-Flash-Vision-Exp', desc: 'DeepSeek 更新日志 11/13、鲸智社区与 AI工具宝箱 11/14：V4 系列首个实验性多模态视觉理解模型上线 API 并以 MIT 协议开源，属 image-text-to-text 类型；Terminal Bench 2.1 得分 83.9、NL2Repo 57.7，多模态 Agent 能力接近 Opus-4.8，中小团队可零授权费本地部署视觉 Agent。', meta: '头条开源', stat: 'MIT 多模态' },
+  { name: 'llama.cpp 发布 v1.0.0 首个稳定大版本', desc: 'RadarAI 11/14-15：llama.cpp 发布首个稳定大版本 v1.0.0，标志本地 AI 部署进入成熟期；配合各类量化模型，在消费级硬件上跑离线大模型的工具链更趋稳定，适合想本地折腾模型的用户关注。', meta: '本地部署', stat: 'v1.0.0' },
+  { name: 'Claude Fable 5.2 上线两小时被越狱，95 万字提示词泄露', desc: '36氪/头条 11/13、智源社区 11/14：Anthropic 最高端一档模型 Claude Fable 5.2 上线两个多小时即遭越狱黑客 Pliny 攻破 Claude Code，完整系统提示词与工具定义被公开至 GitHub；文档达 953,659 字符、7832 行，体量约两部长篇小说，暴露了底层指令逻辑与 Agent 运行机制。', meta: '安全事件', stat: '953K 字符' },
+  { name: '下周看点：英伟达财报大考，Anthropic 冲刺史上最大 IPO', desc: '腾讯新闻 11/15：英伟达将迎来黄仁勋离开后的首份财报；备受期待的 Anthropic IPO 下周公开市场亮相，或成为 AI 情绪催化剂。SEC 文件显示其拟发行价区间每股 70-78 美元，发行 8.25 亿股 A 类普通股。', meta: '资本动态', stat: '下周两大事件' },
+  { name: '马斯克声明 Grok 文本水印默认关闭', desc: '智源社区 11/15：马斯克声明 Grok 生成文本的水印默认关闭，仅在法律要求或用户主动请求时开启；AI 生成内容标识规则在各平台之间口径不一，后续可关注监管侧要求。', meta: 'AI 标识', stat: '默认关闭' },
+  { name: '《中国人工智能开源生态蓝皮书》发布', desc: '新华网浙江 11/15：在本届中国开源年会上，开源社、Datawhale 等主办，主论坛围绕下一代开源技术、社区、商业、教育与人才开展交流，并举行首批"开源导师"授牌，正式发布《中国人工智能开源生态蓝皮书》。', meta: '行业报告', stat: '开源生态' }
 ]
 
 const lifeCards = [
-  { name: '数码科技 · 语音助手先调 API，离线克隆再上本地工具', desc: 'DeepSeek 已把 ASR、TTS、OCR 开放成独立接口，个人做语音助手可先接 API 快速跑通，不必一上来本地硬跑模型；想离线保留音色、不依赖云端，再试 VoiceStudio 这类全本地克隆工具，周末有空可以装来玩玩。', meta: '语音工具', stat: '先 API 后本地' },
-  { name: '数码科技 · 编码模型提速，桌面端 AI 队友开始普及', desc: 'Gemini 4 Hydrogen 主打编码与 Agent 工作流、速度比上代 Flash 快 2.5 倍；Perplexity 把 AI 队友 Teammates 搬上 Mac，付费 Max 用户可在桌面挂数字员工处理重复事务。日常写代码、查资料可以留意这类桌面 Agent。', meta: '效率工具', stat: '桌面 Agent' },
-  { name: '穿搭美妆 · 全天小雨湿度大，防风防水+持妆控油', desc: '周六全天小雨、15~18℃、湿度 93% 以上：出门穿防风防水外套、内搭针织，鞋子选防滑款；雨天妆容以控油持妆为主，避免底妆花掉，护肤注意补水防潮，回到家及时擦干鞋袜。', meta: '雨天穿搭', stat: '湿度93%+' },
-  { name: '理财职场 · 周末复盘：AI 资本火热，求职仍看落地', desc: '本周 AI 头部公司资本动作密集：Anthropic 认购 6 倍、估值约 1.4 万亿，但已排除中港机构，估值仍有波动。看机会优先选现金流健康、有真实付费落地的公司；语音、多模态开源模型密集发布，相关测试与工程岗位可重点留意。', meta: '职场财经', stat: '周末复盘' },
-  { name: '健康 · 雨天防滑保暖，居家拉伸为主', desc: '雨天湿度大、能见度低，外出带伞、走路骑车注意防滑；关节和呼吸道敏感人群注意保暖。居家日适合室内拉伸、轻量活动，避免长时间淋雨外出；开窗通风选雨歇的间隙，别在雨最大的时候开窗。', meta: '健康提醒', stat: '居家轻运动' }
+  { name: '数码科技 · 视觉模型可本地部署，本地跑模型工具链更成熟', desc: 'DeepSeek 多模态视觉模型以 MIT 开源，做客服、质检、文档理解类视觉 Agent 可零授权费本地部署；llama.cpp 1.0 稳定落地，本地跑模型的工具链更成熟。周末有空可以先在本地环境试试量化推理，不必一开始就上大模型。', meta: '本地 AI', stat: '先跑通小模型' },
+  { name: '数码科技 · Meta 开源设计系统，TypeScript Agent 框架持续走强', desc: 'Meta 开源 Astryx，13000+ 内部应用同款组件可直接取用；Mastra 这类 TypeScript Agent 框架月下载百万级，想搭个人 Agent、工具流可以参考其 agents/workflows/memory 分层，做前端的也能直接挑现成组件。', meta: '效率工具', stat: '开源组件' },
+  { name: '穿搭美妆 · 北风偏大防风保暖，发型妆容注意抗风', desc: '周日阴到多云、13~19℃，北风 4-5 级、沿江沿海阵风 6 级：出门穿防风外套、内搭针织，围巾可备；风大容易吹乱发型、吹脱底妆，发型尽量做定型，妆容以持妆为主，护肤注意保湿。', meta: '周日穿搭', stat: '北风4-5级' },
+  { name: '理财职场 · 下周盯财报与 IPO 定价，求职仍看落地付费', desc: '下周英伟达财报与 Anthropic IPO 定价是 AI 板块两大情绪节点；世界模型赛道融资持续升温。看机会仍优先选现金流健康、有真实付费落地的公司；开源模型密集发布带动测试、工程与多模态相关岗位需求，可重点留意。', meta: '职场财经', stat: '周末复盘' },
+  { name: '健康 · 上午有雾注意能见度，居家拉伸傍晚再散步', desc: '上午局部有雾、能见度偏低，外出注意行车走路安全；北风偏大、体感偏凉，关节和呼吸道敏感人群注意保暖。周日适合居家整理、室内拉伸，傍晚转阴到多云、风势减弱后，可短时外出散步透气。', meta: '健康提醒', stat: '居家轻运动' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 11月14日', desc: '小雨转阴，15~18℃（实时 18℃、体感 20℃）。东风转东北/偏北风 2~3 级。相对湿度 93%~99%，体感很湿；上午中雨、局部雨量中等，午后到傍晚间歇小雨，夜间转多云；上午局部有雾、能见度约 3.4 公里。AQI 上午优、午后良。日出06:20，日落16:57。明天阴 14~19℃、北风 3 级、湿度 75%、AQI 95 良。', meta: '今日天气', stat: '15~18℃小雨转阴' },
-  { name: '本地要闻', desc: '①全天阵性降雨、局部中雨，周末出门带伞，骑行、开车减速防滑；②湿度接近饱和、衣物不易干，居家先把衣物收纳好，开窗选雨歇时段；明天转阴、气温略升，更适合安排户外活动。', meta: '上海资讯', stat: '雨天防滑' }
+  { name: '上海天气 · 11月15日', desc: '阴到多云、局部短时小雨，13~19℃（实时 15℃、体感 15℃，午后最高 19℃）。西北风中午转偏北风 4-5 级，沿江沿海地区阵风 6 级，夜里转 3-4 级。相对湿度 64%~86%。上午有雾、能见度约 2.7 公里；AQI 上午良、傍晚转优。日出06:22，日落16:56。明天阴 13~18℃、东北风 2 级、湿度 67%、AQI 44 优。', meta: '今日天气', stat: '13~19℃阴到多云' },
+  { name: '本地要闻', desc: '①上午局部雾、局部短时小雨，出门仍建议备伞，骑行、开车注意能见度；②北风 4-5 级、沿江沿海阵风 6 级，居家晾晒注意防风，阳台物品及时收稳；明天阴天、气温平稳，适合提前做好工作日通勤准备。', meta: '上海资讯', stat: '大风注意' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">周六早安，今天全天小雨、局部中雨，15~18℃ 湿度很大；出门带伞防滑，居家日适合休息折腾点小工具，明天转阴就舒服些啦 ♡</div>
+        <div className="greeting">周日早安，今天阴到多云、局部短时小雨，13~19℃ 北风偏大；上午有雾能见度低，出门备伞注意防风，居家整理休息，傍晚风小了再出门走走 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年11月14日 星期六</span>
-          <span>第 071 期</span>
+          <span className="date">2026年11月15日 星期日</span>
+          <span>第 072 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
         
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>DeepSeek 开放全家桶应用 API；Anthropic IPO 认购 6 倍、估值约 1.4 万亿；Gemini 4 Hydrogen 与 Nex-N2.6 开源亮相</h3>
-          <p>澎湃 11/13：DeepSeek 开放全家桶应用 API，深度思考搜索、文件输入开参数即用，OCR/ASR/TTS 语音能力独立成接口，可 1:1 复刻完整 App。资本侧 Anthropic IPO 认购约 6 倍，IPO+私募合计最高募 904 亿美元、估值约 1.4 万亿，代码 ANT。模型侧 Google DeepMind 发布 Gemini 4 Hydrogen（编码/Agent，速度 2.5×）；Perplexity Mac 上线 Teammates；上海创新研究院开源 321B 多模态 Agent 模型 Nex-N2.6；我国"星云星座计划"太空算力网发布。</p>
+          <h3>DeepSeek 开源首个多模态模型 V4-Flash-Vision-Exp；llama.cpp 1.0 稳定；Claude Fable 5.2 提示词泄露；下周英伟达财报与 Anthropic IPO 登场</h3>
+          <p>DeepSeek V4 系列首个实验性多模态视觉理解模型以 MIT 协议开源，Terminal Bench 2.1 83.9、NL2Repo 57.7；llama.cpp 发布 v1.0.0 首个稳定大版本，本地部署趋于成熟。安全侧 Claude Fable 5.2 上线两小时被越狱，95.4 万字符系统提示词被公开。资本侧下周英伟达迎财报大考，Anthropic 冲刺史上最大 IPO；马斯克称 Grok 文本水印默认关闭；《中国人工智能开源生态蓝皮书》发布。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.071</span>
+        <span>我的工作台 · 每日早报 · VOL.072</span>
       </footer>
     </div>
   )
