@@ -2,34 +2,34 @@ import GradientText from './GradientText'
 import SeasonStamp from './SeasonStamp'
 
 const techProjects = [
-  { name: 'HKUDS / CLI-Anything', lang: 'Python', desc: '约 59.4K 星、当日新增约 384：把各类软件能力封装成适合 AI Agent 调用的命令行接口，让智能体通过统一 CLI 调用外部工具与服务，是 Agent 工具接入层的热门项目。', meta: 'Agent CLI 封装', stat: '59.4K★/日+384' },
-  { name: 'astral-sh / uv', lang: 'Rust', desc: '约 92.2K 星、当日新增约 260（首次记录）：用 Rust 编写的 Python 包与项目管理器，统一管理 Python 版本、项目依赖与隔离环境，并通过锁文件复现开发配置，安装与解析速度显著优于传统工具链。', meta: 'Python 环境管理', stat: '92.2K★/日+260' },
-  { name: 'cursor / plugins', lang: 'TypeScript', desc: '约 17.1K 星、当日新增约 315：Cursor 官方插件规范与公共插件仓库，包含开发规范、大量开发者工具及第三方集成插件，可作为在 Cursor 中扩展编码能力的参考。', meta: '编辑器插件仓库', stat: '17.1K★/日+315' },
-  { name: 'nvm-sh / nvm', lang: 'Shell', desc: '约 96.1K 星、当日新增约 199：在 POSIX Shell 中安装、切换和管理多个 Node.js 版本的经典工具，前端与 Node 开发环境多版本并存时常用，配合包管理器做版本隔离。', meta: 'Node 版本管理', stat: '96.1K★/日+199' },
-  { name: 'openvinotoolkit / openvino', lang: 'C++', desc: '约 11.2K 星、当日新增约 18（首次记录）：英特尔开源的深度学习模型优化与部署工具包，可转换、压缩模型并在受支持的处理器上执行本地推理，适合 CPU/核显侧的本地模型落地。', meta: '本地推理部署', stat: '11.2K★/日+18' },
-  { name: 'n8n-io / n8n', lang: 'TypeScript', desc: '约 210.9K 星、当日新增约 315：支持可视化编排、自定义代码与 AI 能力的工作流自动化平台，可串联应用、API 与智能体节点，搭建自动化流程与内部工具。', meta: '工作流自动化', stat: '210.9K★/日+315' }
+  { name: 'NVIDIA / SkillEvaluator', lang: 'Python', desc: '约 3.7K 星、当日新增约 323：检查智能体技能和插件的结构与安全性，并评估技能之间的重叠度与实际任务效果，帮助团队在接入 Agent 工具链前做质量与风险把关。', meta: 'Agent 技能评估', stat: '3.7K★/日+323' },
+  { name: 'google-labs-code / stitch-skills', lang: 'TypeScript', desc: '约 10.4K 星、当日新增约 369：为编程智能体提供连接设计服务的技能，可用于生成界面、管理设计系统并把设计稿转换为可复用组件，衔接设计与前端开发流程。', meta: '设计-代码衔接', stat: '10.4K★/日+369' },
+  { name: 'sveltejs / svelte', lang: 'JavaScript', desc: '约 89.7K 星、当日新增约 694：将网页组件编译成浏览器原生代码，支持用响应式状态构建交互界面，运行时体积小、更新效率高，是近年关注度较高的前端框架之一。', meta: '前端框架', stat: '89.7K★/日+694' },
+  { name: 'appwrite / appwrite', lang: 'TypeScript', desc: '约 58.2K 星、当日新增约 239：为应用提供用户认证、数据库、文件存储、函数与实时通知等开箱即用的后端服务平台，可作为自建 BaaS 快速支撑前端与移动端应用。', meta: '开源后端平台', stat: '58.2K★/日+239' },
+  { name: 'affaan-m / ECC', lang: 'JavaScript', desc: '约 306.5K 星、当日新增约 1,109：为 Claude Code、Codex 等编程 Agent 提供性能优化、代码评审与工程方法沉淀，帮助多 Agent 协作下保持代码质量与流程规范。', meta: 'Agent 工程方法', stat: '306.5K★/日+1.1K' },
+  { name: 'punkpeye / awesome-mcp-servers', lang: 'MCP', desc: '约 98.0K 星、当日新增约 52：收集并分类 Model Context Protocol 服务端的精选列表，覆盖数据库、文件、浏览器、办公软件等常见接入场景，是搭建 Agent 工具生态的常用索引。', meta: 'MCP 服务端索引', stat: '98.0K★/日+52' }
 ]
 
 const aiCompanion = [
-  { name: '腾讯混元开源 Hy4 flash：224B 参数、1M 上下文', desc: '呼哈日报 11/18：腾讯混元开源 Hy4 flash 家族，含标准版、FP8 量化版与 Base 版，可在 GitHub、Hugging Face、ModelScope 下载；总参数 224B、含 64B Engram 参数，每 token 激活 12B，原生多模态、支持 100 万 token 上下文，API 价格较 Hy4 大幅降低，沐曦曦云 C 系列 GPU 完成 Day 0 适配。', meta: '开源大模型', stat: '224B·1M 上下文' },
-  { name: '谷歌开放 Genie 4 世界模型，可实时改天气与角色', desc: '呼哈日报 11/19：谷歌面向 Google AI Ultra 订阅用户开放 Project Genie 新体验，首次提供 Genie 4 世界模型，支持会话中途用提示词实时修改世界、切换天气、添加角色、改变动作，并加入随场景动态适配的实时原生音频；Genie 3 单次探索时长由 60 秒提升至最多 3 分钟，支持世界串联与 360 度全景。', meta: '世界模型', stat: 'Genie 4' },
-  { name: '谷歌发布 Gemini 4 Neon：百万上下文、专注深度分析', desc: 'selfhost.memene 11/19：谷歌发布 Gemini 4 系列新模型 Neon，定位在复杂软件工程、知识工作与科学工作流中提供前沿级智能，支持端到端任务快速完成；具备 100 万 token 上下文窗口，定价每百万输入 token 3 美元、每百万输出 token 15 美元。', meta: '旗舰模型', stat: '1M 上下文' },
-  { name: 'NVIDIA 向 CNCF 贡献 OpenShell，用策略管控 Agent 行为', desc: 'TechSabado 11/19：NVIDIA 将 OpenShell 贡献给云原生计算基金会（CNCF），该项目通过确定性策略约束 AI 智能体的活动方式，让组织掌握 Agent 运行边界；NVIDIA 同时扩展其开源 AI 工具链，Agent 治理与可观测方向持续升温。', meta: 'Agent 治理', stat: 'OpenShell→CNCF' },
-  { name: '腾讯 Q3 财报：云收入增 35%，WorkBuddy 日活超千万', desc: '环球网/今日头条 11/18：腾讯发布 2026 年三季报，营收 2073 亿元、同比增长 8%，受 AI 需求驱动云服务收入同比增幅提升至 35%；AI 应用 WorkBuddy 日活已超 1000 万、日均 token 调用超 100 万亿；本周推出的 Hy4 Flash 上线首日 token 调用量突破 50 万亿。', meta: '财报商业化', stat: '云 +35%·日活千万' },
-  { name: '特斯拉 Optimus 演示临近，北京出台具身智能行动方案', desc: '金融界/今日头条 11/19：马斯克公开表示特斯拉将在未来两个月内推出 Optimus 人形机器人演示；北京发布具身智能机器人产业高质量发展行动方案，设定每年 20 万台整机产能目标，与津冀协同布局产业链；星动纪元具身物流机器人已在中国邮政广东八城规模化落地。', meta: '具身智能', stat: 'Optimus·20 万台目标' }
+  { name: 'Anthropic 纳斯达克上市：发行价 83 美元，市值约 1.47 万亿美元', desc: 'MIT 科技评论/微博 11/20：当地时间 11 月 19 日 Anthropic 以股票代码“ANT”挂牌纳斯达克，发行价 83 美元/股（高于此前 70-78 美元区间），公开发售 9.8 亿股，募资约 813.4 亿美元；盘中报 107.98 美元、较发行价涨 29.36%，对应市值约 1.47 万亿美元。谷歌、英伟达、AMD、博通、美光、微软及台积电旗下 TSMC Partners 以相同发行价私募配售合计认购 260 亿美元无投票权股份，其中谷歌与英伟达各出资 100 亿美元。', meta: '资本市场', stat: 'ANT·募资 813 亿' },
+  { name: '面壁 MiniCPM 全球下载超 7000 万，V4.7 端侧 MoE 上 iPhone', desc: 'IT之家 11/19：面壁智能宣布截至 2026 年 11 月，MiniCPM 家族模型全球下载量已超 7000 万次。新一代端侧多模态模型 MiniCPM-V4.7 提供 35B-A3B 与 1B 两种规格，其中 35B-A3B 是 MiniCPM-V 系列首个 MoE 模型，基于 LES 前瞻专家调度加速，在 iPhone 17 Pro Max 上仅占用 3GB 内存即可达到 13+ token/s 解码；MiniCPM 系列已深度赋能三星 Galaxy AI。', meta: '端侧大模型', stat: '下载 7000 万+' },
+  { name: 'NVIDIA 开源 Nemotron 3.5 Bolt：8B/4B 量化，面向本地部署', desc: '鲸智社区 11/19：NVIDIA-Nemotron-3.5-Bolt-E4B-4GB 基于 Google Gemma-4-E4B-it 后训练，约 80 亿总参数、40 亿有效参数，采用 Q4_K_M 量化与 GGUF 格式，面向低内存、低延迟的本地部署；最高支持 64K token 上下文与可切换思考模式，可通过 llama.cpp 运行并搭配 DFlash 草稿模型加速，OpenMDW 1.1 许可证开放，支持商业与非商业使用。', meta: '本地开源模型', stat: 'GGUF·64K 上下文' },
+  { name: 'Nous Hermes Enterprise 接入 Teams 与 Azure，Agent 跑在隔离 microVM', desc: 'Sulat News 11/20：Nous Research 宣布 Hermes Enterprise 可在 Microsoft Teams、Microsoft Store 与 Azure Container Apps Sandboxes 中运行，Agent 任务运行在隔离 microVM 内；Collective Wisdom 功能允许员工把经审核的技能沉淀为团队可复用资产，知识保留为企业私有；有数据驻留或采购要求的公司可在自有 Azure 租户内运行。Nous 称 Hermes 是 OpenRouter 上排名靠前的公开开源 Agent，每日处理近 2 万亿 token（官方自述数据）。', meta: '企业级 Agent', stat: 'Teams·Azure microVM' },
+  { name: 'Reply.io 开源 Jason Harness：把通用 Agent 接入销售流程', desc: 'iHAL 11/20：Reply.io 发布 MIT 许可的开源框架 Jason Harness（Alpha），用于把 Claude Code、OpenAI Codex 等通用 Agent 接入商业获客与客户管理流程，支持调研、活动策划、沟通个性化与潜在客户消息准备；框架不自带语言模型，而是为操作者选用的 Agent 提供指令、持久信息与流程规范，含 9 个运营角色与外部服务扩展系统，运行时源码已于 11 月 1 日开放。', meta: '开源 Agent 框架', stat: 'MIT·Alpha' },
+  { name: 'KRAFTON AI 开源 Raon-1-nano：3.1B 韩英双语轻量模型', desc: '鲸智社区 11/19：KRAFTON AI 推出轻量级开源语言模型 Raon-1-nano，主模型约 31 亿总参数、15 亿有效参数，面向韩语与英语的自然对话、指令遵循及工具调用场景，支持长上下文，定位端侧与轻量部署下的双语助手用途。', meta: '轻量开源模型', stat: '3.1B/1.5B 激活' }
 ]
 
 const lifeCards = [
-  { name: '游戏 · 《GTA6》今日 0 点解锁，媒体评分 99 分追平纪录', desc: 'IT之家/搜狐/新浪财经 11/19：等待 13 年的《侠盗猎车手 6》今日在 PS5、Xbox Series X|S 平台按地区零点滚动解锁，首发无 PC 版，双主角杰森与露西亚回归以迈阿密为原型的罪恶城；Metacritic 超 140 家媒体综合 99 分，追平 1998 年《塞尔达传说：时之笛》保持 28 年的纪录；新西兰玩家 18 日 19:00 抢先进入，影视飓风、罗技等全球多家公司给员工放“GTA 假”。', meta: '今日发售', stat: 'PS5/Xbox·99 分' },
-  { name: '数码科技 · Python/Node 环境工具登榜，本地推理部署受关注', desc: 'GitHub 11/18 榜：astral-sh/uv 以 Rust 重做 Python 依赖与环境管理、nvm 继续管理多版本 Node.js；openvino 上榜，主打模型转换优化与处理器本地推理；punkpeye/awesome-mcp-servers 持续扩容 MCP 服务端清单，本地开发与工具接入生态保持活跃。', meta: '开发工具', stat: 'uv·nvm·openvino' },
-  { name: '穿搭美妆 · 周四晴到多云体感仅 4℃，叠穿方便脱卸', desc: '今日 6~13℃ 但清晨体感只有 4℃、湿度偏低，白天西北风 2 级、风寒明显：白天薄羽绒或厚夹克叠针织内搭，方便午间升温后脱卸；早晚接近 6℃，围巾可备；明晨郊区有霜、西北风 4-5 级，出门再加一层，风大注意持妆与发型。', meta: '周四穿搭', stat: '6~13℃ 叠穿' },
-  { name: '理财职场 · AI 商业化提速，关注应用落地与工具链岗位', desc: '腾讯 Q3 云收入增 35%、WorkBuddy 日活破千万，混元 Hy4 Flash 以高性价比压低推理成本，模型调用量持续放量；求职可关注 AI 应用落地、Agent 工具链、云服务与模型部署相关岗位，优先选有真实付费客户与稳定调用量的团队，避免只做演示项目。', meta: '职场财经', stat: 'AI 商业化' },
-  { name: '健康 · 清晨辐射降温最冷，干燥多补水、明晨防结霜', desc: '今晨体感 4℃、昼夜温差约 7℃，辐射降温使清晨最冷；相对湿度仅 31%、空气干燥，注意补水保湿与呼吸道防护；明晨郊区有霜或暗霜，早出门留意路面湿滑、骑车减速；今日紫外线弱，无需强防晒。', meta: '健康提醒', stat: '低温·干燥·有霜' }
+  { name: '数码科技 · 无屏 AI 录音笔曝光，Meta Muse Charm 12 月上市', desc: 'IT之家/DoNews 11/19-20：Nothing 首款 AI 设备外观流出，采用无屏设计、形似录音笔；Meta 计划 12 月假日季推出 AI 硬件 Muse Charm，售价约 300 美元（约合 2008 元人民币），配 2 英寸屏幕、指纹传感器与 Verizon 最长 12 个月 5G 服务，轻触指纹即可直连 Muse AI 智能体，无需手机或应用；同期苹果在 watchOS 27.3 Beta 中为 Siri Modular 表盘新增大时钟与紧凑时钟两种样式。', meta: 'AI 硬件', stat: 'Nothing·Meta·Apple Watch' },
+  { name: '游戏 · GTA6 双平台累计 2458 万份，周末 ZFX 玩家聚会落地上海', desc: '游民星空/IT之家 11/19-20：Sensor Tower 截至 11 月 19 日数据，《GTA6》PS/Xbox 双平台累计销量约 2458 万份、预估营收 23.6 亿美元（已扣退货）；游戏内藏两个“简单模式”开关，可降低敌人血量、减少车辆受损，Xbox Series S 版首发采用 AMD FSR 4.1 超分。本周末 11 月 21-22 日 ZFX 玩家聚会在国家会展中心 2.2 馆举办，拜雅 MMX 100 WL/130 WL 等电竞耳机现场试玩。', meta: '游戏动态', stat: '2458 万份·上海 ZFX' },
+  { name: '穿搭美妆 · 周五大风降温，厚外套叠穿+防风配件，买羽绒看绒子含量', desc: '今日 6~12℃、西北风 4-5 级阵风 6 级，风寒明显：白天厚夹克或薄羽绒叠针织内搭，围巾、帽子、手套重点防风；早晚近 6℃、郊区有霜，出门再加一层。选购羽绒服认准新国标 GB/T 14272-2021，重点看绒子含量（90% 鹅绒性价比更高），不要只看充绒量；大风天注意持妆与发型固定。', meta: '周五穿搭', stat: '6~12℃ 防风叠穿' },
+  { name: '理财职场 · 大模型公司资本化提速，关注 Agent 落地与端侧方向', desc: 'Anthropic 以 83 美元发行价上市、市值约 1.47 万亿美元，七家科技巨头私募认购 260 亿美元，AI 基础设施与模型公司受资本集中关注；端侧模型、企业 Agent 落地、云服务与工具链仍是招聘活跃方向。求职建议优先选择有真实付费客户、稳定调用量与产品闭环的团队，避免只做演示项目；关注岗位时可留意模型部署、Agent 编排与数据安全相关经验要求。', meta: '职场财经', stat: 'AI 资本化' },
+  { name: '健康 · 冬季运动后抓住营养窗口期，减肥不必完全戒主食', desc: '环球网 11/19：运动结束后 30-60 分钟为营养补充“黄金窗口期”，此时骨骼肌细胞对碳水与氨基酸通道开放，营养补充及时、比例恰当有助于肌肉修复增长；减肥不必完全戒主食，搭配优质蛋白与蔬菜、控制总量更可持续。进入冬季注意识别心脏病信号，早晚保暖、规律作息，气温骤降时减少长时间户外剧烈运动。', meta: '健康提醒', stat: '低温·运动营养' }
 ]
 
 const localCards = [
-  { name: '上海天气 · 11月19日', desc: '多云到阴，6~13℃（实时 8℃、体感 4℃）。东南风转西北风 2 级；相对湿度 31%，AQI 54 良，能见度约 28.9 公里，气压 1029hPa。日出06:25，日落16:54。明天多云 5~12℃、西北风 3 级、湿度 45%、AQI 55 良；11/21 晴 8~15℃；11/22 阴 11~14℃；11/23 阴 7~18℃、降水概率 70%。', meta: '今日天气', stat: '6~13℃ 多云' },
-  { name: '本地要闻', desc: '①上海发布提醒：明天 6~12℃ 晴到多云，叠加辐射降温，明晨更冷、有霜或暗霜，西北风 4-5 级，早出晚归要穿暖。②周五至周日以上海晴或多云为主，早间受辐射降温影响气温仍在低位，白天逐日回暖，周日最高约 16℃；预计下周一前后有一次弱降水天气过程。', meta: '上海资讯', stat: '明晨有霜·回暖' }
+  { name: '上海天气 · 11月20日', desc: '晴到多云，6~12℃（实时 9℃、体感 6℃）。西北风 4-5 级、阵风 6 级，沿江沿海地区阵风 6-7 级，下午风力略减；相对湿度 38%，AQI 69 良，能见度约 21.4 公里，气压 1029hPa。日出06:25，日落16:54。明天晴 7~15℃、西北风 2 级、湿度 50%、AQI 90 良；11/22 多云 12~16℃；11/23 小雨 9~16℃、降水概率 70%、约 3mm。', meta: '今日天气', stat: '6~12℃ 大风' },
+  { name: '本地要闻', desc: '①上海发布提醒：今晨中心城区最低 6℃、郊区 1-4℃有霜或暗霜，白天最高约 12℃，西北风 4-5 级，早出晚归注意添衣保暖、谨防感冒。②周六早晨气温触底，白天回暖起步，周日最高气温可升至 16℃左右，可安排洗晒与出游；下周整体晴多雨少，下周一前后有短暂弱降水，暖湿气流参与下气温回到 19℃附近。', meta: '上海资讯', stat: '今晨有霜·周末回暖' }
 ]
 
 export default function DailyReport() {
@@ -37,13 +37,13 @@ export default function DailyReport() {
     <div className="daily-report">
       {/* 头部 */}
       <header className="report-header">
-        <div className="greeting">周四早安，晴到多云 6~13℃，但清晨体感只有 4℃、风寒明显；白天叠穿方便脱卸，明晨郊区有霜、西北风加大，出门添件外套 ♡</div>
+        <div className="greeting">周五早安，晴到多云 6~12℃，但西北风 4-5 级、阵风 6 级，风寒明显；白天厚外套叠穿，早晚和郊区近 6℃有霜，出门把围巾帽子备上，今天也加油 ♡</div>
         <h1 className="report-title">
           <GradientText>每日早报</GradientText>
         </h1>
         <div className="dateline">
-          <span className="date">2026年11月19日 星期四</span>
-          <span>第 076 期</span>
+          <span className="date">2026年11月20日 星期五</span>
+          <span>第 077 期</span>
           <span className="badge">今日 10:00 已更新</span>
         </div>
         <div className="stamp-container">
@@ -82,8 +82,8 @@ export default function DailyReport() {
 
         <div className="headline-card">
           <span className="tag">今日头条</span>
-          <h3>腾讯混元开源 Hy4 flash（224B/1M 上下文）；谷歌开放 Genie 4 并发布 Gemini 4 Neon；NVIDIA 向 CNCF 贡献 OpenShell；腾讯云收入增 35%</h3>
-          <p>模型侧腾讯混元开源 Hy4 flash 家族，224B 参数、1M 上下文并提供 FP8 量化；谷歌开放 Genie 4 世界模型，发布百万上下文的 Gemini 4 Neon。治理侧 NVIDIA 将 Agent 策略管控项目 OpenShell 贡献给 CNCF；产业侧腾讯 Q3 云收入增 35%、WorkBuddy 日活破千万，特斯拉 Optimus 演示临近、北京出台具身智能行动方案。GitHub 榜单上 CLI-Anything、uv、cursor/plugins、nvm、openvino 与 n8n 等工具与平台项目走热。</p>
+          <h3>Anthropic 纳斯达克上市募资 813 亿美元；面壁 MiniCPM 下载超 7000 万；NVIDIA 开源本地部署轻量模型 Nemotron 3.5 Bolt；Hermes Enterprise 接入 Teams/Azure</h3>
+          <p>资本市场侧 Anthropic 以 83 美元发行价挂牌 ANT，市值约 1.47 万亿美元，七家科技巨头私募认购 260 亿美元。模型侧面壁 MiniCPM 家族下载超 7000 万次、端侧 MoE 上 iPhone；NVIDIA 开源 GGUF 量化的 Nemotron 3.5 Bolt，可在 llama.cpp 本地运行。Agent 侧 Nous Hermes Enterprise 进入 Teams 与 Azure 隔离沙箱，Reply.io 开源销售 Agent 框架 Jason Harness，KRAFTON AI 开源双语轻量模型 Raon-1-nano。GitHub 榜单上 SkillEvaluator、stitch-skills、svelte、appwrite、ECC 与 awesome-mcp-servers 等项目走热。</p>
         </div>
 
         <div className="grid">
@@ -146,7 +146,7 @@ export default function DailyReport() {
       </section>
 
       <footer className="report-foot">
-        <span>我的工作台 · 每日早报 · VOL.076</span>
+        <span>我的工作台 · 每日早报 · VOL.077</span>
       </footer>
     </div>
   )
